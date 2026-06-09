@@ -30,7 +30,7 @@ jobs:
           sudo chown -R "$(id -u):$(id -g)" dist
           python3 scripts/activity_graph.py
           echo "=== available 3d files ==="; ls -la profile-3d-contrib
-          cp profile-3d-contrib/profile-night-rainbow.svg dist/3d-contrib.svg
+          cp profile-3d-contrib/profile-season-animate.svg dist/3d-contrib.svg
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GH_USER: ${{ github.repository_owner }}
