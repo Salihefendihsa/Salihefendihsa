@@ -16,7 +16,7 @@ I build products end-to-end — backend, web, and mobile — taking them from an
 
 I care about the full loop: **architecture → UX → ship → growth.** Computer Science student at Fırat University, learning by putting real products in front of real users.
 
----
+<div align="center"><img src="https://raw.githubusercontent.com/Salihefendihsa/Salihefendihsa/main/assets/divider.svg" width="80%" alt="" /></div>
 
 ### 📦 Featured — Navlonix (YÜK-LE)
 
@@ -30,7 +30,7 @@ A production logistics marketplace, designed and built solo across four apps and
 
 🔗 **[github.com/Salihefendihsa/YUK-LE](https://github.com/Salihefendihsa/YUK-LE)**
 
----
+<div align="center"><img src="https://raw.githubusercontent.com/Salihefendihsa/Salihefendihsa/main/assets/divider.svg" width="80%" alt="" /></div>
 
 ### 🧰 Tech Stack
 
@@ -45,7 +45,7 @@ A production logistics marketplace, designed and built solo across four apps and
 ![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
 ![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
 
----
+<div align="center"><img src="https://raw.githubusercontent.com/Salihefendihsa/Salihefendihsa/main/assets/divider.svg" width="80%" alt="" /></div>
 
 ### 📈 Activity
 
@@ -57,7 +57,7 @@ A production logistics marketplace, designed and built solo across four apps and
 
 </div>
 
----
+<div align="center"><img src="https://raw.githubusercontent.com/Salihefendihsa/Salihefendihsa/main/assets/divider.svg" width="80%" alt="" /></div>
 
 ### 🐍 Contribution Graph (live)
 
@@ -67,14 +67,13 @@ A production logistics marketplace, designed and built solo across four apps and
 
 </div>
 
----
+<div align="center"><img src="https://raw.githubusercontent.com/Salihefendihsa/Salihefendihsa/main/assets/divider.svg" width="80%" alt="" /></div>
 
 ### 🤝 Connect
 
 <div align="center">
 
 <a href="https://www.linkedin.com/in/hilmi-salih-alt%C4%B1n%C4%B1%C5%9F%C4%B1k-6a9301294/"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" /></a>
-<a href="mailto:altinisikhilmisalih@gmail.com"><img src="https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white" /></a>
 <a href="https://github.com/Salihefendihsa"><img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" /></a>
 
 </div>
