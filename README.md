@@ -79,6 +79,16 @@ An AI-powered logistics freight-matching marketplace, architected and built solo
 
 <div align="center"><img src="https://raw.githubusercontent.com/Salihefendihsa/Salihefendihsa/main/assets/divider.svg" width="80%" alt="" /></div>
 
+### 🌐 3D Contributions
+
+<div align="center">
+
+<img src="https://raw.githubusercontent.com/Salihefendihsa/Salihefendihsa/output/3d-contrib.svg" alt="3D contributions" />
+
+</div>
+
+<div align="center"><img src="https://raw.githubusercontent.com/Salihefendihsa/Salihefendihsa/main/assets/divider.svg" width="80%" alt="" /></div>
+
 ### 🤝 Connect
 
 <div align="center">
