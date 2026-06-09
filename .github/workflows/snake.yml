@@ -10,23 +10,32 @@ permissions:
 jobs:
   generate:
     runs-on: ubuntu-latest
-    timeout-minutes: 5
+    timeout-minutes: 6
     steps:
+      - name: Checkout
+        uses: actions/checkout@v4
       - name: Generate snake
         uses: Platane/snk@v3
         with:
           github_user_name: ${{ github.repository_owner }}
           outputs: |
             dist/github-snake-dark.svg?palette=github-dark
-      - name: Publish to output branch
+      - name: Fix perms & generate animated activity graph
         run: |
           sudo chown -R "$(id -u):$(id -g)" dist
+          python3 scripts/activity_graph.py
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_USER: ${{ github.repository_owner }}
+          OUT: dist/activity-graph.svg
+      - name: Publish to output branch
+        run: |
           cd dist
           touch .nojekyll
           git init -q
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add -A
-          git commit -q -m "chore: update snake animation"
+          git commit -q -m "chore: update snake + activity graph"
           git branch -M output
           git push -f "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git" output

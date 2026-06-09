@@ -63,7 +63,7 @@ An AI-powered logistics freight-matching marketplace, architected and built solo
 
 <img src="https://streak-stats.demolab.com?user=Salihefendihsa&hide_border=true&background=0D1117&ring=58A6FF&fire=A371F7&currStreakLabel=58A6FF&sideLabels=c9d1d9&dates=8b949e&stroke=21262D&currStreakNum=c9d1d9&sideNums=c9d1d9&dayLabels=8b949e" alt="streak" />
 
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=Salihefendihsa&bg_color=0D1117&color=58A6FF&line=A371F7&point=ffffff&area=true&hide_border=true" alt="activity graph" />
+<img src="https://raw.githubusercontent.com/Salihefendihsa/Salihefendihsa/output/activity-graph.svg" alt="activity graph" />
 
 </div>
 
