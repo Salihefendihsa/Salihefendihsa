@@ -20,6 +20,7 @@ jobs:
             dist/github-snake-dark.svg?palette=github-dark
       - name: Publish to output branch
         run: |
+          sudo chown -R "$(id -u):$(id -g)" dist
           cd dist
           touch .nojekyll
           git init -q
