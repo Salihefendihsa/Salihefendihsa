@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="210" viewBox="0 0 1200 210" role="img" aria-label="MRC Commerce — scroll-driven brand storefront built with Next.js, marketing experience live, commerce layer in progress">
+  <title>MRC Commerce</title>
+  <defs>
+    <linearGradient id="cm-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#150C2B"/>
+      <stop offset="1" stop-color="#0B0716"/>
+    </linearGradient>
+    <linearGradient id="cm-accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#E040FB"/>
+      <stop offset="1" stop-color="#FBBF24"/>
+    </linearGradient>
+    <radialGradient id="cm-halo" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#E040FB" stop-opacity="0.2"/>
+      <stop offset="1" stop-color="#E040FB" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="cm-screen" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1B1036"/>
+      <stop offset="1" stop-color="#0B0716"/>
+    </linearGradient>
+    <filter id="cm-glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="2.5" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <clipPath id="cm-clip"><rect width="1200" height="210" rx="20"/></clipPath>
+    <clipPath id="cm-screenclip"><rect x="850" y="40" width="240" height="130" rx="10"/></clipPath>
+    <style>
+      .cm-sans { font-family: 'Segoe UI', Inter, Helvetica, Arial, sans-serif; }
+      .cm-mono { font-family: Consolas, 'JetBrains Mono', Menlo, monospace; }
+      .cm-scroll { animation: cm-scroll 10s ease-in-out infinite; }
+      .cm-frame { animation: cm-frame 10s ease-in-out infinite; transform-origin: 970px 105px; }
+      .cm-thumb { animation: cm-thumb 10s ease-in-out infinite; }
+      .cm-dot { animation: cm-pulse 2.4s ease-in-out infinite; }
+      @keyframes cm-scroll { 0%,15% { transform: translateY(0); } 50%,65% { transform: translateY(-70px); } 100% { transform: translateY(0); } }
+      @keyframes cm-thumb { 0%,15% { transform: translateY(0); } 50%,65% { transform: translateY(70px); } 100% { transform: translateY(0); } }
+      @keyframes cm-frame { 0%,15% { transform: rotate(0deg) scale(1); } 50%,65% { transform: rotate(18deg) scale(1.12); } 100% { transform: rotate(0deg) scale(1); } }
+      @keyframes cm-pulse { 0%,100% { opacity: 0.5; } 50% { opacity: 1; } }
+      @media (prefers-reduced-motion: reduce) { .cm-scroll, .cm-thumb, .cm-frame, .cm-dot { animation: none; } }
+    </style>
+  </defs>
+  <g clip-path="url(#cm-clip)">
+    <rect width="1200" height="210" fill="url(#cm-bg)"/>
+    <ellipse cx="980" cy="110" rx="300" ry="160" fill="url(#cm-halo)"/>
+    <rect x="0" y="0" width="6" height="210" fill="url(#cm-accent)"/>
+
+    <text x="44" y="46" class="cm-mono" font-size="12" fill="#E040FB" letter-spacing="3">BUILD 03</text>
+    <rect x="128" y="32" width="96" height="20" rx="10" fill="#0B0716" stroke="#22D3EE" stroke-opacity="0.7"/>
+    <circle class="cm-dot" cx="141" cy="42" r="3.5" fill="#22D3EE" filter="url(#cm-glow)"/>
+    <text x="151" y="46" class="cm-mono" font-size="10.5" fill="#22D3EE" letter-spacing="1">OPEN SOURCE</text>
+    <rect x="232" y="32" width="150" height="20" rx="10" fill="#0B0716" stroke="#FBBF24" stroke-opacity="0.6"/>
+    <text x="307" y="46" text-anchor="middle" class="cm-mono" font-size="10.5" fill="#FBBF24" letter-spacing="1">COMMERCE LAYER: WIP</text>
+
+    <text x="44" y="92" class="cm-sans" font-size="34" font-weight="700" fill="#F5F3FF">MRC Commerce</text>
+    <text x="44" y="122" class="cm-sans" font-size="16" fill="#C4B5FD">Cinematic, scroll-driven brand storefront with a production-grade marketing experience.</text>
+    <text x="44" y="150" class="cm-sans" font-size="14" fill="#8B8AA8">Canvas frame-sequence animations · typed DB schema ready (Drizzle) · cart, checkout and admin planned</text>
+
+    <g class="cm-mono" font-size="11" fill="#E9E5FF">
+      <rect x="44" y="166" width="72" height="22" rx="11" fill="#0B0716" stroke="#E040FB" stroke-opacity="0.5"/><text x="80" y="181" text-anchor="middle">Next.js</text>
+      <rect x="124" y="166" width="92" height="22" rx="11" fill="#0B0716" stroke="#E040FB" stroke-opacity="0.5"/><text x="170" y="181" text-anchor="middle">TypeScript</text>
+      <rect x="224" y="166" width="78" height="22" rx="11" fill="#0B0716" stroke="#E040FB" stroke-opacity="0.5"/><text x="263" y="181" text-anchor="middle">Tailwind</text>
+      <rect x="310" y="166" width="70" height="22" rx="11" fill="#0B0716" stroke="#E040FB" stroke-opacity="0.5"/><text x="345" y="181" text-anchor="middle">Drizzle</text>
+      <rect x="388" y="166" width="94" height="22" rx="11" fill="#0B0716" stroke="#E040FB" stroke-opacity="0.5"/><text x="435" y="181" text-anchor="middle">PostgreSQL</text>
+    </g>
+
+    <!-- illustration: browser window with scroll-driven product frame -->
+    <rect x="850" y="40" width="240" height="130" rx="10" fill="url(#cm-screen)" stroke="#E040FB" stroke-opacity="0.6" stroke-width="1.5"/>
+    <rect x="850" y="40" width="240" height="18" rx="10" fill="#2A1656"/>
+    <rect x="850" y="50" width="240" height="8" fill="#2A1656"/>
+    <circle cx="862" cy="49" r="3" fill="#E040FB"/><circle cx="872" cy="49" r="3" fill="#FBBF24"/><circle cx="882" cy="49" r="3" fill="#22D3EE"/>
+    <g clip-path="url(#cm-screenclip)">
+      <g class="cm-scroll">
+        <rect x="866" y="70" width="90" height="8" rx="4" fill="#C4B5FD" opacity="0.8"/>
+        <rect x="866" y="84" width="60" height="6" rx="3" fill="#8B8AA8" opacity="0.7"/>
+        <rect x="866" y="112" width="120" height="6" rx="3" fill="#8B8AA8" opacity="0.4"/>
+        <rect x="866" y="124" width="100" height="6" rx="3" fill="#8B8AA8" opacity="0.4"/>
+        <rect x="866" y="150" width="70" height="6" rx="3" fill="#8B8AA8" opacity="0.4"/>
+        <rect x="866" y="162" width="110" height="6" rx="3" fill="#8B8AA8" opacity="0.4"/>
+        <rect x="866" y="186" width="90" height="8" rx="4" fill="#C4B5FD" opacity="0.8"/>
+        <rect x="866" y="200" width="60" height="6" rx="3" fill="#8B8AA8" opacity="0.7"/>
+        <rect x="866" y="226" width="120" height="6" rx="3" fill="#8B8AA8" opacity="0.4"/>
+      </g>
+      <!-- product frame (rotates as you scroll) -->
+      <g class="cm-frame" filter="url(#cm-glow)">
+        <rect x="1006" y="78" width="54" height="54" rx="10" fill="#E040FB" fill-opacity="0.85"/>
+        <rect x="1016" y="88" width="34" height="34" rx="7" fill="#0B0716"/>
+        <circle cx="1033" cy="105" r="7" fill="#FBBF24"/>
+      </g>
+    </g>
+    <!-- scrollbar -->
+    <rect x="1082" y="62" width="4" height="104" rx="2" fill="#2A1656"/>
+    <rect class="cm-thumb" x="1082" y="66" width="4" height="26" rx="2" fill="#E040FB"/>
+
+    <text x="1156" y="186" text-anchor="end" class="cm-mono" font-size="12" fill="#E040FB">REPO · LIVE DEMO  →</text>
+  </g>
+</svg>

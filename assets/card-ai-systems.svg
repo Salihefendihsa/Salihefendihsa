@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="210" viewBox="0 0 1200 210" role="img" aria-label="AI and Autonomous Systems — multi-agent orchestration with approval-first automation">
+  <title>AI &amp; Autonomous Systems</title>
+  <defs>
+    <linearGradient id="ca-bg" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#0B0716"/>
+      <stop offset="1" stop-color="#1B1036"/>
+    </linearGradient>
+    <linearGradient id="ca-accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#8B5CF6"/>
+      <stop offset="1" stop-color="#E040FB"/>
+    </linearGradient>
+    <radialGradient id="ca-halo" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#8B5CF6" stop-opacity="0.28"/>
+      <stop offset="1" stop-color="#8B5CF6" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="ca-glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="2.5" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <clipPath id="ca-clip"><rect width="1200" height="210" rx="20"/></clipPath>
+    <style>
+      .ca-sans { font-family: 'Segoe UI', Inter, Helvetica, Arial, sans-serif; }
+      .ca-mono { font-family: Consolas, 'JetBrains Mono', Menlo, monospace; }
+      .ca-flow { stroke-dasharray: 5 9; animation: ca-dash 2.4s linear infinite; }
+      .ca-n1 { animation: ca-pulse 3s ease-in-out infinite; }
+      .ca-n2 { animation: ca-pulse 3s ease-in-out infinite; animation-delay: -1s; }
+      .ca-n3 { animation: ca-pulse 3s ease-in-out infinite; animation-delay: -2s; }
+      .ca-gate { animation: ca-gate 6s ease-in-out infinite; }
+      @keyframes ca-dash { to { stroke-dashoffset: -28; } }
+      @keyframes ca-pulse { 0%,100% { opacity: 0.55; } 50% { opacity: 1; } }
+      @keyframes ca-gate { 0%,70%,100% { stroke: #FBBF24; } 80%,90% { stroke: #22D3EE; } }
+      @media (prefers-reduced-motion: reduce) { .ca-flow, .ca-n1, .ca-n2, .ca-n3, .ca-gate { animation: none; } }
+    </style>
+  </defs>
+  <g clip-path="url(#ca-clip)">
+    <rect width="1200" height="210" fill="url(#ca-bg)"/>
+    <ellipse cx="960" cy="105" rx="320" ry="170" fill="url(#ca-halo)"/>
+    <rect x="0" y="0" width="6" height="210" fill="url(#ca-accent)"/>
+
+    <!-- scanline texture (subtle) -->
+    <g stroke="#8B5CF6" stroke-opacity="0.05">
+      <line x1="0" y1="30" x2="1200" y2="30"/><line x1="0" y1="60" x2="1200" y2="60"/><line x1="0" y1="90" x2="1200" y2="90"/>
+      <line x1="0" y1="120" x2="1200" y2="120"/><line x1="0" y1="150" x2="1200" y2="150"/><line x1="0" y1="180" x2="1200" y2="180"/>
+    </g>
+
+    <text x="44" y="46" class="ca-mono" font-size="12" fill="#8B5CF6" letter-spacing="3">BUILD 02</text>
+    <rect x="128" y="32" width="110" height="20" rx="10" fill="#0B0716" stroke="#8B5CF6" stroke-opacity="0.7"/>
+    <text x="183" y="46" text-anchor="middle" class="ca-mono" font-size="10.5" fill="#C4B5FD" letter-spacing="1">PRIVATE R&amp;D</text>
+
+    <text x="44" y="92" class="ca-sans" font-size="34" font-weight="700" fill="#F5F3FF">AI &amp; Autonomous Systems</text>
+    <text x="44" y="122" class="ca-sans" font-size="16" fill="#C4B5FD">Multi-agent orchestration where humans stay in the loop.</text>
+    <text x="44" y="150" class="ca-sans" font-size="14" fill="#8B8AA8">Approval-first automation · reliability and security boundaries · observable workflows</text>
+
+    <g class="ca-mono" font-size="11" fill="#C4B5FD">
+      <rect x="44" y="166" width="66" height="22" rx="11" fill="#0B0716" stroke="#8B5CF6" stroke-opacity="0.5"/><text x="77" y="181" text-anchor="middle">Python</text>
+      <rect x="118" y="166" width="72" height="22" rx="11" fill="#0B0716" stroke="#8B5CF6" stroke-opacity="0.5"/><text x="154" y="181" text-anchor="middle">FastAPI</text>
+      <rect x="198" y="166" width="94" height="22" rx="11" fill="#0B0716" stroke="#8B5CF6" stroke-opacity="0.5"/><text x="245" y="181" text-anchor="middle">OpenAI API</text>
+      <rect x="300" y="166" width="94" height="22" rx="11" fill="#0B0716" stroke="#8B5CF6" stroke-opacity="0.5"/><text x="347" y="181" text-anchor="middle">Gemini API</text>
+      <rect x="402" y="166" width="66" height="22" rx="11" fill="#0B0716" stroke="#8B5CF6" stroke-opacity="0.5"/><text x="435" y="181" text-anchor="middle">Docker</text>
+    </g>
+
+    <!-- illustration: orchestrator -> agents -> approval gate -> action -->
+    <g transform="translate(760 0)">
+      <!-- orchestrator -->
+      <rect x="40" y="82" width="92" height="46" rx="10" fill="#150C2B" stroke="#8B5CF6" stroke-width="1.5"/>
+      <text x="86" y="101" text-anchor="middle" class="ca-mono" font-size="9.5" fill="#C4B5FD" letter-spacing="1">ORCHESTRATOR</text>
+      <text x="86" y="117" text-anchor="middle" class="ca-mono" font-size="10" fill="#22D3EE">plan · route</text>
+      <!-- agents -->
+      <g class="ca-n1"><circle cx="200" cy="56" r="14" fill="#150C2B" stroke="#22D3EE" stroke-width="1.5"/><text x="200" y="60" text-anchor="middle" class="ca-mono" font-size="10" fill="#22D3EE">A1</text></g>
+      <g class="ca-n2"><circle cx="200" cy="105" r="14" fill="#150C2B" stroke="#22D3EE" stroke-width="1.5"/><text x="200" y="109" text-anchor="middle" class="ca-mono" font-size="10" fill="#22D3EE">A2</text></g>
+      <g class="ca-n3"><circle cx="200" cy="154" r="14" fill="#150C2B" stroke="#22D3EE" stroke-width="1.5"/><text x="200" y="158" text-anchor="middle" class="ca-mono" font-size="10" fill="#22D3EE">A3</text></g>
+      <g fill="none" stroke="#8B5CF6" stroke-width="1.5" class="ca-flow">
+        <path d="M132 105 C 160 105, 160 56, 186 56"/>
+        <path d="M132 105 L186 105"/>
+        <path d="M132 105 C 160 105, 160 154, 186 154"/>
+      </g>
+      <!-- approval gate -->
+      <g class="ca-gate" fill="none" stroke="#FBBF24" stroke-width="2">
+        <path d="M296 80 L316 68 L336 80 L336 130 L316 142 L296 130 Z" fill="#150C2B"/>
+      </g>
+      <text x="316" y="110" text-anchor="middle" class="ca-mono" font-size="9" fill="#FBBF24" letter-spacing="1">HUMAN</text>
+      <text x="316" y="164" text-anchor="middle" class="ca-mono" font-size="9.5" fill="#FBBF24" letter-spacing="1">APPROVAL GATE</text>
+      <g fill="none" stroke="#8B5CF6" stroke-width="1.5" class="ca-flow">
+        <path d="M214 56 C 250 56, 250 100, 294 100"/>
+        <path d="M214 105 L294 105"/>
+        <path d="M214 154 C 250 154, 250 110, 294 110"/>
+      </g>
+      <!-- action -->
+      <path class="ca-flow" d="M338 105 L376 105" fill="none" stroke="#22D3EE" stroke-width="1.5"/>
+      <rect x="378" y="90" width="52" height="30" rx="8" fill="#150C2B" stroke="#22D3EE" stroke-width="1.5" filter="url(#ca-glow)"/>
+      <text x="404" y="109" text-anchor="middle" class="ca-mono" font-size="10" fill="#22D3EE">ACT</text>
+    </g>
+  </g>
+</svg>

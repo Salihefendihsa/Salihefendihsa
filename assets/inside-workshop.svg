@@ -1,0 +1,124 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="360" viewBox="0 0 1200 360" role="img" aria-label="Inside the workshop: Building, Exploring, Growing">
+  <title>Inside the Workshop</title>
+  <defs>
+    <linearGradient id="iw-panel" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#150C2B"/>
+      <stop offset="1" stop-color="#0B0716"/>
+    </linearGradient>
+    <linearGradient id="iw-cyan" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#22D3EE"/>
+      <stop offset="1" stop-color="#22D3EE" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="iw-violet" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#8B5CF6"/>
+      <stop offset="1" stop-color="#8B5CF6" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="iw-magenta" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#E040FB"/>
+      <stop offset="1" stop-color="#E040FB" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="iw-halo-cyan" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#22D3EE" stop-opacity="0.22"/>
+      <stop offset="1" stop-color="#22D3EE" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="iw-halo-violet" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#8B5CF6" stop-opacity="0.25"/>
+      <stop offset="1" stop-color="#8B5CF6" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="iw-halo-magenta" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#E040FB" stop-opacity="0.18"/>
+      <stop offset="1" stop-color="#E040FB" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="iw-glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="2" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <style>
+      .iw-sans { font-family: 'Segoe UI', Inter, Helvetica, Arial, sans-serif; }
+      .iw-mono { font-family: Consolas, 'JetBrains Mono', Menlo, monospace; }
+      .iw-spin { animation: iw-spin 24s linear infinite; transform-origin: 600px 118px; }
+      .iw-sweep { animation: iw-spin 6s linear infinite; transform-origin: 600px 118px; }
+      .iw-bob { animation: iw-bob 4s ease-in-out infinite; }
+      .iw-rise { animation: iw-rise 5s ease-in-out infinite; }
+      .iw-pulse { animation: iw-pulse 3s ease-in-out infinite; }
+      @keyframes iw-spin { to { transform: rotate(360deg); } }
+      @keyframes iw-bob { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-4px); } }
+      @keyframes iw-rise { 0%,100% { opacity: 0.5; } 50% { opacity: 1; } }
+      @keyframes iw-pulse { 0%,100% { opacity: 0.5; } 50% { opacity: 1; } }
+      @media (prefers-reduced-motion: reduce) { .iw-spin, .iw-sweep, .iw-bob, .iw-rise, .iw-pulse { animation: none; } }
+    </style>
+  </defs>
+
+  <!-- ===== Panel 1: Building ===== -->
+  <g>
+    <rect x="16" y="16" width="370" height="328" rx="20" fill="url(#iw-panel)" stroke="#22D3EE" stroke-opacity="0.35" stroke-width="1.2"/>
+    <ellipse cx="200" cy="110" rx="170" ry="110" fill="url(#iw-halo-cyan)"/>
+    <rect x="16" y="16" width="370" height="3" rx="1.5" fill="url(#iw-cyan)"/>
+    <!-- icon: isometric cube stack -->
+    <g class="iw-bob" filter="url(#iw-glow)">
+      <path d="M200 60 L236 80 L200 100 L164 80 Z" fill="#22D3EE" fill-opacity="0.85"/>
+      <path d="M164 80 L200 100 L200 140 L164 120 Z" fill="#0E7490" fill-opacity="0.9"/>
+      <path d="M236 80 L200 100 L200 140 L236 120 Z" fill="#155E75" fill-opacity="0.9"/>
+      <path d="M200 60 L236 80 L200 100 L164 80 Z" fill="none" stroke="#E0FCFF" stroke-width="1"/>
+      <path d="M164 80 L200 100 L236 80 M200 100 L200 140" fill="none" stroke="#E0FCFF" stroke-opacity="0.6" stroke-width="1"/>
+    </g>
+    <text x="201" y="188" text-anchor="middle" class="iw-mono" font-size="11" fill="#22D3EE" letter-spacing="3">01</text>
+    <text x="201" y="216" text-anchor="middle" class="iw-sans" font-size="24" font-weight="700" fill="#F5F3FF">Building</text>
+    <g class="iw-sans" font-size="15" fill="#C4B5FD">
+      <text x="201" y="254" text-anchor="middle">AI agent systems</text>
+      <text x="201" y="280" text-anchor="middle">Mobile and backend products</text>
+      <text x="201" y="306" text-anchor="middle">Workflow automation</text>
+    </g>
+  </g>
+
+  <!-- ===== Panel 2: Exploring ===== -->
+  <g>
+    <rect x="415" y="16" width="370" height="328" rx="20" fill="url(#iw-panel)" stroke="#8B5CF6" stroke-opacity="0.45" stroke-width="1.2"/>
+    <ellipse cx="600" cy="110" rx="170" ry="110" fill="url(#iw-halo-violet)"/>
+    <rect x="415" y="16" width="370" height="3" rx="1.5" fill="url(#iw-violet)"/>
+    <!-- icon: radar -->
+    <g fill="none" stroke="#8B5CF6" stroke-opacity="0.7" stroke-width="1.2">
+      <circle cx="600" cy="118" r="44"/>
+      <circle cx="600" cy="118" r="30"/>
+      <circle cx="600" cy="118" r="16"/>
+      <path d="M556 118 H644 M600 74 V162"/>
+    </g>
+    <g class="iw-sweep">
+      <path d="M600 118 L600 74 A44 44 0 0 1 638 96 Z" fill="#8B5CF6" fill-opacity="0.35"/>
+      <line x1="600" y1="118" x2="600" y2="74" stroke="#C4B5FD" stroke-width="1.5"/>
+    </g>
+    <circle class="iw-pulse" cx="622" cy="100" r="3" fill="#22D3EE" filter="url(#iw-glow)"/>
+    <circle class="iw-pulse" cx="582" cy="132" r="2.5" fill="#E040FB" filter="url(#iw-glow)"/>
+    <circle cx="600" cy="118" r="3" fill="#F5F3FF"/>
+    <text x="600" y="188" text-anchor="middle" class="iw-mono" font-size="11" fill="#8B5CF6" letter-spacing="3">02</text>
+    <text x="600" y="216" text-anchor="middle" class="iw-sans" font-size="24" font-weight="700" fill="#F5F3FF">Exploring</text>
+    <g class="iw-sans" font-size="15" fill="#C4B5FD">
+      <text x="600" y="254" text-anchor="middle">Reliable autonomous systems</text>
+      <text x="600" y="280" text-anchor="middle">Human-centered AI experiences</text>
+      <text x="600" y="306" text-anchor="middle">Product-led engineering</text>
+    </g>
+  </g>
+
+  <!-- ===== Panel 3: Growing ===== -->
+  <g>
+    <rect x="814" y="16" width="370" height="328" rx="20" fill="url(#iw-panel)" stroke="#E040FB" stroke-opacity="0.35" stroke-width="1.2"/>
+    <ellipse cx="999" cy="110" rx="170" ry="110" fill="url(#iw-halo-magenta)"/>
+    <rect x="814" y="16" width="370" height="3" rx="1.5" fill="url(#iw-magenta)"/>
+    <!-- icon: growth bars + arrow -->
+    <g filter="url(#iw-glow)">
+      <rect x="958" y="132" width="14" height="28" rx="3" fill="#E040FB" fill-opacity="0.55"/>
+      <rect x="980" y="116" width="14" height="44" rx="3" fill="#E040FB" fill-opacity="0.7"/>
+      <rect x="1002" y="98" width="14" height="62" rx="3" fill="#E040FB" fill-opacity="0.85"/>
+      <rect class="iw-rise" x="1024" y="76" width="14" height="84" rx="3" fill="#FBBF24" fill-opacity="0.9"/>
+      <path d="M952 122 L986 104 L1010 112 L1040 72" fill="none" stroke="#F5F3FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M1028 72 H1042 V86" fill="none" stroke="#F5F3FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+    <text x="999" y="188" text-anchor="middle" class="iw-mono" font-size="11" fill="#E040FB" letter-spacing="3">03</text>
+    <text x="999" y="216" text-anchor="middle" class="iw-sans" font-size="24" font-weight="700" fill="#F5F3FF">Growing</text>
+    <g class="iw-sans" font-size="15" fill="#C4B5FD">
+      <text x="999" y="254" text-anchor="middle">Product strategy · Sales</text>
+      <text x="999" y="280" text-anchor="middle">Marketing</text>
+      <text x="999" y="306" text-anchor="middle">Business development</text>
+    </g>
+  </g>
+</svg>

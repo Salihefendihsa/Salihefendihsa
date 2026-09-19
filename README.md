@@ -1,102 +1,72 @@
 <div align="center">
 
-<img src="https://raw.githubusercontent.com/Salihefendihsa/Salihefendihsa/main/assets/banner.svg" alt="banner" />
+<img src="assets/hero-neon-workshop.svg" alt="Hilmi Salih Altınışık — Software Engineer · AI Systems Builder · Product-Minded Entrepreneur" width="100%" />
+
+</div>
+
+## Welcome to My Workshop
+
+**I build software where AI, automation, and real business needs meet.**
+
+I take products end-to-end — from architecture and backend to mobile apps and shipped UI — and I'm increasingly focused on AI agent systems and workflow automation. Along the way I keep a product and business lens on every build: what it's for, who it serves, and how it grows.
+
+## Inside the Workshop
+
+<img src="assets/inside-workshop.svg" alt="Building: AI agent systems, mobile and backend products, workflow automation. Exploring: reliable autonomous systems, human-centered AI experiences, product-led engineering. Growing: product strategy, sales, marketing, business development." width="100%" />
+
+## Selected Builds
+
+<a href="https://yuk-le.vercel.app"><img src="assets/card-navlonix.svg" alt="Navlonix — AI-powered logistics marketplace (in active development)" width="100%" /></a>
+
+<sub>**Navlonix** · AI-powered logistics marketplace matching shippers with trusted drivers — role-based apps, escrow-backed payments, real-time chat and tracking. Built solo on .NET 9, React, Expo and PostgreSQL. In active development. → [Live demo](https://yuk-le.vercel.app)</sub>
 
 <br/>
 
+<img src="assets/card-ai-systems.svg" alt="AI & Autonomous Systems — multi-agent orchestration with approval-first automation" width="100%" />
+
+<sub>**AI & Autonomous Systems** · Private R&D on multi-agent orchestration: agents plan and act inside explicit boundaries, humans approve what matters, and every workflow stays observable. Python, FastAPI, OpenAI and Gemini APIs, Docker.</sub>
+
+<br/>
+
+<a href="https://github.com/Salihefendihsa/mrc-commerce"><img src="assets/card-mrc-commerce.svg" alt="MRC Commerce — scroll-driven brand storefront built with Next.js" width="100%" /></a>
+
+<sub>**MRC Commerce** · Cinematic, scroll-driven brand storefront with a production-grade marketing experience. The typed database schema is in place; cart, checkout and admin are the next phases. Next.js, TypeScript, Tailwind, Drizzle. → [Repository](https://github.com/Salihefendihsa/mrc-commerce) · [Live demo](https://mrc-commerce.vercel.app)</sub>
+
+## Tech Universe
+
+<img src="assets/tech-universe.svg" alt="Tech Universe — Languages: C#, TypeScript, Python, Dart. Frontend: React, Next.js, Vite, Tailwind CSS. Backend: .NET / ASP.NET Core, Node.js / Express, FastAPI. Mobile: Flutter, React Native / Expo. Data: PostgreSQL, Supabase, Prisma, Drizzle, MongoDB. AI & Automation: OpenAI API, Gemini API, ML.NET, OpenCV. Tools: Docker, Git, GitHub Actions." width="100%" />
+
+## Workshop Status
+
+```text
+┌─ WORKSHOP STATUS ──────────────────────────────────────┐
+│                                                        │
+│  MODE      Building                                    │
+│  FOCUS     AI × Products × Automation                  │
+│  BASE      Türkiye                                     │
+│  SIGNAL    Open to meaningful collaborations           │
+│                                                        │
+└────────────────────────────────────────────────────────┘
+```
+
+## Activity
+
+<div align="center">
+
+<img src="https://raw.githubusercontent.com/Salihefendihsa/Salihefendihsa/output/3d-contrib.svg" alt="3D contribution graph" width="100%" />
+
+</div>
+
+## Contact
+
+<div align="center">
+
 <a href="https://www.linkedin.com/in/hilmi-salih-alt%C4%B1n%C4%B1%C5%9F%C4%B1k-6a9301294/"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
-<img src="https://komarev.com/ghpvc/?username=Salihefendihsa&style=flat-square&color=58A6FF&label=Profile%20Views" alt="views" />
-<img src="https://img.shields.io/github/followers/Salihefendihsa?style=flat-square&logo=github&color=58A6FF&labelColor=0D1117&label=Followers" alt="followers" />
+&nbsp;
+<a href="mailto:altinisikhilmisalih@gmail.com"><img src="https://img.shields.io/badge/Email-7C3AED?style=flat-square&logo=gmail&logoColor=white" alt="Email" /></a>
+&nbsp;
+<a href="https://github.com/Salihefendihsa"><img src="https://img.shields.io/badge/GitHub-0D1117?style=flat-square&logo=github&logoColor=22D3EE" alt="GitHub" /></a>
 
 </div>
 
-### About
-
-I build products end-to-end — backend, web, and mobile — taking them from an empty repo to a shipped, marketed app. Right now I'm founding and building **Navlonix**, an AI-powered logistics freight-matching marketplace, entirely solo.
-
-I care about the full loop: **architecture → UX → ship → growth.** Computer Science student at Fırat University, learning by putting real products in front of real users.
-
-<div align="center"><img src="https://raw.githubusercontent.com/Salihefendihsa/Salihefendihsa/main/assets/divider.svg" width="80%" alt="" /></div>
-
-### 📦 Featured — Navlonix (YÜK-LE)
-
-An AI-powered logistics freight-matching marketplace, architected and built solo.
-
-- **Stack** · .NET 9 API · React 19 + Vite · Expo React Native · Next.js · PostgreSQL
-- **Features** · role-based access (customer / driver / admin) · escrow-secured payments · real-time chat & live tracking
-- **Scope** · four apps + one database, designed and shipped by one person
-
-🔗 **[github.com/Salihefendihsa/YUK-LE](https://github.com/Salihefendihsa/YUK-LE)**
-
-<div align="center"><img src="https://raw.githubusercontent.com/Salihefendihsa/Salihefendihsa/main/assets/divider.svg" width="80%" alt="" /></div>
-
-### 🧰 Tech Stack
-
-**Languages**
-![C#](https://img.shields.io/badge/C%23-161C26?style=for-the-badge&logo=csharp&logoColor=white)
-![TypeScript](https://img.shields.io/badge/TypeScript-161C26?style=for-the-badge&logo=typescript&logoColor=white)
-
-**Frontend**
-![React](https://img.shields.io/badge/React-161C26?style=for-the-badge&logo=react&logoColor=white)
-![Next.js](https://img.shields.io/badge/Next.js-161C26?style=for-the-badge&logo=nextdotjs&logoColor=white)
-![Vite](https://img.shields.io/badge/Vite-161C26?style=for-the-badge&logo=vite&logoColor=white)
-![Tailwind](https://img.shields.io/badge/Tailwind-161C26?style=for-the-badge&logo=tailwindcss&logoColor=white)
-
-**Backend**
-![.NET](https://img.shields.io/badge/.NET%209-161C26?style=for-the-badge&logo=dotnet&logoColor=white)
-![ASP.NET Core](https://img.shields.io/badge/ASP.NET%20Core-161C26?style=for-the-badge&logo=dotnet&logoColor=white)
-
-**Mobile**
-![React Native](https://img.shields.io/badge/React%20Native-161C26?style=for-the-badge&logo=react&logoColor=white)
-![Expo](https://img.shields.io/badge/Expo-161C26?style=for-the-badge&logo=expo&logoColor=white)
-
-**Data & DevOps**
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-161C26?style=for-the-badge&logo=postgresql&logoColor=white)
-![Docker](https://img.shields.io/badge/Docker-161C26?style=for-the-badge&logo=docker&logoColor=white)
-![Git](https://img.shields.io/badge/Git-161C26?style=for-the-badge&logo=git&logoColor=white)
-
-<div align="center"><img src="https://raw.githubusercontent.com/Salihefendihsa/Salihefendihsa/main/assets/divider.svg" width="80%" alt="" /></div>
-
-### 📈 Activity
-
-<div align="center">
-
-<img src="https://streak-stats.demolab.com?user=Salihefendihsa&hide_border=true&background=0D1117&ring=58A6FF&fire=A371F7&currStreakLabel=58A6FF&sideLabels=c9d1d9&dates=8b949e&stroke=21262D&currStreakNum=c9d1d9&sideNums=c9d1d9&dayLabels=8b949e" alt="streak" />
-
-<img src="https://raw.githubusercontent.com/Salihefendihsa/Salihefendihsa/output/activity-graph.svg" alt="activity graph" />
-
-</div>
-
-<div align="center"><img src="https://raw.githubusercontent.com/Salihefendihsa/Salihefendihsa/main/assets/divider.svg" width="80%" alt="" /></div>
-
-### 🐍 Contribution Graph (live)
-
-<div align="center">
-
-<img src="https://raw.githubusercontent.com/Salihefendihsa/Salihefendihsa/output/github-snake-dark.svg" alt="snake eating contributions" />
-
-</div>
-
-<div align="center"><img src="https://raw.githubusercontent.com/Salihefendihsa/Salihefendihsa/main/assets/divider.svg" width="80%" alt="" /></div>
-
-### 🌐 3D Contributions
-
-<div align="center">
-
-<img src="https://raw.githubusercontent.com/Salihefendihsa/Salihefendihsa/output/3d-contrib.svg" alt="3D contributions" />
-
-</div>
-
-<div align="center"><img src="https://raw.githubusercontent.com/Salihefendihsa/Salihefendihsa/main/assets/divider.svg" width="80%" alt="" /></div>
-
-### 🤝 Connect
-
-<div align="center">
-
-<a href="https://www.linkedin.com/in/hilmi-salih-alt%C4%B1n%C4%B1%C5%9F%C4%B1k-6a9301294/"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" /></a>
-<a href="mailto:altinisikhilmisalih@gmail.com"><img src="https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white" /></a>
-<a href="https://github.com/Salihefendihsa"><img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" /></a>
-
-</div>
-
-<img src="https://raw.githubusercontent.com/Salihefendihsa/Salihefendihsa/main/assets/footer.svg" alt="footer" />
+<img src="assets/footer-neon-workshop.svg" alt="Let's build something useful." width="100%" />
