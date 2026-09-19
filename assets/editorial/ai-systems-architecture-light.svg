@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="430" viewBox="0 0 1200 430" role="img" aria-label="Multi-agent workflow: Plan, Execute, Review, Security Audit, with Human Approval required before important actions.">
+  <title>AI systems architecture — Plan, Execute, Review, Security Audit, Human Approval</title>
+  <defs>
+    <marker id="arl-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 Z" fill="#5E667A"/>
+    </marker>
+  </defs>
+  <style>
+    .arl-sans { font-family: 'Segoe UI', Inter, Helvetica, Arial, sans-serif; }
+    .arl-mono { font-family: Consolas, 'JetBrains Mono', Menlo, monospace; }
+  </style>
+  <rect width="1200" height="430" rx="14" fill="#F4F2EC"/>
+  <rect x="0.5" y="0.5" width="1199" height="429" rx="14" fill="none" stroke="#D9D6CE"/>
+  <text x="64" y="56" class="arl-mono" font-size="15" fill="#5E667A" letter-spacing="3">AGENT WORKFLOW — CONTROL FLOW</text>
+
+  <rect x="64" y="96" width="238" height="92" rx="10" fill="#FBFAF7" stroke="#D9D6CE" stroke-width="1.5"/>
+  <text x="183.0" y="136" text-anchor="middle" class="arl-sans" font-size="24" font-weight="700" fill="#0B0D10">Plan</text>
+  <text x="183.0" y="164" text-anchor="middle" class="arl-sans" font-size="17" fill="#5E667A">goal → task graph</text>
+  <rect x="338" y="96" width="238" height="92" rx="10" fill="#FBFAF7" stroke="#D9D6CE" stroke-width="1.5"/>
+  <text x="457.0" y="136" text-anchor="middle" class="arl-sans" font-size="24" font-weight="700" fill="#0B0D10">Execute</text>
+  <text x="457.0" y="164" text-anchor="middle" class="arl-sans" font-size="17" fill="#5E667A">agents run bounded tasks</text>
+  <rect x="612" y="96" width="238" height="92" rx="10" fill="#FBFAF7" stroke="#D9D6CE" stroke-width="1.5"/>
+  <text x="731.0" y="136" text-anchor="middle" class="arl-sans" font-size="24" font-weight="700" fill="#0B0D10">Review</text>
+  <text x="731.0" y="164" text-anchor="middle" class="arl-sans" font-size="17" fill="#5E667A">results checked against plan</text>
+  <rect x="886" y="96" width="238" height="92" rx="10" fill="#FBFAF7" stroke="#D9D6CE" stroke-width="1.5"/>
+  <text x="1005.0" y="136" text-anchor="middle" class="arl-sans" font-size="24" font-weight="700" fill="#0B0D10">Security Audit</text>
+  <text x="1005.0" y="164" text-anchor="middle" class="arl-sans" font-size="17" fill="#5E667A">policy and boundary checks</text>
+  <line x1="302" y1="142.0" x2="332" y2="142.0" stroke="#5E667A" stroke-width="1.8" marker-end="url(#arl-arrow)"/>
+  <line x1="576" y1="142.0" x2="606" y2="142.0" stroke="#5E667A" stroke-width="1.8" marker-end="url(#arl-arrow)"/>
+  <line x1="850" y1="142.0" x2="880" y2="142.0" stroke="#5E667A" stroke-width="1.8" marker-end="url(#arl-arrow)"/>
+  <rect x="338" y="262" width="238" height="92" rx="10" fill="#FBFAF7" stroke="#6C7CFF" stroke-width="2"/>
+  <text x="457.0" y="302" text-anchor="middle" class="arl-sans" font-size="24" font-weight="700" fill="#0B0D10">Human Approval</text>
+  <text x="457.0" y="330" text-anchor="middle" class="arl-sans" font-size="17" fill="#5E667A">required for important actions</text>
+  <path d="M457.0 188 V254" fill="none" stroke="#6C7CFF" stroke-width="1.8" stroke-dasharray="6 6" marker-end="url(#arl-arrow)"/>
+  <path d="M576 308.0 H771.0 V196" fill="none" stroke="#6C7CFF" stroke-width="1.8" stroke-dasharray="6 6" marker-end="url(#arl-arrow)"/>
+  <text x="471.0" y="232" class="arl-mono" font-size="14" fill="#6C7CFF" letter-spacing="1">side-effecting action?</text>
+  <text x="590" y="298.0" class="arl-mono" font-size="14" fill="#6C7CFF" letter-spacing="1">approved → continue</text>
+  <!-- legend -->
+  <line x1="64" y1="390" x2="104" y2="390" stroke="#5E667A" stroke-width="1.8"/>
+  <text x="114" y="395" class="arl-mono" font-size="14" fill="#5E667A">automated step</text>
+  <line x1="290" y1="390" x2="330" y2="390" stroke="#6C7CFF" stroke-width="1.8" stroke-dasharray="6 6"/>
+  <text x="340" y="395" class="arl-mono" font-size="14" fill="#5E667A">approval gate</text>
+  <text x="1136" y="395" text-anchor="end" class="arl-mono" font-size="14" fill="#5E667A">every step logged · fail-closed on audit failure</text>
+</svg>

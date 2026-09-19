@@ -1,72 +1,84 @@
-<div align="center">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/editorial/header-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="assets/editorial/header-light.svg">
+  <img alt="Hilmi Salih Altınışık — Software Engineer and Product Builder" src="assets/editorial/header-dark.svg" width="100%">
+</picture>
 
-<img src="assets/hero-neon-workshop.svg" alt="Hilmi Salih Altınışık — Software Engineer · AI Systems Builder · Product-Minded Entrepreneur" width="100%" />
+I build software products from architecture to launch — across backend, web and mobile.
 
-</div>
+Right now most of my work is on AI-assisted systems, workflow automation and products that solve operational problems for real businesses.
 
-## Welcome to My Workshop
+Alongside engineering, I'm building a stronger product, sales and marketing perspective so the things I ship also find their market.
 
-**I build software where AI, automation, and real business needs meet.**
+## Selected Work
 
-I take products end-to-end — from architecture and backend to mobile apps and shipped UI — and I'm increasingly focused on AI agent systems and workflow automation. Along the way I keep a product and business lens on every build: what it's for, who it serves, and how it grows.
+### Navlonix
 
-## Inside the Workshop
+A logistics marketplace that connects businesses with verified drivers and uses AI to match loads with the right carrier. Fair freight pricing, a secure payment flow and real-time operations for customers, drivers and operators. In active development.
 
-<img src="assets/inside-workshop.svg" alt="Building: AI agent systems, mobile and backend products, workflow automation. Exploring: reliable autonomous systems, human-centered AI experiences, product-led engineering. Growing: product strategy, sales, marketing, business development." width="100%" />
+`.NET 9 · React · Expo · PostgreSQL`
 
-## Selected Builds
+[Live demo](https://yuk-le.vercel.app)
 
-<a href="https://yuk-le.vercel.app"><img src="assets/card-navlonix.svg" alt="Navlonix — AI-powered logistics marketplace (in active development)" width="100%" /></a>
+<br>
 
-<sub>**Navlonix** · AI-powered logistics marketplace matching shippers with trusted drivers — role-based apps, escrow-backed payments, real-time chat and tracking. Built solo on .NET 9, React, Expo and PostgreSQL. In active development. → [Live demo](https://yuk-le.vercel.app)</sub>
+### MRC Commerce
 
-<br/>
+<a href="https://mrc-commerce.vercel.app"><img src="assets/editorial/mrc-commerce-product.webp" alt="MRC Commerce storefront — hero section of the live site" width="100%"></a>
 
-<img src="assets/card-ai-systems.svg" alt="AI & Autonomous Systems — multi-agent orchestration with approval-first automation" width="100%" />
+A cinematic storefront for a wooden-toy brand: scroll-driven product experience, typed architecture and a migration-first database schema. The marketing experience is live; the commerce layer (cart, checkout, admin) is in progress.
 
-<sub>**AI & Autonomous Systems** · Private R&D on multi-agent orchestration: agents plan and act inside explicit boundaries, humans approve what matters, and every workflow stays observable. Python, FastAPI, OpenAI and Gemini APIs, Docker.</sub>
+`Next.js · TypeScript · Tailwind · Drizzle`
 
-<br/>
+[Repository](https://github.com/Salihefendihsa/mrc-commerce) · [Live demo](https://mrc-commerce.vercel.app)
 
-<a href="https://github.com/Salihefendihsa/mrc-commerce"><img src="assets/card-mrc-commerce.svg" alt="MRC Commerce — scroll-driven brand storefront built with Next.js" width="100%" /></a>
+<br>
 
-<sub>**MRC Commerce** · Cinematic, scroll-driven brand storefront with a production-grade marketing experience. The typed database schema is in place; cart, checkout and admin are the next phases. Next.js, TypeScript, Tailwind, Drizzle. → [Repository](https://github.com/Salihefendihsa/mrc-commerce) · [Live demo](https://mrc-commerce.vercel.app)</sub>
+### AI & Autonomous Systems
 
-## Tech Universe
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/editorial/ai-systems-architecture-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="assets/editorial/ai-systems-architecture-light.svg">
+  <img alt="Agent workflow: Plan → Execute → Review → Security Audit, with a Human Approval gate before important actions" src="assets/editorial/ai-systems-architecture-dark.svg" width="100%">
+</picture>
 
-<img src="assets/tech-universe.svg" alt="Tech Universe — Languages: C#, TypeScript, Python, Dart. Frontend: React, Next.js, Vite, Tailwind CSS. Backend: .NET / ASP.NET Core, Node.js / Express, FastAPI. Mobile: Flutter, React Native / Expo. Data: PostgreSQL, Supabase, Prisma, Drizzle, MongoDB. AI & Automation: OpenAI API, Gemini API, ML.NET, OpenCV. Tools: Docker, Git, GitHub Actions." width="100%" />
+Private work on multi-agent orchestration with explicit security boundaries: agents plan and execute bounded tasks, results are reviewed and audited, and important actions wait for human approval. Every workflow is observable, and development is reliability-focused — fault injection and fail-closed configuration before autonomy is widened.
 
-## Workshop Status
+`Python · FastAPI · Docker · OpenAI / Gemini APIs`
 
-```text
-┌─ WORKSHOP STATUS ──────────────────────────────────────┐
-│                                                        │
-│  MODE      Building                                    │
-│  FOCUS     AI × Products × Automation                  │
-│  BASE      Türkiye                                     │
-│  SIGNAL    Open to meaningful collaborations           │
-│                                                        │
-└────────────────────────────────────────────────────────┘
-```
+## How I Build
 
-## Activity
+| Principle | Meaning |
+| --- | --- |
+| Product first | Start with the real problem and the person who has it. |
+| Strong foundations | Prefer clear architecture and systems that stay maintainable. |
+| Controlled automation | Automate aggressively without removing safety boundaries. |
+| Ship and learn | Release in measured steps and improve from evidence. |
 
-<div align="center">
+## Core Expertise
 
-<img src="https://raw.githubusercontent.com/Salihefendihsa/Salihefendihsa/output/3d-contrib.svg" alt="3D contribution graph" width="100%" />
+**Product Engineering**<br>
+React, Next.js, TypeScript, product UX and end-to-end delivery.
 
-</div>
+**Backend Architecture**<br>
+C#, .NET, Node.js, Python, PostgreSQL and API design.
+
+**Mobile Applications**<br>
+Flutter and React Native / Expo, backed by real APIs.
+
+**AI Systems & Automation**<br>
+Multi-agent workflows, approval gates, OpenAI and Gemini integrations, Docker-based deployment.
+
+## Current Focus
+
+- Building and validating Navlonix
+- Developing reliable multi-agent workflows
+- Growing in product strategy, sales and marketing
 
 ## Contact
 
-<div align="center">
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/hilmi-salih-alt%C4%B1n%C4%B1%C5%9F%C4%B1k-6a9301294/)
+[![Email](https://img.shields.io/badge/Email-6C7CFF?style=flat-square&logo=gmail&logoColor=white)](mailto:altinisikhilmisalih@gmail.com)
+[![GitHub](https://img.shields.io/badge/GitHub-0B0D10?style=flat-square&logo=github&logoColor=white)](https://github.com/Salihefendihsa)
 
-<a href="https://www.linkedin.com/in/hilmi-salih-alt%C4%B1n%C4%B1%C5%9F%C4%B1k-6a9301294/"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
-&nbsp;
-<a href="mailto:altinisikhilmisalih@gmail.com"><img src="https://img.shields.io/badge/Email-7C3AED?style=flat-square&logo=gmail&logoColor=white" alt="Email" /></a>
-&nbsp;
-<a href="https://github.com/Salihefendihsa"><img src="https://img.shields.io/badge/GitHub-0D1117?style=flat-square&logo=github&logoColor=22D3EE" alt="GitHub" /></a>
-
-</div>
-
-<img src="assets/footer-neon-workshop.svg" alt="Let's build something useful." width="100%" />
+If you're building something useful, I'd be glad to hear about it.
