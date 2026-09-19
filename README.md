@@ -14,11 +14,12 @@ Alongside engineering, I'm building a stronger product, sales and marketing pers
 
 ### Navlonix
 
-A logistics marketplace that connects businesses with verified drivers and uses AI to match loads with the right carrier. Fair freight pricing, a secure payment flow and real-time operations for customers, drivers and operators. In active development.
+AI-powered logistics marketplace connecting businesses with verified drivers. Fair freight pricing, a secure payment flow and real-time operations for customers, drivers and operators.
 
-`.NET 9 · React · Expo · PostgreSQL`
+`.NET 9 · React · Expo · PostgreSQL`<br>
+In active development
 
-[Live demo](https://yuk-le.vercel.app)
+<sub>Public preview temporarily unavailable while deployment configuration is being updated.</sub>
 
 <br>
 
@@ -45,6 +46,17 @@ A cinematic storefront for a wooden-toy brand: scroll-driven product experience,
 Private work on multi-agent orchestration with explicit security boundaries: agents plan and execute bounded tasks, results are reviewed and audited, and important actions wait for human approval. Every workflow is observable, and development is reliability-focused — fault injection and fail-closed configuration before autonomy is widened.
 
 `Python · FastAPI · Docker · OpenAI / Gemini APIs`
+
+<!-- PROJECT_INDEX:START -->
+<!-- Generated automatically from public repositories tagged with `portfolio`. -->
+
+## Project Index
+
+<sub>Automatically updated from public repositories tagged with `portfolio`.</sub>
+
+_No projects are tagged yet. Add the `portfolio` topic to a public repository to list it here._
+
+<!-- PROJECT_INDEX:END -->
 
 ## How I Build
 
