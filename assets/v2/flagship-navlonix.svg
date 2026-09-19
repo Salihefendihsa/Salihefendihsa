@@ -1,0 +1,129 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="330" viewBox="0 0 1200 330" role="img" aria-label="Flagship product: Navlonix — AI-powered logistics marketplace connecting businesses with verified drivers. Fair pricing, secure payment, real-time operations. In active development. Live demo.">
+  <title>Navlonix — Flagship Product</title>
+  <defs>
+    <linearGradient id="fl-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#07050F"/>
+      <stop offset="0.55" stop-color="#0E0920"/>
+      <stop offset="1" stop-color="#1A0F33"/>
+    </linearGradient>
+    <linearGradient id="fl-panel" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#241546" stop-opacity="0.85"/>
+      <stop offset="1" stop-color="#07050F" stop-opacity="0.85"/>
+    </linearGradient>
+    <linearGradient id="fl-spectrum" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#22D3EE"/>
+      <stop offset="0.5" stop-color="#7C3AED"/>
+      <stop offset="1" stop-color="#E040FB"/>
+    </linearGradient>
+    <linearGradient id="fl-ink" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#F4F1FF"/>
+      <stop offset="1" stop-color="#A78BFA"/>
+    </linearGradient>
+    <radialGradient id="fl-halo-v" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#7C3AED" stop-opacity="0.40"/>
+      <stop offset="1" stop-color="#7C3AED" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="fl-halo-c" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#22D3EE" stop-opacity="0.26"/>
+      <stop offset="1" stop-color="#22D3EE" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="fl-halo-m" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#E040FB" stop-opacity="0.16"/>
+      <stop offset="1" stop-color="#E040FB" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="fl-dots" width="26" height="26" patternUnits="userSpaceOnUse">
+      <circle cx="1.2" cy="1.2" r="1.2" fill="#A78BFA" fill-opacity="0.16"/>
+    </pattern>
+    <filter id="fl-glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="fl-soft" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="1.4" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <clipPath id="fl-clip"><rect width="1200" height="330" rx="26"/></clipPath>
+
+    <style>
+      .fl-sans { font-family: 'Segoe UI', Inter, Helvetica, Arial, sans-serif; }
+      .fl-mono { font-family: Consolas, 'JetBrains Mono', Menlo, monospace; }
+      .fl-pulse { animation: fl-pulse 3s ease-in-out infinite; }
+      .fl-pulse2 { animation: fl-pulse 3s ease-in-out infinite; animation-delay: -1.5s; }
+      .fl-float { animation: fl-float 6s ease-in-out infinite; }
+      .fl-dash { stroke-dasharray: 6 10; animation: fl-dash 3.2s linear infinite; }
+      .fl-blink { animation: fl-blink 5s steps(1, end) infinite; }
+      @keyframes fl-pulse { 0%,100% { opacity: 0.45; } 50% { opacity: 1; } }
+      @keyframes fl-float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-6px); } }
+      @keyframes fl-dash { to { stroke-dashoffset: -32; } }
+      @keyframes fl-blink { 0%,92%,100% { transform: scaleY(1); } 95% { transform: scaleY(0.12); } }
+      .fl-route { stroke-dasharray: 10 12; animation: fl-dash 2.8s linear infinite; }
+      .fl-ring { animation: fl-ring 3s ease-out infinite; transform-origin: 1100px 96px; }
+      @keyframes fl-ring { 0% { transform: scale(0.6); opacity: 0.8; } 100% { transform: scale(2.2); opacity: 0; } }
+      @media (prefers-reduced-motion: reduce) { .fl-pulse, .fl-pulse2, .fl-float, .fl-dash, .fl-blink, .fl-anim { animation: none; } }
+    </style>
+  </defs>
+  <g clip-path="url(#fl-clip)">
+    <rect width="1200" height="330" fill="url(#fl-bg)"/>
+    <rect width="1200" height="330" fill="url(#fl-dots)"/>
+    <ellipse cx="200" cy="80" rx="520" ry="280" fill="url(#fl-halo-v)"/>
+    <ellipse cx="960" cy="200" rx="420" ry="240" fill="url(#fl-halo-c)"/>
+    <rect x="0" y="0" width="7" height="330" fill="#F5C451"/>
+
+    <!-- tags -->
+    <rect x="56" y="40" width="128" height="30" rx="15" fill="#07050F" stroke="#F5C451" stroke-opacity="0.85"/>
+    <text x="120" y="60" text-anchor="middle" class="fl-mono" font-size="14" fill="#F5C451" letter-spacing="3">FLAGSHIP</text>
+    <rect x="194" y="40" width="252" height="30" rx="15" fill="#07050F" stroke="#22D3EE" stroke-opacity="0.6"/>
+    <circle class="fl-pulse" cx="212" cy="55" r="4.5" fill="#22D3EE" filter="url(#fl-glow)"/>
+    <text x="226" y="60" class="fl-mono" font-size="14" fill="#22D3EE" letter-spacing="2">IN ACTIVE DEVELOPMENT</text>
+
+    <text x="56" y="140" class="fl-sans" font-size="66" font-weight="800" fill="url(#fl-ink)" letter-spacing="-1">Navlonix</text>
+    <text x="56" y="184" class="fl-sans" font-size="27" fill="#C9C2E8">AI-powered logistics marketplace</text>
+    <text x="56" y="218" class="fl-sans" font-size="23" fill="#8E86B3">Businesses <tspan fill="#22D3EE">↔</tspan> verified drivers</text>
+
+    <g class="fl-sans" font-size="20" font-weight="600" fill="#F4F1FF">
+      <rect x="56" y="244" width="150" height="38" rx="19" fill="#241546" stroke="#7C3AED" stroke-opacity="0.6"/><text x="131" y="270" text-anchor="middle">Fair pricing</text>
+      <rect x="216" y="244" width="188" height="38" rx="19" fill="#241546" stroke="#7C3AED" stroke-opacity="0.6"/><text x="310" y="270" text-anchor="middle">Secure payment</text>
+      <rect x="414" y="244" width="216" height="38" rx="19" fill="#241546" stroke="#7C3AED" stroke-opacity="0.6"/><text x="522" y="270" text-anchor="middle">Real-time operations</text>
+    </g>
+
+    <!-- CTA -->
+    <g transform="translate(920 244)">
+      <rect x="0" y="0" width="224" height="46" rx="23" fill="#F5C451" filter="url(#fl-glow)"/>
+      <text x="112" y="30" text-anchor="middle" class="fl-sans" font-size="20" font-weight="800" fill="#07050F" letter-spacing="1">OPEN LIVE DEMO  →</text>
+    </g>
+
+    <!-- illustration: business -> AI match -> driver, escrow vault -->
+    <g transform="translate(700 40)">
+      <!-- route -->
+      <path d="M40 150 C 120 150, 150 60, 240 60 S 360 150, 400 56" fill="none" stroke="#241546" stroke-width="10" stroke-linecap="round"/>
+      <path class="fl-route" d="M40 150 C 120 150, 150 60, 240 60 S 360 150, 400 56" fill="none" stroke="#22D3EE" stroke-width="2.5" stroke-linecap="round" filter="url(#fl-soft)"/>
+      <!-- business node -->
+      <rect x="10" y="132" width="60" height="36" rx="8" fill="#07050F" stroke="#22D3EE" stroke-width="2"/>
+      <rect x="22" y="142" width="10" height="16" fill="#22D3EE" opacity="0.8"/><rect x="38" y="142" width="10" height="16" fill="#22D3EE" opacity="0.8"/>
+      <text x="40" y="192" text-anchor="middle" class="fl-mono" font-size="14" fill="#22D3EE" letter-spacing="2">BUSINESS</text>
+      <!-- AI match -->
+      <circle cx="240" cy="60" r="20" fill="#07050F" stroke="#A78BFA" stroke-width="2"/>
+      <circle class="fl-pulse" cx="240" cy="60" r="7" fill="#A78BFA" filter="url(#fl-glow)"/>
+      <text x="240" y="30" text-anchor="middle" class="fl-mono" font-size="14" fill="#A78BFA" letter-spacing="2">AI MATCH</text>
+      <!-- driver -->
+      <circle class="fl-ring" cx="400" cy="56" r="10" fill="none" stroke="#E040FB" stroke-width="1.5"/>
+      <circle cx="400" cy="56" r="16" fill="#07050F" stroke="#E040FB" stroke-width="2"/>
+      <circle cx="400" cy="52" r="5" fill="#E040FB"/><path d="M390 66 Q400 58 410 66" fill="#E040FB"/>
+      <text x="410" y="26" text-anchor="middle" class="fl-mono" font-size="14" fill="#E040FB" letter-spacing="2">VERIFIED DRIVER</text>
+      <!-- escrow vault -->
+      <g transform="translate(300 118)">
+        <rect x="0" y="0" width="76" height="62" rx="12" fill="#07050F" stroke="#F5C451" stroke-width="2"/>
+        <circle cx="38" cy="31" r="14" fill="none" stroke="#F5C451" stroke-width="2"/>
+        <circle cx="38" cy="31" r="4" fill="#F5C451"/>
+        <path d="M38 17 V9 M38 45 V53 M24 31 H16 M52 31 H60" stroke="#F5C451" stroke-width="2" stroke-linecap="round"/>
+        <text x="38" y="84" text-anchor="middle" class="fl-mono" font-size="14" fill="#F5C451" letter-spacing="2">ESCROW</text>
+      </g>
+      <!-- live signal -->
+      <g transform="translate(120 190)">
+        <circle class="fl-pulse" cx="6" cy="0" r="4" fill="#22D3EE"/>
+        <text x="18" y="5" class="fl-mono" font-size="14" fill="#22D3EE" letter-spacing="2">LIVE OPS</text>
+      </g>
+    </g>
+    <rect x="0" y="327" width="1200" height="3" fill="url(#fl-spectrum)" opacity="0.9"/>
+  </g>
+</svg>

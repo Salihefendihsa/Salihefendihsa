@@ -1,0 +1,106 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="300" viewBox="0 0 1200 300" role="img" aria-label="From the lab: AI and Autonomous Systems — agent network, approval gates, observability, security boundaries, controlled autonomy.">
+  <title>AI &amp; Autonomous Systems</title>
+  <defs>
+    <linearGradient id="la-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#07050F"/>
+      <stop offset="0.55" stop-color="#0E0920"/>
+      <stop offset="1" stop-color="#1A0F33"/>
+    </linearGradient>
+    <linearGradient id="la-panel" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#241546" stop-opacity="0.85"/>
+      <stop offset="1" stop-color="#07050F" stop-opacity="0.85"/>
+    </linearGradient>
+    <linearGradient id="la-spectrum" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#22D3EE"/>
+      <stop offset="0.5" stop-color="#7C3AED"/>
+      <stop offset="1" stop-color="#E040FB"/>
+    </linearGradient>
+    <linearGradient id="la-ink" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#F4F1FF"/>
+      <stop offset="1" stop-color="#A78BFA"/>
+    </linearGradient>
+    <radialGradient id="la-halo-v" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#7C3AED" stop-opacity="0.40"/>
+      <stop offset="1" stop-color="#7C3AED" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="la-halo-c" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#22D3EE" stop-opacity="0.26"/>
+      <stop offset="1" stop-color="#22D3EE" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="la-halo-m" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#E040FB" stop-opacity="0.16"/>
+      <stop offset="1" stop-color="#E040FB" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="la-dots" width="26" height="26" patternUnits="userSpaceOnUse">
+      <circle cx="1.2" cy="1.2" r="1.2" fill="#A78BFA" fill-opacity="0.16"/>
+    </pattern>
+    <filter id="la-glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="la-soft" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="1.4" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <clipPath id="la-clip"><rect width="1200" height="300" rx="26"/></clipPath>
+
+    <style>
+      .la-sans { font-family: 'Segoe UI', Inter, Helvetica, Arial, sans-serif; }
+      .la-mono { font-family: Consolas, 'JetBrains Mono', Menlo, monospace; }
+      .la-pulse { animation: la-pulse 3s ease-in-out infinite; }
+      .la-pulse2 { animation: la-pulse 3s ease-in-out infinite; animation-delay: -1.5s; }
+      .la-float { animation: la-float 6s ease-in-out infinite; }
+      .la-dash { stroke-dasharray: 6 10; animation: la-dash 3.2s linear infinite; }
+      .la-blink { animation: la-blink 5s steps(1, end) infinite; }
+      @keyframes la-pulse { 0%,100% { opacity: 0.45; } 50% { opacity: 1; } }
+      @keyframes la-float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-6px); } }
+      @keyframes la-dash { to { stroke-dashoffset: -32; } }
+      @keyframes la-blink { 0%,92%,100% { transform: scaleY(1); } 95% { transform: scaleY(0.12); } }
+      .la-gate { animation: la-gate 6s ease-in-out infinite; }
+      .la-scan { animation: la-scan 5s linear infinite; }
+      @keyframes la-gate { 0%,70%,100% { stroke: #F5C451; } 80%,90% { stroke: #22D3EE; } }
+      @keyframes la-scan { 0% { transform: translateX(0); opacity: 0; } 10% { opacity: 0.6; } 90% { opacity: 0.6; } 100% { transform: translateX(380px); opacity: 0; } }
+      @media (prefers-reduced-motion: reduce) { .la-pulse, .la-pulse2, .la-float, .la-dash, .la-blink, .la-anim { animation: none; } }
+    </style>
+  </defs>
+  <g clip-path="url(#la-clip)">
+    <rect width="1200" height="300" fill="url(#la-bg)"/>
+    <rect width="1200" height="300" fill="url(#la-dots)"/>
+    <ellipse cx="900" cy="150" rx="420" ry="220" fill="url(#la-halo-v)"/>
+    <rect x="0" y="0" width="7" height="300" fill="url(#la-spectrum)"/>
+    <text x="56" y="56" class="la-mono" font-size="15" fill="#A78BFA" letter-spacing="4">FROM THE LAB · PRIVATE R&amp;D</text>
+    <text x="56" y="112" class="la-sans" font-size="46" font-weight="800" fill="#F4F1FF" letter-spacing="-0.5">AI &amp; Autonomous Systems</text>
+    <g class="la-sans" font-size="23" fill="#C9C2E8">
+      <circle cx="64" cy="156" r="4" fill="#22D3EE"/><text x="80" y="163">Agent network with approval gates</text>
+      <circle cx="64" cy="196" r="4" fill="#A78BFA"/><text x="80" y="203">Observability and security boundaries</text>
+      <circle cx="64" cy="236" r="4" fill="#F5C451"/><text x="80" y="243">Controlled autonomy, humans in the loop</text>
+    </g>
+
+    <!-- network diagram -->
+    <g transform="translate(720 40)">
+      <rect x="0" y="0" width="420" height="220" rx="20" fill="url(#la-panel)" stroke="#7C3AED" stroke-opacity="0.4"/>
+      <rect class="la-scan" x="20" y="16" width="30" height="188" fill="#22D3EE" fill-opacity="0.08"/>
+      <!-- orchestrator -->
+      <rect x="28" y="88" width="98" height="44" rx="10" fill="#07050F" stroke="#A78BFA" stroke-width="1.6"/>
+      <text x="77" y="115" text-anchor="middle" class="la-mono" font-size="14" fill="#A78BFA" letter-spacing="1">ORCHESTRATE</text>
+      <!-- agents -->
+      <g fill="none" stroke="#A78BFA" stroke-opacity="0.6" stroke-width="1.5" class="la-dash">
+        <path d="M126 110 C 160 110, 160 50, 190 50"/><path d="M126 110 H190"/><path d="M126 110 C 160 110, 160 170, 190 170"/>
+        <path d="M226 50 C 260 50, 260 104, 292 104"/><path d="M226 110 H292"/><path d="M226 170 C 260 170, 260 116, 292 116"/>
+      </g>
+      <g class="la-mono" font-size="14">
+        <circle class="la-pulse" cx="208" cy="50" r="17" fill="#07050F" stroke="#22D3EE" stroke-width="1.6"/><text x="208" y="55" text-anchor="middle" fill="#22D3EE">A1</text>
+        <circle class="la-pulse2" cx="208" cy="110" r="17" fill="#07050F" stroke="#22D3EE" stroke-width="1.6"/><text x="208" y="115" text-anchor="middle" fill="#22D3EE">A2</text>
+        <circle class="la-pulse" cx="208" cy="170" r="17" fill="#07050F" stroke="#22D3EE" stroke-width="1.6"/><text x="208" y="175" text-anchor="middle" fill="#22D3EE">A3</text>
+      </g>
+      <!-- approval gate -->
+      <path class="la-gate" d="M312 82 L332 70 L352 82 L352 138 L332 150 L312 138 Z" fill="#07050F" stroke="#F5C451" stroke-width="2.2"/>
+      <text x="332" y="115" text-anchor="middle" class="la-mono" font-size="12" fill="#F5C451" letter-spacing="1">HUMAN</text>
+      <text x="332" y="176" text-anchor="middle" class="la-mono" font-size="12" fill="#F5C451" letter-spacing="2">APPROVAL</text>
+      <path class="la-dash" d="M354 110 H380" fill="none" stroke="#22D3EE" stroke-width="1.5"/>
+      <rect x="382" y="96" width="26" height="28" rx="7" fill="#07050F" stroke="#22D3EE" stroke-width="1.6" filter="url(#la-glow)"/>
+      <path d="M389 110 L394 115 L402 104" fill="none" stroke="#22D3EE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="210" y="206" text-anchor="middle" class="la-mono" font-size="12" fill="#8E86B3" letter-spacing="2">TELEMETRY · AUDIT LOG · FAIL-CLOSED</text>
+    </g>
+  </g>
+</svg>

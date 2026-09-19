@@ -1,72 +1,69 @@
-<div align="center">
+<p align="center">
+  <img src="assets/v2/master-hero.svg" alt="Hilmi Salih Altınışık — Software Engineer · AI Systems Builder · Product-Minded Entrepreneur. Engineering intelligent products from first idea to real-world impact." width="100%" />
+</p>
 
-<img src="assets/hero-neon-workshop.svg" alt="Hilmi Salih Altınışık — Software Engineer · AI Systems Builder · Product-Minded Entrepreneur" width="100%" />
+## Building Beyond the Code
 
-</div>
+I engineer products across AI, automation, backend and mobile — and I measure them by the business problems they actually solve. My work runs from multi-agent systems and workflow automation to .NET and Node APIs, React and Flutter apps.
 
-## Welcome to My Workshop
+A product isn't done when the code compiles. I design it, validate it against real users, ship it in controlled steps and keep learning on the sales and marketing side so the next release lands better than the last.
 
-**I build software where AI, automation, and real business needs meet.**
+## My Product Operating System
 
-I take products end-to-end — from architecture and backend to mobile apps and shipped UI — and I'm increasingly focused on AI agent systems and workflow automation. Along the way I keep a product and business lens on every build: what it's for, who it serves, and how it grows.
+<p align="center">
+  <img src="assets/v2/product-operating-system.svg" alt="Discover — real problems. Architect — reliable foundations. Build — end-to-end products. Validate — evidence over assumptions. Ship — controlled delivery. Grow — product and market learning. A continuous loop." width="100%" />
+</p>
 
-## Inside the Workshop
+## Flagship Product
 
-<img src="assets/inside-workshop.svg" alt="Building: AI agent systems, mobile and backend products, workflow automation. Exploring: reliable autonomous systems, human-centered AI experiences, product-led engineering. Growing: product strategy, sales, marketing, business development." width="100%" />
+<p align="center">
+  <a href="https://yuk-le.vercel.app"><img src="assets/v2/flagship-navlonix.svg" alt="Navlonix — AI-powered logistics marketplace connecting businesses with verified drivers. Fair pricing, secure payment, real-time operations. In active development. Open live demo." width="100%" /></a>
+</p>
 
-## Selected Builds
+**Navlonix** is an AI-powered logistics marketplace that matches businesses with verified drivers in seconds. Role-based apps for customers, drivers and operators; escrow-backed payments; real-time chat and live tracking. Architected and built solo on .NET 9, React, Expo and PostgreSQL — currently in active development.
 
-<a href="https://yuk-le.vercel.app"><img src="assets/card-navlonix.svg" alt="Navlonix — AI-powered logistics marketplace (in active development)" width="100%" /></a>
+→ [Open the live demo](https://yuk-le.vercel.app)
 
-<sub>**Navlonix** · AI-powered logistics marketplace matching shippers with trusted drivers — role-based apps, escrow-backed payments, real-time chat and tracking. Built solo on .NET 9, React, Expo and PostgreSQL. In active development. → [Live demo](https://yuk-le.vercel.app)</sub>
+## From the Lab
+
+<p align="center">
+  <img src="assets/v2/lab-ai-systems.svg" alt="AI & Autonomous Systems — agent network with approval gates, observability and security boundaries, controlled autonomy with humans in the loop." width="100%" />
+</p>
+
+Private R&D on multi-agent orchestration: agents plan and act inside explicit boundaries, humans approve what matters, and every workflow stays observable and fail-closed. Python, FastAPI, OpenAI and Gemini APIs, Docker.
 
 <br/>
 
-<img src="assets/card-ai-systems.svg" alt="AI & Autonomous Systems — multi-agent orchestration with approval-first automation" width="100%" />
+<p align="center">
+  <a href="https://github.com/Salihefendihsa/mrc-commerce"><img src="assets/v2/lab-mrc-commerce.svg" alt="MRC Commerce — cinematic scroll-driven storefront with typed architecture; commerce layer in progress. Public repository and live demo." width="100%" /></a>
+</p>
 
-<sub>**AI & Autonomous Systems** · Private R&D on multi-agent orchestration: agents plan and act inside explicit boundaries, humans approve what matters, and every workflow stays observable. Python, FastAPI, OpenAI and Gemini APIs, Docker.</sub>
+A cinematic, scroll-driven brand storefront with a production-grade marketing experience and a migration-first typed schema. Cart, checkout and admin are the next phases. Next.js, TypeScript, Tailwind, Drizzle.
 
-<br/>
+→ [Repository](https://github.com/Salihefendihsa/mrc-commerce) · [Live demo](https://mrc-commerce.vercel.app)
 
-<a href="https://github.com/Salihefendihsa/mrc-commerce"><img src="assets/card-mrc-commerce.svg" alt="MRC Commerce — scroll-driven brand storefront built with Next.js" width="100%" /></a>
+## Core Stack
 
-<sub>**MRC Commerce** · Cinematic, scroll-driven brand storefront with a production-grade marketing experience. The typed database schema is in place; cart, checkout and admin are the next phases. Next.js, TypeScript, Tailwind, Drizzle. → [Repository](https://github.com/Salihefendihsa/mrc-commerce) · [Live demo](https://mrc-commerce.vercel.app)</sub>
+<p align="center">
+  <img src="assets/v2/core-stack.svg" alt="Core stack: C# / .NET, TypeScript, Python, React / Next.js, Flutter, Node.js, PostgreSQL, Docker, AI APIs, GitHub Actions." width="100%" />
+</p>
 
-## Tech Universe
+<sub>Also in the toolbox: ASP.NET Core · Express · FastAPI · React Native / Expo · Vite · Tailwind CSS · Supabase · Prisma · Drizzle · MongoDB · ML.NET · OpenCV · OpenAI API · Gemini API</sub>
 
-<img src="assets/tech-universe.svg" alt="Tech Universe — Languages: C#, TypeScript, Python, Dart. Frontend: React, Next.js, Vite, Tailwind CSS. Backend: .NET / ASP.NET Core, Node.js / Express, FastAPI. Mobile: Flutter, React Native / Expo. Data: PostgreSQL, Supabase, Prisma, Drizzle, MongoDB. AI & Automation: OpenAI API, Gemini API, ML.NET, OpenCV. Tools: Docker, Git, GitHub Actions." width="100%" />
+## Current Signal
 
-## Workshop Status
+<p align="center">
+  <img src="assets/v2/current-signal.svg" alt="Current signal — Building: AI-powered products and autonomous workflows. Learning: product strategy, sales and marketing. Open to: meaningful products, collaborations and ambitious ideas." width="100%" />
+</p>
 
-```text
-┌─ WORKSHOP STATUS ──────────────────────────────────────┐
-│                                                        │
-│  MODE      Building                                    │
-│  FOCUS     AI × Products × Automation                  │
-│  BASE      Türkiye                                     │
-│  SIGNAL    Open to meaningful collaborations           │
-│                                                        │
-└────────────────────────────────────────────────────────┘
-```
+## Build With Me
 
-## Activity
+<p>
+  <a href="https://www.linkedin.com/in/hilmi-salih-alt%C4%B1n%C4%B1%C5%9F%C4%B1k-6a9301294/"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>&nbsp;
+  <a href="mailto:altinisikhilmisalih@gmail.com"><img src="https://img.shields.io/badge/Email-7C3AED?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" /></a>&nbsp;
+  <a href="https://github.com/Salihefendihsa"><img src="https://img.shields.io/badge/GitHub-07050F?style=for-the-badge&logo=github&logoColor=22D3EE" alt="GitHub" /></a>
+</p>
 
-<div align="center">
-
-<img src="https://raw.githubusercontent.com/Salihefendihsa/Salihefendihsa/output/3d-contrib.svg" alt="3D contribution graph" width="100%" />
-
-</div>
-
-## Contact
-
-<div align="center">
-
-<a href="https://www.linkedin.com/in/hilmi-salih-alt%C4%B1n%C4%B1%C5%9F%C4%B1k-6a9301294/"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
-&nbsp;
-<a href="mailto:altinisikhilmisalih@gmail.com"><img src="https://img.shields.io/badge/Email-7C3AED?style=flat-square&logo=gmail&logoColor=white" alt="Email" /></a>
-&nbsp;
-<a href="https://github.com/Salihefendihsa"><img src="https://img.shields.io/badge/GitHub-0D1117?style=flat-square&logo=github&logoColor=22D3EE" alt="GitHub" /></a>
-
-</div>
-
-<img src="assets/footer-neon-workshop.svg" alt="Let's build something useful." width="100%" />
+<p align="center">
+  <img src="assets/v2/master-footer.svg" alt="Let's build something useful. Products · AI Systems · Automation." width="100%" />
+</p>

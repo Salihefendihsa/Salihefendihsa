@@ -1,0 +1,136 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="320" viewBox="0 0 1200 320" role="img" aria-label="Let's build something useful. Products, AI systems, automation. LinkedIn, email, GitHub.">
+  <title>Build With Me</title>
+  <defs>
+    <linearGradient id="mf-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#07050F"/>
+      <stop offset="0.55" stop-color="#0E0920"/>
+      <stop offset="1" stop-color="#1A0F33"/>
+    </linearGradient>
+    <linearGradient id="mf-panel" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#241546" stop-opacity="0.85"/>
+      <stop offset="1" stop-color="#07050F" stop-opacity="0.85"/>
+    </linearGradient>
+    <linearGradient id="mf-spectrum" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#22D3EE"/>
+      <stop offset="0.5" stop-color="#7C3AED"/>
+      <stop offset="1" stop-color="#E040FB"/>
+    </linearGradient>
+    <linearGradient id="mf-ink" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#F4F1FF"/>
+      <stop offset="1" stop-color="#A78BFA"/>
+    </linearGradient>
+    <radialGradient id="mf-halo-v" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#7C3AED" stop-opacity="0.40"/>
+      <stop offset="1" stop-color="#7C3AED" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="mf-halo-c" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#22D3EE" stop-opacity="0.26"/>
+      <stop offset="1" stop-color="#22D3EE" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="mf-halo-m" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#E040FB" stop-opacity="0.16"/>
+      <stop offset="1" stop-color="#E040FB" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="mf-dots" width="26" height="26" patternUnits="userSpaceOnUse">
+      <circle cx="1.2" cy="1.2" r="1.2" fill="#A78BFA" fill-opacity="0.16"/>
+    </pattern>
+    <filter id="mf-glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="mf-soft" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="1.4" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <clipPath id="mf-clip"><rect width="1200" height="320" rx="26"/></clipPath>
+    <linearGradient id="mf-mas-head" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#3A2273"/>
+      <stop offset="1" stop-color="#1B1036"/>
+    </linearGradient>
+    <linearGradient id="mf-mas-body" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2B1858"/>
+      <stop offset="1" stop-color="#140B2B"/>
+    </linearGradient>
+    <style>
+      .mf-sans { font-family: 'Segoe UI', Inter, Helvetica, Arial, sans-serif; }
+      .mf-mono { font-family: Consolas, 'JetBrains Mono', Menlo, monospace; }
+      .mf-pulse { animation: mf-pulse 3s ease-in-out infinite; }
+      .mf-pulse2 { animation: mf-pulse 3s ease-in-out infinite; animation-delay: -1.5s; }
+      .mf-float { animation: mf-float 6s ease-in-out infinite; }
+      .mf-dash { stroke-dasharray: 6 10; animation: mf-dash 3.2s linear infinite; }
+      .mf-blink { animation: mf-blink 5s steps(1, end) infinite; }
+      @keyframes mf-pulse { 0%,100% { opacity: 0.45; } 50% { opacity: 1; } }
+      @keyframes mf-float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-6px); } }
+      @keyframes mf-dash { to { stroke-dashoffset: -32; } }
+      @keyframes mf-blink { 0%,92%,100% { transform: scaleY(1); } 95% { transform: scaleY(0.12); } }
+      .mf-wave { animation: mf-wave 5s ease-in-out infinite; }
+      @keyframes mf-wave { 0%,55%,100% { transform: rotate(0deg); } 65% { transform: rotate(-40deg); } 75% { transform: rotate(-16deg); } 85% { transform: rotate(-40deg); } }
+      @media (prefers-reduced-motion: reduce) { .mf-pulse, .mf-pulse2, .mf-float, .mf-dash, .mf-blink, .mf-anim { animation: none; } }
+    </style>
+  </defs>
+  <g clip-path="url(#mf-clip)">
+    <rect width="1200" height="320" fill="url(#mf-bg)"/>
+    <rect width="1200" height="320" fill="url(#mf-dots)"/>
+    <ellipse cx="600" cy="160" rx="620" ry="240" fill="url(#mf-halo-v)"/>
+    <ellipse cx="180" cy="200" rx="300" ry="200" fill="url(#mf-halo-c)"/>
+    <rect x="0" y="0" width="1200" height="3" fill="url(#mf-spectrum)" opacity="0.9"/>
+
+    
+    <g transform="translate(70 30) scale(1.02)">
+      <ellipse class="mf-pulse" cx="100" cy="236" rx="46" ry="8" fill="url(#mf-halo-c)"/>
+      <g class="mf-float">
+        <!-- antenna -->
+        <path d="M100 44 C 100 32, 106 26, 112 22" fill="none" stroke="#A78BFA" stroke-width="3" stroke-linecap="round"/>
+        <circle class="mf-pulse" cx="114" cy="20" r="5.5" fill="#F5C451" filter="url(#mf-glow)"/>
+        <!-- ear lights -->
+        <rect x="42" y="78" width="12" height="30" rx="6" fill="#22D3EE" opacity="0.9" filter="url(#mf-soft)"/>
+        <rect x="146" y="78" width="12" height="30" rx="6" fill="#22D3EE" opacity="0.9" filter="url(#mf-soft)"/>
+        <!-- head -->
+        <rect x="52" y="44" width="96" height="92" rx="30" fill="url(#mf-mas-head)" stroke="#7C3AED" stroke-width="2.2"/>
+        <rect x="60" y="50" width="80" height="12" rx="6" fill="#F4F1FF" fill-opacity="0.06"/>
+        <!-- visor -->
+        <rect x="66" y="66" width="68" height="50" rx="16" fill="#07050F" stroke="#22D3EE" stroke-opacity="0.55" stroke-width="1.6"/>
+        <!-- eyes -->
+        <g class="mf-blink" style="transform-origin: 100px 88px;">
+          <rect x="78" y="80" width="14" height="16" rx="6" fill="#22D3EE" filter="url(#mf-soft)"/>
+          <rect x="108" y="80" width="14" height="16" rx="6" fill="#22D3EE" filter="url(#mf-soft)"/>
+        </g>
+        <path d="M90 105 Q 100 111 110 105" fill="none" stroke="#E040FB" stroke-width="2.4" stroke-linecap="round" opacity="0.9"/>
+        <!-- cheeks -->
+        <circle cx="62" cy="120" r="3.2" fill="#E040FB" opacity="0.5"/>
+        <circle cx="138" cy="120" r="3.2" fill="#E040FB" opacity="0.5"/>
+        <!-- neck + body -->
+        <rect x="88" y="136" width="24" height="10" rx="4" fill="#241546"/>
+        <rect x="60" y="144" width="80" height="70" rx="24" fill="url(#mf-mas-body)" stroke="#7C3AED" stroke-width="2.2"/>
+        <circle cx="100" cy="174" r="13" fill="#07050F" stroke="#22D3EE" stroke-width="2"/>
+        <circle class="mf-pulse" cx="100" cy="174" r="5.5" fill="#22D3EE" filter="url(#mf-glow)"/>
+        <rect x="84" y="196" width="32" height="3" rx="1.5" fill="#A78BFA" opacity="0.7"/>
+        <!-- arms -->
+        <rect x="38" y="146" width="22" height="46" rx="11" fill="#241546" stroke="#7C3AED" stroke-width="2.2"/>
+        <circle cx="49" cy="192" r="7" fill="#22D3EE" opacity="0.9"/>
+        <g class="mf-wave" style="transform-origin: 150px 150px;">
+          <rect x="140" y="146" width="22" height="46" rx="11" fill="#241546" stroke="#7C3AED" stroke-width="2.2"/>
+          <circle cx="151" cy="192" r="7" fill="#22D3EE" opacity="0.9"/>
+        </g>
+      </g>
+    </g>
+
+    <text x="330" y="96" class="mf-mono" font-size="16" fill="#F5C451" letter-spacing="5">BUILD WITH ME</text>
+    <text x="330" y="156" class="mf-sans" font-size="46" font-weight="800" fill="url(#mf-ink)" letter-spacing="-1">Let's build something useful.</text>
+    <text x="330" y="200" class="mf-sans" font-size="26" fill="#C9C2E8">Products <tspan fill="#A78BFA">·</tspan> AI Systems <tspan fill="#A78BFA">·</tspan> Automation</text>
+
+    <g class="mf-sans" font-size="22" font-weight="700">
+      <rect x="330" y="230" width="166" height="48" rx="24" fill="#0A66C2"/><text x="413" y="262" text-anchor="middle" fill="#F4F1FF">LinkedIn</text>
+      <rect x="510" y="230" width="140" height="48" rx="24" fill="#7C3AED"/><text x="580" y="262" text-anchor="middle" fill="#F4F1FF">Email</text>
+      <rect x="664" y="230" width="150" height="48" rx="24" fill="#07050F" stroke="#22D3EE" stroke-width="1.6"/><text x="739" y="262" text-anchor="middle" fill="#22D3EE">GitHub</text>
+    </g>
+
+    
+    <g transform="translate(1056 92)" opacity="0.9">
+      <path d="M58.0 0 L116 29.0 L116 87.0 L58.0 116 L0 87.0 L0 29.0 Z" fill="#07050F" fill-opacity="0.55" stroke="url(#mf-spectrum)" stroke-width="2.0879999999999996"/>
+      <path d="M58.0 9.28 L107.88000000000001 33.64 L107.88000000000001 82.36 L58.0 106.72 L8.120000000000001 82.36 L8.120000000000001 33.64 Z" fill="none" stroke="#A78BFA" stroke-opacity="0.35" stroke-width="1"/>
+      <text x="58.0" y="71.92" text-anchor="middle" class="mf-sans" font-size="39.440000000000005" font-weight="800" fill="none" stroke="url(#mf-ink)" stroke-width="1.3920000000000001" letter-spacing="2.32">HSA</text>
+    </g>
+    <text x="1114" y="240" text-anchor="middle" class="mf-mono" font-size="13" fill="#8E86B3" letter-spacing="3">@Salihefendihsa</text>
+  </g>
+</svg>

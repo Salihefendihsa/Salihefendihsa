@@ -1,0 +1,112 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="300" viewBox="0 0 1200 300" role="img" aria-label="From the lab: MRC Commerce — cinematic scroll-driven storefront, typed architecture, commerce layer in progress. Public repo and live demo.">
+  <title>MRC Commerce</title>
+  <defs>
+    <linearGradient id="lm-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#07050F"/>
+      <stop offset="0.55" stop-color="#0E0920"/>
+      <stop offset="1" stop-color="#1A0F33"/>
+    </linearGradient>
+    <linearGradient id="lm-panel" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#241546" stop-opacity="0.85"/>
+      <stop offset="1" stop-color="#07050F" stop-opacity="0.85"/>
+    </linearGradient>
+    <linearGradient id="lm-spectrum" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#22D3EE"/>
+      <stop offset="0.5" stop-color="#7C3AED"/>
+      <stop offset="1" stop-color="#E040FB"/>
+    </linearGradient>
+    <linearGradient id="lm-ink" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#F4F1FF"/>
+      <stop offset="1" stop-color="#A78BFA"/>
+    </linearGradient>
+    <radialGradient id="lm-halo-v" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#7C3AED" stop-opacity="0.40"/>
+      <stop offset="1" stop-color="#7C3AED" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="lm-halo-c" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#22D3EE" stop-opacity="0.26"/>
+      <stop offset="1" stop-color="#22D3EE" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="lm-halo-m" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#E040FB" stop-opacity="0.16"/>
+      <stop offset="1" stop-color="#E040FB" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="lm-dots" width="26" height="26" patternUnits="userSpaceOnUse">
+      <circle cx="1.2" cy="1.2" r="1.2" fill="#A78BFA" fill-opacity="0.16"/>
+    </pattern>
+    <filter id="lm-glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="lm-soft" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="1.4" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <clipPath id="lm-clip"><rect width="1200" height="300" rx="26"/></clipPath>
+    <clipPath id="lm-screen"><rect x="80" y="56" width="300" height="188" rx="14"/></clipPath>
+    <style>
+      .lm-sans { font-family: 'Segoe UI', Inter, Helvetica, Arial, sans-serif; }
+      .lm-mono { font-family: Consolas, 'JetBrains Mono', Menlo, monospace; }
+      .lm-pulse { animation: lm-pulse 3s ease-in-out infinite; }
+      .lm-pulse2 { animation: lm-pulse 3s ease-in-out infinite; animation-delay: -1.5s; }
+      .lm-float { animation: lm-float 6s ease-in-out infinite; }
+      .lm-dash { stroke-dasharray: 6 10; animation: lm-dash 3.2s linear infinite; }
+      .lm-blink { animation: lm-blink 5s steps(1, end) infinite; }
+      @keyframes lm-pulse { 0%,100% { opacity: 0.45; } 50% { opacity: 1; } }
+      @keyframes lm-float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-6px); } }
+      @keyframes lm-dash { to { stroke-dashoffset: -32; } }
+      @keyframes lm-blink { 0%,92%,100% { transform: scaleY(1); } 95% { transform: scaleY(0.12); } }
+      .lm-film { animation: lm-film 12s linear infinite; }
+      .lm-spin { animation: lm-spinfr 12s ease-in-out infinite; transform-origin: 300px 150px; }
+      @keyframes lm-film { to { transform: translateY(-160px); } }
+      @keyframes lm-spinfr { 0%,20% { transform: rotate(0deg) scale(1); } 50%,70% { transform: rotate(22deg) scale(1.15); } 100% { transform: rotate(0deg) scale(1); } }
+      @media (prefers-reduced-motion: reduce) { .lm-pulse, .lm-pulse2, .lm-float, .lm-dash, .lm-blink, .lm-anim { animation: none; } }
+    </style>
+  </defs>
+  <g clip-path="url(#lm-clip)">
+    <rect width="1200" height="300" fill="url(#lm-bg)"/>
+    <rect width="1200" height="300" fill="url(#lm-dots)"/>
+    <ellipse cx="240" cy="150" rx="420" ry="220" fill="url(#lm-halo-m)"/>
+    <ellipse cx="900" cy="80" rx="380" ry="200" fill="url(#lm-halo-v)"/>
+    <rect x="1193" y="0" width="7" height="300" fill="#E040FB"/>
+
+    <!-- storefront illustration -->
+    <rect x="80" y="56" width="300" height="188" rx="14" fill="#07050F" stroke="#E040FB" stroke-opacity="0.7" stroke-width="1.6"/>
+    <g clip-path="url(#lm-screen)">
+      <g class="lm-film">
+        <rect x="100" y="80" width="130" height="12" rx="6" fill="#F4F1FF" fill-opacity="0.8"/>
+        <rect x="100" y="100" width="90" height="8" rx="4" fill="#8E86B3"/>
+        <rect x="100" y="140" width="170" height="8" rx="4" fill="#8E86B3" fill-opacity="0.5"/>
+        <rect x="100" y="156" width="140" height="8" rx="4" fill="#8E86B3" fill-opacity="0.5"/>
+        <rect x="100" y="200" width="120" height="12" rx="6" fill="#F4F1FF" fill-opacity="0.8"/>
+        <rect x="100" y="220" width="90" height="8" rx="4" fill="#8E86B3"/>
+        <rect x="100" y="260" width="170" height="8" rx="4" fill="#8E86B3" fill-opacity="0.5"/>
+        <rect x="100" y="276" width="140" height="8" rx="4" fill="#8E86B3" fill-opacity="0.5"/>
+        <rect x="100" y="320" width="130" height="12" rx="6" fill="#F4F1FF" fill-opacity="0.8"/>
+        <rect x="100" y="340" width="90" height="8" rx="4" fill="#8E86B3"/>
+      </g>
+      <g class="lm-spin" filter="url(#lm-glow)">
+        <rect x="266" y="116" width="68" height="68" rx="14" fill="#E040FB" fill-opacity="0.9"/>
+        <rect x="280" y="130" width="40" height="40" rx="9" fill="#07050F"/>
+        <circle cx="300" cy="150" r="8" fill="#F5C451"/>
+      </g>
+    </g>
+    <!-- film strip edge -->
+    <g fill="#E040FB" fill-opacity="0.6">
+      <rect x="392" y="64" width="8" height="14" rx="2"/><rect x="392" y="90" width="8" height="14" rx="2"/><rect x="392" y="116" width="8" height="14" rx="2"/>
+      <rect x="392" y="142" width="8" height="14" rx="2"/><rect x="392" y="168" width="8" height="14" rx="2"/><rect x="392" y="194" width="8" height="14" rx="2"/><rect x="392" y="220" width="8" height="14" rx="2"/>
+    </g>
+    <text x="230" y="272" text-anchor="middle" class="lm-mono" font-size="13" fill="#8E86B3" letter-spacing="3">SCROLL-DRIVEN FRAME SEQUENCE</text>
+
+    <!-- text -->
+    <text x="470" y="56" class="lm-mono" font-size="15" fill="#E040FB" letter-spacing="4">FROM THE LAB · OPEN SOURCE</text>
+    <text x="470" y="112" class="lm-sans" font-size="46" font-weight="800" fill="#F4F1FF" letter-spacing="-0.5">MRC Commerce</text>
+    <g class="lm-sans" font-size="23" fill="#C9C2E8">
+      <text x="470" y="160">Cinematic storefront, scroll-driven experience</text>
+      <text x="470" y="198">Typed architecture with a migration-first schema</text>
+    </g>
+    <rect x="470" y="222" width="286" height="34" rx="17" fill="#07050F" stroke="#F5C451" stroke-opacity="0.8"/>
+    <text x="613" y="245" text-anchor="middle" class="lm-mono" font-size="14" fill="#F5C451" letter-spacing="2">COMMERCE LAYER IN PROGRESS</text>
+    <text x="1140" y="245" text-anchor="end" class="lm-mono" font-size="15" fill="#E040FB" letter-spacing="2">REPO · LIVE DEMO →</text>
+  </g>
+</svg>

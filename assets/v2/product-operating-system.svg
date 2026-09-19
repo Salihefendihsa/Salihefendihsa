@@ -1,0 +1,127 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="520" viewBox="0 0 1200 520" role="img" aria-label="My Product Operating System: Discover, Architect, Build, Validate, Ship, Grow — a continuous loop.">
+  <title>Product Operating System</title>
+  <defs>
+    <linearGradient id="pos-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#07050F"/>
+      <stop offset="0.55" stop-color="#0E0920"/>
+      <stop offset="1" stop-color="#1A0F33"/>
+    </linearGradient>
+    <linearGradient id="pos-panel" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#241546" stop-opacity="0.85"/>
+      <stop offset="1" stop-color="#07050F" stop-opacity="0.85"/>
+    </linearGradient>
+    <linearGradient id="pos-spectrum" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#22D3EE"/>
+      <stop offset="0.5" stop-color="#7C3AED"/>
+      <stop offset="1" stop-color="#E040FB"/>
+    </linearGradient>
+    <linearGradient id="pos-ink" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#F4F1FF"/>
+      <stop offset="1" stop-color="#A78BFA"/>
+    </linearGradient>
+    <radialGradient id="pos-halo-v" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#7C3AED" stop-opacity="0.40"/>
+      <stop offset="1" stop-color="#7C3AED" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="pos-halo-c" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#22D3EE" stop-opacity="0.26"/>
+      <stop offset="1" stop-color="#22D3EE" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="pos-halo-m" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#E040FB" stop-opacity="0.16"/>
+      <stop offset="1" stop-color="#E040FB" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="pos-dots" width="26" height="26" patternUnits="userSpaceOnUse">
+      <circle cx="1.2" cy="1.2" r="1.2" fill="#A78BFA" fill-opacity="0.16"/>
+    </pattern>
+    <filter id="pos-glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="pos-soft" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="1.4" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <clipPath id="pos-clip"><rect width="1200" height="520" rx="26"/></clipPath>
+
+    <style>
+      .pos-sans { font-family: 'Segoe UI', Inter, Helvetica, Arial, sans-serif; }
+      .pos-mono { font-family: Consolas, 'JetBrains Mono', Menlo, monospace; }
+      .pos-pulse { animation: pos-pulse 3s ease-in-out infinite; }
+      .pos-pulse2 { animation: pos-pulse 3s ease-in-out infinite; animation-delay: -1.5s; }
+      .pos-float { animation: pos-float 6s ease-in-out infinite; }
+      .pos-dash { stroke-dasharray: 6 10; animation: pos-dash 3.2s linear infinite; }
+      .pos-blink { animation: pos-blink 5s steps(1, end) infinite; }
+      @keyframes pos-pulse { 0%,100% { opacity: 0.45; } 50% { opacity: 1; } }
+      @keyframes pos-float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-6px); } }
+      @keyframes pos-dash { to { stroke-dashoffset: -32; } }
+      @keyframes pos-blink { 0%,92%,100% { transform: scaleY(1); } 95% { transform: scaleY(0.12); } }
+      .pos-loop { stroke-dasharray: 8 12; animation: pos-dash 4s linear infinite; }
+      @media (prefers-reduced-motion: reduce) { .pos-pulse, .pos-pulse2, .pos-float, .pos-dash, .pos-blink, .pos-anim { animation: none; } }
+    </style>
+  </defs>
+  <g clip-path="url(#pos-clip)">
+    <rect width="1200" height="520" fill="url(#pos-bg)"/>
+    <rect width="1200" height="520" fill="url(#pos-dots)"/>
+    <ellipse cx="600" cy="260" rx="560" ry="240" fill="url(#pos-halo-v)"/>
+    <text x="600" y="58" text-anchor="middle" class="pos-mono" font-size="16" fill="#F5C451" letter-spacing="5">PRODUCT OPERATING SYSTEM</text>
+    <text x="600" y="92" text-anchor="middle" class="pos-sans" font-size="20" fill="#8E86B3">A loop, not a line — every shipped product feeds the next discovery.</text>
+    <g fill="none" stroke="#A78BFA" stroke-opacity="0.45" stroke-width="2" class="pos-loop">
+      <path d="M392 202.0 H416"/>
+      <path d="M784 202.0 H808"/>
+      <path d="M392 394.0 H416"/>
+      <path d="M784 394.0 H808"/>
+      <path d="M1176 202.0 H1186 Q1192 202.0 1192 208.0 V292.0 Q1192 298.0 1186 298.0 H14 Q8 298.0 8 304.0 V388.0 Q8 394.0 14 394.0 H24"/>
+    </g>
+    <!-- return loop GROW -> DISCOVER (outer) -->
+    <path class="pos-loop" d="M992.0 478 V504 H208.0 V118" fill="none" stroke="#E040FB" stroke-opacity="0.4" stroke-width="2"/>
+    <g>
+      <rect x="24" y="118" width="368" height="168" rx="22" fill="url(#pos-panel)" stroke="#22D3EE" stroke-opacity="0.5" stroke-width="1.4"/>
+      <rect x="48" y="140" width="34" height="4" rx="2" fill="#22D3EE"/>
+      <text x="368" y="162" text-anchor="end" class="pos-mono" font-size="18" fill="#22D3EE" fill-opacity="0.8" letter-spacing="3">01</text>
+      <text x="48" y="204" class="pos-sans" font-size="38" font-weight="800" fill="#F4F1FF" letter-spacing="1">DISCOVER</text>
+      <text x="48" y="246" class="pos-sans" font-size="24" fill="#C9C2E8">Real problems</text>
+      <circle class="pos-pulse" cx="362" cy="258" r="5" fill="#22D3EE"/>
+    </g>
+    <g>
+      <rect x="416" y="118" width="368" height="168" rx="22" fill="url(#pos-panel)" stroke="#A78BFA" stroke-opacity="0.5" stroke-width="1.4"/>
+      <rect x="440" y="140" width="34" height="4" rx="2" fill="#A78BFA"/>
+      <text x="760" y="162" text-anchor="end" class="pos-mono" font-size="18" fill="#A78BFA" fill-opacity="0.8" letter-spacing="3">02</text>
+      <text x="440" y="204" class="pos-sans" font-size="38" font-weight="800" fill="#F4F1FF" letter-spacing="1">ARCHITECT</text>
+      <text x="440" y="246" class="pos-sans" font-size="24" fill="#C9C2E8">Reliable foundations</text>
+      <circle class="pos-pulse" cx="754" cy="258" r="5" fill="#A78BFA"/>
+    </g>
+    <g>
+      <rect x="808" y="118" width="368" height="168" rx="22" fill="url(#pos-panel)" stroke="#22D3EE" stroke-opacity="0.5" stroke-width="1.4"/>
+      <rect x="832" y="140" width="34" height="4" rx="2" fill="#22D3EE"/>
+      <text x="1152" y="162" text-anchor="end" class="pos-mono" font-size="18" fill="#22D3EE" fill-opacity="0.8" letter-spacing="3">03</text>
+      <text x="832" y="204" class="pos-sans" font-size="38" font-weight="800" fill="#F4F1FF" letter-spacing="1">BUILD</text>
+      <text x="832" y="246" class="pos-sans" font-size="24" fill="#C9C2E8">End-to-end products</text>
+      <circle class="pos-pulse" cx="1146" cy="258" r="5" fill="#22D3EE"/>
+    </g>
+    <g>
+      <rect x="24" y="310" width="368" height="168" rx="22" fill="url(#pos-panel)" stroke="#A78BFA" stroke-opacity="0.5" stroke-width="1.4"/>
+      <rect x="48" y="332" width="34" height="4" rx="2" fill="#A78BFA"/>
+      <text x="368" y="354" text-anchor="end" class="pos-mono" font-size="18" fill="#A78BFA" fill-opacity="0.8" letter-spacing="3">04</text>
+      <text x="48" y="396" class="pos-sans" font-size="38" font-weight="800" fill="#F4F1FF" letter-spacing="1">VALIDATE</text>
+      <text x="48" y="438" class="pos-sans" font-size="24" fill="#C9C2E8">Evidence over assumptions</text>
+      <circle class="pos-pulse" cx="362" cy="450" r="5" fill="#A78BFA"/>
+    </g>
+    <g>
+      <rect x="416" y="310" width="368" height="168" rx="22" fill="url(#pos-panel)" stroke="#F5C451" stroke-opacity="0.5" stroke-width="1.4"/>
+      <rect x="440" y="332" width="34" height="4" rx="2" fill="#F5C451"/>
+      <text x="760" y="354" text-anchor="end" class="pos-mono" font-size="18" fill="#F5C451" fill-opacity="0.8" letter-spacing="3">05</text>
+      <text x="440" y="396" class="pos-sans" font-size="38" font-weight="800" fill="#F4F1FF" letter-spacing="1" filter="url(#pos-glow)">SHIP</text>
+      <text x="440" y="438" class="pos-sans" font-size="24" fill="#C9C2E8">Controlled delivery</text>
+      <circle class="pos-pulse" cx="754" cy="450" r="5" fill="#F5C451"/>
+    </g>
+    <g>
+      <rect x="808" y="310" width="368" height="168" rx="22" fill="url(#pos-panel)" stroke="#E040FB" stroke-opacity="0.5" stroke-width="1.4"/>
+      <rect x="832" y="332" width="34" height="4" rx="2" fill="#E040FB"/>
+      <text x="1152" y="354" text-anchor="end" class="pos-mono" font-size="18" fill="#E040FB" fill-opacity="0.8" letter-spacing="3">06</text>
+      <text x="832" y="396" class="pos-sans" font-size="38" font-weight="800" fill="#F4F1FF" letter-spacing="1">GROW</text>
+      <text x="832" y="438" class="pos-sans" font-size="24" fill="#C9C2E8">Product and market learning</text>
+      <circle class="pos-pulse" cx="1146" cy="450" r="5" fill="#E040FB"/>
+    </g>
+  </g>
+</svg>

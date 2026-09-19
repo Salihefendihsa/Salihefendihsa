@@ -1,0 +1,196 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="400" viewBox="0 0 1200 400" role="img" aria-label="Hilmi Salih Altınışık — Software Engineer, AI Systems Builder, Product-Minded Entrepreneur. Engineering intelligent products from first idea to real-world impact.">
+  <title>Hilmi Salih Altınışık — Founder's AI Lab</title>
+  <defs>
+    <linearGradient id="mh-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#07050F"/>
+      <stop offset="0.55" stop-color="#0E0920"/>
+      <stop offset="1" stop-color="#1A0F33"/>
+    </linearGradient>
+    <linearGradient id="mh-panel" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#241546" stop-opacity="0.85"/>
+      <stop offset="1" stop-color="#07050F" stop-opacity="0.85"/>
+    </linearGradient>
+    <linearGradient id="mh-spectrum" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#22D3EE"/>
+      <stop offset="0.5" stop-color="#7C3AED"/>
+      <stop offset="1" stop-color="#E040FB"/>
+    </linearGradient>
+    <linearGradient id="mh-ink" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#F4F1FF"/>
+      <stop offset="1" stop-color="#A78BFA"/>
+    </linearGradient>
+    <radialGradient id="mh-halo-v" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#7C3AED" stop-opacity="0.40"/>
+      <stop offset="1" stop-color="#7C3AED" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="mh-halo-c" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#22D3EE" stop-opacity="0.26"/>
+      <stop offset="1" stop-color="#22D3EE" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="mh-halo-m" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#E040FB" stop-opacity="0.16"/>
+      <stop offset="1" stop-color="#E040FB" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="mh-dots" width="26" height="26" patternUnits="userSpaceOnUse">
+      <circle cx="1.2" cy="1.2" r="1.2" fill="#A78BFA" fill-opacity="0.16"/>
+    </pattern>
+    <filter id="mh-glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="mh-soft" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="1.4" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <clipPath id="mh-clip"><rect width="1200" height="400" rx="26"/></clipPath>
+    <linearGradient id="mh-mas-head" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#3A2273"/>
+      <stop offset="1" stop-color="#1B1036"/>
+    </linearGradient>
+    <linearGradient id="mh-mas-body" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2B1858"/>
+      <stop offset="1" stop-color="#140B2B"/>
+    </linearGradient>
+    <linearGradient id="mh-holo" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#22D3EE" stop-opacity="0.14"/>
+      <stop offset="1" stop-color="#E040FB" stop-opacity="0.06"/>
+    </linearGradient>
+    <style>
+      .mh-sans { font-family: 'Segoe UI', Inter, Helvetica, Arial, sans-serif; }
+      .mh-mono { font-family: Consolas, 'JetBrains Mono', Menlo, monospace; }
+      .mh-pulse { animation: mh-pulse 3s ease-in-out infinite; }
+      .mh-pulse2 { animation: mh-pulse 3s ease-in-out infinite; animation-delay: -1.5s; }
+      .mh-float { animation: mh-float 6s ease-in-out infinite; }
+      .mh-dash { stroke-dasharray: 6 10; animation: mh-dash 3.2s linear infinite; }
+      .mh-blink { animation: mh-blink 5s steps(1, end) infinite; }
+      @keyframes mh-pulse { 0%,100% { opacity: 0.45; } 50% { opacity: 1; } }
+      @keyframes mh-float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-6px); } }
+      @keyframes mh-dash { to { stroke-dashoffset: -32; } }
+      @keyframes mh-blink { 0%,92%,100% { transform: scaleY(1); } 95% { transform: scaleY(0.12); } }
+      .mh-orbit { animation: mh-spin 40s linear infinite; transform-origin: 940px 190px; }
+      .mh-cursor { animation: mh-cur 1.2s steps(2, start) infinite; }
+      @keyframes mh-spin { to { transform: rotate(360deg); } }
+      @keyframes mh-cur { 0%,100% { opacity: 1; } 50% { opacity: 0; } }
+      @media (prefers-reduced-motion: reduce) { .mh-pulse, .mh-pulse2, .mh-float, .mh-dash, .mh-blink, .mh-anim { animation: none; } }
+    </style>
+  </defs>
+  <g clip-path="url(#mh-clip)">
+    <rect width="1200" height="400" fill="url(#mh-bg)"/>
+    <rect width="1200" height="400" fill="url(#mh-dots)"/>
+
+    <ellipse cx="120" cy="80" rx="520" ry="300" fill="url(#mh-halo-v)"/>
+    <ellipse cx="960" cy="240" rx="420" ry="260" fill="url(#mh-halo-c)"/>
+    <ellipse cx="700" cy="420" rx="360" ry="160" fill="url(#mh-halo-m)"/>
+    <!-- vignette -->
+    <rect width="1200" height="400" fill="#07050F" fill-opacity="0.18"/>
+
+    <!-- monogram (background, right) -->
+    
+    <g transform="translate(1040 22)" opacity="0.85">
+      <path d="M65.0 0 L130 32.5 L130 97.5 L65.0 130 L0 97.5 L0 32.5 Z" fill="#07050F" fill-opacity="0.55" stroke="url(#mh-spectrum)" stroke-width="2.34"/>
+      <path d="M65.0 10.4 L120.9 37.699999999999996 L120.9 92.3 L65.0 119.60000000000001 L9.100000000000001 92.3 L9.100000000000001 37.699999999999996 Z" fill="none" stroke="#A78BFA" stroke-opacity="0.35" stroke-width="1"/>
+      <text x="65.0" y="80.6" text-anchor="middle" class="mh-sans" font-size="44.2" font-weight="800" fill="none" stroke="url(#mh-ink)" stroke-width="1.56" letter-spacing="2.6">HSA</text>
+    </g>
+
+    <!-- holographic console -->
+    <g transform="translate(590 46)">
+      <rect x="0" y="0" width="300" height="180" rx="18" fill="url(#mh-holo)" stroke="#22D3EE" stroke-opacity="0.35" stroke-width="1.2" transform="skewY(-6)"/>
+      <g transform="skewY(-6)" class="mh-mono" font-size="15" fill="#22D3EE" fill-opacity="0.85">
+        <text x="20" y="34">▸ lab.session <tspan fill="#C9C2E8">active</tspan></text>
+        <text x="20" y="62" fill="#8E86B3">agents  ·  approvals  ·  telemetry</text>
+        <rect x="20" y="78" width="180" height="6" rx="3" fill="#7C3AED" fill-opacity="0.35"/>
+        <rect x="20" y="78" width="112" height="6" rx="3" fill="#22D3EE" fill-opacity="0.8"/>
+        <rect x="20" y="94" width="220" height="6" rx="3" fill="#7C3AED" fill-opacity="0.35"/>
+        <rect x="20" y="94" width="160" height="6" rx="3" fill="#E040FB" fill-opacity="0.7"/>
+        <text x="20" y="128" fill="#8E86B3">status</text>
+        <text x="80" y="128" fill="#F5C451">shipping<tspan class="mh-cursor">▍</tspan></text>
+      </g>
+    </g>
+
+    <!-- node network -->
+    <g stroke="#A78BFA" stroke-opacity="0.32" stroke-width="1" fill="none">
+      <path d="M640 40 L720 24 L800 52 L880 30 L980 62"/>
+      <path d="M720 24 L740 120 M800 52 L860 150 M880 30 L980 62 L1020 150"/>
+      <path d="M640 40 L600 150 L740 120 M600 150 L680 250 L860 150"/>
+      <path d="M680 250 L760 330 L940 330 L1020 150"/>
+      <path d="M1020 150 L1150 200 L1160 320 L940 330"/>
+    </g>
+    <g fill="#22D3EE">
+      <circle class="mh-pulse" cx="640" cy="40" r="3"/><circle class="mh-pulse2" cx="720" cy="24" r="2.5"/><circle class="mh-pulse" cx="800" cy="52" r="3"/>
+      <circle class="mh-pulse2" cx="880" cy="30" r="2.5"/><circle class="mh-pulse" cx="980" cy="62" r="3"/><circle class="mh-pulse2" cx="600" cy="150" r="3"/>
+      <circle class="mh-pulse" cx="740" cy="120" r="2.5"/><circle class="mh-pulse2" cx="860" cy="150" r="3" fill="#E040FB"/><circle class="mh-pulse" cx="1020" cy="150" r="3.5" fill="#F5C451"/>
+      <circle class="mh-pulse2" cx="680" cy="250" r="2.5"/><circle class="mh-pulse" cx="760" cy="330" r="3"/><circle class="mh-pulse2" cx="1150" cy="200" r="2.5"/><circle class="mh-pulse" cx="1160" cy="320" r="2.5"/>
+    </g>
+
+    <!-- product loop orbit -->
+    <g class="mh-orbit" fill="none" stroke="#A78BFA" stroke-opacity="0.3" stroke-width="1" stroke-dasharray="2 8">
+      <ellipse cx="940" cy="190" rx="200" ry="150"/>
+    </g>
+
+    <!-- micro flow BUILD / VALIDATE / SHIP / GROW -->
+    <g transform="translate(800 344)">
+      <path class="mh-dash" d="M0 0 H360" stroke="#A78BFA" stroke-opacity="0.6" stroke-width="1.5" fill="none"/>
+      <g class="mh-mono" font-size="14" letter-spacing="2">
+        <circle cx="0" cy="0" r="6" fill="#07050F" stroke="#22D3EE" stroke-width="2"/><text x="14" y="5" fill="#22D3EE">BUILD</text>
+        <circle cx="96" cy="0" r="6" fill="#07050F" stroke="#A78BFA" stroke-width="2"/><text x="110" y="5" fill="#A78BFA">VALIDATE</text>
+        <circle cx="222" cy="0" r="6" fill="#F5C451" stroke="#F5C451" stroke-width="2" filter="url(#mh-glow)"/><text x="236" y="5" fill="#F5C451">SHIP</text>
+        <circle cx="300" cy="0" r="6" fill="#07050F" stroke="#E040FB" stroke-width="2"/><text x="314" y="5" fill="#E040FB">GROW</text>
+      </g>
+    </g>
+
+    <!-- mascot v2 -->
+    
+    <g transform="translate(826 78) scale(1.06)">
+      <ellipse class="mh-pulse" cx="100" cy="236" rx="46" ry="8" fill="url(#mh-halo-c)"/>
+      <g class="mh-float">
+        <!-- antenna -->
+        <path d="M100 44 C 100 32, 106 26, 112 22" fill="none" stroke="#A78BFA" stroke-width="3" stroke-linecap="round"/>
+        <circle class="mh-pulse" cx="114" cy="20" r="5.5" fill="#F5C451" filter="url(#mh-glow)"/>
+        <!-- ear lights -->
+        <rect x="42" y="78" width="12" height="30" rx="6" fill="#22D3EE" opacity="0.9" filter="url(#mh-soft)"/>
+        <rect x="146" y="78" width="12" height="30" rx="6" fill="#22D3EE" opacity="0.9" filter="url(#mh-soft)"/>
+        <!-- head -->
+        <rect x="52" y="44" width="96" height="92" rx="30" fill="url(#mh-mas-head)" stroke="#7C3AED" stroke-width="2.2"/>
+        <rect x="60" y="50" width="80" height="12" rx="6" fill="#F4F1FF" fill-opacity="0.06"/>
+        <!-- visor -->
+        <rect x="66" y="66" width="68" height="50" rx="16" fill="#07050F" stroke="#22D3EE" stroke-opacity="0.55" stroke-width="1.6"/>
+        <!-- eyes -->
+        <g class="mh-blink" style="transform-origin: 100px 88px;">
+          <rect x="78" y="80" width="14" height="16" rx="6" fill="#22D3EE" filter="url(#mh-soft)"/>
+          <rect x="108" y="80" width="14" height="16" rx="6" fill="#22D3EE" filter="url(#mh-soft)"/>
+        </g>
+        <path d="M90 105 Q 100 111 110 105" fill="none" stroke="#E040FB" stroke-width="2.4" stroke-linecap="round" opacity="0.9"/>
+        <!-- cheeks -->
+        <circle cx="62" cy="120" r="3.2" fill="#E040FB" opacity="0.5"/>
+        <circle cx="138" cy="120" r="3.2" fill="#E040FB" opacity="0.5"/>
+        <!-- neck + body -->
+        <rect x="88" y="136" width="24" height="10" rx="4" fill="#241546"/>
+        <rect x="60" y="144" width="80" height="70" rx="24" fill="url(#mh-mas-body)" stroke="#7C3AED" stroke-width="2.2"/>
+        <circle cx="100" cy="174" r="13" fill="#07050F" stroke="#22D3EE" stroke-width="2"/>
+        <circle class="mh-pulse" cx="100" cy="174" r="5.5" fill="#22D3EE" filter="url(#mh-glow)"/>
+        <rect x="84" y="196" width="32" height="3" rx="1.5" fill="#A78BFA" opacity="0.7"/>
+        <!-- arms -->
+        <rect x="38" y="146" width="22" height="46" rx="11" fill="#241546" stroke="#7C3AED" stroke-width="2.2"/>
+        <circle cx="49" cy="192" r="7" fill="#22D3EE" opacity="0.9"/>
+        <rect x="140" y="146" width="22" height="46" rx="11" fill="#241546" stroke="#7C3AED" stroke-width="2.2"/>
+        <circle cx="151" cy="192" r="7" fill="#22D3EE" opacity="0.9"/>
+      </g>
+    </g>
+
+    <!-- left: identity -->
+    <text x="64" y="86" class="mh-mono" font-size="15" fill="#F5C451" letter-spacing="4">FOUNDER'S AI LAB</text>
+    <text x="64" y="150" class="mh-sans" font-size="56" font-weight="800" fill="url(#mh-ink)" letter-spacing="-1">Hilmi Salih Altınışık</text>
+    <rect x="64" y="166" width="120" height="3" rx="1.5" fill="#F5C451"/>
+    <rect x="190" y="166" width="220" height="3" rx="1.5" fill="url(#mh-spectrum)" opacity="0.8"/>
+
+    <g class="mh-sans" font-size="22" font-weight="600" fill="#F4F1FF">
+      <circle cx="72" cy="206" r="4" fill="#22D3EE"/><text x="86" y="213">Software Engineer</text>
+      <circle cx="72" cy="244" r="4" fill="#A78BFA"/><text x="86" y="251">AI Systems Builder</text>
+      <circle cx="72" cy="282" r="4" fill="#E040FB"/><text x="86" y="289">Product-Minded Entrepreneur</text>
+    </g>
+
+    <text x="64" y="346" class="mh-sans" font-size="23" font-style="italic" fill="#C9C2E8">Engineering intelligent products from first idea to real-world impact.</text>
+
+    <rect x="0" y="397" width="1200" height="3" fill="url(#mh-spectrum)" opacity="0.9"/>
+  </g>
+</svg>
