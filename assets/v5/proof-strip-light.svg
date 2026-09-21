@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="236" viewBox="0 0 1200 236" role="img" aria-labelledby="t d">
+  <title id="t">Verified engineering footprint · Sep 2025 – Sep 2026</title>
+  <desc id="d">953 commits authored; 27 repositories contributed to; 38 owned repositories; 4 verified collaborations. Measured with the GitHub API on 2026-09-21.</desc>
+  <rect x="0.0" y="0.0" width="1200.0" height="236.0" fill="#F6F4EF"/>
+  <rect x="0.5" y="0.5" width="1199.0" height="235.0" fill="none" rx="16" stroke="#D3D6DC" stroke-width="1"/>
+  <text x="48" y="122" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="84" fill="#16181D" font-weight="700" letter-spacing="-2">953</text>
+  <text x="48" y="172" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="32" fill="#5C6270">Commits authored</text>
+  <line x1="312.8" y1="60.0" x2="312.8" y2="176.0" stroke="#D3D6DC" stroke-width="1.5"/>
+  <text x="337" y="122" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="84" fill="#16181D" font-weight="700" letter-spacing="-2">27</text>
+  <text x="337" y="172" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="32" fill="#5C6270">Repositories</text>
+  <line x1="550.5" y1="60.0" x2="550.5" y2="176.0" stroke="#D3D6DC" stroke-width="1.5"/>
+  <text x="574" y="122" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="84" fill="#16181D" font-weight="700" letter-spacing="-2">38</text>
+  <text x="574" y="172" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="32" fill="#5C6270">Owned repositories</text>
+  <line x1="868.4" y1="60.0" x2="868.4" y2="176.0" stroke="#D3D6DC" stroke-width="1.5"/>
+  <text x="892" y="122" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="84" fill="#16181D" font-weight="700" letter-spacing="-2">4</text>
+  <text x="892" y="172" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="32" fill="#5C6270">Collaborations</text>
+  <rect x="48.0" y="202.0" width="96.0" height="4.0" fill="#2F4BC7"/>
+</svg>
