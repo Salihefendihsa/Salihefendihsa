@@ -56,7 +56,7 @@ FOOTPRINT_SVG = {
 }
 
 MAX_FEATURED = 3
-TABLE_COLUMNS = ("Project", "What it does", "Stack", "Role · Access")
+TABLE_COLUMNS = ("Project", "What it does", "Role · Access")  # three columns: fits a 380 px viewport without horizontal scroll
 
 # Fixed category order. Tables render in this order; unknown categories are rejected.
 CATEGORY_ORDER = (
@@ -426,12 +426,22 @@ def render_project_cell(p: Project) -> str:
         bits.append(escape_md(p.status))
     if p.live_url:
         bits.append(f"[Live]({p.live_url})")
-    return title + (f"<br><sub>{' · '.join(bits)}</sub>" if bits else "")
+    out = title
+    if bits:
+        out += f"<br><sub>{' · '.join(bits)}</sub>"
+    if p.stack:
+        out += f"<br><sub>Stack: {escape_md(p.stack)}</sub>"
+    return out
+
+
+def render_role_access_cell(p: Project) -> str:
+    """Role and access on two small-type lines so the column stays narrow on phones."""
+    parts = [f"<sub>{escape_md(x)}</sub>" for x in (p.role, p.access) if x]
+    return "<br>".join(parts) or "—"
 
 
 def render_row(p: Project) -> str:
-    role_access = " · ".join(x for x in (escape_md(p.role), escape_md(p.access)) if x)
-    return "| " + " | ".join((render_project_cell(p), cell(p.summary), cell(p.stack), role_access or "—")) + " |"
+    return "| " + " | ".join((render_project_cell(p), cell(p.summary), render_role_access_cell(p))) + " |"
 
 
 def render_table(projects: list[Project]) -> list[str]:

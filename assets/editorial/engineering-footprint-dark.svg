@@ -1,16 +1,16 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="350" viewBox="0 0 1200 350" role="img" aria-label="Engineering footprint, Sep 2025 – Sep 2026: 936 Commits authored; 27 Repositories contributed to; 37 Owned repositories; 4 Verified collaborations">
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="350" viewBox="0 0 1200 350" role="img" aria-label="Engineering footprint, Sep 2025 – Sep 2026: 939 Commits authored; 27 Repositories contributed to; 37 Owned repositories; 4 Verified collaborations">
   <title>Engineering footprint · Sep 2025 – Sep 2026</title>
   <style>.fp-sans{font-family:'Segoe UI',Inter,Helvetica,Arial,sans-serif}.fp-mono{font-family:Consolas,'JetBrains Mono',Menlo,monospace}</style>
   <defs><clipPath id="fp-bar"><rect x="64" y="244" width="1072" height="14" rx="7"/></clipPath></defs>
   <rect width="1200" height="350" rx="14" fill="#0B0D10"/>
   <rect x="0.5" y="0.5" width="1199" height="349" rx="14" fill="none" stroke="#262A33"/>
   <text x="64" y="58" class="fp-mono" font-size="15" letter-spacing="2" fill="#8B93A7">ENGINEERING FOOTPRINT · SEP 2025 – SEP 2026</text>
-  <text x="64" y="132" class="fp-sans" font-size="56" font-weight="700" fill="#F4F2EC" letter-spacing="-1">936</text>
+  <text x="64" y="132" class="fp-sans" font-size="56" font-weight="700" fill="#F4F2EC" letter-spacing="-1">939</text>
   <text x="64" y="164" class="fp-sans" font-size="18" font-weight="600" fill="#F4F2EC">Commits authored</text>
-  <text x="64" y="188" class="fp-sans" font-size="14" fill="#8B93A7">12 months · public + private</text>
+  <text x="64" y="188" class="fp-sans" font-size="14" fill="#8B93A7">12 months · 72 public · 867 private</text>
   <text x="332" y="132" class="fp-sans" font-size="56" font-weight="700" fill="#F4F2EC" letter-spacing="-1">27</text>
   <text x="332" y="164" class="fp-sans" font-size="18" font-weight="600" fill="#F4F2EC">Repositories contributed to</text>
-  <text x="332" y="188" class="fp-sans" font-size="14" fill="#8B93A7">12 months · owned + collaborative</text>
+  <text x="332" y="188" class="fp-sans" font-size="14" fill="#8B93A7">12 months · 23 owned · 4 collaborative</text>
   <text x="600" y="132" class="fp-sans" font-size="56" font-weight="700" fill="#F4F2EC" letter-spacing="-1">37</text>
   <text x="600" y="164" class="fp-sans" font-size="18" font-weight="600" fill="#F4F2EC">Owned repositories</text>
   <text x="600" y="188" class="fp-sans" font-size="14" fill="#8B93A7">23 public · 14 private</text>

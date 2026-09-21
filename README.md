@@ -15,10 +15,10 @@ Alongside engineering, I'm building a stronger product, sales and marketing pers
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/editorial/engineering-footprint-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="assets/editorial/engineering-footprint-light.svg">
-  <img alt="Engineering footprint, Sep 2025 – Sep 2026: 936 commits authored across public and private repositories, 27 repositories contributed to, 37 owned repositories (23 public, 14 private), 4 verified collaborations. Code by language: TypeScript 34.5%, Python 19.8%, C# 19.4%, HTML 9.6%, Dart 8.1%, JavaScript 4%, other 4.6%." src="assets/editorial/engineering-footprint-dark.svg" width="100%">
+  <img alt="Engineering footprint, Sep 2025 – Sep 2026: 939 authored commits on the default branches of accessible public and private repositories (72 public, 867 private), 27 repositories contributed to, 37 owned repositories (23 public, 14 private), 4 verified collaborations. Code by language: TypeScript 34.5%, Python 19.8%, C# 19.4%, HTML 9.6%, Dart 8.1%, JavaScript 4%, other 4.6%." src="assets/editorial/engineering-footprint-dark.svg" width="100%">
 </picture>
 
-<sub>**936 commits** across **27 repositories** in the last 12 months (Sep 2025 – Sep 2026), **37 owned repositories** and **4 verified collaborations** — measured with the GitHub API on 2026-09-21 from repositories I own or verifiably contribute to. Most of this work lives in private repositories, so GitHub's native contribution graph on this profile reflects public activity only.</sub>
+<sub>**939 authored commits** across accessible public and private repository default branches in the last 12 months (Sep 2025 – Sep 2026; 72 public, 867 private), spread over **27 repositories**, plus **37 owned repositories** and **4 verified collaborations**. Measured with the GitHub API on 2026-09-21 by matching the commit author to this account; this is a commit count, not GitHub's contribution count. Private-repository activity is included in this measurement, while GitHub's public contribution graph on this profile shows public activity only.</sub>
 
 ## Featured Work
 
@@ -64,92 +64,92 @@ Solo engineer · Private product · In active development
 
 ### Products & Platforms
 
-| Project | What it does | Stack | Role · Access |
-| --- | --- | --- | --- |
-| [MRC Commerce](https://github.com/Salihefendihsa/mrc-commerce)<br><sub>Featured · Building · [Live](https://mrc-commerce.vercel.app)</sub> | Cinematic, scroll-driven storefront for a wooden-toy brand; the marketing experience is live, the commerce layer is in progress. | Next.js · TypeScript · Tailwind · Drizzle | Solo engineer · Public |
-| [Nalbur Stok](https://github.com/Salihefendihsa/nalbur-stok)<br><sub>Maintained</sub> | Inventory management for small hardware stores: virtualised 100K-row product tables, reports and a Supabase backend. | React 19 · TypeScript · Vite · TanStack · Supabase | Solo engineer · Public |
+| Project | What it does | Role · Access |
+| --- | --- | --- |
+| [MRC Commerce](https://github.com/Salihefendihsa/mrc-commerce)<br><sub>Featured · Building · [Live](https://mrc-commerce.vercel.app)</sub><br><sub>Stack: Next.js · TypeScript · Tailwind · Drizzle</sub> | Cinematic, scroll-driven storefront for a wooden-toy brand; the marketing experience is live, the commerce layer is in progress. | <sub>Solo engineer</sub><br><sub>Public</sub> |
+| [Nalbur Stok](https://github.com/Salihefendihsa/nalbur-stok)<br><sub>Maintained</sub><br><sub>Stack: React 19 · TypeScript · Vite · TanStack · Supabase</sub> | Inventory management for small hardware stores: virtualised 100K-row product tables, reports and a Supabase backend. | <sub>Solo engineer</sub><br><sub>Public</sub> |
 
 ### AI & Automation
 
-| Project | What it does | Stack | Role · Access |
-| --- | --- | --- | --- |
-| [Shape Classifier](https://github.com/Salihefendihsa/ShapeClassifier)<br><sub>Maintained</sub> | Geometric shape recognition pipeline: synthetic data, OpenCV preprocessing, Hu-moment features and an ML.NET classifier. | C# · .NET 8 · OpenCvSharp · ML.NET | Solo engineer · Public |
-| [AuraProject AI Service](https://github.com/Salihefendihsa/auraproject-ai-service)<br><sub>Experimental</sub> | AI outfit-recommendation service with validation, auth and rate limiting, self-critique via a second LLM, wardrobe hashing and pose-locked virtual try-on. | Python · FastAPI · OpenAI / Gemini · ControlNet | Solo engineer · Public |
+| Project | What it does | Role · Access |
+| --- | --- | --- |
+| [Shape Classifier](https://github.com/Salihefendihsa/ShapeClassifier)<br><sub>Maintained</sub><br><sub>Stack: C# · .NET 8 · OpenCvSharp · ML.NET</sub> | Geometric shape recognition pipeline: synthetic data, OpenCV preprocessing, Hu-moment features and an ML.NET classifier. | <sub>Solo engineer</sub><br><sub>Public</sub> |
+| [AuraProject AI Service](https://github.com/Salihefendihsa/auraproject-ai-service)<br><sub>Experimental</sub><br><sub>Stack: Python · FastAPI · OpenAI / Gemini · ControlNet</sub> | AI outfit-recommendation service with validation, auth and rate limiting, self-critique via a second LLM, wardrobe hashing and pose-locked virtual try-on. | <sub>Solo engineer</sub><br><sub>Public</sub> |
 
 ### Backend & APIs
 
-| Project | What it does | Stack | Role · Access |
-| --- | --- | --- | --- |
-| [LLM Chatbot](https://github.com/Salihefendihsa/LLMChatbot)<br><sub>Maintained</sub> | Streaming, multi-turn chatbot backend on the OpenAI-compatible Chat Completions API with a console client and tests. | C# · .NET · REST | Solo engineer · Public |
+| Project | What it does | Role · Access |
+| --- | --- | --- |
+| [LLM Chatbot](https://github.com/Salihefendihsa/LLMChatbot)<br><sub>Maintained</sub><br><sub>Stack: C# · .NET · REST</sub> | Streaming, multi-turn chatbot backend on the OpenAI-compatible Chat Completions API with a console client and tests. | <sub>Solo engineer</sub><br><sub>Public</sub> |
 
 ### Desktop & Tools
 
-| Project | What it does | Stack | Role · Access |
-| --- | --- | --- | --- |
-| [Antivirus Simulator](https://github.com/Salihefendihsa/AntivirusSimulator)<br><sub>Coursework</sub> | Educational antivirus simulator (signature scanning, async cancellation) built as an OOP course project; contains no real malware. | C# · WinForms | Student · Public |
-| [MultiLang Translator](https://github.com/Salihefendihsa/MultiLangTranslator)<br><sub>Maintained</sub> | WPF desktop app translating text into several languages in parallel, with auto-detection, caching, history and an offline mock provider. | C# · .NET 8 · WPF · MVVM | Solo engineer · Public |
+| Project | What it does | Role · Access |
+| --- | --- | --- |
+| [Antivirus Simulator](https://github.com/Salihefendihsa/AntivirusSimulator)<br><sub>Coursework</sub><br><sub>Stack: C# · WinForms</sub> | Educational antivirus simulator (signature scanning, async cancellation) built as an OOP course project; contains no real malware. | <sub>Student</sub><br><sub>Public</sub> |
+| [MultiLang Translator](https://github.com/Salihefendihsa/MultiLangTranslator)<br><sub>Maintained</sub><br><sub>Stack: C# · .NET 8 · WPF · MVVM</sub> | WPF desktop app translating text into several languages in parallel, with auto-detection, caching, history and an offline mock provider. | <sub>Solo engineer</sub><br><sub>Public</sub> |
 
 ## Private Products & Systems
 
 <sub>Products built for real businesses or under NDA. Names and details are limited to what can be shared publicly; no private repositories are linked.</sub>
 
-| Project | What it does | Stack | Role · Access |
-| --- | --- | --- | --- |
-| **Navlonix**<br><sub>Featured · In active development</sub> | AI-assisted B2B logistics marketplace matching shippers with verified drivers: role-based apps, escrow-style payment flow, real-time chat and tracking. | .NET 9 · React · Expo · PostgreSQL / PostGIS | Founder & lead engineer · Private |
-| **Multi-Agent AI Operations System**<br><sub>Featured · In active development</sub> | General-purpose multi-agent operating layer with explicit security boundaries: bounded task execution, review and audit stages, human approval gates, fault injection and fail-closed reliability work. | Python · SQLite · Claude-based agents | Solo engineer · Private |
-| **Approval-First Social Media Operations Platform**<br><sub>In active development</sub> | Multi-workspace backend for professional social accounts: secure Meta OAuth and webhooks, durable background jobs, AI-assisted inbox and comment workflows that never act without human approval. | Python · FastAPI · PostgreSQL · Redis · Next.js · Docker | Lead engineer · Private |
-| **Field Service Operations Platform**<br><sub>In active development</sub> | Internal management system for a pest-control service business: customers, staff, jobs, contracts, quotes and payments behind a typed API and an admin web panel. | TypeScript · Express · Prisma · Next.js | Solo engineer · Confidential |
-| **Service Business Website & Panel**<br><sub>Delivered</sub> | Marketing site with SEO, FAQ and service guides for a local service company, plus an authenticated panel and database schema. | Next.js · TypeScript · Supabase | Solo engineer · Confidential |
-| **Restaurant QR Ordering & POS**<br><sub>Delivered</sub> | QR-based live table ordering for guests and a role-based admin POS: realtime order board, menu and table management, receipts and bill splitting, CI with unit tests. | Next.js · TypeScript · Supabase Realtime | Solo engineer · Confidential |
-| **Personal Finance & Investment Tracker**<br><sub>In development</sub> | Income and expense tracking, category budgets, FIFO profit/loss on gold and currency holdings, receipt and bank-statement OCR, reminders and cash-flow insights. Flutter client plus REST API. | Flutter · Node.js · Express · MongoDB | Solo engineer · Private |
-| **AuraProject Core**<br><sub>Experimental</sub> | Private counterpart of the public AI service: PyTorch-based visual analysis, style-rule engine, weather and trend context for personalised outfit recommendations. | Python · PyTorch · FastAPI · Streamlit | Solo engineer · Private |
+| Project | What it does | Role · Access |
+| --- | --- | --- |
+| **Navlonix**<br><sub>Featured · In active development</sub><br><sub>Stack: .NET 9 · React · Expo · PostgreSQL / PostGIS</sub> | AI-assisted B2B logistics marketplace matching shippers with verified drivers: role-based apps, escrow-style payment flow, real-time chat and tracking. | <sub>Founder & lead engineer</sub><br><sub>Private</sub> |
+| **Multi-Agent AI Operations System**<br><sub>Featured · In active development</sub><br><sub>Stack: Python · SQLite · Claude-based agents</sub> | General-purpose multi-agent operating layer with explicit security boundaries: bounded task execution, review and audit stages, human approval gates, fault injection and fail-closed reliability work. | <sub>Solo engineer</sub><br><sub>Private</sub> |
+| **Approval-First Social Media Operations Platform**<br><sub>In active development</sub><br><sub>Stack: Python · FastAPI · PostgreSQL · Redis · Next.js · Docker</sub> | Multi-workspace backend for professional social accounts: secure Meta OAuth and webhooks, durable background jobs, AI-assisted inbox and comment workflows that never act without human approval. | <sub>Lead engineer</sub><br><sub>Private</sub> |
+| **Field Service Operations Platform**<br><sub>In active development</sub><br><sub>Stack: TypeScript · Express · Prisma · Next.js</sub> | Internal management system for a pest-control service business: customers, staff, jobs, contracts, quotes and payments behind a typed API and an admin web panel. | <sub>Solo engineer</sub><br><sub>Confidential</sub> |
+| **Service Business Website & Panel**<br><sub>Delivered</sub><br><sub>Stack: Next.js · TypeScript · Supabase</sub> | Marketing site with SEO, FAQ and service guides for a local service company, plus an authenticated panel and database schema. | <sub>Solo engineer</sub><br><sub>Confidential</sub> |
+| **Restaurant QR Ordering & POS**<br><sub>Delivered</sub><br><sub>Stack: Next.js · TypeScript · Supabase Realtime</sub> | QR-based live table ordering for guests and a role-based admin POS: realtime order board, menu and table management, receipts and bill splitting, CI with unit tests. | <sub>Solo engineer</sub><br><sub>Confidential</sub> |
+| **Personal Finance & Investment Tracker**<br><sub>In development</sub><br><sub>Stack: Flutter · Node.js · Express · MongoDB</sub> | Income and expense tracking, category budgets, FIFO profit/loss on gold and currency holdings, receipt and bank-statement OCR, reminders and cash-flow insights. Flutter client plus REST API. | <sub>Solo engineer</sub><br><sub>Private</sub> |
+| **AuraProject Core**<br><sub>Experimental</sub><br><sub>Stack: Python · PyTorch · FastAPI · Streamlit</sub> | Private counterpart of the public AI service: PyTorch-based visual analysis, style-rule engine, weather and trend context for personalised outfit suggestions. | <sub>Solo engineer</sub><br><sub>Private</sub> |
 
 ## Collaborative Work
 
 <sub>Only repositories where my commits or pull requests are verifiable are listed. Ownership stays with the partner.</sub>
 
-| Project | What it does | Stack | Role · Access |
-| --- | --- | --- | --- |
-| **Sticker & Label Studio**<br><sub>Delivered</sub> | Web app for designing school name stickers and labels: template library, positioned text editor, bulk generation from Excel/CSV and millimetre-accurate print layouts. | TypeScript · React | Lead contributor · 71 of 75 commits · Collaborative · Private |
-| **Couples Companion App**<br><sub>In development</sub> | Flutter mobile app with shared goals, daily check-in nudges and a personality-informed character quiz; delivered through reviewed pull requests. | Flutter · Dart · Gradle / Kotlin toolchain | Core contributor · 37 commits, 30 pull requests · Collaborative · Private |
-| **Invitation Design Studio**<br><sub>Delivered</sub> | Interactive web studio for wedding and event invitations: parses pasted invitation text, applies templates and phrase libraries, live preview and print preparation. | React · Vite · JavaScript | Primary contributor · 5 of 6 commits · Collaborative · Private |
-| **Product Photo Studio**<br><sub>In development</sub> | Flutter app that guides small sellers through 360° product capture, removes backgrounds fully on-device and exports social-ready posts. | Flutter · Dart · on-device ML | Contributor · 2 of 7 commits · Collaborative · Private |
+| Project | What it does | Role · Access |
+| --- | --- | --- |
+| **Sticker & Label Studio**<br><sub>Delivered</sub><br><sub>Stack: TypeScript · React</sub> | Web app for designing school name stickers and labels: template library, positioned text editor, bulk generation from Excel/CSV and millimetre-accurate print layouts. | <sub>Lead contributor · 71 of 75 commits</sub><br><sub>Collaborative · Private</sub> |
+| **Couples Companion App**<br><sub>In development</sub><br><sub>Stack: Flutter · Dart · Gradle / Kotlin toolchain</sub> | Flutter mobile app with shared goals, daily check-in nudges and a personality-informed character quiz; delivered through reviewed pull requests. | <sub>Core contributor · 37 commits, 30 pull requests</sub><br><sub>Collaborative · Private</sub> |
+| **Invitation Design Studio**<br><sub>Delivered</sub><br><sub>Stack: React · Vite · JavaScript</sub> | Interactive web studio for wedding and event invitations: parses pasted invitation text, applies templates and phrase libraries, live preview and print preparation. | <sub>Primary contributor · 5 of 6 commits</sub><br><sub>Collaborative · Private</sub> |
+| **Product Photo Studio**<br><sub>In development</sub><br><sub>Stack: Flutter · Dart · on-device ML</sub> | Flutter app that guides small sellers through 360° product capture, removes backgrounds fully on-device and exports social-ready posts. | <sub>Contributor · 2 of 7 commits</sub><br><sub>Collaborative · Private</sub> |
 
 ## Academic & Experiments
 
 <details>
 <summary>University coursework, labs and small experiments (19)</summary>
 
-| Project | What it does | Stack | Role · Access |
-| --- | --- | --- | --- |
-| [web-tasarimi-odevler](https://github.com/Salihefendihsa/web-tasarimi-odevler)<br><sub>Coursework</sub> | Web design course assignments. | JavaScript · HTML · CSS | Student · Public |
-| [Fonksiyonel-Programlama-LAB2](https://github.com/Salihefendihsa/Fonksiyonel-Programlama-LAB2)<br><sub>Coursework</sub> | Functional programming lab: shared-wallet expense tracker for flatmates as a mobile web app. | JavaScript · HTML · CSS | Student · Public |
-| [web-lab-hello](https://github.com/Salihefendihsa/web-lab-hello)<br><sub>Coursework</sub> | Web lab starter: React + TypeScript + Vite setup. | React · TypeScript · Vite | Student · Public |
-| [web-lab-1](https://github.com/Salihefendihsa/web-lab-1)<br><sub>Coursework</sub> | Web lab exercise. | HTML | Student · Public |
-| [RSU JPEG Compression](https://github.com/Salihefendihsa/rsu-jpeg-compression)<br><sub>Experiment</sub> | Research experiment: a custom random-number generator drives dynamic JPEG quantization tables, benchmarked against the standard table. | Python · NumPy · SciPy | Solo engineer · Public |
-| [arabaYarisi](https://github.com/Salihefendihsa/arabaYarisi)<br><sub>Coursework</sub> | Car-racing mini game written as a C# course project. | C# | Student · Public |
-| [ntplabodev6.2](https://github.com/Salihefendihsa/ntplabodev6.2)<br><sub>Coursework</sub> | Object-oriented programming lab assignment 6.2. | C# | Student · Public |
-| [ntplabodevuygulama6.1](https://github.com/Salihefendihsa/ntplabodevuygulama6.1)<br><sub>Coursework</sub> | Object-oriented programming lab application 6.1. | C# | Student · Public |
-| [mayinTarlasi](https://github.com/Salihefendihsa/mayinTarlasi)<br><sub>Coursework</sub> | Minesweeper clone written as a C# course project. | C# | Student · Public |
-| [ntpLab5.1\_Odev](https://github.com/Salihefendihsa/ntpLab5.1_Odev)<br><sub>Coursework</sub> | Object-oriented programming lab assignment 5.1. | C# | Student · Public |
-| [netpLab5-Odev](https://github.com/Salihefendihsa/netpLab5-Odev)<br><sub>Coursework</sub> | Object-oriented programming lab assignment 5. | C# | Student · Public |
-| [proje2\_flippybird](https://github.com/Salihefendihsa/proje2_flippybird)<br><sub>Coursework</sub> | Flappy-Bird style game written as a C# course project. | C# | Student · Public |
-| [ntp\_lab\_odev2-3-78910-](https://github.com/Salihefendihsa/ntp_lab_odev2-3-78910-)<br><sub>Coursework</sub> | Object-oriented programming lab assignments 2–3 and 7–10. | C# | Student · Public |
-| [ntp\_lab\_odev2-3](https://github.com/Salihefendihsa/ntp_lab_odev2-3)<br><sub>Coursework</sub> | Object-oriented programming lab assignments 2–3. | C# | Student · Public |
-| [NTP\_Lab](https://github.com/Salihefendihsa/NTP_Lab)<br><sub>Coursework</sub> | Object-oriented programming lab exercises. | C# | Student · Public |
-| [oryantasyon](https://github.com/Salihefendihsa/oryantasyon)<br><sub>Coursework</sub> | Software-engineering orientation course video assignment. | Video | Student · Public |
-| **OOP Lab — Tic-Tac-Toe**<br><sub>Coursework</sub> | Object-oriented programming lab exercise (2024). | C# | Student · Private |
-| **OOP Lab — Week 4 exercise**<br><sub>Coursework</sub> | Object-oriented programming lab exercise (2024). | C# | Student · Private |
-| **OOP Lab — Home desktop exercise**<br><sub>Coursework</sub> | Object-oriented programming lab exercise (2024). | C# | Student · Private |
+| Project | What it does | Role · Access |
+| --- | --- | --- |
+| [Web Design Assignments](https://github.com/Salihefendihsa/web-tasarimi-odevler)<br><sub>Coursework</sub><br><sub>Stack: JavaScript · HTML · CSS</sub> | Web design course assignments. | <sub>Student</sub><br><sub>Public</sub> |
+| [Functional Programming Lab 2](https://github.com/Salihefendihsa/Fonksiyonel-Programlama-LAB2)<br><sub>Coursework</sub><br><sub>Stack: JavaScript · HTML · CSS</sub> | Functional programming lab: shared-wallet expense tracker for flatmates as a mobile web app. | <sub>Student</sub><br><sub>Public</sub> |
+| [Web Lab Hello](https://github.com/Salihefendihsa/web-lab-hello)<br><sub>Coursework</sub><br><sub>Stack: React · TypeScript · Vite</sub> | Web lab starter: React + TypeScript + Vite setup. | <sub>Student</sub><br><sub>Public</sub> |
+| [Web Lab 1](https://github.com/Salihefendihsa/web-lab-1)<br><sub>Coursework</sub><br><sub>Stack: HTML</sub> | Web lab exercise. | <sub>Student</sub><br><sub>Public</sub> |
+| [RSU JPEG Compression](https://github.com/Salihefendihsa/rsu-jpeg-compression)<br><sub>Experiment</sub><br><sub>Stack: Python · NumPy · SciPy</sub> | Research experiment: a custom random-number generator drives dynamic JPEG quantization tables, benchmarked against the standard table. | <sub>Solo engineer</sub><br><sub>Public</sub> |
+| [Car Racing Game](https://github.com/Salihefendihsa/arabaYarisi)<br><sub>Coursework</sub><br><sub>Stack: C#</sub> | Car-racing mini game written as a C# course project. | <sub>Student</sub><br><sub>Public</sub> |
+| [OOP Lab 6.2](https://github.com/Salihefendihsa/ntplabodev6.2)<br><sub>Coursework</sub><br><sub>Stack: C#</sub> | Object-oriented programming lab assignment 6.2. | <sub>Student</sub><br><sub>Public</sub> |
+| [OOP Lab 6.1](https://github.com/Salihefendihsa/ntplabodevuygulama6.1)<br><sub>Coursework</sub><br><sub>Stack: C#</sub> | Object-oriented programming lab application 6.1. | <sub>Student</sub><br><sub>Public</sub> |
+| [Minesweeper Clone](https://github.com/Salihefendihsa/mayinTarlasi)<br><sub>Coursework</sub><br><sub>Stack: C#</sub> | Minesweeper clone written as a C# course project. | <sub>Student</sub><br><sub>Public</sub> |
+| [OOP Lab 5.1](https://github.com/Salihefendihsa/ntpLab5.1_Odev)<br><sub>Coursework</sub><br><sub>Stack: C#</sub> | Object-oriented programming lab assignment 5.1. | <sub>Student</sub><br><sub>Public</sub> |
+| [OOP Lab 5](https://github.com/Salihefendihsa/netpLab5-Odev)<br><sub>Coursework</sub><br><sub>Stack: C#</sub> | Object-oriented programming lab assignment 5. | <sub>Student</sub><br><sub>Public</sub> |
+| [Flappy Bird Clone](https://github.com/Salihefendihsa/proje2_flippybird)<br><sub>Coursework</sub><br><sub>Stack: C#</sub> | Flappy-Bird style game written as a C# course project. | <sub>Student</sub><br><sub>Public</sub> |
+| [OOP Lab 2–3, 7–10](https://github.com/Salihefendihsa/ntp_lab_odev2-3-78910-)<br><sub>Coursework</sub><br><sub>Stack: C#</sub> | Object-oriented programming lab assignments 2–3 and 7–10. | <sub>Student</sub><br><sub>Public</sub> |
+| [OOP Lab 2–3](https://github.com/Salihefendihsa/ntp_lab_odev2-3)<br><sub>Coursework</sub><br><sub>Stack: C#</sub> | Object-oriented programming lab assignments 2–3. | <sub>Student</sub><br><sub>Public</sub> |
+| [OOP Lab](https://github.com/Salihefendihsa/NTP_Lab)<br><sub>Coursework</sub><br><sub>Stack: C#</sub> | Object-oriented programming lab exercises. | <sub>Student</sub><br><sub>Public</sub> |
+| [Orientation Video](https://github.com/Salihefendihsa/oryantasyon)<br><sub>Coursework</sub><br><sub>Stack: Video</sub> | Software-engineering orientation course video assignment. | <sub>Student</sub><br><sub>Public</sub> |
+| **OOP Lab — Tic-Tac-Toe**<br><sub>Coursework</sub><br><sub>Stack: C#</sub> | Object-oriented programming lab exercise (2024). | <sub>Student</sub><br><sub>Private</sub> |
+| **OOP Lab — Week 4 exercise**<br><sub>Coursework</sub><br><sub>Stack: C#</sub> | Object-oriented programming lab exercise (2024). | <sub>Student</sub><br><sub>Private</sub> |
+| **OOP Lab — Home desktop exercise**<br><sub>Coursework</sub><br><sub>Stack: C#</sub> | Object-oriented programming lab exercise (2024). | <sub>Student</sub><br><sub>Private</sub> |
 
 </details>
 
 <details>
 <summary>Archived / earlier work (1)</summary>
 
-| Project | What it does | Stack | Role · Access |
-| --- | --- | --- | --- |
-| **Restaurant Order Desk & Reporting**<br><sub>Superseded</sub> | Earlier single-page order desk for the same venue: table and takeaway cards, stock-aware menu, hourly and per-product sales reports. | React · Vite | Solo engineer · Confidential |
+| Project | What it does | Role · Access |
+| --- | --- | --- |
+| **Restaurant Order Desk & Reporting**<br><sub>Superseded</sub><br><sub>Stack: React · Vite</sub> | Earlier single-page order desk for the same venue: table and takeaway cards, stock-aware menu, hourly and per-product sales reports. | <sub>Solo engineer</sub><br><sub>Confidential</sub> |
 
 </details>
 

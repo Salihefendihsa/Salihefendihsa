@@ -101,7 +101,7 @@
     },
     {
       "display_name": "AuraProject Core",
-      "safe_summary": "Private counterpart of the public AI service: PyTorch-based visual analysis, style-rule engine, weather and trend context for personalised outfit recommendations.",
+      "safe_summary": "Private counterpart of the public AI service: PyTorch-based visual analysis, style-rule engine, weather and trend context for personalised outfit suggestions.",
       "stack": "Python · PyTorch · FastAPI · Streamlit",
       "role": "Solo engineer",
       "access": "Private",
@@ -259,6 +259,7 @@
       "category": "Academic & Experiments"
     },
     "Fonksiyonel-Programlama-LAB2": {
+      "display_name": "Functional Programming Lab 2",
       "safe_summary": "Functional programming lab: shared-wallet expense tracker for flatmates as a mobile web app.",
       "stack": "JavaScript · HTML · CSS",
       "role": "Student",
@@ -266,6 +267,7 @@
       "category": "Academic & Experiments"
     },
     "web-tasarimi-odevler": {
+      "display_name": "Web Design Assignments",
       "safe_summary": "Web design course assignments.",
       "stack": "JavaScript · HTML · CSS",
       "role": "Student",
@@ -273,6 +275,7 @@
       "category": "Academic & Experiments"
     },
     "web-lab-hello": {
+      "display_name": "Web Lab Hello",
       "safe_summary": "Web lab starter: React + TypeScript + Vite setup.",
       "stack": "React · TypeScript · Vite",
       "role": "Student",
@@ -280,6 +283,7 @@
       "category": "Academic & Experiments"
     },
     "web-lab-1": {
+      "display_name": "Web Lab 1",
       "safe_summary": "Web lab exercise.",
       "stack": "HTML",
       "role": "Student",
@@ -287,6 +291,7 @@
       "category": "Academic & Experiments"
     },
     "NTP_Lab": {
+      "display_name": "OOP Lab",
       "safe_summary": "Object-oriented programming lab exercises.",
       "stack": "C#",
       "role": "Student",
@@ -294,6 +299,7 @@
       "category": "Academic & Experiments"
     },
     "ntp_lab_odev2-3": {
+      "display_name": "OOP Lab 2–3",
       "safe_summary": "Object-oriented programming lab assignments 2–3.",
       "stack": "C#",
       "role": "Student",
@@ -301,6 +307,7 @@
       "category": "Academic & Experiments"
     },
     "ntp_lab_odev2-3-78910-": {
+      "display_name": "OOP Lab 2–3, 7–10",
       "safe_summary": "Object-oriented programming lab assignments 2–3 and 7–10.",
       "stack": "C#",
       "role": "Student",
@@ -308,6 +315,7 @@
       "category": "Academic & Experiments"
     },
     "netpLab5-Odev": {
+      "display_name": "OOP Lab 5",
       "safe_summary": "Object-oriented programming lab assignment 5.",
       "stack": "C#",
       "role": "Student",
@@ -315,6 +323,7 @@
       "category": "Academic & Experiments"
     },
     "ntpLab5.1_Odev": {
+      "display_name": "OOP Lab 5.1",
       "safe_summary": "Object-oriented programming lab assignment 5.1.",
       "stack": "C#",
       "role": "Student",
@@ -322,6 +331,7 @@
       "category": "Academic & Experiments"
     },
     "ntplabodev6.2": {
+      "display_name": "OOP Lab 6.2",
       "safe_summary": "Object-oriented programming lab assignment 6.2.",
       "stack": "C#",
       "role": "Student",
@@ -329,6 +339,7 @@
       "category": "Academic & Experiments"
     },
     "ntplabodevuygulama6.1": {
+      "display_name": "OOP Lab 6.1",
       "safe_summary": "Object-oriented programming lab application 6.1.",
       "stack": "C#",
       "role": "Student",
@@ -336,6 +347,7 @@
       "category": "Academic & Experiments"
     },
     "proje2_flippybird": {
+      "display_name": "Flappy Bird Clone",
       "safe_summary": "Flappy-Bird style game written as a C# course project.",
       "stack": "C#",
       "role": "Student",
@@ -343,6 +355,7 @@
       "category": "Academic & Experiments"
     },
     "arabaYarisi": {
+      "display_name": "Car Racing Game",
       "safe_summary": "Car-racing mini game written as a C# course project.",
       "stack": "C#",
       "role": "Student",
@@ -350,6 +363,7 @@
       "category": "Academic & Experiments"
     },
     "mayinTarlasi": {
+      "display_name": "Minesweeper Clone",
       "safe_summary": "Minesweeper clone written as a C# course project.",
       "stack": "C#",
       "role": "Student",
@@ -357,6 +371,7 @@
       "category": "Academic & Experiments"
     },
     "oryantasyon": {
+      "display_name": "Orientation Video",
       "safe_summary": "Software-engineering orientation course video assignment.",
       "stack": "Video",
       "role": "Student",

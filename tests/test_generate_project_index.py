@@ -169,13 +169,13 @@ class CatalogTests(unittest.TestCase):
         p = by_name(build(entries=[e]), "Shared App")
         row = gpi.render_row(p)
         self.assertIn("[Shared App](https://github.com/partner/shared-app)", row)
-        self.assertIn("Core contributor · 40 commits · Collaborative · Public", row)
+        self.assertIn("<sub>Core contributor · 40 commits</sub><br><sub>Collaborative · Public</sub>", row)
 
     def test_collaborative_private_entry_shows_role_and_no_link(self):
         e = entry("Shared Private", access="Collaborative · Private", category="Collaborative Work", role="Lead contributor")
         row = gpi.render_row(by_name(build(entries=[e]), "Shared Private"))
         self.assertIn("**Shared Private**", row)
-        self.assertIn("Lead contributor · Collaborative · Private", row)
+        self.assertIn("<sub>Lead contributor</sub><br><sub>Collaborative · Private</sub>", row)
         self.assertNotIn("github.com", row)
 
     def test_disallowed_fields_and_values_are_rejected(self):
@@ -243,18 +243,29 @@ class RenderTests(unittest.TestCase):
         p = by_name(build([repo(description="a | b <script> *c* [d](e) `f`")]), "demo-app")
         row = gpi.render_row(p)
         self.assertIn("a \\| b \\<script\\> \\*c\\* \\[d\\](e) \\`f\\`", row)
-        self.assertEqual(row.count(" | "), 3)  # still exactly four cells
+        self.assertEqual(row.count(" | "), 2)  # still exactly three cells
 
     def test_display_name_is_escaped(self):
         row = gpi.render_row(by_name(build(entries=[entry("Evil | Name")]), "Evil | Name"))
         self.assertIn("**Evil \\| Name**", row)
 
-    def test_tables_have_four_columns_for_mobile(self):
+    def test_tables_have_three_columns_for_mobile(self):
         block = gpi.render_block(build([repo()], [entry()]))
         for line in block.splitlines():
             if line.startswith("| "):
-                self.assertEqual(line.count(" | "), 3, line)
-        self.assertEqual(len(gpi.TABLE_COLUMNS), 4)
+                self.assertEqual(line.count(" | "), 2, line)
+        self.assertEqual(gpi.TABLE_COLUMNS, ("Project", "What it does", "Role · Access"))
+
+    def test_stack_moves_into_project_cell_and_is_escaped(self):
+        p = by_name(build([repo(homepage="https://demo.example.com", topics=["status-live"])], overrides={"demo-app": {"stack": "Next.js · C# | Vite"}}), "demo-app")
+        cell_text = gpi.render_row(p).split(" | ")[0]
+        self.assertIn("<br><sub>Live · [Live](https://demo.example.com)</sub>", cell_text)
+        self.assertIn("<br><sub>Stack: Next.js · C# \| Vite</sub>", cell_text)
+        self.assertNotIn("Next.js", gpi.render_row(p).split(" | ")[1])
+
+    def test_empty_stack_omits_stack_line(self):
+        row = gpi.render_row(by_name(build(entries=[entry(stack="")]), "Private Thing"))
+        self.assertNotIn("Stack:", row)
 
     def test_block_has_all_sections_and_markers(self):
         block = gpi.render_block(build([repo()], [entry()]))
