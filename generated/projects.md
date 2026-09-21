@@ -17,7 +17,7 @@
 | Project | What it does | Role · Access |
 | --- | --- | --- |
 | [Shape Classifier](https://github.com/Salihefendihsa/ShapeClassifier)<br><sub>Maintained</sub><br><sub>Stack: C# · .NET 8 · OpenCvSharp · ML.NET</sub> | Geometric shape recognition pipeline: synthetic data, OpenCV pre-processing, Hu-moment features and an ML.NET classifier. | <sub>Solo engineer</sub><br><sub>Public</sub> |
-| [AuraProject AI Service](https://github.com/Salihefendihsa/auraproject-ai-service)<br><sub>Experimental</sub><br><sub>Stack: Python · FastAPI · OpenAI / Gemini · ControlNet</sub> | AI outfit recommendation service with validation, auth and rate limiting, self-critique via a second LLM, wardrobe hashing and pose-locked virtual try-on. | <sub>Solo engineer</sub><br><sub>Public</sub> |
+| [AuraProject AI Service](https://github.com/Salihefendihsa/auraproject-ai-service)<br><sub>Experimental</sub><br><sub>Stack: Python · FastAPI · OpenAI / Gemini · ControlNet</sub> | AI service that recommends outfits: validation, auth and rate limiting, self-critique via a second LLM, wardrobe hashing and pose-locked virtual try-on. | <sub>Solo engineer</sub><br><sub>Public</sub> |
 
 ### Backend & APIs
 

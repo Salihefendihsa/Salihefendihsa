@@ -216,7 +216,7 @@
     },
     "auraproject-ai-service": {
       "display_name": "AuraProject AI Service",
-      "safe_summary": "AI outfit recommendation service with validation, auth and rate limiting, self-critique via a second LLM, wardrobe hashing and pose-locked virtual try-on.",
+      "safe_summary": "AI service that recommends outfits: validation, auth and rate limiting, self-critique via a second LLM, wardrobe hashing and pose-locked virtual try-on.",
       "stack": "Python · FastAPI · OpenAI / Gemini · ControlNet",
       "role": "Solo engineer",
       "status": "Experimental"
