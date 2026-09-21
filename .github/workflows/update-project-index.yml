@@ -1,8 +1,11 @@
 name: Update project index
 
-# Refreshes the generated portfolio block in README.md from the public GitHub API
-# and the public-safe catalog in data/project_catalog.json. Uses only the default
-# GITHUB_TOKEN (public data); it never requests private repositories.
+# Refreshes the generated portfolio blocks in README.md from the public GitHub
+# API and the public-safe product model in data/portfolio.json. Uses only the
+# default GITHUB_TOKEN (public data); it never requests private repositories.
+# Private and collaborative work is described solely from the committed,
+# curated portfolio file — new private repositories are never published
+# automatically. Featured products are curated, not chosen by the workflow.
 
 on:
   schedule:
@@ -12,10 +15,13 @@ on:
     branches:
       - main
     paths:
-      - scripts/generate_project_index.py
-      - data/project_catalog.json
+      - scripts/generate_portfolio.py
+      - scripts/render_assets.py
+      - data/portfolio.json
       - data/footprint.json
       - .github/workflows/update-project-index.yml
+      # README.md and generated/ are deliberately absent: the workflow's own
+      # commit must not re-trigger it (its commit message also carries [skip ci]).
 
 permissions:
   contents: write
@@ -40,16 +46,16 @@ jobs:
       - name: Run tests
         run: python -m unittest discover -s tests
 
-      - name: Generate project index
+      - name: Generate portfolio
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: python scripts/generate_project_index.py
+        run: python scripts/generate_portfolio.py
 
-      - name: Verify only generated files changed
+      - name: Verify only generated content changed
         id: verify
         run: |
           set -euo pipefail
-          allowed="README.md generated/projects.md assets/editorial/engineering-footprint-dark.svg assets/editorial/engineering-footprint-light.svg"
+          allowed="README.md generated/portfolio.md generated/project-archive.md assets/v5/proof-strip-dark.svg assets/v5/proof-strip-light.svg"
           changed="$(git status --porcelain | awk '{print $2}')"
           for f in $changed; do
             case " $allowed " in
@@ -64,14 +70,21 @@ jobs:
           fi
           python - <<'PY'
           import re, subprocess, sys
-          pat = re.compile(r"<!-- PROJECT_INDEX:START -->.*?<!-- PROJECT_INDEX:END -->", re.S)
+          pats = [re.compile(r"<!-- PORTFOLIO:START -->.*?<!-- PORTFOLIO:END -->", re.S),
+                  re.compile(r"<!-- ARCHIVE:START -->.*?<!-- ARCHIVE:END -->", re.S)]
           before = subprocess.check_output(["git", "show", "HEAD:README.md"], text=True)
           after = open("README.md", encoding="utf-8").read()
-          if not pat.search(before) or not pat.search(after):
-              sys.exit("markers missing — refusing to commit")
-          if pat.sub("", before) != pat.sub("", after):
-              sys.exit("changes found outside the generated block — refusing to commit")
+          for pat in pats:
+              if not pat.search(before) or not pat.search(after):
+                  sys.exit("markers missing — refusing to commit")
+              before, after = pat.sub("", before), pat.sub("", after)
+          if before != after:
+              sys.exit("changes found outside the generated blocks — refusing to commit")
+          low = open("README.md", encoding="utf-8").read().lower()
+          if "mrc-commerce" in low or "mrc commerce" in low:
+              sys.exit("excluded repository would be published — refusing to commit")
           PY
+          python -m unittest discover -s tests -p "test_readme_and_assets.py"
           echo "changed=true" >> "$GITHUB_OUTPUT"
 
       - name: Commit and push
@@ -80,6 +93,6 @@ jobs:
           set -euo pipefail
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add README.md generated/projects.md assets/editorial/engineering-footprint-dark.svg assets/editorial/engineering-footprint-light.svg
+          git add README.md generated/portfolio.md generated/project-archive.md assets/v5/proof-strip-dark.svg assets/v5/proof-strip-light.svg
           git commit -m "chore(profile): refresh project index [skip ci]"
           git push origin HEAD:main
