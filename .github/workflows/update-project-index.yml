@@ -1,5 +1,9 @@
 name: Update project index
 
+# Refreshes the generated portfolio block in README.md from the public GitHub API
+# and the public-safe catalog in data/project_catalog.json. Uses only the default
+# GITHUB_TOKEN (public data); it never requests private repositories.
+
 on:
   schedule:
     - cron: "17 */6 * * *"
@@ -9,6 +13,8 @@ on:
       - main
     paths:
       - scripts/generate_project_index.py
+      - data/project_catalog.json
+      - data/footprint.json
       - .github/workflows/update-project-index.yml
 
 permissions:
@@ -39,13 +45,21 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: python scripts/generate_project_index.py
 
-      - name: Verify only the generated block changed
+      - name: Verify only generated files changed
         id: verify
         run: |
           set -euo pipefail
-          if git diff --quiet -- README.md; then
+          allowed="README.md generated/projects.md assets/editorial/engineering-footprint-dark.svg assets/editorial/engineering-footprint-light.svg"
+          changed="$(git status --porcelain | awk '{print $2}')"
+          for f in $changed; do
+            case " $allowed " in
+              *" $f "*) ;;
+              *) echo "unexpected change: $f"; exit 1 ;;
+            esac
+          done
+          if [ -z "$changed" ]; then
             echo "changed=false" >> "$GITHUB_OUTPUT"
-            echo "README unchanged"
+            echo "nothing to commit"
             exit 0
           fi
           python - <<'PY'
@@ -66,6 +80,6 @@ jobs:
           set -euo pipefail
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add README.md generated/projects.md
+          git add README.md generated/projects.md assets/editorial/engineering-footprint-dark.svg assets/editorial/engineering-footprint-light.svg
           git commit -m "chore(profile): refresh project index [skip ci]"
           git push origin HEAD:main

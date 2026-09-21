@@ -1,0 +1,66 @@
+{
+  "$comment": "Verified engineering footprint. Every number here was measured with the GitHub API on `measured_on` (REST commits?author=<login> per accessible repository, GraphQL viewer data and repository language bytes). Private repositories contribute to the aggregates only; no private name is stored. Update by re-measuring, never by hand.",
+  "measured_on": "2026-09-21",
+  "window": {
+    "from": "2025-09-21",
+    "to": "2026-09-21",
+    "label": "Sep 2025 – Sep 2026"
+  },
+  "metrics": [
+    {
+      "key": "commits_12m",
+      "value": 936,
+      "label": "Commits authored",
+      "note": "12 months · public + private"
+    },
+    {
+      "key": "repos_contributed_12m",
+      "value": 27,
+      "label": "Repositories contributed to",
+      "note": "12 months · owned + collaborative"
+    },
+    {
+      "key": "owned_repos",
+      "value": 37,
+      "label": "Owned repositories",
+      "note": "23 public · 14 private"
+    },
+    {
+      "key": "verified_collaborations",
+      "value": 4,
+      "label": "Verified collaborations",
+      "note": "commit / pull-request evidence only"
+    }
+  ],
+  "languages": [
+    {
+      "name": "TypeScript",
+      "share": 34.5
+    },
+    {
+      "name": "Python",
+      "share": 19.8
+    },
+    {
+      "name": "C#",
+      "share": 19.4
+    },
+    {
+      "name": "HTML",
+      "share": 9.6
+    },
+    {
+      "name": "Dart",
+      "share": 8.1
+    },
+    {
+      "name": "JavaScript",
+      "share": 4.0
+    },
+    {
+      "name": "Other",
+      "share": 4.6
+    }
+  ],
+  "languages_note": "Share of code by bytes across owned repositories, public and private"
+}

@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="350" viewBox="0 0 1200 350" role="img" aria-label="Engineering footprint, Sep 2025 – Sep 2026: 936 Commits authored; 27 Repositories contributed to; 37 Owned repositories; 4 Verified collaborations">
+  <title>Engineering footprint · Sep 2025 – Sep 2026</title>
+  <style>.fp-sans{font-family:'Segoe UI',Inter,Helvetica,Arial,sans-serif}.fp-mono{font-family:Consolas,'JetBrains Mono',Menlo,monospace}</style>
+  <defs><clipPath id="fp-bar"><rect x="64" y="244" width="1072" height="14" rx="7"/></clipPath></defs>
+  <rect width="1200" height="350" rx="14" fill="#FFFFFF"/>
+  <rect x="0.5" y="0.5" width="1199" height="349" rx="14" fill="none" stroke="#D9DCE3"/>
+  <text x="64" y="58" class="fp-mono" font-size="15" letter-spacing="2" fill="#5B6272">ENGINEERING FOOTPRINT · SEP 2025 – SEP 2026</text>
+  <text x="64" y="132" class="fp-sans" font-size="56" font-weight="700" fill="#14161B" letter-spacing="-1">936</text>
+  <text x="64" y="164" class="fp-sans" font-size="18" font-weight="600" fill="#14161B">Commits authored</text>
+  <text x="64" y="188" class="fp-sans" font-size="14" fill="#5B6272">12 months · public + private</text>
+  <text x="332" y="132" class="fp-sans" font-size="56" font-weight="700" fill="#14161B" letter-spacing="-1">27</text>
+  <text x="332" y="164" class="fp-sans" font-size="18" font-weight="600" fill="#14161B">Repositories contributed to</text>
+  <text x="332" y="188" class="fp-sans" font-size="14" fill="#5B6272">12 months · owned + collaborative</text>
+  <text x="600" y="132" class="fp-sans" font-size="56" font-weight="700" fill="#14161B" letter-spacing="-1">37</text>
+  <text x="600" y="164" class="fp-sans" font-size="18" font-weight="600" fill="#14161B">Owned repositories</text>
+  <text x="600" y="188" class="fp-sans" font-size="14" fill="#5B6272">23 public · 14 private</text>
+  <text x="868" y="132" class="fp-sans" font-size="56" font-weight="700" fill="#14161B" letter-spacing="-1">4</text>
+  <text x="868" y="164" class="fp-sans" font-size="18" font-weight="600" fill="#14161B">Verified collaborations</text>
+  <text x="868" y="188" class="fp-sans" font-size="14" fill="#5B6272">commit / pull-request evidence only</text>
+  <line x1="64" y1="216" x2="1136" y2="216" stroke="#D9DCE3" stroke-width="1.5"/>
+  <rect x="64" y="215" width="72" height="3" fill="#4A5BE0"/>
+  <rect x="64" y="244" width="1072" height="14" rx="7" fill="#ECEEF3"/>
+  <g clip-path="url(#fp-bar)">
+    <rect x="64.0" y="244" width="369.8" height="14" fill="#6C7CFF"/>
+    <rect x="433.8" y="244" width="212.3" height="14" fill="#9AA6FF"/>
+    <rect x="646.1" y="244" width="208.0" height="14" fill="#C1C8FF"/>
+    <rect x="854.1" y="244" width="102.9" height="14" fill="#7A85A8"/>
+    <rect x="957.0" y="244" width="86.8" height="14" fill="#A3ABC2"/>
+    <rect x="1043.8" y="244" width="42.9" height="14" fill="#C7CCDA"/>
+    <rect x="1086.7" y="244" width="49.3" height="14" fill="#DDE0E8"/>
+  </g>
+  <rect x="64" y="282" width="10" height="10" rx="2" fill="#6C7CFF"/>
+  <text x="80" y="291" class="fp-sans" font-size="14" fill="#14161B">TypeScript 34.5%</text>
+  <rect x="244" y="282" width="10" height="10" rx="2" fill="#9AA6FF"/>
+  <text x="260" y="291" class="fp-sans" font-size="14" fill="#14161B">Python 19.8%</text>
+  <rect x="390" y="282" width="10" height="10" rx="2" fill="#C1C8FF"/>
+  <text x="406" y="291" class="fp-sans" font-size="14" fill="#14161B">C# 19.4%</text>
+  <rect x="503" y="282" width="10" height="10" rx="2" fill="#7A85A8"/>
+  <text x="519" y="291" class="fp-sans" font-size="14" fill="#14161B">HTML 9.6%</text>
+  <rect x="624" y="282" width="10" height="10" rx="2" fill="#A3ABC2"/>
+  <text x="640" y="291" class="fp-sans" font-size="14" fill="#14161B">Dart 8.1%</text>
+  <rect x="745" y="282" width="10" height="10" rx="2" fill="#C7CCDA"/>
+  <text x="761" y="291" class="fp-sans" font-size="14" fill="#14161B">JavaScript 4%</text>
+  <rect x="900" y="282" width="10" height="10" rx="2" fill="#DDE0E8"/>
+  <text x="916" y="291" class="fp-sans" font-size="14" fill="#14161B">Other 4.6%</text>
+  <text x="64" y="322" class="fp-mono" font-size="13" fill="#5B6272">Share of code by bytes across owned repositories, public and private · measured 2026-09-21</text>
+</svg>
