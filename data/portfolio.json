@@ -1,0 +1,600 @@
+{
+  "$comment": "Public-safe portfolio model. Products group one or more repositories into a single portfolio entry. Only display-oriented, public-safe text is allowed here: never a private repository name, private URL, customer data, internal code name or credential. A repository_sources entry of kind 'public' must be a public repository owned by the profile owner (the generator verifies this against the GitHub API); 'private' and 'collaboration' sources are opaque labels only. The generator refuses any GitHub URL on a non-public product and any link whose hostname would reveal a private repository name.",
+  "version": 5,
+  "as_of": "2026-09-21",
+  "profile_excluded_repositories": [
+    "mrc-commerce"
+  ],
+  "products": [
+    {
+      "product_id": "navlonix",
+      "display_name": "Navlonix",
+      "tagline": "AI-assisted B2B logistics marketplace that matches cargo owners with verified drivers.",
+      "problem": "Industrial freight is still arranged over phone calls, negotiated prices and cash risk. Navlonix turns it into a marketplace: businesses post loads, verified drivers bid on an AI-computed fair base price, and the platform carries the job through escrow, live tracking and delivery confirmation.",
+      "summary": "AI-assisted B2B logistics marketplace matching cargo owners with verified drivers: role-based customer, driver and admin apps, fair freight pricing, an escrow-style payment flow, live chat and tracking.",
+      "built": [
+        "Role-based customer, driver and admin experiences on web and mobile",
+        "Fair base-price engine from fuel prices, real road distance and vehicle type",
+        "Escrow-style payment ledger with QR delivery confirmation and settlement preview",
+        "Real-time offers, chat and location tracking; driver document verification with vision models"
+      ],
+      "surfaces": [
+        ".NET 9 API",
+        "Web app",
+        "Mobile app",
+        "Marketing site"
+      ],
+      "role": "Founder & lead engineer",
+      "status": "In active development",
+      "status_note": "Web app deployed for preview; payment-provider and regulatory integrations are on the roadmap, the ledger, matching and tracking flows run in code.",
+      "access": "Private product",
+      "category": "Logistics",
+      "repository_sources": [
+        {
+          "kind": "private",
+          "label": "Monorepo: API, web, mobile, marketing"
+        }
+      ],
+      "public_links": [],
+      "stack": [
+        ".NET 9",
+        "React",
+        "Expo",
+        "PostgreSQL / PostGIS",
+        "Redis",
+        "SignalR",
+        "Gemini"
+      ],
+      "featured_tier": 1,
+      "visual": "navlonix",
+      "publish_name": true,
+      "publish_repository_links": false,
+      "collaboration": null,
+      "sort_order": 10
+    },
+    {
+      "product_id": "nilufer-ilaclama",
+      "display_name": "Nilüfer İlaçlama Operations Suite",
+      "tagline": "Field-service operations platform for a pest-control business — from customer records to field crews, contracts and payments.",
+      "problem": "A pest-control company runs on scheduled jobs, crews in the field, recurring contracts and collections. The suite replaces scattered spreadsheets and phone calls with one operational system shared by the owner, managers, team leads, field staff and customers.",
+      "summary": "Field-service operations platform for a pest-control business: customers, field personnel, service jobs and scheduling, contracts and quotations, payments, notifications and audit logs across an admin panel, a field mobile app and a public site with a customer portal.",
+      "built": [
+        "Typed operations API with a role and permission model: owner, manager, team lead, staff, customer",
+        "Admin web panel with a live command-centre dashboard, pending-approval queue and audit logs",
+        "Field mobile app for jobs, calendar, approvals, leave and advance requests, messaging and payslips",
+        "Customer records, service jobs and reports, contracts, quotations, payments — plus a public site with a row-level-secured customer portal"
+      ],
+      "surfaces": [
+        "Operations API",
+        "Admin web panel",
+        "Field mobile app",
+        "Public site & portal"
+      ],
+      "role": "Lead engineer",
+      "status": "In active development",
+      "status_note": "",
+      "access": "Client system · private",
+      "category": "Field service",
+      "repository_sources": [
+        {
+          "kind": "private",
+          "label": "Operations core: API, admin panel, mobile app"
+        },
+        {
+          "kind": "private",
+          "label": "Public website and customer portal"
+        }
+      ],
+      "public_links": [],
+      "stack": [
+        "TypeScript",
+        "Express",
+        "Prisma",
+        "PostgreSQL",
+        "Next.js",
+        "Flutter",
+        "Supabase"
+      ],
+      "featured_tier": 1,
+      "visual": "nilufer-ilaclama",
+      "publish_name": true,
+      "publish_repository_links": false,
+      "collaboration": null,
+      "sort_order": 20
+    },
+    {
+      "product_id": "salih-ai-company",
+      "display_name": "SALIH-AI-COMPANY",
+      "tagline": "Autonomous multi-agent operating system that plans, executes and reviews bounded work under explicit human approval.",
+      "problem": "Running several development projects with AI agents only makes sense if the agents cannot quietly take consequential actions. SALIH-AI-COMPANY is built as a reusable company operating system: agents do bounded work inside a deterministic policy engine, and everything that touches the outside world waits for the owner.",
+      "summary": "Autonomous multi-agent operating system: an executive planner and engineering, research, finance, quality and security agents work inside a policy engine with human approval gates, a hash-chained audit trail, fail-closed reliability configuration and readiness gates.",
+      "built": [
+        "Executive planner plus engineering, research, finance, quality and security agents with least-privilege scopes",
+        "Deterministic policy engine with action levels L0–L5; external or irreversible actions need human approval",
+        "Hash-chained audit trail, fail-closed reliability configuration, job queue with leases and dead-lettering, watchdogs and readiness gates",
+        "Project registry that onboards external repositories through isolated worktrees; 500+ tests and smoke workflows"
+      ],
+      "surfaces": [
+        "Orchestrator",
+        "Department agents",
+        "Operations control plane",
+        "Reliability lab"
+      ],
+      "role": "Solo engineer",
+      "status": "In active development",
+      "status_note": "Scheduler and live network access stay switched off until the readiness gates pass; built for my own projects and team.",
+      "access": "Private system",
+      "category": "AI systems",
+      "repository_sources": [
+        {
+          "kind": "private",
+          "label": "Orchestrator, agents, tests and operations tooling"
+        }
+      ],
+      "public_links": [],
+      "stack": [
+        "Python 3.11",
+        "SQLite",
+        "Claude-based agents"
+      ],
+      "featured_tier": 1,
+      "visual": "salih-ai-company",
+      "publish_name": true,
+      "publish_repository_links": false,
+      "collaboration": null,
+      "sort_order": 30
+    },
+    {
+      "product_id": "instagram-ai-manager",
+      "display_name": "Instagram AI Manager",
+      "tagline": "Approval-first Instagram operations platform for professional accounts.",
+      "summary": "Multi-workspace backend where AI-assisted inbox, comment and publishing workflows pass through role checks, human approval and durable jobs before anything reaches the Meta API.",
+      "role": "Lead engineer",
+      "status": "In active development",
+      "access": "Private",
+      "category": "Business automation",
+      "repository_sources": [
+        {
+          "kind": "private",
+          "label": "Backend, workers and web dashboard"
+        }
+      ],
+      "public_links": [],
+      "stack": [
+        "Python",
+        "FastAPI",
+        "PostgreSQL",
+        "Redis",
+        "Next.js",
+        "Docker"
+      ],
+      "featured_tier": 2,
+      "publish_name": true,
+      "publish_repository_links": false,
+      "collaboration": null,
+      "sort_order": 110
+    },
+    {
+      "product_id": "finans-pro",
+      "display_name": "Finans Pro",
+      "tagline": "Personal finance and investment platform — mobile client plus REST API.",
+      "summary": "Income and expense tracking, category budgets, FIFO profit and loss on gold and currency holdings, receipt and bank-statement OCR, subscriptions, debts, reminders and cash-flow insights.",
+      "role": "Solo engineer",
+      "status": "In development",
+      "access": "Private",
+      "category": "Finance",
+      "repository_sources": [
+        {
+          "kind": "private",
+          "label": "REST API"
+        },
+        {
+          "kind": "private",
+          "label": "Flutter client"
+        }
+      ],
+      "public_links": [],
+      "stack": [
+        "Flutter",
+        "Node.js",
+        "Express",
+        "MongoDB"
+      ],
+      "featured_tier": 2,
+      "publish_name": true,
+      "publish_repository_links": false,
+      "collaboration": null,
+      "sort_order": 120
+    },
+    {
+      "product_id": "tatli-duragi",
+      "display_name": "Tatlı Durağı POS & QR Ordering",
+      "tagline": "QR table ordering and role-based admin POS for a dessert café.",
+      "summary": "Guests order from a QR menu with live status; waiters, cashiers and managers run a realtime order board, receipts and bill splitting, menu and table management and a revenue dashboard.",
+      "role": "Solo engineer",
+      "status": "Delivered",
+      "access": "Client system · private",
+      "category": "Hospitality",
+      "repository_sources": [
+        {
+          "kind": "private",
+          "label": "QR ordering and admin POS"
+        },
+        {
+          "kind": "private",
+          "label": "Earlier order desk and reporting"
+        }
+      ],
+      "public_links": [],
+      "stack": [
+        "Next.js",
+        "TypeScript",
+        "Supabase Realtime"
+      ],
+      "featured_tier": 2,
+      "publish_name": true,
+      "publish_repository_links": false,
+      "collaboration": null,
+      "sort_order": 130
+    },
+    {
+      "product_id": "auraproject",
+      "display_name": "AuraProject",
+      "tagline": "AI outfit recommendation — a visual-analysis core and a hardened recommendation API.",
+      "summary": "Public FastAPI service with validation, auth, rate limiting, second-LLM self-critique and pose-locked virtual try-on; private core with PyTorch visual analysis and a style-rule engine.",
+      "role": "Lead engineer",
+      "status": "Experimental",
+      "access": "Public service · private core",
+      "category": "AI systems",
+      "repository_sources": [
+        {
+          "kind": "public",
+          "repo": "Salihefendihsa/auraproject-ai-service"
+        },
+        {
+          "kind": "private",
+          "label": "Visual-analysis core"
+        }
+      ],
+      "public_links": [],
+      "stack": [
+        "Python",
+        "FastAPI",
+        "PyTorch",
+        "OpenAI / Gemini",
+        "ControlNet"
+      ],
+      "featured_tier": 2,
+      "publish_name": true,
+      "publish_repository_links": true,
+      "collaboration": null,
+      "sort_order": 140
+    },
+    {
+      "product_id": "nalbur-stok",
+      "display_name": "Nalbur Stok",
+      "tagline": "Inventory management for small hardware stores.",
+      "summary": "Virtualised 100K-row product tables, reports and a Supabase backend.",
+      "role": "Solo engineer",
+      "status": "Maintained",
+      "access": "Public",
+      "category": "Retail operations",
+      "repository_sources": [
+        {
+          "kind": "public",
+          "repo": "Salihefendihsa/nalbur-stok"
+        }
+      ],
+      "public_links": [],
+      "stack": [
+        "React 19",
+        "TypeScript",
+        "Vite",
+        "TanStack",
+        "Supabase"
+      ],
+      "featured_tier": 2,
+      "publish_name": true,
+      "publish_repository_links": true,
+      "collaboration": null,
+      "sort_order": 150
+    },
+    {
+      "product_id": "optivark",
+      "display_name": "Optivark",
+      "tagline": "Studio site for operational software — logistics, production, field teams and mobile tooling.",
+      "summary": "Marketing site and solution catalogue for the software practice behind these products: logistics and dispatch, production optimisation, field-team mobile apps and barcode / QR tooling.",
+      "role": "Solo engineer",
+      "status": "In development",
+      "access": "Private",
+      "category": "Studio",
+      "repository_sources": [
+        {
+          "kind": "private",
+          "label": "Marketing site"
+        }
+      ],
+      "public_links": [],
+      "stack": [
+        "React",
+        "TypeScript",
+        "Vite",
+        "GSAP"
+      ],
+      "featured_tier": 2,
+      "publish_name": true,
+      "publish_repository_links": false,
+      "collaboration": null,
+      "sort_order": 160
+    },
+    {
+      "product_id": "sticker-label-studio",
+      "display_name": "Sticker & Label Studio",
+      "tagline": "Web studio for school name stickers and labels.",
+      "summary": "Template library, positioned text editor, bulk generation from Excel and CSV, millimetre-accurate print layouts and Word export.",
+      "role": "Lead contributor",
+      "status": "Delivered",
+      "access": "Partner-owned · private",
+      "category": "Collaboration",
+      "repository_sources": [
+        {
+          "kind": "collaboration",
+          "label": "Partner-owned repository"
+        }
+      ],
+      "public_links": [],
+      "stack": [
+        "Next.js",
+        "TypeScript",
+        "Supabase",
+        "Cloudflare"
+      ],
+      "featured_tier": 2,
+      "publish_name": true,
+      "publish_repository_links": false,
+      "collaboration": {
+        "label": "Built in collaboration",
+        "evidence": "71 of 75 commits"
+      },
+      "sort_order": 210
+    },
+    {
+      "product_id": "couples-companion",
+      "display_name": "Couples Companion App",
+      "tagline": "Flutter app that helps couples share how they feel without a fight.",
+      "summary": "Emotion signals, shared goals, daily check-in nudges, a character quiz and weekly insights, delivered through reviewed pull requests with accessibility tests.",
+      "role": "Core contributor",
+      "status": "In development",
+      "access": "Partner-owned · private",
+      "category": "Collaboration",
+      "repository_sources": [
+        {
+          "kind": "collaboration",
+          "label": "Partner-owned repository"
+        }
+      ],
+      "public_links": [],
+      "stack": [
+        "Flutter",
+        "Dart",
+        "Supabase"
+      ],
+      "featured_tier": 2,
+      "publish_name": true,
+      "publish_repository_links": false,
+      "collaboration": {
+        "label": "Built in collaboration",
+        "evidence": "37 commits · 36 pull requests"
+      },
+      "sort_order": 220
+    },
+    {
+      "product_id": "invitation-studio",
+      "display_name": "Invitation Design Studio",
+      "tagline": "Interactive studio for wedding and event invitations.",
+      "summary": "Parses pasted invitation text into fields, applies templates and phrase libraries, previews live and exports print-ready Word documents.",
+      "role": "Lead contributor",
+      "status": "Delivered",
+      "access": "Partner-owned · private",
+      "category": "Collaboration",
+      "repository_sources": [
+        {
+          "kind": "collaboration",
+          "label": "Partner-owned repository"
+        }
+      ],
+      "public_links": [],
+      "stack": [
+        "React",
+        "Vite",
+        "JavaScript"
+      ],
+      "featured_tier": 2,
+      "publish_name": true,
+      "publish_repository_links": false,
+      "collaboration": {
+        "label": "Built in collaboration",
+        "evidence": "5 of 6 commits"
+      },
+      "sort_order": 230
+    },
+    {
+      "product_id": "product-photo-studio",
+      "display_name": "Product Photo Studio",
+      "tagline": "Flutter app that turns product photos into social-ready posts.",
+      "summary": "Guided 360° capture, fully on-device background removal, studio backgrounds and post, carousel and story export for small sellers.",
+      "role": "Contributor",
+      "status": "In development",
+      "access": "Partner-owned · private",
+      "category": "Collaboration",
+      "repository_sources": [
+        {
+          "kind": "collaboration",
+          "label": "Partner-owned repository"
+        }
+      ],
+      "public_links": [],
+      "stack": [
+        "Flutter",
+        "Dart",
+        "on-device ML",
+        "Supabase"
+      ],
+      "featured_tier": 2,
+      "publish_name": true,
+      "publish_repository_links": false,
+      "collaboration": {
+        "label": "Built in collaboration",
+        "evidence": "2 of 7 commits"
+      },
+      "sort_order": 240
+    }
+  ],
+  "archive_groups": [
+    "Tools & Research",
+    "University Coursework"
+  ],
+  "archive_overrides": {
+    "$comment": "Curated English text for public repositories that are not part of a product family. Keys are public repository names owned by the profile owner. 'group' selects the archive group; unknown public repositories default to 'Tools & Research' unless their topics mark them as coursework.",
+    "LLMChatbot": {
+      "display_name": "LLM Chatbot",
+      "summary": "Streaming, multi-turn chatbot backend on the OpenAI-compatible Chat Completions API with a console client and tests.",
+      "stack": "C# · .NET",
+      "group": "Tools & Research"
+    },
+    "ShapeClassifier": {
+      "display_name": "Shape Classifier",
+      "summary": "Geometric shape recognition: synthetic data, OpenCV pre-processing, Hu-moment features and an ML.NET classifier.",
+      "stack": "C# · .NET 8 · OpenCvSharp · ML.NET",
+      "group": "Tools & Research"
+    },
+    "MultiLangTranslator": {
+      "display_name": "MultiLang Translator",
+      "summary": "WPF desktop app translating text into several languages in parallel, with auto-detection, caching, history and an offline mock provider.",
+      "stack": "C# · .NET 8 · WPF · MVVM",
+      "group": "Tools & Research"
+    },
+    "rsu-jpeg-compression": {
+      "display_name": "RSU JPEG Compression",
+      "summary": "Research experiment: a custom random-number generator drives dynamic JPEG quantization tables, benchmarked against the standard table.",
+      "stack": "Python · NumPy · SciPy",
+      "group": "Tools & Research"
+    },
+    "AntivirusSimulator": {
+      "display_name": "Antivirus Simulator",
+      "summary": "Educational antivirus simulator (signature scanning, async cancellation) built as an OOP course project; contains no real malware.",
+      "stack": "C# · WinForms",
+      "group": "University Coursework"
+    },
+    "Fonksiyonel-Programlama-LAB2": {
+      "display_name": "Functional Programming Lab 2",
+      "summary": "Shared-wallet expense tracker for flatmates as a mobile web app.",
+      "stack": "JavaScript · HTML · CSS",
+      "group": "University Coursework"
+    },
+    "web-tasarimi-odevler": {
+      "display_name": "Web Design Assignments",
+      "summary": "Web design course assignments.",
+      "stack": "JavaScript · HTML · CSS",
+      "group": "University Coursework"
+    },
+    "web-lab-hello": {
+      "display_name": "Web Lab Hello",
+      "summary": "Web lab starter: React + TypeScript + Vite setup.",
+      "stack": "React · TypeScript · Vite",
+      "group": "University Coursework"
+    },
+    "NTP_Lab": {
+      "display_name": "OOP Lab",
+      "summary": "Object-oriented programming lab exercises.",
+      "stack": "C#",
+      "group": "University Coursework"
+    },
+    "ntp_lab_odev2-3": {
+      "display_name": "OOP Lab 2–3",
+      "summary": "Object-oriented programming lab assignments 2–3.",
+      "stack": "C#",
+      "group": "University Coursework"
+    },
+    "ntp_lab_odev2-3-78910-": {
+      "display_name": "OOP Lab 2–3, 7–10",
+      "summary": "Object-oriented programming lab assignments 2–3 and 7–10.",
+      "stack": "C#",
+      "group": "University Coursework"
+    },
+    "netpLab5-Odev": {
+      "display_name": "OOP Lab 5",
+      "summary": "Object-oriented programming lab assignment 5.",
+      "stack": "C#",
+      "group": "University Coursework"
+    },
+    "ntpLab5.1_Odev": {
+      "display_name": "OOP Lab 5.1",
+      "summary": "Object-oriented programming lab assignment 5.1.",
+      "stack": "C#",
+      "group": "University Coursework"
+    },
+    "ntplabodev6.2": {
+      "display_name": "OOP Lab 6.2",
+      "summary": "Object-oriented programming lab assignment 6.2.",
+      "stack": "C#",
+      "group": "University Coursework"
+    },
+    "ntplabodevuygulama6.1": {
+      "display_name": "OOP Lab 6.1",
+      "summary": "Object-oriented programming lab application 6.1.",
+      "stack": "C#",
+      "group": "University Coursework"
+    },
+    "proje2_flippybird": {
+      "display_name": "Flappy Bird Clone",
+      "summary": "Flappy-Bird style game written as a C# course project.",
+      "stack": "C#",
+      "group": "University Coursework"
+    },
+    "arabaYarisi": {
+      "display_name": "Car Racing Game",
+      "summary": "Car-racing mini game written as a C# course project.",
+      "stack": "C#",
+      "group": "University Coursework"
+    },
+    "mayinTarlasi": {
+      "display_name": "Minesweeper Clone",
+      "summary": "Minesweeper clone written as a C# course project.",
+      "stack": "C#",
+      "group": "University Coursework"
+    },
+    "oryantasyon": {
+      "display_name": "Orientation Video",
+      "summary": "Software-engineering orientation course video assignment.",
+      "stack": "Video",
+      "group": "University Coursework"
+    }
+  },
+  "private_archive_entries": {
+    "$comment": "Allowlisted private repositories shown in the archive under a generic public-safe name. No repository names or URLs.",
+    "entries": [
+      {
+        "display_name": "OOP Lab — Tic-Tac-Toe",
+        "summary": "Object-oriented programming lab exercise (2024).",
+        "stack": "C#",
+        "group": "University Coursework",
+        "access": "Private"
+      },
+      {
+        "display_name": "OOP Lab — Week 4 exercise",
+        "summary": "Object-oriented programming lab exercise (2024).",
+        "stack": "C#",
+        "group": "University Coursework",
+        "access": "Private"
+      },
+      {
+        "display_name": "OOP Lab — Home desktop exercise",
+        "summary": "Object-oriented programming lab exercise (2024).",
+        "stack": "C#",
+        "group": "University Coursework",
+        "access": "Private"
+      }
+    ]
+  }
+}

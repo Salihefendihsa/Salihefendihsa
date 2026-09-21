@@ -1,5 +1,5 @@
 {
-  "$comment": "Verified engineering footprint. Measured with the GitHub API on `measured_on`: for every repository the account can access (owned + collaborator), commits on the DEFAULT BRANCH whose GitHub author login is the profile owner (login match, i.e. commit e-mail linked to the account; bot and other-login commits excluded; each SHA counted once), in the window below. Private repositories contribute to the aggregates only; no private name is stored. Update by re-measuring, never by hand.",
+  "$comment": "Verified engineering footprint. Measured with the GitHub API on `measured_on` by scripts/discover_repositories.py --write-footprint: for every repository the account can access (owned + collaborator), commits on the DEFAULT BRANCH whose GitHub author login is the profile owner (login match; bot and other-login commits excluded; each SHA counted once) in the window below. Private repositories contribute to the aggregates only; no private name is stored. Update by re-measuring, never by hand.",
   "measured_on": "2026-09-21",
   "window": {
     "from": "2025-09-21",
@@ -9,41 +9,45 @@
   "metrics": [
     {
       "key": "commits_12m",
-      "value": 939,
+      "value": 953,
       "label": "Commits authored",
-      "note": "12 months · 72 public · 867 private"
+      "note": "12 months · 76 public · 877 private",
+      "short_label": "Commits authored"
     },
     {
       "key": "repos_contributed_12m",
       "value": 27,
       "label": "Repositories contributed to",
-      "note": "12 months · 23 owned · 4 collaborative"
+      "note": "12 months · 23 owned · 4 collaborative",
+      "short_label": "Repositories"
     },
     {
       "key": "owned_repos",
-      "value": 37,
+      "value": 38,
       "label": "Owned repositories",
-      "note": "23 public · 14 private"
+      "note": "23 public · 15 private",
+      "short_label": "Owned repositories"
     },
     {
       "key": "verified_collaborations",
       "value": 4,
       "label": "Verified collaborations",
-      "note": "commit / pull-request evidence only"
+      "note": "commit / pull-request evidence only",
+      "short_label": "Collaborations"
     }
   ],
   "languages": [
     {
       "name": "TypeScript",
-      "share": 34.5
+      "share": 34.4
     },
     {
       "name": "Python",
-      "share": 19.8
+      "share": 19.7
     },
     {
       "name": "C#",
-      "share": 19.4
+      "share": 19.3
     },
     {
       "name": "HTML",
@@ -51,7 +55,7 @@
     },
     {
       "name": "Dart",
-      "share": 8.1
+      "share": 8.2
     },
     {
       "name": "JavaScript",
@@ -59,9 +63,9 @@
     },
     {
       "name": "Other",
-      "share": 4.6
+      "share": 4.8
     }
   ],
   "languages_note": "Share of code by bytes across owned repositories, public and private",
-  "method_note": "Default-branch commits with author login match; includes 12 pull-request merge commits authored by the owner; public count equals GitHub's public commit contributions (72)."
+  "method_note": "Default-branch commits with author login match; includes 12 pull-request merge commits authored by the owner; the public count equals GitHub's public commit contributions for the same window (76)."
 }
