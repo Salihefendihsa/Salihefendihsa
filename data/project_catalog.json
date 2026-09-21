@@ -230,7 +230,7 @@
     },
     "ShapeClassifier": {
       "display_name": "Shape Classifier",
-      "safe_summary": "Geometric shape recognition pipeline: synthetic data, OpenCV preprocessing, Hu-moment features and an ML.NET classifier.",
+      "safe_summary": "Geometric shape recognition pipeline: synthetic data, OpenCV pre-processing, Hu-moment features and an ML.NET classifier.",
       "stack": "C# · .NET 8 · OpenCvSharp · ML.NET",
       "role": "Solo engineer",
       "status": "Maintained"
