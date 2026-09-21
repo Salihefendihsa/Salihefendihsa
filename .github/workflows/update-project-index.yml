@@ -55,7 +55,7 @@ jobs:
         id: verify
         run: |
           set -euo pipefail
-          allowed="README.md generated/portfolio.md generated/project-archive.md assets/v5/proof-strip-dark.svg assets/v5/proof-strip-light.svg"
+          allowed="README.md generated/portfolio.md generated/project-archive.md $(echo assets/v5/*.svg)"
           changed="$(git status --porcelain | awk '{print $2}')"
           for f in $changed; do
             case " $allowed " in
@@ -93,6 +93,6 @@ jobs:
           set -euo pipefail
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add README.md generated/portfolio.md generated/project-archive.md assets/v5/proof-strip-dark.svg assets/v5/proof-strip-light.svg
+          git add README.md generated/portfolio.md generated/project-archive.md assets/v5/*.svg
           git commit -m "chore(profile): refresh project index [skip ci]"
           git push origin HEAD:main

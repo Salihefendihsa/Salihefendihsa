@@ -19,8 +19,11 @@ README.md holds two marker regions that are replaced wholesale:
   <!-- PORTFOLIO:START --> … <!-- PORTFOLIO:END -->   flagships, ecosystem, collaborations
   <!-- ARCHIVE:START -->   … <!-- ARCHIVE:END -->     complete collapsed archive
 
-The proof-strip SVGs (assets/v5/proof-strip-*.svg) are rendered from
-data/footprint.json so the numbers shown are exactly the measured ones.
+Every SVG in assets/v5 is rendered by scripts/render_assets.py from
+data/footprint.json and data/portfolio.json, so the numbers and the product
+boards shown are exactly the curated, measured data. Responsive assets have a
+desktop (1200 px) and a recomposed mobile (720 px) variant, each in light and
+dark, selected with ordered <picture> sources.
 
 Guarantees: deterministic output for the same input; idempotent (a second run
 changes nothing); only the marker regions of README.md are touched; Markdown
@@ -43,7 +46,7 @@ from dataclasses import dataclass, field
 from typing import Any, Callable, Iterable
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from render_assets import asset_path, render_proof_strip  # noqa: E402
+from render_assets import render_all  # noqa: E402
 
 OWNER = "Salihefendihsa"
 PROFILE_REPO = OWNER  # the profile README repository has the same name as the owner
@@ -65,7 +68,7 @@ DEFAULT_OUT_ARCHIVE = os.path.join("generated", "project-archive.md")
 
 ASSET_PREFIX = "assets/v5"
 MAX_FLAGSHIPS = 3
-MAX_BUILT = 4  # flagship bullet budget keeps the story within a few desktop screens
+MAX_BUILT = 3  # flagship bullet budget keeps the story within a few desktop screens
 
 HIDE_TOPIC = "profile-hide"
 COURSEWORK_TOPICS = {"academic", "coursework", "lab", "university"}
@@ -78,8 +81,10 @@ PRODUCT_REQUIRED = ("product_id", "display_name", "tagline", "summary", "role", 
                     "category", "repository_sources", "stack", "featured_tier", "sort_order")
 PRODUCT_ALLOWED = set(PRODUCT_REQUIRED) | {
     "problem", "built", "surfaces", "status_note", "public_links", "visual", "publish_name",
-    "publish_repository_links", "collaboration",
+    "publish_repository_links", "collaboration", "domain", "icon", "short_summary",
 }
+DOMAINS = ("logistics", "field", "business", "ai", "studio")
+MAX_SHORT_SUMMARY_WORDS = 16
 SOURCE_KINDS = ("public", "private", "collaboration")
 OVERRIDE_ALLOWED = {"display_name", "summary", "stack", "group"}
 PRIVATE_ARCHIVE_ALLOWED = {"display_name", "summary", "stack", "group", "access"}
@@ -114,6 +119,7 @@ class Product:
     public_links: list[dict] = field(default_factory=list)
     publish_repository_links: bool = False
     collaboration: dict | None = None
+    short_summary: str = ""
 
     @property
     def is_collaboration(self) -> bool:
@@ -354,6 +360,14 @@ def validate_portfolio(data: Any) -> None:
                 raise PortfolioError(f"product {pid!r} has an invalid public link")
             if is_github_url(url):
                 raise PortfolioError(f"product {pid!r}: public_links must not point at github.com; use repository_sources")
+        if p["featured_tier"] == 2:
+            for key in ("short_summary", "icon", "domain"):
+                if not str(p.get(key, "")).strip():
+                    raise PortfolioError(f"product {pid!r} needs {key!r} for the product board")
+            if len(str(p["short_summary"]).split()) > MAX_SHORT_SUMMARY_WORDS:
+                raise PortfolioError(f"product {pid!r}: short_summary must be at most {MAX_SHORT_SUMMARY_WORDS} words")
+        if p.get("domain") and p["domain"] not in DOMAINS:
+            raise PortfolioError(f"product {pid!r} has unknown domain {p['domain']!r}")
         if p.get("collaboration") is not None:
             c = p["collaboration"]
             if not isinstance(c, dict) or not str(c.get("label", "")).strip() or not str(c.get("evidence", "")).strip():
@@ -421,6 +435,7 @@ def product_from_entry(p: dict, listed_names: set[str]) -> Product:
         public_links=[{"label": str(l["label"]), "url": safe_http_url(str(l["url"]))} for l in (p.get("public_links") or [])],
         publish_repository_links=bool(p.get("publish_repository_links", False)),
         collaboration=p.get("collaboration"),
+        short_summary=str(p.get("short_summary") or ""),
     )
 
 
@@ -462,7 +477,11 @@ def build(repos: Iterable[dict], portfolio: dict, owner: str = OWNER, profile_re
 
 # --------------------------------------------------------------------------- render
 
+MOBILE_QUERY = "(max-width: 600px)"
+
+
 def picture(basename: str, alt: str) -> list[str]:
+    """Light/dark picture with a light fallback (single geometry)."""
     light = f"{ASSET_PREFIX}/{basename}-light.svg"
     dark = f"{ASSET_PREFIX}/{basename}-dark.svg"
     return [
@@ -470,6 +489,20 @@ def picture(basename: str, alt: str) -> list[str]:
         f'  <source media="(prefers-color-scheme: dark)" srcset="{dark}">',
         f'  <source media="(prefers-color-scheme: light)" srcset="{light}">',
         f'  <img alt="{escape_attr(alt)}" src="{light}" width="100%">',
+        "</picture>",
+    ]
+
+
+def responsive_picture(basename: str, alt: str) -> list[str]:
+    """Ordered sources: mobile-dark, mobile-light, desktop-dark, then the desktop-light <img> fallback."""
+    def a(variant: str) -> str:
+        return f"{ASSET_PREFIX}/{basename}-{variant}.svg"
+    return [
+        "<picture>",
+        f'  <source media="(prefers-color-scheme: dark) and {MOBILE_QUERY}" srcset="{a("mobile-dark")}">',
+        f'  <source media="{MOBILE_QUERY}" srcset="{a("mobile-light")}">',
+        f'  <source media="(prefers-color-scheme: dark)" srcset="{a("desktop-dark")}">',
+        f'  <img alt="{escape_attr(alt)}" src="{a("desktop-light")}" width="100%">',
         "</picture>",
     ]
 
@@ -485,9 +518,8 @@ def _links(p: Product) -> list[str]:
 
 
 def render_flagship(p: Product, index: int) -> list[str]:
-    alt = f"{p.name} system diagram: {', '.join(p.surfaces)}."
-    out = [f"### {escape_md(p.name)}", ""]
-    out += picture(f"flagship-{p.visual}", alt) + [""]
+    alt = f"Flagship {index:02d} — {p.name}: {p.tagline} System diagram: {', '.join(p.surfaces)}."
+    out = picture(f"flagship-{p.visual}", alt) + [""]
     out += [f"**{escape_md(p.tagline)}**", "", escape_md(p.problem), ""]
     out += [f"- {escape_md(b)}" for b in p.built[:MAX_BUILT]] + [""]
     meta = [escape_md(p.role), escape_md(p.status), escape_md(p.access)] + _links(p)
@@ -503,21 +535,11 @@ def render_flagship(p: Product, index: int) -> list[str]:
     return out
 
 
-def render_ecosystem_item(p: Product) -> list[str]:
-    title = f"**{escape_md(p.name)}**"
-    if p.repo_urls:
-        title = f"**[{escape_md(p.name)}]({p.repo_urls[0][1]})**"
-    meta = [escape_md(' · '.join(p.stack))]
-    if p.is_collaboration:
-        c = p.collaboration or {}
-        meta.append(f"{escape_md(c.get('label', ''))} · {escape_md(p.role)} · {escape_md(c.get('evidence', ''))}")
-    else:
-        meta.append(escape_md(p.role))
-    meta.append(f"{escape_md(p.status)} · {escape_md(p.access)}")
-    extra = _links(p)[1:] if p.repo_urls else _links(p)
-    if extra:
-        meta.append(" · ".join(extra))
-    return [f"{title} · {escape_md(p.tagline)}<br>{escape_md(p.summary)}<br><sub>{' &nbsp;·&nbsp; '.join(meta)}</sub>", ""]
+def _board_alt(items: list[Product], what: str) -> str:
+    return f"{what}: " + "; ".join(
+        f"{p.name} — {p.short_summary or p.tagline} ({p.role}"
+        + (f", {p.collaboration.get('evidence', '')}" if p.collaboration else "") + f", {p.status}, {p.access})"
+        for p in items)
 
 
 def render_portfolio_block(products: list[Product]) -> str:
@@ -526,30 +548,45 @@ def render_portfolio_block(products: list[Product]) -> str:
     ecosystem = [p for p in products if p.tier == 2 and not p.is_collaboration]
     collabs = [p for p in products if p.is_collaboration]
 
-    out += ["## Flagship Product Systems", ""]
+    out += ["## 01 — Flagship Systems", "",
+            "<sub>Three product systems I am responsible for end to end, each shown with the same structure.</sub>", ""]
     if flagships:
         for i, p in enumerate(flagships, 1):
+            if i > 1:
+                out += ["<br>", ""]  # breathing room between case studies
             out += render_flagship(p, i)
     else:
         out += ["_No flagship products yet._", ""]
 
-    out += ["## Selected Product Ecosystem", "",
-            "<sub>Products are grouped by what they do, not by repository: a backend, a client and a website of one product are one entry.</sub>", ""]
+    out += ["## 02 — Product Ecosystem", "",
+            "<sub>Six products grouped by what they do, not by repository. Full descriptions sit in the collapsed archive below.</sub>", ""]
     if ecosystem:
-        for p in ecosystem:
-            out += render_ecosystem_item(p)
+        out += responsive_picture("ecosystem", _board_alt(ecosystem, "Selected product ecosystem")) + [""]
+        links = [f"[{escape_md(p.name)}]({p.repo_urls[0][1]})" for p in ecosystem if p.repo_urls]
+        links += [f"[{escape_md(p.name)} — {escape_md(l['label'])}]({l['url']})" for p in ecosystem for l in p.public_links if l["url"]]
+        if links:
+            out += [f"<sub>Public repositories: {' · '.join(links)}</sub>", ""]
     else:
         out += ["_Nothing to show yet._", ""]
 
-    out += ["## Selected Collaborations", "",
+    out += ["## 03 — Verified Collaborations", "",
             "<sub>Partner-owned products where my commits or pull requests are verifiable. Ownership stays with the partner; no private repositories are linked.</sub>", ""]
     if collabs:
-        for p in collabs:
-            out += render_ecosystem_item(p)
+        out += responsive_picture("collaborations", _board_alt(collabs, "Verified collaborations on partner-owned products")) + [""]
     else:
         out += ["_Nothing to show yet._", ""]
     out.append(PORTFOLIO_END)
     return "\n".join(out)
+
+
+def render_product_detail_row(p: Product) -> str:
+    name = cell(p.name)
+    title = f"[{name}]({p.repo_urls[0][1]})" if p.repo_urls else f"**{name}**"
+    meta = [escape_md(" · ".join(p.stack)), escape_md(p.role)]
+    if p.collaboration:
+        meta.append(escape_md(p.collaboration.get("evidence", "")))
+    meta += [escape_md(p.status), escape_md(p.access)]
+    return f"| {title}<br><sub>{' · '.join(x for x in meta if x)}</sub> | {cell(p.summary)} |"
 
 
 def render_archive_row(a: ArchiveEntry) -> str:
@@ -560,10 +597,16 @@ def render_archive_row(a: ArchiveEntry) -> str:
     return f"| {left} | {cell(a.summary)} |"
 
 
-def render_archive_block(archive: list[ArchiveEntry], groups: tuple[str, ...]) -> str:
+def render_archive_block(archive: list[ArchiveEntry], groups: tuple[str, ...], products: list[Product] | None = None) -> str:
     out = [ARCHIVE_START, GENERATED_NOTE, "",
-           "## Complete Project Archive", "",
-           "<sub>Everything else that is safe to show: public repositories discovered automatically from GitHub, plus allowlisted private work under generic names. Products above are not repeated here.</sub>", ""]
+           "## 05 — Complete Archive", "",
+           "<sub>Full descriptions of the products on the boards above, then everything else that is safe to show: public repositories discovered automatically from GitHub and allowlisted private work under generic names.</sub>", ""]
+    details = [p for p in (products or []) if p.tier == 2]
+    if details:
+        out += ["<details>", f"<summary><b>Selected products — full descriptions</b> ({len(details)})</summary>", "",
+                "| Product | What it does |", "| --- | --- |"]
+        out += [render_product_detail_row(p) for p in details]
+        out += ["", "</details>", ""]
     any_group = False
     for group in groups:
         items = [a for a in archive if a.group == group]
@@ -623,7 +666,7 @@ def replace_block(readme: str, start: str, end: str, block: str) -> str:
 
 def update_readme_text(readme: str, products: list[Product], archive: list[ArchiveEntry], groups: tuple[str, ...]) -> str:
     readme = replace_block(readme, PORTFOLIO_START, PORTFOLIO_END, render_portfolio_block(products))
-    readme = replace_block(readme, ARCHIVE_START, ARCHIVE_END, render_archive_block(archive, groups))
+    readme = replace_block(readme, ARCHIVE_START, ARCHIVE_END, render_archive_block(archive, groups, products))
     return readme
 
 
@@ -694,19 +737,18 @@ def main(argv: list[str] | None = None) -> int:
 
     if args.dry_run:
         print(render_portfolio_block(products))
-        print(render_archive_block(archive, groups))
+        print(render_archive_block(archive, groups, products))
         return 0
     changed = []
     if _write_if_changed(args.readme, new_readme):
         changed.append(args.readme)
     if args.out_portfolio and _write_if_changed(args.out_portfolio, render_portfolio_block(products) + "\n"):
         changed.append(args.out_portfolio)
-    if args.out_archive and _write_if_changed(args.out_archive, render_archive_block(archive, groups) + "\n"):
+    if args.out_archive and _write_if_changed(args.out_archive, render_archive_block(archive, groups, products) + "\n"):
         changed.append(args.out_archive)
     if footprint:
-        for theme in ("light", "dark"):
-            path = asset_path("proof-strip", theme)
-            if _write_if_changed(path, render_proof_strip(footprint, theme)):
+        for path, content in render_all(footprint, portfolio).items():
+            if _write_if_changed(path, content):
                 changed.append(path)
     print(f"portfolio: {len(products)} product(s), {len(archive)} archive entr(ies); changed: {', '.join(changed) if changed else 'nothing'}")
     return 0

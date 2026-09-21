@@ -1,34 +1,34 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="400" viewBox="0 0 1200 400" role="img" aria-labelledby="t d">
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="380" viewBox="0 0 1200 380" role="img" aria-labelledby="t d">
   <title id="t">SALIH-AI-COMPANY — Multi-agent operating system</title>
   <desc id="d">SALIH-AI-COMPANY system diagram. Agents: Executive planner, Engineering &amp; research, Quality · Security. Policy engine: Action levels L0–L5, Bounded execution, Human approval gate. Foundations: SQLite · audit chain, Job queue · watchdogs, Project registry.</desc>
-  <rect x="0.0" y="0.0" width="1200.0" height="400.0" fill="#F6F4EF"/>
-  <rect x="0.5" y="0.5" width="1199.0" height="399.0" fill="none" rx="16" stroke="#D3D6DC" stroke-width="1"/>
-  <text x="48" y="54" font-family="Consolas, 'SFMono-Regular', Menlo, monospace" font-size="22" fill="#2F4BC7" letter-spacing="3">FLAGSHIP 03</text>
-  <text x="48" y="100" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="46" fill="#16181D" font-weight="700" letter-spacing="-1">SALIH-AI-COMPANY</text>
-  <text x="1152" y="100" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="28" fill="#5C6270" text-anchor="end">Multi-agent operating system</text>
-  <line x1="48.0" y1="122.0" x2="1152.0" y2="122.0" stroke="#D3D6DC" stroke-width="1.5"/>
-  <text x="48" y="156" font-family="Consolas, 'SFMono-Regular', Menlo, monospace" font-size="22" fill="#5C6270" letter-spacing="2">AGENTS</text>
-  <text x="431" y="156" font-family="Consolas, 'SFMono-Regular', Menlo, monospace" font-size="22" fill="#2F4BC7" letter-spacing="2">POLICY ENGINE</text>
-  <text x="813" y="156" font-family="Consolas, 'SFMono-Regular', Menlo, monospace" font-size="22" fill="#5C6270" letter-spacing="2">FOUNDATIONS</text>
-  <rect x="48.0" y="176.0" width="338.7" height="60.0" fill="#ECEDF0" rx="8"/>
-  <text x="70" y="215" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="26" fill="#16181D">Executive planner</text>
-  <rect x="48.0" y="250.0" width="338.7" height="60.0" fill="#ECEDF0" rx="8"/>
-  <text x="70" y="289" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="26" fill="#16181D">Engineering &amp; research</text>
-  <rect x="48.0" y="324.0" width="338.7" height="60.0" fill="#ECEDF0" rx="8"/>
-  <text x="70" y="363" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="26" fill="#16181D">Quality · Security</text>
-  <rect x="813.3" y="176.0" width="338.7" height="60.0" fill="#ECEDF0" rx="8"/>
-  <text x="835" y="215" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="26" fill="#16181D">SQLite · audit chain</text>
-  <rect x="813.3" y="250.0" width="338.7" height="60.0" fill="#ECEDF0" rx="8"/>
-  <text x="835" y="289" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="26" fill="#16181D">Job queue · watchdogs</text>
-  <rect x="813.3" y="324.0" width="338.7" height="60.0" fill="#ECEDF0" rx="8"/>
-  <text x="835" y="363" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="26" fill="#16181D">Project registry</text>
-  <rect x="430.7" y="176.0" width="338.7" height="208.0" fill="#DDE3F7" rx="10"/>
-  <rect x="430.7" y="176.0" width="6.0" height="208.0" fill="#2F4BC7" rx="3"/>
-  <text x="457" y="218" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="26" fill="#16181D" font-weight="600">Action levels L0–L5</text>
-  <text x="457" y="284" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="26" fill="#16181D" font-weight="600">Bounded execution</text>
-  <text x="457" y="350" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="26" fill="#16181D" font-weight="600">Human approval gate</text>
-  <line x1="386.7" y1="280.0" x2="430.7" y2="280.0" stroke="#8A94A8" stroke-width="2"/>
-  <line x1="769.3" y1="280.0" x2="813.3" y2="280.0" stroke="#8A94A8" stroke-width="2"/>
-  <circle cx="430.7" cy="280.0" r="5" fill="#2F4BC7"/>
-  <circle cx="813.3" cy="280.0" r="5" fill="#2F4BC7"/>
+  <rect x="0.0" y="0.0" width="1200.0" height="380.0" fill="#F6F4EF"/>
+  <rect x="0.5" y="0.5" width="1199.0" height="379.0" fill="none" rx="16" stroke="#D8DAE0" stroke-width="1"/>
+  <text x="48" y="46" font-family="Consolas, 'SFMono-Regular', Menlo, monospace" font-size="22" fill="#6B4FB8" letter-spacing="3">FLAGSHIP 03</text>
+  <text x="48" y="90" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="46" fill="#16181D" font-weight="700" letter-spacing="-1">SALIH-AI-COMPANY</text>
+  <text x="1152" y="90" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="28" fill="#5C6270" text-anchor="end">Multi-agent operating system</text>
+  <line x1="48.0" y1="110.0" x2="1152.0" y2="110.0" stroke="#D8DAE0" stroke-width="1.5"/>
+  <text x="48" y="142" font-family="Consolas, 'SFMono-Regular', Menlo, monospace" font-size="22" fill="#5C6270" letter-spacing="2">AGENTS</text>
+  <text x="431" y="142" font-family="Consolas, 'SFMono-Regular', Menlo, monospace" font-size="22" fill="#6B4FB8" letter-spacing="2">POLICY ENGINE</text>
+  <text x="813" y="142" font-family="Consolas, 'SFMono-Regular', Menlo, monospace" font-size="22" fill="#5C6270" letter-spacing="2">FOUNDATIONS</text>
+  <rect x="48.0" y="160.0" width="338.7" height="60.0" fill="#ECEDF0" rx="8"/>
+  <text x="70" y="198" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="23" fill="#16181D">Executive planner</text>
+  <rect x="48.0" y="234.0" width="338.7" height="60.0" fill="#ECEDF0" rx="8"/>
+  <text x="70" y="272" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="23" fill="#16181D">Engineering &amp; research</text>
+  <rect x="48.0" y="308.0" width="338.7" height="60.0" fill="#ECEDF0" rx="8"/>
+  <text x="70" y="346" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="23" fill="#16181D">Quality · Security</text>
+  <rect x="813.3" y="160.0" width="338.7" height="60.0" fill="#ECEDF0" rx="8"/>
+  <text x="835" y="198" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="23" fill="#16181D">SQLite · audit chain</text>
+  <rect x="813.3" y="234.0" width="338.7" height="60.0" fill="#ECEDF0" rx="8"/>
+  <text x="835" y="272" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="23" fill="#16181D">Job queue · watchdogs</text>
+  <rect x="813.3" y="308.0" width="338.7" height="60.0" fill="#ECEDF0" rx="8"/>
+  <text x="835" y="346" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="23" fill="#16181D">Project registry</text>
+  <rect x="430.7" y="160.0" width="338.7" height="208.0" fill="#ECE6F8" rx="10"/>
+  <rect x="430.7" y="160.0" width="6.0" height="208.0" fill="#6B4FB8" rx="3"/>
+  <text x="457" y="202" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="23" fill="#16181D" font-weight="600">Action levels L0–L5</text>
+  <text x="457" y="268" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="23" fill="#16181D" font-weight="600">Bounded execution</text>
+  <text x="457" y="334" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="23" fill="#16181D" font-weight="600">Human approval gate</text>
+  <line x1="386.7" y1="264.0" x2="430.7" y2="264.0" stroke="#8A94A8" stroke-width="2"/>
+  <line x1="769.3" y1="264.0" x2="813.3" y2="264.0" stroke="#8A94A8" stroke-width="2"/>
+  <circle cx="430.7" cy="264.0" r="5" fill="#6B4FB8"/>
+  <circle cx="813.3" cy="264.0" r="5" fill="#6B4FB8"/>
 </svg>

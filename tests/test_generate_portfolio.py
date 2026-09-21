@@ -43,6 +43,9 @@ def repo(name="demo-app", **over):
 
 def product(pid="thing", tier=2, **over):
     base = {
+        "domain": "business",
+        "icon": "ledger",
+        "short_summary": "Does a thing for real people every day.",
         "product_id": pid,
         "display_name": pid.replace("-", " ").title(),
         "tagline": "Does a thing.",
@@ -132,9 +135,10 @@ class GroupingTests(unittest.TestCase):
         pf = portfolio([product("aura", repository_sources=[{"kind": "public", "repo": f"{OWNER}/aura-service"}],
                                 publish_repository_links=True)])
         text = generate([repo("aura-service"), repo("tool")], pf)
-        self.assertEqual(text.count(f"https://github.com/{OWNER}/aura-service"), 1)
-        # the archive must not repeat it
-        archive = text[text.index(gp.ARCHIVE_START):]
+        # linked from the board's public-repository line and from its full-description row; never as an archive entry
+        self.assertEqual(text.count(f"https://github.com/{OWNER}/aura-service"), 2)
+        # the archive groups must not repeat it (its only archive presence is the full-description table)
+        archive = text[text.index("<summary><b>Tools"):]
         self.assertNotIn("aura-service", archive)
         self.assertIn("tool", archive)
 
@@ -171,9 +175,14 @@ class GroupingTests(unittest.TestCase):
         self.assertEqual(len(names), len(set(names)))
         self.assertEqual(len(names), 4 + 3)
         text = re.sub(r"https?://\S+", "", generate(repos, pf))
-        for name in ("Eco", "Collab", "Pub", "OOP Lab 1", "OOP Lab — Private", "tool"):
+        for name in ("OOP Lab 1", "OOP Lab — Private", "tool"):
             self.assertEqual(len(re.findall(rf"(?<![\w-]){re.escape(name)}(?![\w-])", text)), 1, name)
-        self.assertEqual(text.count("### Nav" + chr(10)), 1)  # flagship: one heading (+ its own image alt text)
+        # board products: once in the board alt text, once in the collapsed full-description table
+        # (a public product is additionally named on the board's public-repository link line)
+        for name, expected in (("Eco", 2), ("Collab", 2), ("Pub", 3)):
+            self.assertEqual(len(re.findall(rf"(?<![\w-]){re.escape(name)}(?![\w-])", text)), expected, name)
+            self.assertEqual(text.count(f"| **{name}**") + text.count(f"| [{name}]"), 1, name)
+        self.assertEqual(text.count("Flagship 01 — Nav:"), 1)  # flagship: named once in its diagram alt text
 
     def test_duplicate_display_names_are_rejected(self):
         pf = portfolio([product("a", display_name="Same"), product("b", display_name="same")])
@@ -268,12 +277,14 @@ class CollaborationTests(unittest.TestCase):
         pf = portfolio([product("stud", display_name="Sticker Studio", role="Lead contributor", access="Partner-owned · private",
                                 collaboration={"label": "Built in collaboration", "evidence": "71 of 75 commits"})])
         text = generate([repo("tool")], pf)
-        collab = text[text.index("## Selected Collaborations"):text.index(gp.PORTFOLIO_END)]
-        self.assertIn("Sticker Studio", collab)
-        self.assertIn("Built in collaboration · Lead contributor · 71 of 75 commits", collab)
+        collab = text[text.index("## 03 — Verified Collaborations"):text.index(gp.PORTFOLIO_END)]
+        self.assertIn("assets/v5/collaborations-mobile-dark.svg", collab)
+        self.assertIn("Sticker Studio — Does a thing for real people every day. (Lead contributor, 71 of 75 commits", collab)
         self.assertIn("Partner-owned · private", collab)
-        eco = text[text.index("## Selected Product Ecosystem"):text.index("## Selected Collaborations")]
+        eco = text[text.index("## 02 — Product Ecosystem"):text.index("## 03 — Verified Collaborations")]
         self.assertNotIn("Sticker Studio", eco)
+        archive = text[text.index(gp.ARCHIVE_START):]
+        self.assertIn("| **Sticker Studio**<br><sub>Python · Lead contributor · 71 of 75 commits · In development · Partner-owned · private</sub> | Does a private thing well. |", archive)
 
     def test_collaboration_needs_label_and_evidence(self):
         pf = portfolio([product("p", collaboration={"label": "Built in collaboration"})])
@@ -345,7 +356,7 @@ class RenderingTests(unittest.TestCase):
         self.assertIn('src="assets/v5/flagship-navlonix-light.svg" width="100%"', text)
 
     def test_flagship_bullets_are_capped(self):
-        pf = portfolio([product("nav", tier=1, built=["1", "2", "3", "4", "5"])])
+        pf = portfolio([product("nav", tier=1, built=["1", "2", "3", "4"])])
         with self.assertRaises(gp.PortfolioError):
             gp.validate_portfolio(pf)
 
@@ -360,6 +371,28 @@ class RenderingTests(unittest.TestCase):
         text = generate([repo("tool")], pf)
         for line in text.splitlines():
             self.assertFalse(line.endswith("<br>"), line)
+
+    def test_boards_use_responsive_pictures_and_no_text_wall(self):
+        pf = portfolio([product("eco", repository_sources=[{"kind": "public", "repo": f"{OWNER}/eco-repo"}], publish_repository_links=True),
+                        product("col", collaboration={"label": "Built in collaboration", "evidence": "3 / 4 commits"})])
+        text = generate([repo("eco-repo")], pf)
+        block = text[text.index(gp.PORTFOLIO_START):text.index(gp.PORTFOLIO_END)]
+        for base in ("ecosystem", "collaborations"):
+            order = [block.index(f"assets/v5/{base}-{v}.svg") for v in ("mobile-dark", "mobile-light", "desktop-dark", "desktop-light")]
+            self.assertEqual(order, sorted(order), base)
+        visible = re.sub(r"<picture>.*?</picture>", "", block, flags=re.S)
+        self.assertNotIn("Does a private thing well.", visible)
+        self.assertIn(f"[Eco](https://github.com/{OWNER}/eco-repo)", visible)  # public link line survives
+
+    def test_tier2_products_need_board_fields(self):
+        p = product("eco")
+        del p["short_summary"]
+        with self.assertRaises(gp.PortfolioError):
+            gp.validate_portfolio(portfolio([p]))
+        with self.assertRaises(gp.PortfolioError):
+            gp.validate_portfolio(portfolio([product("eco", short_summary=" ".join(["word"] * 17))]))
+        with self.assertRaises(gp.PortfolioError):
+            gp.validate_portfolio(portfolio([product("eco", domain="space")]))
 
     def test_archive_table_is_two_columns(self):
         text = generate([repo("tool")], portfolio())
@@ -477,7 +510,7 @@ class RealDataTests(unittest.TestCase):
 
     def test_generation_with_public_repositories_including_mrc(self):
         repos = [repo("mrc-commerce", description="Cinematic storefront", homepage="https://mrc-commerce.vercel.app"),
-                 repo("nalbur-stok"), repo("auraproject-ai-service", language="Python"), repo("LLMChatbot", language="C#"),
+                 repo("auraproject-ai-service", language="Python"), repo("LLMChatbot", language="C#"),
                  repo(OWNER, description="Config files for my GitHub profile."), repo("web-lab-1", size=0, language=None),
                  repo("NTP_Lab", language="C#")]
         text = generate(repos, self.pf)
@@ -485,9 +518,11 @@ class RealDataTests(unittest.TestCase):
         self.assertNotIn("vercel.app/mrc", text)
         listed = {r["name"].lower() for r in repos if gp.is_listed(r, self.pf)}
         gp.check_generated_text(text, self.pf, listed)
-        self.assertIn("### Navlonix", text)
-        self.assertIn("### Nilüfer İlaçlama Operations Suite", text)
-        self.assertIn("### SALIH-AI-COMPANY", text)
+        self.assertIn("Flagship 01 — Navlonix:", text)
+        self.assertIn("Flagship 02 — Nilüfer İlaçlama Operations Suite:", text)
+        self.assertIn("Flagship 03 — SALIH-AI-COMPANY:", text)
+        self.assertIn("## 02 — Product Ecosystem", text)
+        self.assertIn("<summary><b>Selected products — full descriptions</b> (10)</summary>", text)
         self.assertNotIn("Web Lab 1", text)
         self.assertLessEqual(gp.longest_word(text), 30)
 

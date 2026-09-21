@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="920" viewBox="0 0 720 920" role="img" aria-labelledby="t d">
+  <title id="t">Engineering approach — five stages from architecture to observation</title>
+  <desc id="d">Engineering approach in five stages: Architecture — Define the system before scaling it.; Typed Boundaries — Make responsibilities and contracts explicit.; Testable Workflows — Prove behaviour before widening scope.; Human Approval — Keep consequential AI actions supervised.; Observe &amp; Improve — Measure real operation and iterate.</desc>
+  <rect x="0.0" y="0.0" width="720.0" height="920.0" fill="#101216"/>
+  <rect x="0.5" y="0.5" width="719.0" height="919.0" fill="none" rx="18" stroke="#2C3039" stroke-width="1"/>
+  <line x1="76.0" y1="70.0" x2="76.0" y2="772.0" stroke="#2C3039" stroke-width="2"/>
+  <circle cx="76.0" cy="100.0" r="34" fill="#181B21" stroke="#7A90EE" stroke-width="2"/>
+  <rect x="64.0" y="88.0" width="24.0" height="24.0" fill="none" rx="2" stroke="#7A90EE" stroke-width="2.66667"/>
+  <path d="M72.0 88.0 V112.0 M80.0 88.0 V112.0 M64.0 96.0 H88.0 M64.0 104.0 H88.0" fill="none" stroke="#7A90EE" stroke-width="1.86667" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="72.0" y="96.0" width="8.0" height="8.0" fill="#7A90EE"/>
+  <text x="138" y="78" font-family="Consolas, 'SFMono-Regular', Menlo, monospace" font-size="19" fill="#9AA1B0" letter-spacing="2">01</text>
+  <text x="138" y="108" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="30" fill="#F1EEE6" font-weight="700">Architecture</text>
+  <text x="138" y="142" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="24" fill="#9AA1B0">Define the system before scaling it.</text>
+  <circle cx="76.0" cy="268.0" r="34" fill="#181B21" stroke="#7A90EE" stroke-width="2"/>
+  <path d="M70.66666666666667 257.3333333333333 H65.33333333333333 V278.6666666666667 H70.66666666666667 M81.33333333333333 257.3333333333333 H86.66666666666666 V278.6666666666667 H81.33333333333333" fill="none" stroke="#7A90EE" stroke-width="2.66667" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="72.0" y="264.0" width="8.0" height="8.0" fill="#7A90EE" rx="1.33333"/>
+  <text x="138" y="246" font-family="Consolas, 'SFMono-Regular', Menlo, monospace" font-size="19" fill="#9AA1B0" letter-spacing="2">02</text>
+  <text x="138" y="276" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="30" fill="#F1EEE6" font-weight="700">Typed Boundaries</text>
+  <text x="138" y="310" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="24" fill="#9AA1B0">Make responsibilities and contracts</text>
+  <text x="138" y="340" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="24" fill="#9AA1B0">explicit.</text>
+  <circle cx="76.0" cy="436.0" r="34" fill="#181B21" stroke="#7A90EE" stroke-width="2"/>
+  <circle cx="76.0" cy="436.0" r="12" fill="none" stroke="#7A90EE" stroke-width="2.66667"/>
+  <path d="M70.0 436.6666666666667 L74.4 441.06666666666666 L82.4 431.73333333333335" fill="none" stroke="#7A90EE" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="138" y="414" font-family="Consolas, 'SFMono-Regular', Menlo, monospace" font-size="19" fill="#9AA1B0" letter-spacing="2">03</text>
+  <text x="138" y="444" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="30" fill="#F1EEE6" font-weight="700">Testable Workflows</text>
+  <text x="138" y="478" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="24" fill="#9AA1B0">Prove behaviour before widening scope.</text>
+  <circle cx="76.0" cy="604.0" r="34" fill="#181B21" stroke="#7A90EE" stroke-width="2"/>
+  <path d="M65.33333333333333 616.0 V600.0 M86.66666666666666 616.0 V600.0 M65.33333333333333 600.0 H86.66666666666666" fill="none" stroke="#7A90EE" stroke-width="2.66667" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="76.0" cy="600.0" r="4.26667" fill="#7A90EE"/>
+  <path d="M76.0 604.0 V612.0" fill="none" stroke="#7A90EE" stroke-width="2.66667" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="138" y="582" font-family="Consolas, 'SFMono-Regular', Menlo, monospace" font-size="19" fill="#9AA1B0" letter-spacing="2">04</text>
+  <text x="138" y="612" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="30" fill="#F1EEE6" font-weight="700">Human Approval</text>
+  <text x="138" y="646" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="24" fill="#9AA1B0">Keep consequential AI actions supervised.</text>
+  <circle cx="76.0" cy="772.0" r="34" fill="#181B21" stroke="#7A90EE" stroke-width="2"/>
+  <path d="M64.0 778.6666666666666 A12.0 12.0 0 0 1 88.0 778.6666666666666" fill="none" stroke="#7A90EE" stroke-width="2.66667" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M76.0 778.6666666666666 L81.33333333333333 769.3333333333334" fill="none" stroke="#7A90EE" stroke-width="2.66667" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="76.0" cy="778.7" r="2.66667" fill="#7A90EE"/>
+  <path d="M66.66666666666667 772.0 L68.66666666666667 773.3333333333334 M85.33333333333333 772.0 L83.33333333333333 773.3333333333334" fill="none" stroke="#7A90EE" stroke-width="2.66667" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="138" y="750" font-family="Consolas, 'SFMono-Regular', Menlo, monospace" font-size="19" fill="#9AA1B0" letter-spacing="2">05</text>
+  <text x="138" y="780" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="30" fill="#F1EEE6" font-weight="700">Observe &amp; Improve</text>
+  <text x="138" y="814" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="24" fill="#9AA1B0">Measure real operation and iterate.</text>
+</svg>

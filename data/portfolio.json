@@ -10,13 +10,12 @@
       "product_id": "navlonix",
       "display_name": "Navlonix",
       "tagline": "AI-assisted B2B logistics marketplace that matches cargo owners with verified drivers.",
-      "problem": "Industrial freight is still arranged over phone calls, negotiated prices and cash risk. Navlonix turns it into a marketplace: businesses post loads, verified drivers bid on an AI-computed fair base price, and the platform carries the job through escrow, live tracking and delivery confirmation.",
+      "problem": "Industrial freight is still arranged over phone calls, negotiated prices and cash risk. Navlonix turns it into a marketplace: businesses post loads, verified drivers bid on an AI-computed fair price, and the platform carries the job through escrow, tracking and delivery.",
       "summary": "AI-assisted B2B logistics marketplace matching cargo owners with verified drivers: role-based customer, driver and admin apps, fair freight pricing, an escrow-style payment flow, live chat and tracking.",
       "built": [
         "Role-based customer, driver and admin experiences on web and mobile",
-        "Fair base-price engine from fuel prices, real road distance and vehicle type",
-        "Escrow-style payment ledger with QR delivery confirmation and settlement preview",
-        "Real-time offers, chat and location tracking; driver document verification with vision models"
+        "Fair base-price engine, escrow-style ledger with QR delivery confirmation and settlement preview",
+        "Real-time offers, chat and tracking; driver document verification with vision models"
       ],
       "surfaces": [
         ".NET 9 API",
@@ -50,19 +49,19 @@
       "publish_name": true,
       "publish_repository_links": false,
       "collaboration": null,
-      "sort_order": 10
+      "sort_order": 10,
+      "domain": "logistics"
     },
     {
       "product_id": "nilufer-ilaclama",
       "display_name": "Nilüfer İlaçlama Operations Suite",
       "tagline": "Field-service operations platform for a pest-control business — from customer records to field crews, contracts and payments.",
-      "problem": "A pest-control company runs on scheduled jobs, crews in the field, recurring contracts and collections. The suite replaces scattered spreadsheets and phone calls with one operational system shared by the owner, managers, team leads, field staff and customers.",
+      "problem": "A pest-control company runs on scheduled jobs, field crews, recurring contracts and collections. The suite replaces spreadsheets and phone calls with one operational system shared by owner, managers, team leads, field staff and customers.",
       "summary": "Field-service operations platform for a pest-control business: customers, field personnel, service jobs and scheduling, contracts and quotations, payments, notifications and audit logs across an admin panel, a field mobile app and a public site with a customer portal.",
       "built": [
-        "Typed operations API with a role and permission model: owner, manager, team lead, staff, customer",
-        "Admin web panel with a live command-centre dashboard, pending-approval queue and audit logs",
-        "Field mobile app for jobs, calendar, approvals, leave and advance requests, messaging and payslips",
-        "Customer records, service jobs and reports, contracts, quotations, payments — plus a public site with a row-level-secured customer portal"
+        "Typed operations API with owner, manager, team-lead, staff and customer roles and permissions",
+        "Admin panel with live command-centre dashboard, approval queue and audit logs; field mobile app for jobs, calendar, requests and payslips",
+        "Customers, service jobs and reports, contracts, quotations and payments — plus a public site with a row-level-secured customer portal"
       ],
       "surfaces": [
         "Operations API",
@@ -100,19 +99,19 @@
       "publish_name": true,
       "publish_repository_links": false,
       "collaboration": null,
-      "sort_order": 20
+      "sort_order": 20,
+      "domain": "field"
     },
     {
       "product_id": "salih-ai-company",
       "display_name": "SALIH-AI-COMPANY",
       "tagline": "Autonomous multi-agent operating system that plans, executes and reviews bounded work under explicit human approval.",
-      "problem": "Running several development projects with AI agents only makes sense if the agents cannot quietly take consequential actions. SALIH-AI-COMPANY is built as a reusable company operating system: agents do bounded work inside a deterministic policy engine, and everything that touches the outside world waits for the owner.",
+      "problem": "Running several development projects with AI agents only makes sense if agents cannot quietly take consequential actions. This is a reusable company operating system: bounded work inside a deterministic policy engine, and everything external waits for the owner.",
       "summary": "Autonomous multi-agent operating system: an executive planner and engineering, research, finance, quality and security agents work inside a policy engine with human approval gates, a hash-chained audit trail, fail-closed reliability configuration and readiness gates.",
       "built": [
         "Executive planner plus engineering, research, finance, quality and security agents with least-privilege scopes",
-        "Deterministic policy engine with action levels L0–L5; external or irreversible actions need human approval",
-        "Hash-chained audit trail, fail-closed reliability configuration, job queue with leases and dead-lettering, watchdogs and readiness gates",
-        "Project registry that onboards external repositories through isolated worktrees; 500+ tests and smoke workflows"
+        "Deterministic policy engine with action levels L0–L5: external or irreversible actions wait for human approval",
+        "Hash-chained audit trail, fail-closed reliability configuration, job queue with leases, watchdogs, readiness gates; 500+ tests"
       ],
       "surfaces": [
         "Orchestrator",
@@ -142,7 +141,8 @@
       "publish_name": true,
       "publish_repository_links": false,
       "collaboration": null,
-      "sort_order": 30
+      "sort_order": 30,
+      "domain": "ai"
     },
     {
       "product_id": "instagram-ai-manager",
@@ -152,7 +152,7 @@
       "role": "Lead engineer",
       "status": "In active development",
       "access": "Private",
-      "category": "Business automation",
+      "category": "AI operations",
       "repository_sources": [
         {
           "kind": "private",
@@ -172,7 +172,10 @@
       "publish_name": true,
       "publish_repository_links": false,
       "collaboration": null,
-      "sort_order": 110
+      "sort_order": 110,
+      "domain": "ai",
+      "icon": "inbox-approval",
+      "short_summary": "Approval-first Instagram operations platform for professional accounts."
     },
     {
       "product_id": "finans-pro",
@@ -204,7 +207,10 @@
       "publish_name": true,
       "publish_repository_links": false,
       "collaboration": null,
-      "sort_order": 120
+      "sort_order": 120,
+      "domain": "business",
+      "icon": "ledger",
+      "short_summary": "Personal finance and investment tracking with OCR and FIFO profit."
     },
     {
       "product_id": "tatli-duragi",
@@ -235,7 +241,10 @@
       "publish_name": true,
       "publish_repository_links": false,
       "collaboration": null,
-      "sort_order": 130
+      "sort_order": 130,
+      "domain": "business",
+      "icon": "table-order",
+      "short_summary": "QR table ordering with a realtime, role-based admin POS."
     },
     {
       "product_id": "auraproject",
@@ -245,7 +254,7 @@
       "role": "Lead engineer",
       "status": "Experimental",
       "access": "Public service · private core",
-      "category": "AI systems",
+      "category": "AI · Vision",
       "repository_sources": [
         {
           "kind": "public",
@@ -268,7 +277,10 @@
       "publish_name": true,
       "publish_repository_links": true,
       "collaboration": null,
-      "sort_order": 140
+      "sort_order": 140,
+      "domain": "ai",
+      "icon": "vision",
+      "short_summary": "Outfit recommendation from visual analysis and style rules."
     },
     {
       "product_id": "nalbur-stok",
@@ -277,12 +289,12 @@
       "summary": "Virtualised 100K-row product tables, reports and a Supabase backend.",
       "role": "Solo engineer",
       "status": "Maintained",
-      "access": "Public",
+      "access": "Private",
       "category": "Retail operations",
       "repository_sources": [
         {
-          "kind": "public",
-          "repo": "Salihefendihsa/nalbur-stok"
+          "kind": "private",
+          "label": "Inventory web app"
         }
       ],
       "public_links": [],
@@ -295,9 +307,12 @@
       ],
       "featured_tier": 2,
       "publish_name": true,
-      "publish_repository_links": true,
+      "publish_repository_links": false,
       "collaboration": null,
-      "sort_order": 150
+      "sort_order": 150,
+      "domain": "business",
+      "icon": "inventory",
+      "short_summary": "Inventory management for hardware stores with virtualised 100K-row product tables."
     },
     {
       "product_id": "optivark",
@@ -325,7 +340,10 @@
       "publish_name": true,
       "publish_repository_links": false,
       "collaboration": null,
-      "sort_order": 160
+      "sort_order": 160,
+      "domain": "studio",
+      "icon": "system-map",
+      "short_summary": "Studio site for logistics, production and field-team software."
     },
     {
       "product_id": "sticker-label-studio",
@@ -335,7 +353,7 @@
       "role": "Lead contributor",
       "status": "Delivered",
       "access": "Partner-owned · private",
-      "category": "Collaboration",
+      "category": "Print tooling",
       "repository_sources": [
         {
           "kind": "collaboration",
@@ -354,9 +372,12 @@
       "publish_repository_links": false,
       "collaboration": {
         "label": "Built in collaboration",
-        "evidence": "71 of 75 commits"
+        "evidence": "71 / 75 commits"
       },
-      "sort_order": 210
+      "sort_order": 210,
+      "domain": "business",
+      "icon": "collaboration",
+      "short_summary": "Web studio for school name stickers and print-ready labels."
     },
     {
       "product_id": "couples-companion",
@@ -366,7 +387,7 @@
       "role": "Core contributor",
       "status": "In development",
       "access": "Partner-owned · private",
-      "category": "Collaboration",
+      "category": "Mobile app",
       "repository_sources": [
         {
           "kind": "collaboration",
@@ -384,9 +405,12 @@
       "publish_repository_links": false,
       "collaboration": {
         "label": "Built in collaboration",
-        "evidence": "37 commits · 36 pull requests"
+        "evidence": "37 commits · 36 PRs"
       },
-      "sort_order": 220
+      "sort_order": 220,
+      "domain": "business",
+      "icon": "collaboration",
+      "short_summary": "Flutter app that helps couples share how they feel, without a fight."
     },
     {
       "product_id": "invitation-studio",
@@ -396,7 +420,7 @@
       "role": "Lead contributor",
       "status": "Delivered",
       "access": "Partner-owned · private",
-      "category": "Collaboration",
+      "category": "Print tooling",
       "repository_sources": [
         {
           "kind": "collaboration",
@@ -414,9 +438,12 @@
       "publish_repository_links": false,
       "collaboration": {
         "label": "Built in collaboration",
-        "evidence": "5 of 6 commits"
+        "evidence": "5 / 6 commits"
       },
-      "sort_order": 230
+      "sort_order": 230,
+      "domain": "business",
+      "icon": "collaboration",
+      "short_summary": "Interactive studio for wedding and event invitations with print export."
     },
     {
       "product_id": "product-photo-studio",
@@ -426,7 +453,7 @@
       "role": "Contributor",
       "status": "In development",
       "access": "Partner-owned · private",
-      "category": "Collaboration",
+      "category": "Mobile app",
       "repository_sources": [
         {
           "kind": "collaboration",
@@ -445,9 +472,12 @@
       "publish_repository_links": false,
       "collaboration": {
         "label": "Built in collaboration",
-        "evidence": "2 of 7 commits"
+        "evidence": "2 / 7 commits"
       },
-      "sort_order": 240
+      "sort_order": 240,
+      "domain": "business",
+      "icon": "collaboration",
+      "short_summary": "On-device product photo studio that exports social-ready posts and stories."
     }
   ],
   "archive_groups": [

@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="440" viewBox="0 0 1200 440" role="img" aria-labelledby="t d">
+  <title id="t">Hilmi Salih Altınışık — Software Engineer &amp; Product Builder</title>
+  <desc id="d">Desktop editorial hero: personal monogram, Building operational software across logistics, field service, business automation and autonomous AI systems. A map connects one engineer to four product domains: Logistics — Navlonix; Field Operations — Nilüfer İlaçlama; Business Systems — Finans Pro · Tatlı Durağı; Autonomous AI — SALIH-AI-COMPANY.</desc>
+  <rect x="0.0" y="0.0" width="1200.0" height="440.0" fill="#F6F4EF"/>
+  <rect x="0.5" y="0.5" width="1199.0" height="439.0" fill="none" rx="18" stroke="#D8DAE0" stroke-width="1"/>
+  <rect x="56.0" y="48.0" width="60.0" height="60.0" fill="#FFFFFF" rx="13.2" stroke="#D8DAE0" stroke-width="1.5"/>
+  <rect x="64.4" y="56.4" width="7.2" height="7.2" fill="#2F4BC7" rx="1.8"/>
+  <text x="86" y="92" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="20.4" fill="#16181D" font-weight="700" text-anchor="middle" letter-spacing="-0.6">HSA</text>
+  <text x="134" y="86" font-family="Consolas, 'SFMono-Regular', Menlo, monospace" font-size="21" fill="#5C6270" letter-spacing="3">HILMI SALIH ALTINIŞIK</text>
+  <text x="56" y="184" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="60" fill="#16181D" font-weight="700" letter-spacing="-1.5">Software Engineer</text>
+  <text x="56" y="246" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="60" fill="#16181D" font-weight="700" letter-spacing="-1.5">&amp; Product Builder</text>
+  <text x="56" y="296" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="23" fill="#5C6270">Building operational software across logistics,</text>
+  <text x="56" y="328" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="23" fill="#5C6270">field service, business automation and</text>
+  <text x="56" y="360" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="23" fill="#5C6270">autonomous AI systems.</text>
+  <rect x="56.0" y="404.0" width="64.0" height="4.0" fill="#2F4BC7" rx="2"/>
+  <text x="136" y="411" font-family="Consolas, 'SFMono-Regular', Menlo, monospace" font-size="19" fill="#16181D" letter-spacing="2">ARCHITECTURE → PRODUCT → LAUNCH</text>
+  <text x="676" y="46" font-family="Consolas, 'SFMono-Regular', Menlo, monospace" font-size="18" fill="#5C6270" letter-spacing="3">PRODUCT DOMAINS</text>
+  <line x1="911.0" y1="219.0" x2="900.0" y2="182.0" stroke="#8A94A8" stroke-width="1.5"/>
+  <line x1="911.0" y1="219.0" x2="922.0" y2="182.0" stroke="#8A94A8" stroke-width="1.5"/>
+  <line x1="911.0" y1="219.0" x2="900.0" y2="234.0" stroke="#8A94A8" stroke-width="1.5"/>
+  <line x1="911.0" y1="219.0" x2="922.0" y2="234.0" stroke="#8A94A8" stroke-width="1.5"/>
+  <rect x="676.0" y="64.0" width="224.0" height="118.0" fill="#FFFFFF" rx="12" stroke="#D8DAE0" stroke-width="1"/>
+  <rect x="694.0" y="82.0" width="42.0" height="42.0" fill="#E4E8F8" rx="9"/>
+  <circle cx="707.4" cy="109.5" r="3.25" fill="none" stroke="#2F4BC7" stroke-width="2.16667"/>
+  <circle cx="722.6" cy="96.5" r="3.25" fill="none" stroke="#2F4BC7" stroke-width="2.16667"/>
+  <path d="M710.125 107.33333333333333 C717.1666666666666 107.33333333333333 712.8333333333334 98.66666666666667 719.875 98.66666666666667" fill="none" stroke="#2F4BC7" stroke-width="2.16667" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="752" y="106" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="22" fill="#16181D" font-weight="700">Logistics</text>
+  <text x="694" y="162" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="18" fill="#5C6270">Navlonix</text>
+  <rect x="922.0" y="64.0" width="224.0" height="118.0" fill="#FFFFFF" rx="12" stroke="#D8DAE0" stroke-width="1"/>
+  <rect x="940.0" y="82.0" width="42.0" height="42.0" fill="#DFF0EC" rx="9"/>
+  <path d="M961.0 111.66666666666666 L954.5 101.91666666666667 A6.5 6.5 0 1 1 967.5 101.91666666666667 Z" fill="none" stroke="#1F7A6D" stroke-width="2.16667" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="961.0" cy="100.8" r="2.38333" fill="#1F7A6D"/>
+  <line x1="951.2" y1="113.8" x2="970.8" y2="113.8" stroke="#1F7A6D" stroke-width="2.16667"/>
+  <text x="998" y="106" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="18" fill="#16181D" font-weight="700">Field Operations</text>
+  <text x="940" y="162" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="18" fill="#5C6270">Nilüfer İlaçlama</text>
+  <rect x="676.0" y="234.0" width="224.0" height="118.0" fill="#FFFFFF" rx="12" stroke="#D8DAE0" stroke-width="1"/>
+  <rect x="694.0" y="252.0" width="42.0" height="42.0" fill="#F6EBDC" rx="9"/>
+  <path d="M706.3333333333334 266.5 H723.6666666666666 M706.3333333333334 271.9166666666667 H719.3333333333334 M706.3333333333334 277.3333333333333 H721.5" fill="none" stroke="#A3651F" stroke-width="2.16667" stroke-linecap="round" stroke-linejoin="round"/>
+  <line x1="706.3" y1="282.8" x2="723.7" y2="282.8" stroke="#A3651F" stroke-width="3.46667"/>
+  <text x="752" y="276" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="18" fill="#16181D" font-weight="700">Business Systems</text>
+  <text x="694" y="332" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="16" fill="#5C6270">Finans Pro · Tatlı Durağı</text>
+  <rect x="922.0" y="234.0" width="224.0" height="118.0" fill="#FFFFFF" rx="12" stroke="#D8DAE0" stroke-width="1"/>
+  <rect x="940.0" y="252.0" width="42.0" height="42.0" fill="#ECE6F8" rx="9"/>
+  <circle cx="961.0" cy="273.0" r="3.46667" fill="#6B4FB8"/>
+  <circle cx="952.3" cy="265.4" r="2.38333" fill="none" stroke="#6B4FB8" stroke-width="2.16667"/>
+  <circle cx="969.7" cy="266.5" r="2.38333" fill="none" stroke="#6B4FB8" stroke-width="2.16667"/>
+  <circle cx="967.5" cy="281.7" r="2.38333" fill="none" stroke="#6B4FB8" stroke-width="2.16667"/>
+  <path d="M958.2916666666666 270.6166666666667 L954.2833333333333 267.15 M964.0333333333333 271.05 L967.7166666666667 268.01666666666665 M962.95 275.81666666666666 L965.9833333333333 279.71666666666664" fill="none" stroke="#6B4FB8" stroke-width="2.16667" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="998" y="276" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="18" fill="#16181D" font-weight="700">Autonomous AI</text>
+  <text x="940" y="332" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="18" fill="#5C6270">SALIH-AI-COMPANY</text>
+  <circle cx="911.0" cy="219.0" r="22" fill="#2F4BC7"/>
+  <circle cx="911.0" cy="219.0" r="8" fill="#F6F4EF"/>
+</svg>

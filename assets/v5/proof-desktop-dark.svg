@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="304" viewBox="0 0 1200 304" role="img" aria-labelledby="t d">
+  <title id="t">Verified engineering footprint · Sep 2025 – Sep 2026</title>
+  <desc id="d">957 commits authored; 27 repositories contributed to; 38 owned repositories; 4 verified collaborations. Measured with the GitHub API on 2026-09-22.</desc>
+  <rect x="0.0" y="0.0" width="1200.0" height="304.0" fill="#101216"/>
+  <rect x="0.5" y="0.5" width="1199.0" height="303.0" fill="none" rx="18" stroke="#2C3039" stroke-width="1"/>
+  <text x="48" y="36" font-family="Consolas, 'SFMono-Regular', Menlo, monospace" font-size="18" fill="#9AA1B0" letter-spacing="3">VERIFIED ENGINEERING FOOTPRINT</text>
+  <text x="1152" y="36" font-family="Consolas, 'SFMono-Regular', Menlo, monospace" font-size="18" fill="#7A90EE" text-anchor="end" letter-spacing="3">12 MONTHS</text>
+  <rect x="48.0" y="52.0" width="261.0" height="168.0" fill="#181B21" rx="14" stroke="#2C3039" stroke-width="1"/>
+  <rect x="68.0" y="72.0" width="44.0" height="44.0" fill="#232A45" rx="10"/>
+  <line x1="78.3" y1="94.0" x2="101.7" y2="94.0" stroke="#7A90EE" stroke-width="2.33333"/>
+  <circle cx="90.0" cy="94.0" r="4.66667" fill="#232A45" stroke="#7A90EE" stroke-width="2.33333"/>
+  <circle cx="90.0" cy="94.0" r="1.86667" fill="#7A90EE"/>
+  <text x="68" y="164" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="58" fill="#F1EEE6" font-weight="700" letter-spacing="-1.5">957</text>
+  <text x="68" y="191" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="20" fill="#F1EEE6" font-weight="600">Commits authored</text>
+  <text x="68" y="210" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="15" fill="#9AA1B0">12 months · 62 public · 895 private</text>
+  <rect x="329.0" y="52.0" width="261.0" height="168.0" fill="#181B21" rx="14" stroke="#2C3039" stroke-width="1"/>
+  <rect x="349.0" y="72.0" width="44.0" height="44.0" fill="#232A45" rx="10"/>
+  <path d="M371.0 84.66666666666667 L381.5 90.5 L371.0 96.33333333333334 L360.5 90.5 Z" fill="none" stroke="#7A90EE" stroke-width="2.33333" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M360.5 96.33333333333334 L371.0 102.16666666666667 L381.5 96.33333333333334" fill="none" stroke="#7A90EE" stroke-width="2.33333" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="349" y="164" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="58" fill="#F1EEE6" font-weight="700" letter-spacing="-1.5">27</text>
+  <text x="349" y="191" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="18" fill="#F1EEE6" font-weight="600">Repositories contributed to</text>
+  <text x="349" y="210" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="15" fill="#9AA1B0">12 months · 23 owned · 4 collaborative</text>
+  <rect x="610.0" y="52.0" width="261.0" height="168.0" fill="#181B21" rx="14" stroke="#2C3039" stroke-width="1"/>
+  <rect x="630.0" y="72.0" width="44.0" height="44.0" fill="#232A45" rx="10"/>
+  <path d="M641.5 90.5 V103.33333333333334 H662.5 V90.5 M641.5 90.5 V85.83333333333333 H649.6666666666666 L652.0 89.33333333333333 H662.5 V90.5" fill="none" stroke="#7A90EE" stroke-width="2.33333" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="641.5" y="90.5" width="21.0" height="2.6" fill="#7A90EE"/>
+  <text x="630" y="164" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="58" fill="#F1EEE6" font-weight="700" letter-spacing="-1.5">38</text>
+  <text x="630" y="191" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="20" fill="#F1EEE6" font-weight="600">Owned repositories</text>
+  <text x="630" y="210" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="17" fill="#9AA1B0">22 public · 16 private</text>
+  <rect x="891.0" y="52.0" width="261.0" height="168.0" fill="#181B21" rx="14" stroke="#2C3039" stroke-width="1"/>
+  <rect x="911.0" y="72.0" width="44.0" height="44.0" fill="#232A45" rx="10"/>
+  <circle cx="928.9" cy="94.0" r="7" fill="#232A45" stroke="#7A90EE" stroke-width="2.33333"/>
+  <circle cx="937.1" cy="94.0" r="7" fill="none" stroke="#7A90EE" stroke-width="2.33333"/>
+  <circle cx="933.0" cy="94.0" r="2.1" fill="#7A90EE"/>
+  <text x="911" y="164" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="58" fill="#F1EEE6" font-weight="700" letter-spacing="-1.5">4</text>
+  <text x="911" y="191" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="18" fill="#F1EEE6" font-weight="600">Verified collaborations</text>
+  <text x="911" y="210" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="15" fill="#9AA1B0">commit / pull-request evidence only</text>
+  <line x1="56.0" y1="258.0" x2="1144.0" y2="258.0" stroke="#2C3039" stroke-width="2"/>
+  <line x1="56.0" y1="250.0" x2="56.0" y2="266.0" stroke="#6B7386" stroke-width="2"/>
+  <line x1="1144.0" y1="250.0" x2="1144.0" y2="266.0" stroke="#6B7386" stroke-width="2"/>
+  <circle cx="1144.0" cy="258.0" r="5" fill="#7A90EE"/>
+  <text x="56" y="286" font-family="Consolas, 'SFMono-Regular', Menlo, monospace" font-size="16" fill="#9AA1B0" letter-spacing="1">SEP 2025</text>
+  <text x="1144" y="286" font-family="Consolas, 'SFMono-Regular', Menlo, monospace" font-size="16" fill="#9AA1B0" text-anchor="end" letter-spacing="1">SEP 2026</text>
+  <text x="600" y="246" font-family="Consolas, 'SFMono-Regular', Menlo, monospace" font-size="16" fill="#9AA1B0" text-anchor="middle" letter-spacing="1">MEASURED 2026-09-22 · GITHUB API · AUTHOR-LOGIN MATCH</text>
+</svg>
