@@ -27,7 +27,7 @@ permissions:
   contents: write
 
 concurrency:
-  group: update-project-index
+  group: profile-content-updates
   cancel-in-progress: false
 
 jobs:

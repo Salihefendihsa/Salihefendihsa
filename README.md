@@ -9,7 +9,7 @@
   <source media="(prefers-color-scheme: dark) and (max-width: 600px)" srcset="assets/v5/proof-mobile-dark.svg">
   <source media="(max-width: 600px)" srcset="assets/v5/proof-mobile-light.svg">
   <source media="(prefers-color-scheme: dark)" srcset="assets/v5/proof-desktop-dark.svg">
-  <img alt="Verified engineering footprint, Sep 2025 – Sep 2026: 957 commits authored, 27 repositories contributed to, 38 owned repositories, 4 verified collaborations; measured with the GitHub API on 2026-09-22" src="assets/v5/proof-desktop-light.svg" width="100%">
+  <img alt="Verified engineering footprint, Oct 2025 – Oct 2026: 1,342 commits authored, 26 repositories contributed to, 38 owned repositories, 4 verified collaborations; measured 2026-10-04 from token-visible GitHub data" src="assets/v5/proof-desktop-light.svg" width="100%">
 </picture>
 
 <details>
@@ -17,12 +17,13 @@
 
 <br>
 
-- **957 commits authored** — commits on the default branches of every repository this account can access (owned and collaborator), Sep 2025 – Sep 2026, where the GitHub author login is this account. 62 are public, 895 private; 12 are pull-request merge commits I authored. This is an authored-commit count, not GitHub's contribution count — the public part (62) equals GitHub's public commit contributions for the same window.
-- **27 repositories contributed to** in the same 12 months: 23 owned, 4 collaborative.
-- **38 owned repositories** — 22 public, 16 private (including this profile repository).
-- **4 verified collaborations** — partner-owned repositories with my commits or pull requests; access-only repositories with no verifiable contribution are not counted.
-- **Code by language** across owned repositories, public and private: TypeScript 34.4 %, Python 19.7 %, C# 19.3 %, HTML 9.6 %, Dart 8.2 %, JavaScript 4.0 %, other 4.8 %.
-- Measured with the GitHub API on 2026-09-22 by `scripts/discover_repositories.py`; the public contribution graph on this profile shows public activity only.
+- **1,342 commits authored** — 303 public and 1,039 private. GitHub-linked author login on accessible repositories' default branches; each SHA counted once across repositories. This is an authored-commit count, not GitHub's contribution count.
+- **26 repositories contributed to** — 22 owned and 4 partner-owned. A qualifying authored default-branch commit or authored pull request in the period is required.
+- **38 owned repositories** — 24 public and 14 private, as visible to the statistics credential at measurement time; this snapshot includes the profile repository.
+- **4 verified collaborations** — partner-owned repositories with a qualifying commit or pull request in the period. Mere access is not evidence.
+- **Period:** UTC [2025-10-04T06:31:33Z, 2026-10-04T06:31:33Z) (365 days). Last published measurement: 2026-10-04. Access scope: repositories visible to the owner's credential. The profile repository is excluded from activity counts so automated card commits cannot raise them. If the underlying numbers have not changed, the previous valid measurement date stays visible and no commit is made.
+- GitHub's contribution graph follows GitHub's own eligibility and visibility rules. It is a different measure from this card; its contribution total is not a commit count.
+- **Code by language** across owned repositories: TypeScript 34.4 %, Python 19.7 %, C# 19.3 %, HTML 9.6 %, Dart 8.2 %, JavaScript 4.0 %, Other 4.8 %. This is a separate 2026-09-22 snapshot, not refreshed by this card workflow.
 
 </details>
 

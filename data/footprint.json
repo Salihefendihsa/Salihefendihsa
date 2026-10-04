@@ -1,38 +1,40 @@
 {
-  "$comment": "Verified engineering footprint. Measured with the GitHub API on `measured_on` by scripts/discover_repositories.py --write-footprint: for every repository the account can access (owned + collaborator), commits on the DEFAULT BRANCH whose GitHub author login is the profile owner (login match; bot and other-login commits excluded; each SHA counted once) in the window below. Private repositories contribute to the aggregates only; no private name is stored. Update by re-measuring, never by hand.",
-  "measured_on": "2026-09-22",
+  "$comment": "Token-visible repositories only. Rolling UTC 365-day window [start_utc,end_utc). GitHub-linked author on default-branch commits; globally unique SHA. Profile repository excluded from activity; owned count includes it. Partner evidence is authored commit or PR. No private names stored.",
+  "measured_on": "2026-10-04",
   "window": {
-    "from": "2025-09-22",
-    "to": "2026-09-22",
-    "label": "Sep 2025 – Sep 2026"
+    "from": "2025-10-04",
+    "to": "2026-10-04",
+    "start_utc": "2025-10-04T06:31:33Z",
+    "end_utc": "2026-10-04T06:31:33Z",
+    "label": "Oct 2025 – Oct 2026"
   },
   "metrics": [
     {
       "key": "commits_12m",
-      "value": 957,
+      "value": 1342,
       "label": "Commits authored",
-      "note": "12 months · 62 public · 895 private",
+      "note": "303 public · 1039 private",
       "short_label": "Commits authored"
     },
     {
       "key": "repos_contributed_12m",
-      "value": 27,
+      "value": 26,
       "label": "Repositories contributed to",
-      "note": "12 months · 23 owned · 4 collaborative",
+      "note": "22 owned · 4 partner",
       "short_label": "Repositories"
     },
     {
       "key": "owned_repos",
       "value": 38,
       "label": "Owned repositories",
-      "note": "22 public · 16 private",
+      "note": "24 public · 14 private",
       "short_label": "Owned repositories"
     },
     {
       "key": "verified_collaborations",
       "value": 4,
       "label": "Verified collaborations",
-      "note": "commit / pull-request evidence only",
+      "note": "12m · commit / PR evidence",
       "short_label": "Collaborations"
     }
   ],
@@ -67,5 +69,19 @@
     }
   ],
   "languages_note": "Share of code by bytes across owned repositories, public and private",
-  "method_note": "Default-branch commits with author login match; includes 12 pull-request merge commits authored by the owner; the public count equals GitHub's public commit contributions for the same window (62)."
+  "method_note": "Default-branch, GitHub-linked authored commits; SHA deduplicated globally. Authored PRs are repository evidence, never extra commits. Token-visible scope; profile repository excluded from activity.",
+  "scope": "Repositories visible to the authenticated owner; default-branch commits",
+  "measurement": {
+    "scope": "Repositories visible to the authenticated owner; default-branch commits",
+    "commits_12m": 1342,
+    "public": 303,
+    "private": 1039,
+    "repos_contributed_12m": 26,
+    "repos_contributed_owned": 22,
+    "repos_contributed_collab": 4,
+    "owned_repos": 38,
+    "owned_public": 24,
+    "owned_private": 14,
+    "verified_collaborations": 4
+  }
 }
