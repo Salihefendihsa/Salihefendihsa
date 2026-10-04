@@ -3,7 +3,7 @@
 
 ## 01 — Flagship Systems
 
-<sub>Three product systems I am responsible for end to end, each shown with the same structure.</sub>
+<sub>3 product systems I am responsible for end to end, each shown with the same structure.</sub>
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/v5/flagship-navlonix-dark.svg">
@@ -59,7 +59,7 @@ Running several development projects with AI agents only makes sense if agents c
 
 ## 02 — Product Ecosystem
 
-<sub>Six products grouped by what they do, not by repository. Full descriptions sit in the collapsed archive below.</sub>
+<sub>6 products grouped by what they do, not by repository. Full descriptions sit in the collapsed archive below.</sub>
 
 <picture>
   <source media="(prefers-color-scheme: dark) and (max-width: 600px)" srcset="assets/v5/ecosystem-mobile-dark.svg">
@@ -78,7 +78,7 @@ Running several development projects with AI agents only makes sense if agents c
   <source media="(prefers-color-scheme: dark) and (max-width: 600px)" srcset="assets/v5/collaborations-mobile-dark.svg">
   <source media="(max-width: 600px)" srcset="assets/v5/collaborations-mobile-light.svg">
   <source media="(prefers-color-scheme: dark)" srcset="assets/v5/collaborations-desktop-dark.svg">
-  <img alt="Verified collaborations on partner-owned products: Sticker &amp; Label Studio — Web studio for school name stickers and print-ready labels. (Lead contributor, 71 / 75 commits, Delivered, Partner-owned · private); Couples Companion App — Flutter app that helps couples share how they feel, without a fight. (Core contributor, 37 commits · 36 PRs, In development, Partner-owned · private); Invitation Design Studio — Interactive studio for wedding and event invitations with print export. (Lead contributor, 5 / 6 commits, Delivered, Partner-owned · private); Product Photo Studio — On-device product photo studio that exports social-ready posts and stories. (Contributor, 2 / 7 commits, In development, Partner-owned · private)" src="assets/v5/collaborations-desktop-light.svg" width="100%">
+  <img alt="Verified collaborations on partner-owned products: Sticker &amp; Label Studio — Web studio for school name stickers and print-ready labels. (Lead contributor, 71 authored commits · 2 PRs (12m), Delivered, Partner-owned · private); Couples Companion App — Flutter app that helps couples share how they feel, without a fight. (Core contributor, 37 authored commits · 36 PRs (12m), In development, Partner-owned · private); Invitation Design Studio — Interactive studio for wedding and event invitations with print export. (Lead contributor, 5 authored commits · 0 PRs (12m), Delivered, Partner-owned · private); Product Photo Studio — On-device product photo studio that exports social-ready posts and stories. (Contributor, 2 authored commits · 0 PRs (12m), In development, Partner-owned · private)" src="assets/v5/collaborations-desktop-light.svg" width="100%">
 </picture>
 
 <!-- PORTFOLIO:END -->

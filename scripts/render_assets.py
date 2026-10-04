@@ -21,6 +21,7 @@ Standard library only.
 from __future__ import annotations
 
 import argparse
+import copy
 import json
 import os
 import sys
@@ -550,7 +551,8 @@ def _collab_card(x: float, y: float, w: float, h: float, p: dict, t: dict, mobil
     ey = y + h - 46
     role = str(p["role"]).upper()
     rw = text_width(role, role_s, mono=True) + 28
-    out.append(text(x + 30, ey, c["evidence"], fit_size(c["evidence"], w - 60 - rw - 24, ev_s, "700", floor=26), t["fg"], weight="700", spacing=-1))
+    visual_evidence = c.get("visual_evidence") or c["evidence"]
+    out.append(text(x + 30, ey, visual_evidence, fit_size(visual_evidence, w - 60 - rw - 24, ev_s, "700", floor=26), t["fg"], weight="700", spacing=-1))
     out.append(rect(x + w - 30 - rw, ey - role_s - 12, rw, role_s + 16, t["accent_soft"], rx=(role_s + 16) / 2))
     out.append(text(x + w - 30 - rw / 2, ey - 1, role, role_s, t["accent"], mono=True, spacing=1.5, anchor="middle"))
     meta = f"{p['status']}  ·  {p['access']}"
@@ -626,6 +628,14 @@ RESPONSIVE_ASSETS = ("hero", "proof", "ecosystem", "collaborations", "approach")
 
 
 def render_all(footprint: dict, portfolio: dict) -> dict[str, str]:
+    portfolio = copy.deepcopy(portfolio)
+    for product in portfolio.get("products", []):
+        if product["product_id"] in footprint.get("collaboration_evidence", {}):
+            evidence = footprint["collaboration_evidence"][product["product_id"]]
+            if evidence is None:
+                product["collaboration"] = None
+            elif product.get("collaboration"):
+                product["collaboration"].update(evidence)
     """Return {relative path: svg text} for every V5 asset."""
     out: dict[str, str] = {}
     for theme in THEMES:

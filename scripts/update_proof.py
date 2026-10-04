@@ -115,12 +115,14 @@ class GhApi:
         raise MeasurementError("GitHub pagination limit reached; existing card preserved")
 
 
-def measure(api: GhApi, end: dt.datetime) -> dict:
+def measure(api: GhApi, end: dt.datetime, *, repos: list[dict] | None = None,
+            evidence: dict[int, dict[str, int]] | None = None) -> dict:
     if end.tzinfo is None:
         raise ValueError("end must have a timezone")
     end = end.astimezone(UTC)
     start = end - dt.timedelta(days=365)
-    repos = api.pages("user/repos?affiliation=owner,collaborator,organization_member&sort=full_name")
+    if repos is None:
+        repos = api.pages("user/repos?affiliation=owner,collaborator,organization_member&sort=full_name")
     by_id: dict[int, dict] = {}
     for repo in repos:
         if not isinstance(repo.get("id"), int) or not isinstance(repo.get("private"), bool):
@@ -147,6 +149,7 @@ def measure(api: GhApi, end: dt.datetime) -> dict:
         except EmptyRepository:
             commits = []
         has_commit = False
+        repo_shas: set[str] = set()
         for commit in commits:
             author = commit.get("author") or {}
             if not isinstance(author, dict) or (author.get("login") or "").casefold() != OWNER.casefold():
@@ -160,10 +163,12 @@ def measure(api: GhApi, end: dt.datetime) -> dict:
             if not isinstance(sha, str) or not re.fullmatch(r"[0-9a-f]{40,64}", sha, re.I):
                 raise MeasurementError("GitHub returned an invalid commit SHA")
             has_commit = True
+            repo_shas.add(sha)
             sha_public[sha] = sha_public.get(sha, False) or not repo["private"]
 
         pulls = api.pages(f"repos/{full}/pulls?state=all&sort=created&direction=desc")
         has_pr = False
+        authored_prs = 0
         for pull in pulls:
             if ((pull.get("user") or {}).get("login") or "").casefold() != OWNER.casefold():
                 continue
@@ -171,6 +176,9 @@ def measure(api: GhApi, end: dt.datetime) -> dict:
                 raise MeasurementError("An authored pull request has no creation timestamp")
             if in_window(pull["created_at"], start, end):
                 has_pr = True
+                authored_prs += 1
+        if evidence is not None:
+            evidence[repo["id"]] = {"commits": len(repo_shas), "prs": authored_prs}
         if has_commit or has_pr:
             if is_owned:
                 contributed_owned += 1
@@ -207,12 +215,12 @@ def metric_values(result: dict) -> dict[str, tuple[int, str]]:
     }
 
 
-def prepare(old: dict, result: dict, readme: str) -> tuple[dict, str, dict[str, str], bool]:
+def prepare(old: dict, result: dict, readme: str, *, languages: list[dict] | None = None) -> tuple[dict, str, dict[str, str], bool]:
     values = metric_values(result)
     if set(values) != set(METRIC_KEYS):
         raise MeasurementError("Metric configuration is incomplete")
     previous = {m["key"]: (m["value"], m.get("note")) for m in old["metrics"]}
-    same = previous == values and old.get("scope") == result["scope"] and old.get("measurement") == {
+    same = previous == values and old.get("scope") == result["scope"] and (languages is None or old.get("languages") == languages) and old.get("measurement") == {
         k: result[k] for k in result if k not in ("measured_on", "window")
     }
     if same:
@@ -226,6 +234,8 @@ def prepare(old: dict, result: dict, readme: str) -> tuple[dict, str, dict[str, 
     footprint["window"] = result["window"]
     footprint["scope"] = result["scope"]
     footprint["measurement"] = {k: result[k] for k in result if k not in ("measured_on", "window")}
+    if languages is not None:
+        footprint["languages"] = languages
     footprint["method_note"] = "Default-branch, GitHub-linked authored commits; SHA deduplicated globally. Authored PRs are repository evidence, never extra commits. Token-visible scope; profile repository excluded from activity."
     for metric in footprint["metrics"]:
         if metric["key"] in values:
@@ -249,19 +259,25 @@ def prepare(old: dict, result: dict, readme: str) -> tuple[dict, str, dict[str, 
               "If the underlying numbers have not changed, the previous valid measurement date stays visible and no commit is made.\n"
               "- GitHub's contribution graph follows GitHub's own eligibility and visibility rules. "
               "It is a different measure from this card; its contribution total is not a commit count.\n"
-              f"- **Code by language** across owned repositories: {languages}. This is a separate 2026-09-22 snapshot, not refreshed by this card workflow.\n\n"
+              f"- **Code by language** across token-visible owned repositories: {languages}. GitHub language bytes measured with the same credential on {a['measured_on']}.\n\n"
               "</details>")
+    marked = re.compile(r"<!-- PROOF:START -->.*?<!-- PROOF:END -->", re.S)
+    matches = list(marked.finditer(readme))
+    if len(matches) != 1:
+        raise MeasurementError("README proof markers are missing")
+    section = matches[0].group(0)
     block = re.compile(r"<details>\s*<summary>How these numbers are measured</summary>.*?</details>", re.S)
-    if len(block.findall(readme)) != 1:
+    if len(block.findall(section)) != 1:
         raise MeasurementError("README measurement explanation markers are missing")
-    updated = block.sub(detail, readme)
+    section = block.sub(detail, section)
     alt = (f"Verified engineering footprint, {a['window']['label']}: {a['commits_12m']:,} commits authored, "
            f"{a['repos_contributed_12m']:,} repositories contributed to, {a['owned_repos']:,} owned repositories, "
            f"{a['verified_collaborations']:,} verified collaborations; measured {a['measured_on']} from token-visible GitHub data")
     image = re.compile(r'(<img alt=")[^"]*(" src="assets/v5/proof-desktop-light\.svg")')
-    if len(image.findall(updated)) != 1:
+    if len(image.findall(section)) != 1:
         raise MeasurementError("README proof card image is missing")
-    updated = image.sub(lambda m: m.group(1) + alt + m.group(2), updated)
+    section = image.sub(lambda m: m.group(1) + alt + m.group(2), section)
+    updated = readme[:matches[0].start()] + section + readme[matches[0].end():]
     assets = {
         str(Path("assets") / "v5" / f"proof-{bp}-{theme}.svg"): render_proof(footprint, theme, mobile=bp == "mobile")
         for bp in ("desktop", "mobile") for theme in ("light", "dark")

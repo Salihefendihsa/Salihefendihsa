@@ -241,6 +241,8 @@ def is_listed(repo: dict, portfolio: dict, owner: str = OWNER, profile_repo: str
         return False
     if name.lower() in excluded_names(portfolio):
         return False
+    if repo.get("id") in portfolio.get("profile_excluded_repository_ids", []):
+        return False
     if HIDE_TOPIC in _topics(repo):
         return False
     if int(repo.get("size") or 0) == 0 and not repo.get("language"):
@@ -278,7 +280,7 @@ def archive_entry_from_repo(repo: dict, overrides: dict, groups: tuple[str, ...]
         summary=summary,
         stack=override.get("stack") or (repo.get("language") or ""),
         group=group,
-        access="Public",
+        access="Archived · Public" if repo.get("archived") else "Public",
         url=url,
     )
 
@@ -301,6 +303,9 @@ def validate_portfolio(data: Any) -> None:
     if not isinstance(data, dict) or not isinstance(data.get("products"), list):
         raise PortfolioError("portfolio must be an object with a 'products' list")
     excluded = excluded_names(data)
+    excluded_ids = data.get("profile_excluded_repository_ids", [])
+    if not isinstance(excluded_ids, list) or any(not isinstance(x, int) or x <= 0 for x in excluded_ids):
+        raise PortfolioError("profile_excluded_repository_ids must contain positive numeric IDs")
     groups = archive_groups(data)
     ids: set[str] = set()
     names: set[str] = set()
@@ -351,6 +356,9 @@ def validate_portfolio(data: Any) -> None:
                 label = str(src.get("label", ""))
                 if "/" in label or "github.com" in label.lower() or "repo" in src:
                     raise PortfolioError(f"product {pid!r}: a {src['kind']} source must be an opaque label")
+                if src["kind"] == "collaboration" and "repository_id" in src:
+                    if not isinstance(src["repository_id"], int) or src["repository_id"] <= 0:
+                        raise PortfolioError(f"product {pid!r}: invalid collaboration repository ID")
         has_public = any(s["kind"] == "public" for s in p["repository_sources"])
         if p.get("publish_repository_links") and not has_public:
             raise PortfolioError(f"product {pid!r} publishes repository links without a public source")
@@ -549,7 +557,7 @@ def render_portfolio_block(products: list[Product]) -> str:
     collabs = [p for p in products if p.is_collaboration]
 
     out += ["## 01 — Flagship Systems", "",
-            "<sub>Three product systems I am responsible for end to end, each shown with the same structure.</sub>", ""]
+            f"<sub>{len(flagships)} product systems I am responsible for end to end, each shown with the same structure.</sub>", ""]
     if flagships:
         for i, p in enumerate(flagships, 1):
             if i > 1:
@@ -559,7 +567,7 @@ def render_portfolio_block(products: list[Product]) -> str:
         out += ["_No flagship products yet._", ""]
 
     out += ["## 02 — Product Ecosystem", "",
-            "<sub>Six products grouped by what they do, not by repository. Full descriptions sit in the collapsed archive below.</sub>", ""]
+            f"<sub>{len(ecosystem)} products grouped by what they do, not by repository. Full descriptions sit in the collapsed archive below.</sub>", ""]
     if ecosystem:
         out += responsive_picture("ecosystem", _board_alt(ecosystem, "Selected product ecosystem")) + [""]
         links = [f"[{escape_md(p.name)}]({p.repo_urls[0][1]})" for p in ecosystem if p.repo_urls]
@@ -628,7 +636,8 @@ def render_archive_block(archive: list[ArchiveEntry], groups: tuple[str, ...], p
 def check_generated_text(text: str, portfolio: dict, listed_public_names: set[str], owner: str = OWNER) -> None:
     """Refuse output that leaks an excluded name or links anything but listed public repositories."""
     low = text.lower()
-    for name in excluded_names(portfolio):
+    published_product_ids = {p["product_id"].lower() for p in portfolio["products"] if p.get("publish_name")}
+    for name in excluded_names(portfolio) - published_product_ids:
         for variant in {name, name.replace("-", " "), name.replace("-", "")}:
             if variant and variant in low:
                 raise PortfolioError(f"excluded repository {name!r} would appear in the generated text")

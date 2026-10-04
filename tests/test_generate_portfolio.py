@@ -198,6 +198,7 @@ class ClassificationTests(unittest.TestCase):
         groups = gp.archive_groups(pf)
         ov = gp.archive_overrides(pf)
         self.assertEqual(gp.archive_entry_from_repo(repo("old", archived=True), ov, groups).group, "Earlier Work")
+        self.assertEqual(gp.archive_entry_from_repo(repo("old", archived=True), ov, groups).access, "Archived · Public")
         self.assertEqual(gp.archive_entry_from_repo(repo("hw", topics=["coursework"]), ov, groups).group, "University Coursework")
         self.assertEqual(gp.archive_entry_from_repo(repo("Lab-2"), ov, groups).group, "University Coursework")
         self.assertEqual(gp.archive_entry_from_repo(repo("tool"), ov, groups).group, "Tools & Research")
