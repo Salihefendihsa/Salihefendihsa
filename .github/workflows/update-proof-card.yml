@@ -1,0 +1,74 @@
+name: Update proof card
+
+on:
+  schedule:
+    # GitHub may delay scheduled jobs; 09:11 is intentional to avoid :00 load.
+    - cron: "11 9 * * *"
+      timezone: "Europe/Istanbul"
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - scripts/update_proof.py
+      - scripts/render_assets.py
+      - tests/test_update_proof.py
+      - tests/test_readme_and_assets.py
+      - data/footprint.json
+      - README.md
+      - assets/v5/proof-*.svg
+      - .github/workflows/update-proof-card.yml
+
+permissions:
+  contents: read
+
+concurrency:
+  group: profile-content-updates
+  cancel-in-progress: false
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Test measurement, pagination and rendering
+        run: python -m unittest discover -s tests
+
+  refresh:
+    if: github.event_name != 'pull_request'
+    needs: verify
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Measure through owner credential
+        env:
+          # Never use the repository-limited GITHUB_TOKEN for private metrics.
+          GH_TOKEN: ${{ secrets.PROFILE_STATS_TOKEN }}
+        run: python scripts/update_proof.py --ci
+      - name: Check scope and commit only changed card files
+        run: |
+          set -euo pipefail
+          changed="$(git status --porcelain --untracked-files=all | awk '{print $2}')"
+          for file in $changed; do
+            case "$file" in
+              README.md|data/footprint.json|assets/v5/proof-desktop-light.svg|assets/v5/proof-desktop-dark.svg|assets/v5/proof-mobile-light.svg|assets/v5/proof-mobile-dark.svg) ;;
+              *) echo "Unexpected generated file"; exit 1 ;;
+            esac
+          done
+          if [ -z "$changed" ]; then
+            echo "No metric change; no commit"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add README.md data/footprint.json assets/v5/proof-desktop-light.svg assets/v5/proof-desktop-dark.svg assets/v5/proof-mobile-light.svg assets/v5/proof-mobile-dark.svg
+          git commit -m "chore(profile): refresh verified footprint [skip ci]"
+          git push origin HEAD:main
