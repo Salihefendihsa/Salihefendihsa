@@ -131,15 +131,56 @@ class MeasurementTests(unittest.TestCase):
 
     def test_unchanged_values_keep_previous_date_and_generate_no_files(self):
         result = proof.measure(FakeApi([repo(1, proof.OWNER)], {}, {}), self.END)
+        result.update({"contribution_window": {"year": 2026, "from": "2026-01-01", "to": "2026-12-31",
+                                               "start_utc": "2026-01-01T00:00:00Z", "end_utc": "2026-12-31T23:59:59Z"},
+                       "github_contributions": 4, "restricted_contributions": 2,
+                       "github_commit_contributions": 1})
         old = {"metrics": [{"key": k, "value": v, "note": n, "label": k} for k, (v, n) in proof.metric_values(result).items()],
                "scope": result["scope"],
-               "measurement": {k: result[k] for k in result if k not in ("measured_on", "window")},
+               "measurement": {k: result[k] for k in result if k not in ("measured_on", "measured_at_utc", "window")},
                "measured_on": "2026-10-03", "window": {"from": "2025-10-03", "to": "2026-10-03"}}
         fp, readme, assets, changed = proof.prepare(old, result, "existing README")
         self.assertFalse(changed)
         self.assertEqual(fp["measured_on"], "2026-10-03")
         self.assertEqual(readme, "existing README")
         self.assertFalse(assets)
+
+
+class CalendarTests(unittest.TestCase):
+    END = dt.datetime(2026, 10, 4, 7, 0, tzinfo=proof.UTC)
+
+    class Api:
+        def __init__(self, collection, viewer=proof.OWNER):
+            self.collection, self.viewer = collection, viewer
+            self.variables = None
+
+        def graphql(self, query, variables):
+            self.variables = variables
+            self.query = query
+            return {"viewer": {"login": self.viewer},
+                    "user": {"contributionsCollection": self.collection}}
+
+    def collection(self, *, total=1581, restricted=1252):
+        return {"startedAt": "2026-01-01T00:00:00Z", "endedAt": "2026-12-31T23:59:59Z",
+                "restrictedContributionsCount": restricted, "totalCommitContributions": 311,
+                "contributionCalendar": {"totalContributions": total}}
+
+    def test_exact_calendar_year_and_distinct_total(self):
+        api = self.Api(self.collection())
+        result = proof.measure_calendar(api, self.END)
+        self.assertEqual(api.variables, {"login": proof.OWNER, "from": "2026-01-01T00:00:00Z",
+                                         "to": "2026-12-31T23:59:59Z"})
+        self.assertIn("contributionCalendar", api.query)
+        self.assertEqual(result["github_contributions"], 1581)
+        self.assertEqual(result["restricted_contributions"], 1252)
+        self.assertEqual(result["contribution_window"]["year"], 2026)
+
+    def test_wrong_viewer_or_period_or_missing_total_fails_closed(self):
+        for api in (self.Api(self.collection(), viewer="other"),
+                    self.Api({**self.collection(), "endedAt": "2026-10-04T00:00:00Z"}),
+                    self.Api(self.collection(total=None))):
+            with self.assertRaises(proof.MeasurementError):
+                proof.measure_calendar(api, self.END)
 
 
 if __name__ == "__main__":

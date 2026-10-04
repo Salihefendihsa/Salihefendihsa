@@ -9,11 +9,12 @@ rate-limit, or validation failure leaves the published files unchanged.
 
 ## Automatically generated
 
-- The proof card and its `How these numbers are measured` block: distinct
-  authored-commit, contributed-repository, owned-repository, and evidenced
-  collaboration measures; public/private splits; UTC period; credential-visible
-  scope; language-byte distribution. The contribution graph is a separate
-  GitHub measure and is never labelled a commit count.
+- The proof card and its `How these numbers are measured` block: the selected
+  calendar year's `contributionCalendar.totalContributions` from GitHub
+  GraphQL, alongside distinct rolling-365-day authored-commit,
+  contributed-repository, owned-repository, and evidenced collaboration
+  measures. A contribution total is never labelled a commit count. The card
+  shows both periods, scope, and the last published successful measurement.
 - The marked `PORTFOLIO` and `ARCHIVE` README blocks, their generated Markdown
   copies, and the ecosystem/collaboration SVGs. Public repository links are
   shown only when `data/portfolio.json` permits them and the API confirms the
@@ -39,18 +40,23 @@ or production readiness. Stars, forks, last activity, and CI badges are not
 displayed; no stale status is implied. GitHub renders the generated Markdown
 and committed SVGs directly.
 
-The four numeric metrics use a rolling 365-day UTC interval `[start_utc,
-end_utc)`. Default-branch commits require GitHub's linked `author.login` to
+The first metric uses the full UTC calendar year, January 1 through December
+31, explicitly requested in GraphQL; it includes whatever contribution types
+and private-activity visibility GitHub returns. URL `from`/`to` filters on a
+profile page do not flow into an embedded README image. The other activity
+metrics use a rolling 365-day UTC interval `[start_utc, end_utc)`.
+Default-branch commits require GitHub's linked `author.login` to
 match the profile owner; each SHA is globally deduplicated. An authored PR is
 repository-level evidence, never an extra commit. The language distribution is
 GitHub's language-byte count across credential-visible owned repositories.
 The public/private classification comes only from repositories the credential
-can see. The published date advances only when the values or rendered dynamic
-content change; a daily no-op creates no commit.
+can see. The published measurement time advances only when the values or
+rendered dynamic content change. Successful no-op runs are visible in Actions
+history; the static card does not imply instant synchronization.
 
 ## Actions credential and verification
 
-The workflow runs around **09:11 Europe/Istanbul** and supports manual
+The workflow runs **hourly, around minute 11 Europe/Istanbul**, and supports manual
 `workflow_dispatch`. It needs the repository Actions secret
 `PROFILE_STATS_TOKEN`: a classic personal access token issued to
 `Salihefendihsa` with the `repo` scope. Add `read:org` if organization

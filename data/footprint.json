@@ -1,19 +1,26 @@
 {
-  "$comment": "Token-visible repositories only. Rolling UTC 365-day window [start_utc,end_utc). GitHub-linked author on default-branch commits; globally unique SHA. Profile repository excluded from activity; owned count includes it. Partner evidence is authored commit or PR. No private names stored.",
+  "$comment": "GitHub contribution calendar uses a UTC calendar year. Other activity uses token-visible repositories in rolling UTC 365-day window [start_utc,end_utc). GitHub-linked author on default-branch commits; globally unique SHA. Profile repository excluded from activity; owned count includes it. Partner evidence is authored commit or PR. No private names stored.",
   "measured_on": "2026-10-04",
   "window": {
     "from": "2025-10-04",
     "to": "2026-10-04",
-    "start_utc": "2025-10-04T06:50:23Z",
-    "end_utc": "2026-10-04T06:50:23Z",
+    "start_utc": "2025-10-04T13:28:34Z",
+    "end_utc": "2026-10-04T13:28:34Z",
     "label": "Oct 2025 – Oct 2026"
   },
   "metrics": [
     {
+      "key": "github_contributions",
+      "label": "2026 GitHub contributions",
+      "short_label": "2026 GitHub contributions",
+      "value": 1581,
+      "note": "Jan–Dec 2026"
+    },
+    {
       "key": "commits_12m",
       "value": 1342,
       "label": "Commits authored",
-      "note": "303 public · 1039 private",
+      "note": "365d · 303 public",
       "short_label": "Commits authored"
     },
     {
@@ -27,14 +34,14 @@
       "key": "owned_repos",
       "value": 38,
       "label": "Owned repositories",
-      "note": "24 public · 14 private",
+      "note": "24 public · 14 priv.",
       "short_label": "Owned repositories"
     },
     {
       "key": "verified_collaborations",
       "value": 4,
       "label": "Verified collaborations",
-      "note": "12m · commit / PR evidence",
+      "note": "12m · commit/PR proof",
       "short_label": "Collaborations"
     }
   ],
@@ -83,6 +90,16 @@
     "owned_public": 24,
     "owned_private": 14,
     "verified_collaborations": 4,
+    "contribution_window": {
+      "year": 2026,
+      "from": "2026-01-01",
+      "to": "2026-12-31",
+      "start_utc": "2026-01-01T00:00:00Z",
+      "end_utc": "2026-12-31T23:59:59Z"
+    },
+    "github_contributions": 1581,
+    "restricted_contributions": 1252,
+    "github_commit_contributions": 311,
     "profile_fingerprint": "cbdba987684c90fa6fcd38fbc20616fe972240b799cd30ea4f207723327e7176"
   },
   "collaboration_evidence": {
@@ -106,5 +123,13 @@
       "evidence": "2 authored commits · 0 PRs (12m)",
       "visual_evidence": "2 commits · 0 PRs"
     }
+  },
+  "measured_at_utc": "2026-10-04T13:28:34Z",
+  "contribution_window": {
+    "year": 2026,
+    "from": "2026-01-01",
+    "to": "2026-12-31",
+    "start_utc": "2026-01-01T00:00:00Z",
+    "end_utc": "2026-12-31T23:59:59Z"
   }
 }

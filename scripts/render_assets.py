@@ -10,7 +10,7 @@ filters, no animation.
 
 Assets (each in -light / -dark):
   hero-desktop, hero-mobile               name, title, monogram, product-domain map
-  proof-desktop, proof-mobile             four verified evidence cards + measurement timeline
+  proof-desktop, proof-mobile             five verified evidence cards + measurement timeline
   flagship-<id>                           one system diagram per flagship product
   ecosystem-desktop, ecosystem-mobile     product board (tier-2 products, from data/portfolio.json)
   collaborations-desktop, -mobile         verified collaboration board
@@ -248,6 +248,11 @@ def glyph(name: str, x: float, y: float, s: float, color: str, soft: str = "") -
               circle(X(12), Y(12), 1.8 * u, color)]
     elif name == "commits":  # commit dot on a branch line
         g += [line(X(2), Y(12), X(22), Y(12), color, sw), circle(X(12), Y(12), 4 * u, soft or "none", color, sw), circle(X(12), Y(12), 1.6 * u, color)]
+    elif name == "contributions":  # calendar activity cells
+        g += [rect(X(2), Y(3), 5 * u, 5 * u, color, rx=u), rect(X(9.5), Y(3), 5 * u, 5 * u, "none", rx=u, stroke=color, sw=sw),
+              rect(X(17), Y(3), 5 * u, 5 * u, color, rx=u), rect(X(2), Y(11), 5 * u, 5 * u, "none", rx=u, stroke=color, sw=sw),
+              rect(X(9.5), Y(11), 5 * u, 5 * u, color, rx=u), rect(X(17), Y(11), 5 * u, 5 * u, "none", rx=u, stroke=color, sw=sw),
+              rect(X(2), Y(19), 5 * u, 5 * u, color, rx=u), rect(X(9.5), Y(19), 5 * u, 5 * u, color, rx=u)]
     elif name == "repositories":  # stacked layers
         g += [path(f"M{X(12)} {Y(4)} L{X(21)} {Y(9)} L{X(12)} {Y(14)} L{X(3)} {Y(9)} Z", color, sw),
               path(f"M{X(3)} {Y(14)} L{X(12)} {Y(19)} L{X(21)} {Y(14)}", color, sw)]
@@ -362,7 +367,7 @@ def render_hero(theme: str, mobile: bool = False) -> str:
 
 # --------------------------------------------------------------------------- proof (evidence cards)
 
-EVIDENCE_GLYPHS = {"commits_12m": "commits", "repos_contributed_12m": "repositories", "owned_repos": "owned", "verified_collaborations": "collaboration"}
+EVIDENCE_GLYPHS = {"github_contributions": "contributions", "commits_12m": "commits", "repos_contributed_12m": "repositories", "owned_repos": "owned", "verified_collaborations": "collaboration"}
 
 
 MONTHS = ("JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEP", "OCT", "NOV", "DEC")
@@ -382,51 +387,61 @@ def _timeline(x1: float, x2: float, y: float, t: dict, footprint: dict, size: fl
            circle(x2, y, 5, t["accent"]),
            text(x1, y + size + 12, _month(win.get("from", "")), size, t["muted"], mono=True, spacing=1),
            text(x2, y + size + 12, _month(win.get("to", "")), size, t["muted"], mono=True, spacing=1, anchor="end")]
-    label = f"MEASURED {footprint.get('measured_on', '')} · GITHUB API · AUTHOR-LOGIN MATCH"
+    measured = footprint.get("measured_at_utc") or footprint.get("measured_on", "")
+    label = f"LAST PUBLISHED {measured.replace('T', ' ').replace('Z', ' UTC')}"
     out.append(text((x1 + x2) / 2, y - 12, label, size, t["muted"], mono=True, spacing=1, anchor="middle"))
     return out
 
 
 def render_proof(footprint: dict, theme: str, mobile: bool = False) -> str:
     t = THEMES[theme]
-    metrics = list(footprint["metrics"][:4])
+    metrics = list(footprint["metrics"][:5])
+    year = footprint.get("contribution_window", {}).get("year")
     if not mobile:
-        w, h, m = DESKTOP_W, 304, 48
-        cw, ch, gap = (w - 2 * m - 3 * 20) / 4, 168, 20
+        w, h, m = DESKTOP_W, 336, 48
+        cw, ch, gap = (w - 2 * m - (len(metrics) - 1) * 16) / max(1, len(metrics)), 198, 16
         body = [rect(0.5, 0.5, w - 1, h - 1, "none", rx=18, stroke=t["rule"]),
                 text(m, 36, "VERIFIED ENGINEERING FOOTPRINT", 18, t["muted"], mono=True, spacing=3),
-                text(w - m, 36, "12 MONTHS", 18, t["accent"], mono=True, spacing=3, anchor="end")]
+                text(w - m, 36, f"{year} GRAPH · 365D ACTIVITY" if year else "365D ACTIVITY", 18, t["accent"], mono=True, spacing=2, anchor="end")]
         y = 52
         for i, mt in enumerate(metrics):
             x = m + i * (cw + gap)
             body += card(x, y, cw, ch, t)
             body.append(rect(x + 20, y + 20, 44, 44, t["accent_soft"], rx=10))
             body += glyph(EVIDENCE_GLYPHS.get(mt.get("key", ""), "commits"), x + 28, y + 28, 28, t["accent"], t["accent_soft"])
-            body.append(text(x + 20, y + 112, format(int(mt["value"]), ","), 58, t["fg"], weight="700", spacing=-1.5))
-            body.append(text(x + 20, y + 139, mt["label"], fit_size(mt["label"], cw - 40, 20, "600"), t["fg"], weight="600"))
-            body.append(text(x + 20, y + 158, mt.get("note", ""), fit_size(mt.get("note", ""), cw - 40, 17, floor=15), t["muted"]))
-        body += _timeline(m + 8, w - m - 8, 258, t, footprint, 16)
+            body.append(text(x + 20, y + 112, format(int(mt["value"]), ","), 52, t["fg"], weight="700", spacing=-1.5))
+            label_lines = wrap(mt["label"], 18, cw - 40, weight="600", max_lines=2)
+            body += lines_block(x + 20, y + 139, label_lines, 18, t["fg"], 20, weight="600")
+            note = mt.get("note", "")
+            body.append(text(x + 20, y + 181, note, fit_size(note, cw - 40, 16, floor=14), t["muted"]))
+        body += _timeline(m + 8, w - m - 8, 284, t, footprint, 16)
     else:
-        w, h, m = MOBILE_W, 620, 36
-        cw, ch, gap = (w - 2 * m - 24) / 2, 210, 24
+        w, m = MOBILE_W, 36
+        cw, ch, gap = (w - 2 * m - 24) / 2, 230, 24
+        rows = (len(metrics) + 1) // 2
+        timeline_y = 64 + rows * ch + max(0, rows - 1) * gap + 32
+        h = timeline_y + 56
         body = [rect(0.5, 0.5, w - 1, h - 1, "none", rx=18, stroke=t["rule"]),
                 text(m, 44, "VERIFIED FOOTPRINT", 20, t["muted"], mono=True, spacing=3),
-                text(w - m, 44, "12 MONTHS", 20, t["accent"], mono=True, spacing=3, anchor="end")]
+                text(w - m, 44, f"{year} + 365D" if year else "365D", 20, t["accent"], mono=True, spacing=3, anchor="end")]
         for i, mt in enumerate(metrics):
-            x = m + (i % 2) * (cw + gap)
+            cell_w = w - 2 * m if i == 4 else cw
+            x = m if i == 4 else m + (i % 2) * (cw + gap)
             y = 64 + (i // 2) * (ch + gap)
-            body += card(x, y, cw, ch, t)
+            body += card(x, y, cell_w, ch, t)
             body.append(rect(x + 20, y + 20, 48, 48, t["accent_soft"], rx=10))
             body += glyph(EVIDENCE_GLYPHS.get(mt.get("key", ""), "commits"), x + 29, y + 29, 30, t["accent"], t["accent_soft"])
             body.append(text(x + 20, y + 132, format(int(mt["value"]), ","), 56, t["fg"], weight="700", spacing=-1.5))
             label = str(mt.get("short_label") or mt["label"])
-            body.append(text(x + 20, y + 164, label, fit_size(label, cw - 40, 24, "600"), t["fg"], weight="600"))
-            body.append(text(x + 20, y + 192, mt.get("note", ""), fit_size(mt.get("note", ""), cw - 40, 20, floor=17), t["muted"]))
-        body += _timeline(m + 8, w - m - 8, 572, t, footprint, 18)
+            label_lines = wrap(label, 22, cell_w - 40, weight="600", max_lines=2)
+            body += lines_block(x + 20, y + 166, label_lines, 22, t["fg"], 23, weight="600")
+            note = mt.get("note", "")
+            body.append(text(x + 20, y + 211, note, fit_size(note, cell_w - 40, 18, floor=16), t["muted"]))
+        body += _timeline(m + 8, w - m - 8, timeline_y, t, footprint, 18)
     window = footprint.get("window", {}).get("label", "")
     summary = "; ".join(f"{int(x['value']):,} {x['label'].lower()}" for x in metrics)
-    return svg(w, h, f"Verified engineering footprint · {window}",
-               f"{summary}. Measured with the GitHub API on {footprint.get('measured_on', '')}.", body, t["bg"])
+    return svg(w, h, f"Verified engineering footprint · {year} calendar year and {window}",
+               f"{summary}. Last published successful measurement {footprint.get('measured_at_utc', footprint.get('measured_on', ''))}.", body, t["bg"])
 
 
 # --------------------------------------------------------------------------- flagship diagrams

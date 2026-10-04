@@ -643,7 +643,7 @@ def check_generated_text(text: str, portfolio: dict, listed_public_names: set[st
                 raise PortfolioError(f"excluded repository {name!r} would appear in the generated text")
     for url in re.findall(r"https?://[^\s)\"'<>]+", text):
         if is_github_url(url):
-            if re.match(rf"^https://github\.com/{re.escape(owner)}/?$", url):
+            if re.match(rf"^https://github\.com/{re.escape(owner)}/?(?:\?from=\d{{4}}-\d{{2}}-\d{{2}}&to=\d{{4}}-\d{{2}}-\d{{2}})?$", url):
                 continue  # the owner's own profile link
             m = re.match(rf"^https://github\.com/{re.escape(owner)}/([A-Za-z0-9_.-]+)/?$", url)
             if not m or m.group(1).lower() not in listed_public_names:

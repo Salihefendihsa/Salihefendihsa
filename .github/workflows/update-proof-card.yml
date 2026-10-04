@@ -2,8 +2,8 @@ name: Update dynamic profile
 
 on:
   schedule:
-    # GitHub may delay scheduled jobs; 09:11 is intentional to avoid :00 load.
-    - cron: "11 9 * * *"
+    # Hourly around minute 11; GitHub may delay scheduled jobs.
+    - cron: "11 * * * *"
       timezone: "Europe/Istanbul"
   workflow_dispatch:
   pull_request:
