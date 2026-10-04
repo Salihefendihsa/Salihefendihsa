@@ -51,8 +51,8 @@ class ReadmeTests(unittest.TestCase):
         alt = re.search(r'<img alt="([^"]+)" src="assets/v5/collaborations-desktop-light\.svg"', block).group(1)
         for name in ("Sticker &amp; Label Studio", "Couples Companion App", "Invitation Design Studio", "Product Photo Studio"):
             self.assertEqual(alt.count(name), 1, name)
-        self.assertIn("Lead contributor, 71 / 75 commits", alt)
-        self.assertIn("Core contributor, 37 commits · 36 PRs", alt)
+        self.assertRegex(alt, r"Lead contributor, [0-9]+ authored commits · [0-9]+ PRs \(12m\)")
+        self.assertRegex(alt, r"Core contributor, [0-9]+ authored commits · [0-9]+ PRs \(12m\)")
         # the visible section is the board plus its intro line: no paragraphs repeating the cards
         visible = re.sub(r"<picture>.*?</picture>", "", block, flags=re.S)
         self.assertNotIn("Web studio for school name stickers", visible)
@@ -149,6 +149,12 @@ class ReadmeTests(unittest.TestCase):
     def test_proof_strip_numbers_match_footprint(self):
         with open(os.path.join(ROOT, "data", "footprint.json"), encoding="utf-8") as fh:
             fp = json.load(fh)
+        self.assertEqual(self.readme.count("<!-- PROOF:START -->"), 1)
+        self.assertEqual(self.readme.count("<!-- PROOF:END -->"), 1)
+        self.assertLess(self.readme.index("<!-- PROOF:START -->"), self.readme.index("<!-- PROOF:END -->"))
+        for language in fp["languages"]:
+            self.assertIn(f"{language['name']} {language['share']:.1f} %", self.readme)
+        self.assertNotIn("2026-09-22 snapshot", self.readme)
         for m in fp["metrics"]:
             self.assertIn(f"{m['value']:,}", self.readme)
         self.assertIn("How these numbers are measured", self.readme)
@@ -195,10 +201,14 @@ class AssetTests(unittest.TestCase):
         for name in ("Instagram AI Manager", "Finans Pro", "Tatlı Durağı POS &amp; QR Ordering", "AuraProject", "Nalbur Stok", "Optivark"):
             self.assertEqual(eco.count(f">{name}<"), 1, name)
         col = read(os.path.join(self.dir, "collaborations-desktop-light.svg"))
-        for name, evidence in (("Sticker &amp; Label Studio", "71 / 75 commits"), ("Couples Companion App", "37 commits · 36 PRs"),
-                               ("Invitation Design Studio", "5 / 6 commits"), ("Product Photo Studio", "2 / 7 commits")):
+        with open(os.path.join(ROOT, "data", "footprint.json"), encoding="utf-8") as fh:
+            evidence = json.load(fh)["collaboration_evidence"]
+        for name, product_id in (("Sticker &amp; Label Studio", "sticker-label-studio"),
+                                 ("Couples Companion App", "couples-companion"),
+                                 ("Invitation Design Studio", "invitation-studio"),
+                                 ("Product Photo Studio", "product-photo-studio")):
             self.assertEqual(col.count(f">{name}<"), 1, name)
-            self.assertIn(f">{evidence}<", col)
+            self.assertIn(f">{evidence[product_id]['visual_evidence']}<", col)
         app = read(os.path.join(self.dir, "approach-mobile-dark.svg"))
         for stage in ("Architecture", "Typed Boundaries", "Testable Workflows", "Human Approval", "Observe &amp; Improve"):
             self.assertIn(f">{stage}<", app)

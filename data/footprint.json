@@ -4,8 +4,8 @@
   "window": {
     "from": "2025-10-04",
     "to": "2026-10-04",
-    "start_utc": "2025-10-04T06:31:33Z",
-    "end_utc": "2026-10-04T06:31:33Z",
+    "start_utc": "2025-10-04T06:50:23Z",
+    "end_utc": "2026-10-04T06:50:23Z",
     "label": "Oct 2025 – Oct 2026"
   },
   "metrics": [
@@ -41,31 +41,31 @@
   "languages": [
     {
       "name": "TypeScript",
-      "share": 34.4
-    },
-    {
-      "name": "Python",
-      "share": 19.7
+      "share": 38.5
     },
     {
       "name": "C#",
-      "share": 19.3
+      "share": 19.0
     },
     {
-      "name": "HTML",
-      "share": 9.6
+      "name": "Python",
+      "share": 18.3
     },
     {
       "name": "Dart",
-      "share": 8.2
+      "share": 10.3
+    },
+    {
+      "name": "HTML",
+      "share": 7.2
     },
     {
       "name": "JavaScript",
-      "share": 4.0
+      "share": 3.1
     },
     {
       "name": "Other",
-      "share": 4.8
+      "share": 3.6
     }
   ],
   "languages_note": "Share of code by bytes across owned repositories, public and private",
@@ -82,6 +82,29 @@
     "owned_repos": 38,
     "owned_public": 24,
     "owned_private": 14,
-    "verified_collaborations": 4
+    "verified_collaborations": 4,
+    "profile_fingerprint": "cbdba987684c90fa6fcd38fbc20616fe972240b799cd30ea4f207723327e7176"
+  },
+  "collaboration_evidence": {
+    "sticker-label-studio": {
+      "label": "Built in collaboration",
+      "evidence": "71 authored commits · 2 PRs (12m)",
+      "visual_evidence": "71 commits · 2 PRs"
+    },
+    "couples-companion": {
+      "label": "Built in collaboration",
+      "evidence": "37 authored commits · 36 PRs (12m)",
+      "visual_evidence": "37 commits · 36 PRs"
+    },
+    "invitation-studio": {
+      "label": "Built in collaboration",
+      "evidence": "5 authored commits · 0 PRs (12m)",
+      "visual_evidence": "5 commits · 0 PRs"
+    },
+    "product-photo-studio": {
+      "label": "Built in collaboration",
+      "evidence": "2 authored commits · 0 PRs (12m)",
+      "visual_evidence": "2 commits · 0 PRs"
+    }
   }
 }

@@ -1,59 +1,67 @@
-# Proof card measurement
+# Dynamic profile data
 
-`scripts/update_proof.py` updates only `data/footprint.json`, the proof section
-of `README.md`, and the four existing `assets/v5/proof-*.svg` files. The visual
-geometry, theme, and other profile assets stay the same.
+`scripts/update_profile.py` is the only scheduled README writer. One owner
+credential supplies a complete paginated repository list. The same run then
+measures default-branch authored commits, authored PRs, repository languages,
+and public repository metadata. It renders the README's proof, portfolio, and
+archive blocks plus their linked SVGs before writing any file. API, permission,
+rate-limit, or validation failure leaves the published files unchanged.
 
-## Method
+## Automatically generated
 
-- A rolling 365-day UTC interval `[start_utc, end_utc)` is written to
-  `data/footprint.json` and explained in the README. The four card values use
-  the same interval, except owned repositories, which is a snapshot at the
-  measurement time.
-- The repository universe is `/user/repos` for the authenticated profile owner:
-  owned repositories plus accessible collaborator/organization repositories.
-  The count describes **token-visible** data; it does not claim to include
-  repositories the credential cannot see.
-- `Commits authored` counts default-branch commit SHAs with GitHub's linked
-  `author.login` equal to `Salihefendihsa`. Each SHA is counted once even if
-  reachable in multiple repositories. Public/private is based on visible
-  repository metadata; a SHA visible in both is public.
-- `Repositories contributed to` counts distinct token-visible repositories
-  with such a commit or a pull request authored in the interval. `Verified
-  collaborations` is the partner-owned subset. Access alone is not proof.
-- The profile repository is included in owned repositories, but excluded from
-  commits and contributed repositories. Automated card commits cannot increase
-  the card's own activity numbers. PRs provide repository evidence, not extra
-  commits.
-- The card is different from GitHub's contribution graph, whose eligibility
-  and visibility rules differ. Its contribution total is never described here
-  as a commit count.
-- All REST pages are consumed. Any authentication, pagination, rate-limit, or
-  API failure stops before files are written. When values and scope have not
-  changed, the last valid date and period remain visible and no commit is made.
+- The proof card and its `How these numbers are measured` block: distinct
+  authored-commit, contributed-repository, owned-repository, and evidenced
+  collaboration measures; public/private splits; UTC period; credential-visible
+  scope; language-byte distribution. The contribution graph is a separate
+  GitHub measure and is never labelled a commit count.
+- The marked `PORTFOLIO` and `ARCHIVE` README blocks, their generated Markdown
+  copies, and the ecosystem/collaboration SVGs. Public repository links are
+  shown only when `data/portfolio.json` permits them and the API confirms the
+  repository is public. Uncurated public archive descriptions, language and
+  archived state come from the API. Curated descriptions remain editorial.
+- Partner product evidence is computed from configured opaque repository IDs:
+  authored commits and PRs in the same 365-day interval. A product with no
+  current-window evidence remains in the archive but leaves the verified
+  collaboration board. No private repository name or URL is published.
+- Product and archive counts are computed from the rendered collection.
 
-The `Code by language` sentence in the README is a separately dated
-2026-09-22 snapshot; this workflow does not remeasure it.
+`data/portfolio.json` is the single selection and visibility configuration:
+product groups, public repository sources, excluded repositories, archive
+overrides, and allowed private archive descriptions. It contains only opaque
+IDs for partner repositories. The profile repository is included in the owned
+snapshot but excluded from activity metrics, so the workflow cannot raise its
+own card numbers.
 
-## Actions credential
+Names, biography, product vision, manually checked delivery status, detailed
+technical descriptions, the hero and engineering-method artwork remain
+editorial. Repository activity never implies delivery, deployment, security,
+or production readiness. Stars, forks, last activity, and CI badges are not
+displayed; no stale status is implied. GitHub renders the generated Markdown
+and committed SVGs directly.
 
-The daily workflow runs around **09:11 Europe/Istanbul** and also accepts
-`workflow_dispatch`. It needs one repository Actions secret:
+The four numeric metrics use a rolling 365-day UTC interval `[start_utc,
+end_utc)`. Default-branch commits require GitHub's linked `author.login` to
+match the profile owner; each SHA is globally deduplicated. An authored PR is
+repository-level evidence, never an extra commit. The language distribution is
+GitHub's language-byte count across credential-visible owned repositories.
+The public/private classification comes only from repositories the credential
+can see. The published date advances only when the values or rendered dynamic
+content change; a daily no-op creates no commit.
 
-1. Create a **classic personal access token** for `Salihefendihsa` with the
-   `repo` scope. Add `read:org` only if organization membership is needed to
-   see relevant repositories. Authorize organization SSO where applicable.
-2. In `Salihefendihsa/Salihefendihsa`, open **Settings → Secrets and variables
-   → Actions → New repository secret**. Name it `PROFILE_STATS_TOKEN` and paste
-   the token value there. Never put the token in the repository, a PR, or a log.
-3. Run **Actions → Update proof card → Run workflow** once. Confirm the
-   `refresh` job succeeds and either commits changed card values or prints
-   `No metric change; no commit`.
+## Actions credential and verification
 
-The script verifies the authenticated login and classic PAT `repo` scope.
-GitHub's default `GITHUB_TOKEN` is limited to this repository and is not a
-substitute. Without `PROFILE_STATS_TOKEN`, the update job fails and leaves the
-previous card intact. A newly restricted credential can only measure the
-repositories it sees; compare its visibility with the intended coverage before
-trusting a changed count. The workflow never publishes private repository names,
-email addresses, tokens, or a per-repository breakdown.
+The workflow runs around **09:11 Europe/Istanbul** and supports manual
+`workflow_dispatch`. It needs the repository Actions secret
+`PROFILE_STATS_TOKEN`: a classic personal access token issued to
+`Salihefendihsa` with the `repo` scope. Add `read:org` if organization
+membership is needed, and authorize organization SSO where applicable.
+The classic token scope is broad; keep its lifetime short. GitHub's default
+`GITHUB_TOKEN` is limited to this profile repository and cannot be treated as
+access to the owner's other private repositories.
+
+Add the token at **Settings → Secrets and variables → Actions → New repository
+secret**. Never put its value in a PR, local file, or log. Then run **Actions →
+Update dynamic profile → Run workflow** and confirm both `verify` and `refresh`
+jobs pass. `refresh` either commits changed generated files or reports a no-op.
+Without the secret, it fails before writing; a restricted credential measures
+only what it can see, which is explicitly labelled as token-visible scope.

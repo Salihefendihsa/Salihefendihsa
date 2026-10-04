@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="720" height="1410" viewBox="0 0 720 1410" role="img" aria-labelledby="t d">
   <title id="t">Selected collaborations — Sticker &amp; Label Studio, Couples Companion App, Invitation Design Studio, Product Photo Studio</title>
-  <desc id="d">Verified collaborations on partner-owned products: Sticker &amp; Label Studio — Lead contributor, 71 / 75 commits, Delivered, Partner-owned · private; Couples Companion App — Core contributor, 37 commits · 36 PRs, In development, Partner-owned · private; Invitation Design Studio — Lead contributor, 5 / 6 commits, Delivered, Partner-owned · private; Product Photo Studio — Contributor, 2 / 7 commits, In development, Partner-owned · private</desc>
+  <desc id="d">Verified collaborations on partner-owned products: Sticker &amp; Label Studio — Lead contributor, 71 authored commits · 2 PRs (12m), Delivered, Partner-owned · private; Couples Companion App — Core contributor, 37 authored commits · 36 PRs (12m), In development, Partner-owned · private; Invitation Design Studio — Lead contributor, 5 authored commits · 0 PRs (12m), Delivered, Partner-owned · private; Product Photo Studio — Contributor, 2 authored commits · 0 PRs (12m), In development, Partner-owned · private</desc>
   <rect x="0.0" y="0.0" width="720.0" height="1410.0" fill="#101216"/>
   <rect x="0.5" y="0.5" width="719.0" height="1409.0" fill="none" rx="18" stroke="#2C3039" stroke-width="1"/>
   <rect x="32.0" y="32.0" width="656.0" height="320.0" fill="#181B21" rx="14" stroke="#2C3039" stroke-width="1"/>
@@ -14,7 +14,7 @@
   <text x="62" y="156" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="26" fill="#F1EEE6">Web studio for school name stickers and</text>
   <text x="62" y="191" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="26" fill="#F1EEE6">print-ready labels.</text>
   <line x1="62.0" y1="260.0" x2="658.0" y2="260.0" stroke="#2C3039" stroke-width="1"/>
-  <text x="62" y="306" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="41" fill="#F1EEE6" font-weight="700" letter-spacing="-1">71 / 75 commits</text>
+  <text x="62" y="306" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="34" fill="#F1EEE6" font-weight="700" letter-spacing="-1">71 commits · 2 PRs</text>
   <rect x="431.6" y="274.0" width="226.4" height="36.0" fill="#232A45" rx="18"/>
   <text x="545" y="305" font-family="Consolas, 'SFMono-Regular', Menlo, monospace" font-size="20" fill="#7A90EE" text-anchor="middle" letter-spacing="1.5">LEAD CONTRIBUTOR</text>
   <text x="62" y="334" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="21" fill="#9AA1B0">Delivered  ·  Partner-owned · private</text>
@@ -44,7 +44,7 @@
   <text x="62" y="840" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="26" fill="#F1EEE6">Interactive studio for wedding and event</text>
   <text x="62" y="875" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="26" fill="#F1EEE6">invitations with print export.</text>
   <line x1="62.0" y1="944.0" x2="658.0" y2="944.0" stroke="#2C3039" stroke-width="1"/>
-  <text x="62" y="990" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="44" fill="#F1EEE6" font-weight="700" letter-spacing="-1">5 / 6 commits</text>
+  <text x="62" y="990" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="36" fill="#F1EEE6" font-weight="700" letter-spacing="-1">5 commits · 0 PRs</text>
   <rect x="431.6" y="958.0" width="226.4" height="36.0" fill="#232A45" rx="18"/>
   <text x="545" y="989" font-family="Consolas, 'SFMono-Regular', Menlo, monospace" font-size="20" fill="#7A90EE" text-anchor="middle" letter-spacing="1.5">LEAD CONTRIBUTOR</text>
   <text x="62" y="1018" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="21" fill="#9AA1B0">Delivered  ·  Partner-owned · private</text>
@@ -59,7 +59,7 @@
   <text x="62" y="1182" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="26" fill="#F1EEE6">On-device product photo studio that exports</text>
   <text x="62" y="1217" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="26" fill="#F1EEE6">social-ready posts and stories.</text>
   <line x1="62.0" y1="1286.0" x2="658.0" y2="1286.0" stroke="#2C3039" stroke-width="1"/>
-  <text x="62" y="1332" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="44" fill="#F1EEE6" font-weight="700" letter-spacing="-1">2 / 7 commits</text>
+  <text x="62" y="1332" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="42" fill="#F1EEE6" font-weight="700" letter-spacing="-1">2 commits · 0 PRs</text>
   <rect x="493.6" y="1300.0" width="164.4" height="36.0" fill="#232A45" rx="18"/>
   <text x="576" y="1331" font-family="Consolas, 'SFMono-Regular', Menlo, monospace" font-size="20" fill="#7A90EE" text-anchor="middle" letter-spacing="1.5">CONTRIBUTOR</text>
   <text x="62" y="1360" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="21" fill="#9AA1B0">In development  ·  Partner-owned · private</text>
