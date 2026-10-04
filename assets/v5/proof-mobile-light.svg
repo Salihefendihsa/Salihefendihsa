@@ -1,45 +1,59 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="720" height="620" viewBox="0 0 720 620" role="img" aria-labelledby="t d">
-  <title id="t">Verified engineering footprint · Oct 2025 – Oct 2026</title>
-  <desc id="d">1,342 commits authored; 26 repositories contributed to; 38 owned repositories; 4 verified collaborations. Measured with the GitHub API on 2026-10-04.</desc>
-  <rect x="0.0" y="0.0" width="720.0" height="620.0" fill="#F6F4EF"/>
-  <rect x="0.5" y="0.5" width="719.0" height="619.0" fill="none" rx="18" stroke="#D8DAE0" stroke-width="1"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="890" viewBox="0 0 720 890" role="img" aria-labelledby="t d">
+  <title id="t">Verified engineering footprint · 2026 calendar year and Oct 2025 – Oct 2026</title>
+  <desc id="d">1,581 2026 github contributions; 1,342 commits authored; 26 repositories contributed to; 38 owned repositories; 4 verified collaborations. Last published successful measurement 2026-10-04T13:28:34Z.</desc>
+  <rect x="0.0" y="0.0" width="720.0" height="890.0" fill="#F6F4EF"/>
+  <rect x="0.5" y="0.5" width="719.0" height="889.0" fill="none" rx="18" stroke="#D8DAE0" stroke-width="1"/>
   <text x="36" y="44" font-family="Consolas, 'SFMono-Regular', Menlo, monospace" font-size="20" fill="#5C6270" letter-spacing="3">VERIFIED FOOTPRINT</text>
-  <text x="684" y="44" font-family="Consolas, 'SFMono-Regular', Menlo, monospace" font-size="20" fill="#2F4BC7" text-anchor="end" letter-spacing="3">12 MONTHS</text>
-  <rect x="36.0" y="64.0" width="312.0" height="210.0" fill="#FFFFFF" rx="14" stroke="#D8DAE0" stroke-width="1"/>
+  <text x="684" y="44" font-family="Consolas, 'SFMono-Regular', Menlo, monospace" font-size="20" fill="#2F4BC7" text-anchor="end" letter-spacing="3">2026 + 365D</text>
+  <rect x="36.0" y="64.0" width="312.0" height="230.0" fill="#FFFFFF" rx="14" stroke="#D8DAE0" stroke-width="1"/>
   <rect x="56.0" y="84.0" width="48.0" height="48.0" fill="#E4E8F8" rx="10"/>
-  <line x1="67.5" y1="108.0" x2="92.5" y2="108.0" stroke="#2F4BC7" stroke-width="2.5"/>
-  <circle cx="80.0" cy="108.0" r="5" fill="#E4E8F8" stroke="#2F4BC7" stroke-width="2.5"/>
-  <circle cx="80.0" cy="108.0" r="2" fill="#2F4BC7"/>
-  <text x="56" y="196" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="56" fill="#16181D" font-weight="700" letter-spacing="-1.5">1,342</text>
-  <text x="56" y="228" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="24" fill="#16181D" font-weight="600">Commits authored</text>
-  <text x="56" y="256" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="20" fill="#5C6270">303 public · 1039 private</text>
-  <rect x="372.0" y="64.0" width="312.0" height="210.0" fill="#FFFFFF" rx="14" stroke="#D8DAE0" stroke-width="1"/>
+  <rect x="67.5" y="96.8" width="6.2" height="6.2" fill="#2F4BC7" rx="1.25"/>
+  <rect x="76.9" y="96.8" width="6.2" height="6.2" fill="none" rx="1.25" stroke="#2F4BC7" stroke-width="2.5"/>
+  <rect x="86.2" y="96.8" width="6.2" height="6.2" fill="#2F4BC7" rx="1.25"/>
+  <rect x="67.5" y="106.8" width="6.2" height="6.2" fill="none" rx="1.25" stroke="#2F4BC7" stroke-width="2.5"/>
+  <rect x="76.9" y="106.8" width="6.2" height="6.2" fill="#2F4BC7" rx="1.25"/>
+  <rect x="86.2" y="106.8" width="6.2" height="6.2" fill="none" rx="1.25" stroke="#2F4BC7" stroke-width="2.5"/>
+  <rect x="67.5" y="116.8" width="6.2" height="6.2" fill="#2F4BC7" rx="1.25"/>
+  <rect x="76.9" y="116.8" width="6.2" height="6.2" fill="#2F4BC7" rx="1.25"/>
+  <text x="56" y="196" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="56" fill="#16181D" font-weight="700" letter-spacing="-1.5">1,581</text>
+  <text x="56" y="230" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="22" fill="#16181D" font-weight="600">2026 GitHub</text>
+  <text x="56" y="253" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="22" fill="#16181D" font-weight="600">contributions</text>
+  <text x="56" y="275" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="18" fill="#5C6270">Jan–Dec 2026</text>
+  <rect x="372.0" y="64.0" width="312.0" height="230.0" fill="#FFFFFF" rx="14" stroke="#D8DAE0" stroke-width="1"/>
   <rect x="392.0" y="84.0" width="48.0" height="48.0" fill="#E4E8F8" rx="10"/>
-  <path d="M416.0 98.0 L427.25 104.25 L416.0 110.5 L404.75 104.25 Z" fill="none" stroke="#2F4BC7" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M404.75 110.5 L416.0 116.75 L427.25 110.5" fill="none" stroke="#2F4BC7" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-  <text x="392" y="196" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="56" fill="#16181D" font-weight="700" letter-spacing="-1.5">26</text>
-  <text x="392" y="228" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="24" fill="#16181D" font-weight="600">Repositories</text>
-  <text x="392" y="256" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="20" fill="#5C6270">22 owned · 4 partner</text>
-  <rect x="36.0" y="298.0" width="312.0" height="210.0" fill="#FFFFFF" rx="14" stroke="#D8DAE0" stroke-width="1"/>
-  <rect x="56.0" y="318.0" width="48.0" height="48.0" fill="#E4E8F8" rx="10"/>
-  <path d="M68.75 338.25 V352.0 H91.25 V338.25 M68.75 338.25 V333.25 H77.5 L80.0 337.0 H91.25 V338.25" fill="none" stroke="#2F4BC7" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-  <rect x="68.8" y="338.2" width="22.5" height="2.8" fill="#2F4BC7"/>
-  <text x="56" y="430" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="56" fill="#16181D" font-weight="700" letter-spacing="-1.5">38</text>
-  <text x="56" y="462" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="24" fill="#16181D" font-weight="600">Owned repositories</text>
-  <text x="56" y="490" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="20" fill="#5C6270">24 public · 14 private</text>
-  <rect x="372.0" y="298.0" width="312.0" height="210.0" fill="#FFFFFF" rx="14" stroke="#D8DAE0" stroke-width="1"/>
-  <rect x="392.0" y="318.0" width="48.0" height="48.0" fill="#E4E8F8" rx="10"/>
-  <circle cx="411.6" cy="342.0" r="7.5" fill="#E4E8F8" stroke="#2F4BC7" stroke-width="2.5"/>
-  <circle cx="420.4" cy="342.0" r="7.5" fill="none" stroke="#2F4BC7" stroke-width="2.5"/>
-  <circle cx="416.0" cy="342.0" r="2.25" fill="#2F4BC7"/>
-  <text x="392" y="430" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="56" fill="#16181D" font-weight="700" letter-spacing="-1.5">4</text>
-  <text x="392" y="462" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="24" fill="#16181D" font-weight="600">Collaborations</text>
-  <text x="392" y="490" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="20" fill="#5C6270">12m · commit / PR evidence</text>
-  <line x1="44.0" y1="572.0" x2="676.0" y2="572.0" stroke="#D8DAE0" stroke-width="2"/>
-  <line x1="44.0" y1="564.0" x2="44.0" y2="580.0" stroke="#8A94A8" stroke-width="2"/>
-  <line x1="676.0" y1="564.0" x2="676.0" y2="580.0" stroke="#8A94A8" stroke-width="2"/>
-  <circle cx="676.0" cy="572.0" r="5" fill="#2F4BC7"/>
-  <text x="44" y="602" font-family="Consolas, 'SFMono-Regular', Menlo, monospace" font-size="18" fill="#5C6270" letter-spacing="1">OCT 2025</text>
-  <text x="676" y="602" font-family="Consolas, 'SFMono-Regular', Menlo, monospace" font-size="18" fill="#5C6270" text-anchor="end" letter-spacing="1">OCT 2026</text>
-  <text x="360" y="560" font-family="Consolas, 'SFMono-Regular', Menlo, monospace" font-size="18" fill="#5C6270" text-anchor="middle" letter-spacing="1">MEASURED 2026-10-04 · GITHUB API · AUTHOR-LOGIN MATCH</text>
+  <line x1="403.5" y1="108.0" x2="428.5" y2="108.0" stroke="#2F4BC7" stroke-width="2.5"/>
+  <circle cx="416.0" cy="108.0" r="5" fill="#E4E8F8" stroke="#2F4BC7" stroke-width="2.5"/>
+  <circle cx="416.0" cy="108.0" r="2" fill="#2F4BC7"/>
+  <text x="392" y="196" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="56" fill="#16181D" font-weight="700" letter-spacing="-1.5">1,342</text>
+  <text x="392" y="230" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="22" fill="#16181D" font-weight="600">Commits authored</text>
+  <text x="392" y="275" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="18" fill="#5C6270">365d · 303 public</text>
+  <rect x="36.0" y="318.0" width="312.0" height="230.0" fill="#FFFFFF" rx="14" stroke="#D8DAE0" stroke-width="1"/>
+  <rect x="56.0" y="338.0" width="48.0" height="48.0" fill="#E4E8F8" rx="10"/>
+  <path d="M80.0 352.0 L91.25 358.25 L80.0 364.5 L68.75 358.25 Z" fill="none" stroke="#2F4BC7" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M68.75 364.5 L80.0 370.75 L91.25 364.5" fill="none" stroke="#2F4BC7" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="56" y="450" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="56" fill="#16181D" font-weight="700" letter-spacing="-1.5">26</text>
+  <text x="56" y="484" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="22" fill="#16181D" font-weight="600">Repositories</text>
+  <text x="56" y="529" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="18" fill="#5C6270">22 owned · 4 partner</text>
+  <rect x="372.0" y="318.0" width="312.0" height="230.0" fill="#FFFFFF" rx="14" stroke="#D8DAE0" stroke-width="1"/>
+  <rect x="392.0" y="338.0" width="48.0" height="48.0" fill="#E4E8F8" rx="10"/>
+  <path d="M404.75 358.25 V372.0 H427.25 V358.25 M404.75 358.25 V353.25 H413.5 L416.0 357.0 H427.25 V358.25" fill="none" stroke="#2F4BC7" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="404.8" y="358.2" width="22.5" height="2.8" fill="#2F4BC7"/>
+  <text x="392" y="450" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="56" fill="#16181D" font-weight="700" letter-spacing="-1.5">38</text>
+  <text x="392" y="484" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="22" fill="#16181D" font-weight="600">Owned repositories</text>
+  <text x="392" y="529" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="18" fill="#5C6270">24 public · 14 priv.</text>
+  <rect x="36.0" y="572.0" width="648.0" height="230.0" fill="#FFFFFF" rx="14" stroke="#D8DAE0" stroke-width="1"/>
+  <rect x="56.0" y="592.0" width="48.0" height="48.0" fill="#E4E8F8" rx="10"/>
+  <circle cx="75.6" cy="616.0" r="7.5" fill="#E4E8F8" stroke="#2F4BC7" stroke-width="2.5"/>
+  <circle cx="84.4" cy="616.0" r="7.5" fill="none" stroke="#2F4BC7" stroke-width="2.5"/>
+  <circle cx="80.0" cy="616.0" r="2.25" fill="#2F4BC7"/>
+  <text x="56" y="704" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="56" fill="#16181D" font-weight="700" letter-spacing="-1.5">4</text>
+  <text x="56" y="738" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="22" fill="#16181D" font-weight="600">Collaborations</text>
+  <text x="56" y="783" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="18" fill="#5C6270">12m · commit/PR proof</text>
+  <line x1="44.0" y1="834.0" x2="676.0" y2="834.0" stroke="#D8DAE0" stroke-width="2"/>
+  <line x1="44.0" y1="826.0" x2="44.0" y2="842.0" stroke="#8A94A8" stroke-width="2"/>
+  <line x1="676.0" y1="826.0" x2="676.0" y2="842.0" stroke="#8A94A8" stroke-width="2"/>
+  <circle cx="676.0" cy="834.0" r="5" fill="#2F4BC7"/>
+  <text x="44" y="864" font-family="Consolas, 'SFMono-Regular', Menlo, monospace" font-size="18" fill="#5C6270" letter-spacing="1">OCT 2025</text>
+  <text x="676" y="864" font-family="Consolas, 'SFMono-Regular', Menlo, monospace" font-size="18" fill="#5C6270" text-anchor="end" letter-spacing="1">OCT 2026</text>
+  <text x="360" y="822" font-family="Consolas, 'SFMono-Regular', Menlo, monospace" font-size="18" fill="#5C6270" text-anchor="middle" letter-spacing="1">LAST PUBLISHED 2026-10-04 13:28:34 UTC</text>
 </svg>

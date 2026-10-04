@@ -217,6 +217,12 @@ class ClassificationTests(unittest.TestCase):
         with self.assertRaises(gp.PortfolioError):
             gp.archive_entry_from_repo(repo("x", html_url="https://evil.example/x"), {}, gp.archive_groups(pf))
 
+    def test_year_graph_profile_link_is_allowed_but_repository_link_is_checked(self):
+        pf = portfolio()
+        gp.check_generated_text(f"[Graph](https://github.com/{OWNER}?from=2026-01-01&to=2026-12-31)", pf, set())
+        with self.assertRaises(gp.PortfolioError):
+            gp.check_generated_text(f"[Repo](https://github.com/{OWNER}/private)", pf, set())
+
 
 # --------------------------------------------------------------------------- privacy
 

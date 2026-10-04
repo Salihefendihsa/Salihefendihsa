@@ -79,9 +79,11 @@ def apply_collaboration_evidence(config: dict, repos: list[dict], evidence: dict
 
 def build_outputs(api: proof.GhApi, end: dt.datetime, readme: str, old: dict,
                   config: dict) -> dict[str, str]:
+    calendar = proof.measure_calendar(api, end)
     repos = api.pages("user/repos?affiliation=owner,collaborator,organization_member&sort=full_name")
     evidence: dict[int, dict[str, int]] = {}
     measured = proof.measure(api, end, repos=repos, evidence=evidence)
+    measured.update(calendar)
     languages = language_distribution(api, repos)
     curated = apply_collaboration_evidence(config, repos, evidence)
     products, archive = portfolio_gen.build(repos, curated)

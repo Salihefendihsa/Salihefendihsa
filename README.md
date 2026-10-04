@@ -10,7 +10,7 @@
   <source media="(prefers-color-scheme: dark) and (max-width: 600px)" srcset="assets/v5/proof-mobile-dark.svg">
   <source media="(max-width: 600px)" srcset="assets/v5/proof-mobile-light.svg">
   <source media="(prefers-color-scheme: dark)" srcset="assets/v5/proof-desktop-dark.svg">
-  <img alt="Verified engineering footprint, Oct 2025 – Oct 2026: 1,342 commits authored, 26 repositories contributed to, 38 owned repositories, 4 verified collaborations; measured 2026-10-04 from token-visible GitHub data" src="assets/v5/proof-desktop-light.svg" width="100%">
+  <img alt="Verified engineering footprint: 1,581 GitHub contributions in 2026 (calendar year), 1,342 commits authored in the last 365 days, 26 repositories contributed to, 38 owned repositories, 4 verified collaborations; last published successful measurement 2026-10-04T13:28:34Z" src="assets/v5/proof-desktop-light.svg" width="100%">
 </picture>
 
 <details>
@@ -18,12 +18,13 @@
 
 <br>
 
-- **1,342 commits authored** — 303 public and 1,039 private. GitHub-linked author login on accessible repositories' default branches; each SHA counted once across repositories. This is an authored-commit count, not GitHub's contribution count.
+- **1,581 GitHub contributions in 2026** — The GitHub GraphQL `contributionsCollection` calendar `totalContributions` for the full UTC calendar year [2026-01-01T00:00:00Z, 2026-12-31T23:59:59Z]. GitHub reports 1,252 restricted contributions in this collection; their repository identities are not published here. This total follows GitHub's contribution rules and is not a commit count. [View the 2026 graph](https://github.com/Salihefendihsa?from=2026-01-01&to=2026-12-31).
+- **1,342 commits authored in the last 365 days** — 303 public and 1,039 private. GitHub-linked author login on accessible repositories' default branches; each SHA counted once across repositories. This authored-commit measure has a different time window and eligibility rules from the contribution graph.
 - **26 repositories contributed to** — 22 owned and 4 partner-owned. A qualifying authored default-branch commit or authored pull request in the period is required.
 - **38 owned repositories** — 24 public and 14 private, as visible to the statistics credential at measurement time; this snapshot includes the profile repository.
 - **4 verified collaborations** — partner-owned repositories with a qualifying commit or pull request in the period. Mere access is not evidence.
-- **Period:** UTC [2025-10-04T06:50:23Z, 2026-10-04T06:50:23Z) (365 days). Last published measurement: 2026-10-04. Access scope: repositories visible to the owner's credential. The profile repository is excluded from activity counts so automated card commits cannot raise them. If the underlying numbers have not changed, the previous valid measurement date stays visible and no commit is made.
-- GitHub's contribution graph follows GitHub's own eligibility and visibility rules. It is a different measure from this card; its contribution total is not a commit count.
+- **Authored activity period:** UTC [2025-10-04T13:28:34Z, 2026-10-04T13:28:34Z) (365 days). Last published successful measurement: 2026-10-04T13:28:34Z. Access scope: repositories visible to the owner's credential. The profile repository is excluded from activity counts so automated card commits cannot raise them. Hourly runs are not instant synchronization. If values have not changed, the last published successful time stays visible and no commit is made; newer successful no-op runs appear in Actions history.
+- The year shown on this card is 2026. Profile URL `from`/`to` filters are not passed into README images; the workflow explicitly requests the calendar-year range above. Private contribution visibility and credential access can change which contributions GitHub returns.
 - **Code by language** across token-visible owned repositories: TypeScript 38.5 %, C# 19.0 %, Python 18.3 %, Dart 10.3 %, HTML 7.2 %, JavaScript 3.1 %, Other 3.6 %. GitHub language bytes measured with the same credential on 2026-10-04.
 
 </details>
