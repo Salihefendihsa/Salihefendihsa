@@ -1,32 +1,198 @@
-# Hilmi Salih Altınışık
+<picture>
+  <source media="(prefers-color-scheme: dark) and (max-width: 600px)" srcset="assets/v5/hero-mobile-dark.svg">
+  <source media="(max-width: 600px)" srcset="assets/v5/hero-mobile-light.svg">
+  <source media="(prefers-color-scheme: dark)" srcset="assets/v5/hero-desktop-dark.svg">
+  <img alt="Hilmi Salih Altınışık — Software Engineer & Product Builder. Building operational software across logistics, field service, business automation and autonomous AI systems. Product domains: Logistics (Navlonix), Field Operations (Nilüfer İlaçlama), Business Systems (Finans Pro, Tatlı Durağı), Autonomous AI (SALIH-AI-COMPANY)." src="assets/v5/hero-desktop-light.svg" width="100%">
+</picture>
 
-Fırat Üniversitesi Yazılım Mühendisliği öğrencisi · Full-stack ve mobil geliştirici
-Software Engineering student at Fırat University · Full-stack and mobile developer
+<!-- PROOF:START -->
+<picture>
+  <source media="(prefers-color-scheme: dark) and (max-width: 600px)" srcset="assets/v5/proof-mobile-dark.svg">
+  <source media="(max-width: 600px)" srcset="assets/v5/proof-mobile-light.svg">
+  <source media="(prefers-color-scheme: dark)" srcset="assets/v5/proof-desktop-dark.svg">
+  <img alt="Verified engineering footprint: 1,581 GitHub contributions in 2026 (calendar year), 1,342 commits authored in the last 365 days, 26 repositories contributed to, 38 owned repositories, 4 verified collaborations; last published successful measurement 2026-10-04T13:28:34Z" src="assets/v5/proof-desktop-light.svg" width="100%">
+</picture>
 
-Web, mobil ve arka uç tarafında uçtan uca uygulamalar geliştiriyorum: veri modeli, API, arayüz ve yayına alma.
-I build applications end to end across web, mobile and backend: data model, API, interface and deployment.
+<details>
+<summary>How these numbers are measured</summary>
 
-## Teknolojiler / Tech
+<br>
 
-- **Diller / Languages:** TypeScript, JavaScript, Python, C#, Dart
-- **Web:** Next.js, React, Vite, Tailwind CSS
-- **Mobil / Mobile:** Flutter, Expo (React Native)
-- **Arka uç / Backend:** Node.js, Express, ASP.NET (.NET), FastAPI
-- **Veri / Data:** PostgreSQL, Prisma, Supabase, SQLite
-- **Araçlar / Tooling:** Git, GitHub Actions, Docker
+- **1,581 GitHub contributions in 2026** — The GitHub GraphQL `contributionsCollection` calendar `totalContributions` for the full UTC calendar year [2026-01-01T00:00:00Z, 2026-12-31T23:59:59Z]. GitHub reports 1,252 restricted contributions in this collection; their repository identities are not published here. This total follows GitHub's contribution rules and is not a commit count. [View the 2026 graph](https://github.com/Salihefendihsa?from=2026-01-01&to=2026-12-31).
+- **1,342 commits authored in the last 365 days** — 303 public and 1,039 private. GitHub-linked author login on accessible repositories' default branches; each SHA counted once across repositories. This authored-commit measure has a different time window and eligibility rules from the contribution graph.
+- **26 repositories contributed to** — 22 owned and 4 partner-owned. A qualifying authored default-branch commit or authored pull request in the period is required.
+- **38 owned repositories** — 24 public and 14 private, as visible to the statistics credential at measurement time; this snapshot includes the profile repository.
+- **4 verified collaborations** — partner-owned repositories with a qualifying commit or pull request in the period. Mere access is not evidence.
+- **Authored activity period:** UTC [2025-10-04T13:28:34Z, 2026-10-04T13:28:34Z) (365 days). Last published successful measurement: 2026-10-04T13:28:34Z. Access scope: repositories visible to the owner's credential. The profile repository is excluded from activity counts so automated card commits cannot raise them. Hourly runs are not instant synchronization. If values have not changed, the last published successful time stays visible and no commit is made; newer successful no-op runs appear in Actions history.
+- The year shown on this card is 2026. Profile URL `from`/`to` filters are not passed into README images; the workflow explicitly requests the calendar-year range above. Private contribution visibility and credential access can change which contributions GitHub returns.
+- **Code by language** across token-visible owned repositories: TypeScript 38.5 %, C# 19.0 %, Python 18.3 %, Dart 10.3 %, HTML 7.2 %, JavaScript 3.1 %, Other 3.6 %. GitHub language bytes measured with the same credential on 2026-10-04.
 
-## Öne çıkan açık projeler / Selected public projects
+</details>
+<!-- PROOF:END -->
 
-| Proje | Açıklama / Description |
-|---|---|
-| [auraproject-ai-service](https://github.com/Salihefendihsa/auraproject-ai-service) | Yapay zeka destekli kıyafet önerisi servisi (FastAPI). AI outfit-recommendation service with self-critique and virtual try-on. |
-| [LLMChatbot](https://github.com/Salihefendihsa/LLMChatbot) | OpenAI uyumlu Chat Completions API üzerinde akışlı, çok turlu sohbet botu (.NET). Streaming, multi-turn chatbot with a .NET backend, console client and tests. |
-| [ShapeClassifier](https://github.com/Salihefendihsa/ShapeClassifier) | OpenCvSharp ön işleme, Hu momentleri ve ML.NET ile geometrik şekil tanıma (.NET 8). Geometric shape recognition. |
-| [MultiLangTranslator](https://github.com/Salihefendihsa/MultiLangTranslator) | Metni birden çok dile paralel çeviren WPF/MVVM masaüstü uygulaması (.NET 8). WPF/MVVM desktop translator with caching and history. |
+<!-- PORTFOLIO:START -->
+<!-- Generated by scripts/generate_portfolio.py from data/portfolio.json + the public GitHub API. Do not edit by hand. -->
 
-Çalışmalarımın büyük kısmı özel (private) depolarda tutuluyor; bu yüzden katkı grafiğim kamuya açık etkinliğin tamamını yansıtmıyor.
-Much of my work lives in private repositories, so the contribution graph does not show all of my activity.
+## 01 — Flagship Systems
 
-## İletişim / Contact
+<sub>3 product systems I am responsible for end to end, each shown with the same structure.</sub>
 
-altinisikhilmisalih@gmail.com · [github.com/Salihefendihsa](https://github.com/Salihefendihsa)
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/v5/flagship-navlonix-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="assets/v5/flagship-navlonix-light.svg">
+  <img alt="Flagship 01 — Navlonix: AI-assisted B2B logistics marketplace that matches cargo owners with verified drivers. System diagram: .NET 9 API, Web app, Mobile app, Marketing site." src="assets/v5/flagship-navlonix-light.svg" width="100%">
+</picture>
+
+**AI-assisted B2B logistics marketplace that matches cargo owners with verified drivers.**
+
+Industrial freight is still arranged over phone calls, negotiated prices and cash risk. Navlonix turns it into a marketplace: businesses post loads, verified drivers bid on an AI-computed fair price, and the platform carries the job through escrow, tracking and delivery.
+
+- Role-based customer, driver and admin experiences on web and mobile
+- Fair base-price engine, escrow-style ledger with QR delivery confirmation and settlement preview
+- Real-time offers, chat and tracking; driver document verification with vision models
+
+<sub><b>Surfaces</b> .NET 9 API · Web app · Mobile app · Marketing site<br><b>Stack</b> .NET 9 · React · Expo · PostgreSQL / PostGIS · Redis · SignalR · Gemini<br>Founder & lead engineer · In active development · Private product<br><i>Web app deployed for preview; payment-provider and regulatory integrations are on the roadmap, the ledger, matching and tracking flows run in code.</i></sub>
+
+<br>
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/v5/flagship-nilufer-ilaclama-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="assets/v5/flagship-nilufer-ilaclama-light.svg">
+  <img alt="Flagship 02 — Nilüfer İlaçlama Operations Suite: Field-service operations platform for a pest-control business — from customer records to field crews, contracts and payments. System diagram: Operations API, Admin web panel, Field mobile app, Public site &amp; portal." src="assets/v5/flagship-nilufer-ilaclama-light.svg" width="100%">
+</picture>
+
+**Field-service operations platform for a pest-control business — from customer records to field crews, contracts and payments.**
+
+A pest-control company runs on scheduled jobs, field crews, recurring contracts and collections. The suite replaces spreadsheets and phone calls with one operational system shared by owner, managers, team leads, field staff and customers.
+
+- Typed operations API with owner, manager, team-lead, staff and customer roles and permissions
+- Admin panel with live command-centre dashboard, approval queue and audit logs; field mobile app for jobs, calendar, requests and payslips
+- Customers, service jobs and reports, contracts, quotations and payments — plus a public site with a row-level-secured customer portal
+
+<sub><b>Surfaces</b> Operations API · Admin web panel · Field mobile app · Public site & portal<br><b>Stack</b> TypeScript · Express · Prisma · PostgreSQL · Next.js · Flutter · Supabase<br>Lead engineer · In active development · Client system · private</sub>
+
+<br>
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/v5/flagship-salih-ai-company-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="assets/v5/flagship-salih-ai-company-light.svg">
+  <img alt="Flagship 03 — SALIH-AI-COMPANY: Autonomous multi-agent operating system that plans, executes and reviews bounded work under explicit human approval. System diagram: Orchestrator, Department agents, Operations control plane, Reliability lab." src="assets/v5/flagship-salih-ai-company-light.svg" width="100%">
+</picture>
+
+**Autonomous multi-agent operating system that plans, executes and reviews bounded work under explicit human approval.**
+
+Running several development projects with AI agents only makes sense if agents cannot quietly take consequential actions. This is a reusable company operating system: bounded work inside a deterministic policy engine, and everything external waits for the owner.
+
+- Executive planner plus engineering, research, finance, quality and security agents with least-privilege scopes
+- Deterministic policy engine with action levels L0–L5: external or irreversible actions wait for human approval
+- Hash-chained audit trail, fail-closed reliability configuration, job queue with leases, watchdogs, readiness gates; 500+ tests
+
+<sub><b>Surfaces</b> Orchestrator · Department agents · Operations control plane · Reliability lab<br><b>Stack</b> Python 3.11 · SQLite · Claude-based agents<br>Solo engineer · In active development · Private system<br><i>Scheduler and live network access stay switched off until the readiness gates pass; built for my own projects and team.</i></sub>
+
+## 02 — Product Ecosystem
+
+<sub>6 products grouped by what they do, not by repository. Full descriptions sit in the collapsed archive below.</sub>
+
+<picture>
+  <source media="(prefers-color-scheme: dark) and (max-width: 600px)" srcset="assets/v5/ecosystem-mobile-dark.svg">
+  <source media="(max-width: 600px)" srcset="assets/v5/ecosystem-mobile-light.svg">
+  <source media="(prefers-color-scheme: dark)" srcset="assets/v5/ecosystem-desktop-dark.svg">
+  <img alt="Selected product ecosystem: Instagram AI Manager — Approval-first Instagram operations platform for professional accounts. (Lead engineer, In active development, Private); Finans Pro — Personal finance and investment tracking with OCR and FIFO profit. (Solo engineer, In development, Private); Tatlı Durağı POS &amp; QR Ordering — QR table ordering with a realtime, role-based admin POS. (Solo engineer, Delivered, Client system · private); AuraProject — Outfit recommendation from visual analysis and style rules. (Lead engineer, Experimental, Public service · private core); Nalbur Stok — Inventory management for hardware stores with virtualised 100K-row product tables. (Solo engineer, Maintained, Private); Optivark — Studio site for logistics, production and field-team software. (Solo engineer, In development, Private)" src="assets/v5/ecosystem-desktop-light.svg" width="100%">
+</picture>
+
+<sub>Public repositories: [AuraProject](https://github.com/Salihefendihsa/auraproject-ai-service)</sub>
+
+## 03 — Verified Collaborations
+
+<sub>Partner-owned products where my commits or pull requests are verifiable. Ownership stays with the partner; no private repositories are linked.</sub>
+
+<picture>
+  <source media="(prefers-color-scheme: dark) and (max-width: 600px)" srcset="assets/v5/collaborations-mobile-dark.svg">
+  <source media="(max-width: 600px)" srcset="assets/v5/collaborations-mobile-light.svg">
+  <source media="(prefers-color-scheme: dark)" srcset="assets/v5/collaborations-desktop-dark.svg">
+  <img alt="Verified collaborations on partner-owned products: Sticker &amp; Label Studio — Web studio for school name stickers and print-ready labels. (Lead contributor, 71 authored commits · 2 PRs (12m), Delivered, Partner-owned · private); Couples Companion App — Flutter app that helps couples share how they feel, without a fight. (Core contributor, 37 authored commits · 36 PRs (12m), In development, Partner-owned · private); Invitation Design Studio — Interactive studio for wedding and event invitations with print export. (Lead contributor, 5 authored commits · 0 PRs (12m), Delivered, Partner-owned · private); Product Photo Studio — On-device product photo studio that exports social-ready posts and stories. (Contributor, 2 authored commits · 0 PRs (12m), In development, Partner-owned · private)" src="assets/v5/collaborations-desktop-light.svg" width="100%">
+</picture>
+
+<!-- PORTFOLIO:END -->
+
+## 04 — Engineering Method
+
+<sub>How every product above is built: from architecture to supervised operation.</sub>
+
+<picture>
+  <source media="(prefers-color-scheme: dark) and (max-width: 600px)" srcset="assets/v5/approach-mobile-dark.svg">
+  <source media="(max-width: 600px)" srcset="assets/v5/approach-mobile-light.svg">
+  <source media="(prefers-color-scheme: dark)" srcset="assets/v5/approach-desktop-dark.svg">
+  <img alt="Engineering method in five stages: Architecture — define the system before scaling it; Typed Boundaries — make responsibilities and contracts explicit; Testable Workflows — prove behaviour before widening scope; Human Approval — keep consequential AI actions supervised; Observe and Improve — measure real operation and iterate." src="assets/v5/approach-desktop-light.svg" width="100%">
+</picture>
+
+<!-- ARCHIVE:START -->
+<!-- Generated by scripts/generate_portfolio.py from data/portfolio.json + the public GitHub API. Do not edit by hand. -->
+
+## 05 — Complete Archive
+
+<sub>Full descriptions of the products on the boards above, then everything else that is safe to show: public repositories discovered automatically from GitHub and allowlisted private work under generic names.</sub>
+
+<details>
+<summary><b>Selected products — full descriptions</b> (10)</summary>
+
+| Product | What it does |
+| --- | --- |
+| **Instagram AI Manager**<br><sub>Python · FastAPI · PostgreSQL · Redis · Next.js · Docker · Lead engineer · In active development · Private</sub> | Multi-workspace backend where AI-assisted inbox, comment and publishing workflows pass through role checks, human approval and durable jobs before anything reaches the Meta API. |
+| **Finans Pro**<br><sub>Flutter · Node.js · Express · MongoDB · Solo engineer · In development · Private</sub> | Income and expense tracking, category budgets, FIFO profit and loss on gold and currency holdings, receipt and bank-statement OCR, subscriptions, debts, reminders and cash-flow insights. |
+| **Tatlı Durağı POS & QR Ordering**<br><sub>Next.js · TypeScript · Supabase Realtime · Solo engineer · Delivered · Client system · private</sub> | Guests order from a QR menu with live status; waiters, cashiers and managers run a realtime order board, receipts and bill splitting, menu and table management and a revenue dashboard. |
+| [AuraProject](https://github.com/Salihefendihsa/auraproject-ai-service)<br><sub>Python · FastAPI · PyTorch · OpenAI / Gemini · ControlNet · Lead engineer · Experimental · Public service · private core</sub> | Public FastAPI service with validation, auth, rate limiting, second-LLM self-critique and pose-locked virtual try-on; private core with PyTorch visual analysis and a style-rule engine. |
+| **Nalbur Stok**<br><sub>React 19 · TypeScript · Vite · TanStack · Supabase · Solo engineer · Maintained · Private</sub> | Virtualised 100K-row product tables, reports and a Supabase backend. |
+| **Optivark**<br><sub>React · TypeScript · Vite · GSAP · Solo engineer · In development · Private</sub> | Marketing site and solution catalogue for the software practice behind these products: logistics and dispatch, production optimisation, field-team mobile apps and barcode / QR tooling. |
+| **Sticker & Label Studio**<br><sub>Next.js · TypeScript · Supabase · Cloudflare · Lead contributor · 71 authored commits · 2 PRs (12m) · Delivered · Partner-owned · private</sub> | Template library, positioned text editor, bulk generation from Excel and CSV, millimetre-accurate print layouts and Word export. |
+| **Couples Companion App**<br><sub>Flutter · Dart · Supabase · Core contributor · 37 authored commits · 36 PRs (12m) · In development · Partner-owned · private</sub> | Emotion signals, shared goals, daily check-in nudges, a character quiz and weekly insights, delivered through reviewed pull requests with accessibility tests. |
+| **Invitation Design Studio**<br><sub>React · Vite · JavaScript · Lead contributor · 5 authored commits · 0 PRs (12m) · Delivered · Partner-owned · private</sub> | Parses pasted invitation text into fields, applies templates and phrase libraries, previews live and exports print-ready Word documents. |
+| **Product Photo Studio**<br><sub>Flutter · Dart · on-device ML · Supabase · Contributor · 2 authored commits · 0 PRs (12m) · In development · Partner-owned · private</sub> | Guided 360° capture, fully on-device background removal, studio backgrounds and post, carousel and story export for small sellers. |
+
+</details>
+
+<details>
+<summary><b>Tools &amp; Research</b> (4)</summary>
+
+| Project | What it does |
+| --- | --- |
+| [LLM Chatbot](https://github.com/Salihefendihsa/LLMChatbot)<br><sub>C\# · .NET · Public</sub> | Streaming, multi-turn chatbot backend on the OpenAI-compatible Chat Completions API with a console client and tests. |
+| [MultiLang Translator](https://github.com/Salihefendihsa/MultiLangTranslator)<br><sub>C\# · .NET 8 · WPF · MVVM · Public</sub> | WPF desktop app translating text into several languages in parallel, with auto-detection, caching, history and an offline mock provider. |
+| [RSU JPEG Compression](https://github.com/Salihefendihsa/rsu-jpeg-compression)<br><sub>Python · NumPy · SciPy · Public</sub> | Research experiment: a custom random-number generator drives dynamic JPEG quantization tables, benchmarked against the standard table. |
+| [Shape Classifier](https://github.com/Salihefendihsa/ShapeClassifier)<br><sub>C\# · .NET 8 · OpenCvSharp · ML.NET · Public</sub> | Geometric shape recognition: synthetic data, OpenCV pre-processing, Hu-moment features and an ML.NET classifier. |
+
+</details>
+
+<details>
+<summary><b>University Coursework</b> (18)</summary>
+
+| Project | What it does |
+| --- | --- |
+| [Antivirus Simulator](https://github.com/Salihefendihsa/AntivirusSimulator)<br><sub>C\# · WinForms · Public</sub> | Educational antivirus simulator (signature scanning, async cancellation) built as an OOP course project; contains no real malware. |
+| [Car Racing Game](https://github.com/Salihefendihsa/arabaYarisi)<br><sub>C\# · Public</sub> | Car-racing mini game written as a C\# course project. |
+| [Flappy Bird Clone](https://github.com/Salihefendihsa/proje2_flippybird)<br><sub>C\# · Public</sub> | Flappy-Bird style game written as a C\# course project. |
+| [Functional Programming Lab 2](https://github.com/Salihefendihsa/Fonksiyonel-Programlama-LAB2)<br><sub>JavaScript · HTML · CSS · Public</sub> | Shared-wallet expense tracker for flatmates as a mobile web app. |
+| [Minesweeper Clone](https://github.com/Salihefendihsa/mayinTarlasi)<br><sub>C\# · Public</sub> | Minesweeper clone written as a C\# course project. |
+| [OOP Lab](https://github.com/Salihefendihsa/NTP_Lab)<br><sub>C\# · Public</sub> | Object-oriented programming lab exercises. |
+| [OOP Lab 2–3](https://github.com/Salihefendihsa/ntp_lab_odev2-3)<br><sub>C\# · Public</sub> | Object-oriented programming lab assignments 2–3. |
+| [OOP Lab 2–3, 7–10](https://github.com/Salihefendihsa/ntp_lab_odev2-3-78910-)<br><sub>C\# · Public</sub> | Object-oriented programming lab assignments 2–3 and 7–10. |
+| [OOP Lab 5](https://github.com/Salihefendihsa/netpLab5-Odev)<br><sub>C\# · Public</sub> | Object-oriented programming lab assignment 5. |
+| [OOP Lab 5.1](https://github.com/Salihefendihsa/ntpLab5.1_Odev)<br><sub>C\# · Public</sub> | Object-oriented programming lab assignment 5.1. |
+| [OOP Lab 6.1](https://github.com/Salihefendihsa/ntplabodevuygulama6.1)<br><sub>C\# · Public</sub> | Object-oriented programming lab application 6.1. |
+| [OOP Lab 6.2](https://github.com/Salihefendihsa/ntplabodev6.2)<br><sub>C\# · Public</sub> | Object-oriented programming lab assignment 6.2. |
+| **OOP Lab — Home desktop exercise**<br><sub>C\# · Private</sub> | Object-oriented programming lab exercise (2024). |
+| **OOP Lab — Tic-Tac-Toe**<br><sub>C\# · Private</sub> | Object-oriented programming lab exercise (2024). |
+| **OOP Lab — Week 4 exercise**<br><sub>C\# · Private</sub> | Object-oriented programming lab exercise (2024). |
+| [Orientation Video](https://github.com/Salihefendihsa/oryantasyon)<br><sub>Video · Public</sub> | Software-engineering orientation course video assignment. |
+| [Web Design Assignments](https://github.com/Salihefendihsa/web-tasarimi-odevler)<br><sub>JavaScript · HTML · CSS · Public</sub> | Web design course assignments. |
+| [Web Lab Hello](https://github.com/Salihefendihsa/web-lab-hello)<br><sub>React · TypeScript · Vite · Public</sub> | Web lab starter: React + TypeScript + Vite setup. |
+
+</details>
+
+<!-- ARCHIVE:END -->
+
+## Contact
+
+[LinkedIn](https://www.linkedin.com/in/hilmi-salih-alt%C4%B1n%C4%B1%C5%9F%C4%B1k-6a9301294/) · [Email](mailto:altinisikhilmisalih@gmail.com) · [GitHub](https://github.com/Salihefendihsa)
+
+If you are building something useful, I would be glad to hear about it.

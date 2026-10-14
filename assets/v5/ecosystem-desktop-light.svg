@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="836" viewBox="0 0 1200 836" role="img" aria-labelledby="t d">
+  <title id="t">Selected product ecosystem — Instagram AI Manager, Finans Pro, Tatlı Durağı POS &amp; QR Ordering, AuraProject, Nalbur Stok, Optivark</title>
+  <desc id="d">Product board: Instagram AI Manager (AI operations) — Approval-first Instagram operations platform for professional accounts. In active development, Private, Lead engineer; Finans Pro (Finance) — Personal finance and investment tracking with OCR and FIFO profit. In development, Private, Solo engineer; Tatlı Durağı POS &amp; QR Ordering (Hospitality) — QR table ordering with a realtime, role-based admin POS. Delivered, Client system · private, Solo engineer; AuraProject (AI · Vision) — Outfit recommendation from visual analysis and style rules. Experimental, Public service · private core, Lead engineer; Nalbur Stok (Retail operations) — Inventory management for hardware stores with virtualised 100K-row product tables. Maintained, Private, Solo engineer; Optivark (Studio) — Studio site for logistics, production and field-team software. In development, Private, Solo engineer</desc>
+  <rect x="0.0" y="0.0" width="1200.0" height="836.0" fill="#F6F4EF"/>
+  <rect x="0.5" y="0.5" width="1199.0" height="835.0" fill="none" rx="18" stroke="#D8DAE0" stroke-width="1"/>
+  <rect x="40.0" y="40.0" width="548.0" height="236.0" fill="#FFFFFF" rx="14" stroke="#D8DAE0" stroke-width="1"/>
+  <rect x="40.0" y="62.0" width="5.0" height="192.0" fill="#6B4FB8" rx="2.5"/>
+  <rect x="70.0" y="66.0" width="52.0" height="52.0" fill="#ECE6F8" rx="11"/>
+  <path d="M84.75 93.25 V100.75 H107.25 V93.25 M84.75 93.25 L88.5 84.5 H103.5 L107.25 93.25 H99.75 L97.25 97.0 H94.75 L92.25 93.25 Z" fill="none" stroke="#6B4FB8" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="104.8" cy="84.5" r="5.25" fill="#ECE6F8" stroke="#6B4FB8" stroke-width="2.5"/>
+  <path d="M102.25 84.5 L104.125 86.375 L107.5 82.75" fill="none" stroke="#6B4FB8" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="142" y="84" font-family="Consolas, 'SFMono-Regular', Menlo, monospace" font-size="18" fill="#6B4FB8" letter-spacing="2">AI OPERATIONS</text>
+  <text x="142" y="120" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="30" fill="#16181D" font-weight="700" letter-spacing="-0.5">Instagram AI Manager</text>
+  <text x="70" y="158" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="22" fill="#16181D">Approval-first Instagram operations</text>
+  <text x="70" y="188" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="22" fill="#16181D">platform for professional accounts.</text>
+  <text x="70" y="225" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="17" fill="#5C6270">Python · FastAPI · PostgreSQL · Redis · Next.js · Docker</text>
+  <line x1="70.0" y1="232.0" x2="558.0" y2="232.0" stroke="#D8DAE0" stroke-width="1"/>
+  <text x="70" y="258" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="18" fill="#5C6270">In active development  ·  Private  ·  Lead engineer</text>
+  <rect x="612.0" y="40.0" width="548.0" height="236.0" fill="#FFFFFF" rx="14" stroke="#D8DAE0" stroke-width="1"/>
+  <rect x="612.0" y="62.0" width="5.0" height="192.0" fill="#A3651F" rx="2.5"/>
+  <rect x="642.0" y="66.0" width="52.0" height="52.0" fill="#F6EBDC" rx="11"/>
+  <rect x="656.8" y="93.2" width="5.0" height="10.0" fill="none" rx="1.25" stroke="#A3651F" stroke-width="2.5"/>
+  <rect x="665.5" y="88.2" width="5.0" height="15.0" fill="none" rx="1.25" stroke="#A3651F" stroke-width="2.5"/>
+  <rect x="674.2" y="83.2" width="5.0" height="20.0" fill="#A3651F" rx="1.25"/>
+  <path d="M656.75 87.0 L664.25 83.25 L670.5 84.5" fill="none" stroke="#A3651F" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="714" y="84" font-family="Consolas, 'SFMono-Regular', Menlo, monospace" font-size="18" fill="#A3651F" letter-spacing="2">FINANCE</text>
+  <text x="714" y="120" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="30" fill="#16181D" font-weight="700" letter-spacing="-0.5">Finans Pro</text>
+  <text x="642" y="158" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="22" fill="#16181D">Personal finance and investment tracking</text>
+  <text x="642" y="188" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="22" fill="#16181D">with OCR and FIFO profit.</text>
+  <text x="642" y="225" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="19" fill="#5C6270">Flutter · Node.js · Express · MongoDB</text>
+  <line x1="642.0" y1="232.0" x2="1130.0" y2="232.0" stroke="#D8DAE0" stroke-width="1"/>
+  <text x="642" y="258" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="18" fill="#5C6270">In development  ·  Private  ·  Solo engineer</text>
+  <rect x="40.0" y="300.0" width="548.0" height="236.0" fill="#FFFFFF" rx="14" stroke="#D8DAE0" stroke-width="1"/>
+  <rect x="40.0" y="322.0" width="5.0" height="192.0" fill="#A3651F" rx="2.5"/>
+  <rect x="70.0" y="326.0" width="52.0" height="52.0" fill="#F6EBDC" rx="11"/>
+  <rect x="84.8" y="340.8" width="10.0" height="10.0" fill="none" rx="1.25" stroke="#A3651F" stroke-width="2.5"/>
+  <rect x="87.9" y="343.9" width="3.8" height="3.8" fill="#A3651F"/>
+  <rect x="97.2" y="340.8" width="10.0" height="10.0" fill="none" rx="1.25" stroke="#A3651F" stroke-width="2.5"/>
+  <rect x="84.8" y="353.2" width="10.0" height="10.0" fill="none" rx="1.25" stroke="#A3651F" stroke-width="2.5"/>
+  <circle cx="102.2" cy="358.2" r="4.375" fill="#A3651F"/>
+  <text x="142" y="344" font-family="Consolas, 'SFMono-Regular', Menlo, monospace" font-size="18" fill="#A3651F" letter-spacing="2">HOSPITALITY</text>
+  <text x="142" y="380" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="24" fill="#16181D" font-weight="700" letter-spacing="-0.5">Tatlı Durağı POS &amp; QR Ordering</text>
+  <text x="70" y="418" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="22" fill="#16181D">QR table ordering with a realtime,</text>
+  <text x="70" y="448" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="22" fill="#16181D">role-based admin POS.</text>
+  <text x="70" y="485" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="19" fill="#5C6270">Next.js · TypeScript · Supabase Realtime</text>
+  <line x1="70.0" y1="492.0" x2="558.0" y2="492.0" stroke="#D8DAE0" stroke-width="1"/>
+  <text x="70" y="518" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="17" fill="#5C6270">Delivered  ·  Client system · private  ·  Solo engineer</text>
+  <rect x="612.0" y="300.0" width="548.0" height="236.0" fill="#FFFFFF" rx="14" stroke="#D8DAE0" stroke-width="1"/>
+  <rect x="612.0" y="322.0" width="5.0" height="192.0" fill="#6B4FB8" rx="2.5"/>
+  <rect x="642.0" y="326.0" width="52.0" height="52.0" fill="#ECE6F8" rx="11"/>
+  <circle cx="668.0" cy="352.0" r="10" fill="none" stroke="#6B4FB8" stroke-width="2.5"/>
+  <circle cx="668.0" cy="352.0" r="3.75" fill="#6B4FB8"/>
+  <path d="M668.0 338.875 V343.25 M668.0 360.75 V365.125 M654.875 352.0 H659.25 M676.75 352.0 H681.125" fill="none" stroke="#6B4FB8" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="714" y="344" font-family="Consolas, 'SFMono-Regular', Menlo, monospace" font-size="18" fill="#6B4FB8" letter-spacing="2">AI · VISION</text>
+  <text x="714" y="380" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="30" fill="#16181D" font-weight="700" letter-spacing="-0.5">AuraProject</text>
+  <text x="642" y="418" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="22" fill="#16181D">Outfit recommendation from visual analysis</text>
+  <text x="642" y="448" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="22" fill="#16181D">and style rules.</text>
+  <text x="642" y="485" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="16" fill="#5C6270">Python · FastAPI · PyTorch · OpenAI / Gemini · ControlNet</text>
+  <line x1="642.0" y1="492.0" x2="1130.0" y2="492.0" stroke="#D8DAE0" stroke-width="1"/>
+  <text x="642" y="518" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="15" fill="#5C6270">Experimental  ·  Public service · private core  ·  Lead engineer</text>
+  <rect x="40.0" y="560.0" width="548.0" height="236.0" fill="#FFFFFF" rx="14" stroke="#D8DAE0" stroke-width="1"/>
+  <rect x="40.0" y="582.0" width="5.0" height="192.0" fill="#A3651F" rx="2.5"/>
+  <rect x="70.0" y="586.0" width="52.0" height="52.0" fill="#F6EBDC" rx="11"/>
+  <rect x="84.8" y="612.0" width="10.0" height="10.0" fill="none" rx="1.25" stroke="#A3651F" stroke-width="2.5"/>
+  <rect x="97.2" y="612.0" width="10.0" height="10.0" fill="none" rx="1.25" stroke="#A3651F" stroke-width="2.5"/>
+  <rect x="91.0" y="600.8" width="10.0" height="10.0" fill="#A3651F" rx="1.25"/>
+  <path d="M84.75 625.75 H107.25" fill="none" stroke="#A3651F" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="142" y="604" font-family="Consolas, 'SFMono-Regular', Menlo, monospace" font-size="18" fill="#A3651F" letter-spacing="2">RETAIL OPERATIONS</text>
+  <text x="142" y="640" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="30" fill="#16181D" font-weight="700" letter-spacing="-0.5">Nalbur Stok</text>
+  <text x="70" y="678" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="22" fill="#16181D">Inventory management for hardware stores</text>
+  <text x="70" y="708" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="22" fill="#16181D">with virtualised 100K-row product tables.</text>
+  <text x="70" y="745" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="19" fill="#5C6270">React 19 · TypeScript · Vite · TanStack · Supabase</text>
+  <line x1="70.0" y1="752.0" x2="558.0" y2="752.0" stroke="#D8DAE0" stroke-width="1"/>
+  <text x="70" y="778" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="18" fill="#5C6270">Maintained  ·  Private  ·  Solo engineer</text>
+  <rect x="612.0" y="560.0" width="548.0" height="236.0" fill="#FFFFFF" rx="14" stroke="#D8DAE0" stroke-width="1"/>
+  <rect x="612.0" y="582.0" width="5.0" height="192.0" fill="#2F4BC7" rx="2.5"/>
+  <rect x="642.0" y="586.0" width="52.0" height="52.0" fill="#E4E8F8" rx="11"/>
+  <rect x="656.8" y="600.8" width="8.8" height="8.8" fill="none" rx="1.875" stroke="#2F4BC7" stroke-width="2.5"/>
+  <rect x="670.5" y="600.8" width="8.8" height="8.8" fill="none" rx="1.875" stroke="#2F4BC7" stroke-width="2.5"/>
+  <rect x="656.8" y="614.5" width="8.8" height="8.8" fill="none" rx="1.875" stroke="#2F4BC7" stroke-width="2.5"/>
+  <rect x="670.5" y="614.5" width="8.8" height="8.8" fill="#2F4BC7" rx="1.875"/>
+  <path d="M665.5 605.125 H670.5 M661.125 609.5 V614.5 M674.875 609.5 V614.5" fill="none" stroke="#2F4BC7" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="714" y="604" font-family="Consolas, 'SFMono-Regular', Menlo, monospace" font-size="18" fill="#2F4BC7" letter-spacing="2">STUDIO</text>
+  <text x="714" y="640" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="30" fill="#16181D" font-weight="700" letter-spacing="-0.5">Optivark</text>
+  <text x="642" y="678" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="22" fill="#16181D">Studio site for logistics, production and</text>
+  <text x="642" y="708" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="22" fill="#16181D">field-team software.</text>
+  <text x="642" y="745" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="19" fill="#5C6270">React · TypeScript · Vite · GSAP</text>
+  <line x1="642.0" y1="752.0" x2="1130.0" y2="752.0" stroke="#D8DAE0" stroke-width="1"/>
+  <text x="642" y="778" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="18" fill="#5C6270">In development  ·  Private  ·  Solo engineer</text>
+</svg>
