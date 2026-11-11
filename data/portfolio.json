@@ -607,6 +607,12 @@
       "summary": "Software-engineering orientation course video assignment.",
       "stack": "Video",
       "group": "University Coursework"
+    },
+    "navlonix-localdocuments": {
+      "display_name": "Local Documents",
+      "summary": "Local PDF text extraction and image OCR for .NET, with bounded helper processes, cancellation and explicit failure states.",
+      "stack": "C# · .NET",
+      "group": "Tools & Research"
     }
   },
   "private_archive_entries": {
