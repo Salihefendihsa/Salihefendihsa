@@ -1,26 +1,8 @@
 name: Update dynamic profile
 
 on:
-  schedule:
-    # Hourly around minute 11; GitHub may delay scheduled jobs.
-    - cron: "11 * * * *"
-      timezone: "Europe/Istanbul"
+  # Paused: the README is now hand-written. Run manually only if the generated cards return.
   workflow_dispatch:
-  pull_request:
-    paths:
-      - scripts/update_proof.py
-      - scripts/update_profile.py
-      - scripts/generate_portfolio.py
-      - scripts/render_assets.py
-      - tests/test_update_proof.py
-      - tests/test_update_profile.py
-      - tests/test_readme_and_assets.py
-      - data/footprint.json
-      - data/portfolio.json
-      - README.md
-      - generated/**
-      - assets/v5/*.svg
-      - .github/workflows/update-proof-card.yml
 
 permissions:
   contents: read
