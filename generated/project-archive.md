@@ -29,8 +29,8 @@
 | Project | What it does |
 | --- | --- |
 | [LLM Chatbot](https://github.com/Salihefendihsa/LLMChatbot)<br><sub>C\# · .NET · Public</sub> | Streaming, multi-turn chatbot backend on the OpenAI-compatible Chat Completions API with a console client and tests. |
+| [Local Documents](https://github.com/Salihefendihsa/navlonix-localdocuments)<br><sub>C\# · .NET · Public</sub> | Local PDF text extraction and image OCR for .NET, with bounded helper processes, cancellation and explicit failure states. |
 | [MultiLang Translator](https://github.com/Salihefendihsa/MultiLangTranslator)<br><sub>C\# · .NET 8 · WPF · MVVM · Public</sub> | WPF desktop app translating text into several languages in parallel, with auto-detection, caching, history and an offline mock provider. |
-| [navlonix-localdocuments](https://github.com/Salihefendihsa/navlonix-localdocuments)<br><sub>C\# · Public</sub> | Local PDF text extraction and image OCR for .NET, with bounded helper processes, cancellation and explicit failure states. |
 | [RSU JPEG Compression](https://github.com/Salihefendihsa/rsu-jpeg-compression)<br><sub>Python · NumPy · SciPy · Public</sub> | Research experiment: a custom random-number generator drives dynamic JPEG quantization tables, benchmarked against the standard table. |
 | [Shape Classifier](https://github.com/Salihefendihsa/ShapeClassifier)<br><sub>C\# · .NET 8 · OpenCvSharp · ML.NET · Public</sub> | Geometric shape recognition: synthetic data, OpenCV pre-processing, Hu-moment features and an ML.NET classifier. |
 

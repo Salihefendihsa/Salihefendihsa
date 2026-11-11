@@ -4,8 +4,8 @@
   "window": {
     "from": "2025-11-11",
     "to": "2026-11-11",
-    "start_utc": "2025-11-11T13:38:03Z",
-    "end_utc": "2026-11-11T13:38:03Z",
+    "start_utc": "2025-11-11T13:52:18Z",
+    "end_utc": "2026-11-11T13:52:18Z",
     "label": "Nov 2025 – Nov 2026"
   },
   "metrics": [
@@ -13,8 +13,8 @@
       "key": "github_contributions",
       "label": "Contributions in the last year",
       "short_label": "Contributions (1y)",
-      "value": 3651,
-      "note": "Same as profile graph"
+      "value": 3655,
+      "note": "2026: 3,630"
     },
     {
       "key": "commits_12m",
@@ -31,11 +31,11 @@
       "note": "est. · 237 sessions"
     },
     {
-      "key": "repos_contributed_12m",
-      "value": 42,
-      "label": "Repositories contributed to",
-      "note": "38 owned · 4 partner",
-      "short_label": "Repositories"
+      "key": "owned_repos",
+      "label": "Repositories",
+      "short_label": "Repositories",
+      "value": 56,
+      "note": "23 public · 33 private"
     },
     {
       "key": "verified_collaborations",
@@ -97,13 +97,14 @@
       "rolling": true,
       "from": "2025-11-11",
       "to": "2026-11-11",
-      "start_utc": "2025-11-11T13:38:03Z",
-      "end_utc": "2026-11-11T13:38:03Z"
+      "start_utc": "2025-11-11T13:52:18Z",
+      "end_utc": "2026-11-11T13:52:18Z"
     },
-    "github_contributions": 3651,
+    "github_contributions": 3655,
     "restricted_contributions": 3544,
-    "github_commit_contributions": 93,
-    "profile_fingerprint": "29ea8441828ce873471c3d503b737d8f7f4284e8de1804f6ffa540dc83226ae3"
+    "github_commit_contributions": 97,
+    "github_contributions_year": 3630,
+    "profile_fingerprint": "fbfc63ddaf46495665afec70afa7d0f3abe3ba1343a018423596f666bd9706a0"
   },
   "collaboration_evidence": {
     "sticker-label-studio": {
@@ -127,13 +128,13 @@
       "visual_evidence": "2 commits · 0 PRs"
     }
   },
-  "measured_at_utc": "2026-11-11T13:38:03Z",
+  "measured_at_utc": "2026-11-11T13:52:18Z",
   "contribution_window": {
     "year": 2026,
     "rolling": true,
     "from": "2025-11-11",
     "to": "2026-11-11",
-    "start_utc": "2025-11-11T13:38:03Z",
-    "end_utc": "2026-11-11T13:38:03Z"
+    "start_utc": "2025-11-11T13:52:18Z",
+    "end_utc": "2026-11-11T13:52:18Z"
   }
 }

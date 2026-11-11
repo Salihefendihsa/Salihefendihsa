@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="720" height="890" viewBox="0 0 720 890" role="img" aria-labelledby="t d">
   <title id="t">Verified engineering footprint · last 12 months (Nov 2025 – Nov 2026)</title>
-  <desc id="d">3,651 contributions in the last year; 3,216 commits authored; 618 coding hours (est.); 42 repositories contributed to; 4 verified collaborations. Last published successful measurement 2026-11-11T13:38:03Z.</desc>
+  <desc id="d">3,655 contributions in the last year; 3,216 commits authored; 618 coding hours (est.); 56 repositories; 4 verified collaborations. Last published successful measurement 2026-11-11T13:52:18Z.</desc>
   <rect x="0.0" y="0.0" width="720.0" height="890.0" fill="#101216"/>
   <style>@keyframes rise{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}@keyframes draw{from{stroke-dashoffset:1200}to{stroke-dashoffset:0}}.rise{opacity:0;animation:rise .7s cubic-bezier(.2,.7,.2,1) forwards}.draw{stroke-dasharray:1200;animation:draw 1.6s ease-out .5s both}@media (prefers-reduced-motion:reduce){.rise{opacity:1;animation:none}.draw{animation:none;stroke-dasharray:none}}</style>
   <rect x="0.5" y="0.5" width="719.0" height="889.0" fill="none" rx="18" stroke="#2C3039" stroke-width="1"/>
@@ -17,9 +17,9 @@
   <rect x="86.2" y="106.8" width="6.2" height="6.2" fill="none" rx="1.25" stroke="#7A90EE" stroke-width="2.5"/>
   <rect x="67.5" y="116.8" width="6.2" height="6.2" fill="#7A90EE" rx="1.25"/>
   <rect x="76.9" y="116.8" width="6.2" height="6.2" fill="#7A90EE" rx="1.25"/>
-  <text x="56" y="196" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="56" fill="#F1EEE6" font-weight="700" letter-spacing="-1.5">3,651</text>
+  <text x="56" y="196" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="56" fill="#F1EEE6" font-weight="700" letter-spacing="-1.5">3,655</text>
   <text x="56" y="230" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="22" fill="#F1EEE6" font-weight="600">Contributions (1y)</text>
-  <text x="56" y="275" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="18" fill="#9AA1B0">Same as profile graph</text>
+  <text x="56" y="275" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="18" fill="#9AA1B0">2026: 3,630</text>
   </g>
   <g class="rise" style="animation-delay:0.20s">
   <rect x="372.0" y="64.0" width="312.0" height="230.0" fill="#181B21" rx="14" stroke="#2C3039" stroke-width="1"/>
@@ -45,11 +45,11 @@
   <g class="rise" style="animation-delay:0.44s">
   <rect x="372.0" y="318.0" width="312.0" height="230.0" fill="#181B21" rx="14" stroke="#2C3039" stroke-width="1"/>
   <rect x="392.0" y="338.0" width="48.0" height="48.0" fill="#232A45" rx="10"/>
-  <path d="M416.0 352.0 L427.25 358.25 L416.0 364.5 L404.75 358.25 Z" fill="none" stroke="#7A90EE" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M404.75 364.5 L416.0 370.75 L427.25 364.5" fill="none" stroke="#7A90EE" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-  <text x="392" y="450" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="56" fill="#F1EEE6" font-weight="700" letter-spacing="-1.5">42</text>
+  <path d="M404.75 358.25 V372.0 H427.25 V358.25 M404.75 358.25 V353.25 H413.5 L416.0 357.0 H427.25 V358.25" fill="none" stroke="#7A90EE" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="404.8" y="358.2" width="22.5" height="2.8" fill="#7A90EE"/>
+  <text x="392" y="450" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="56" fill="#F1EEE6" font-weight="700" letter-spacing="-1.5">56</text>
   <text x="392" y="484" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="22" fill="#F1EEE6" font-weight="600">Repositories</text>
-  <text x="392" y="529" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="18" fill="#9AA1B0">38 owned · 4 partner</text>
+  <text x="392" y="529" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="18" fill="#9AA1B0">23 public · 33 private</text>
   </g>
   <g class="rise" style="animation-delay:0.56s">
   <rect x="36.0" y="572.0" width="648.0" height="230.0" fill="#181B21" rx="14" stroke="#2C3039" stroke-width="1"/>
@@ -67,5 +67,5 @@
   <circle cx="676.0" cy="834.0" r="5" fill="#7A90EE"/>
   <text x="44" y="864" font-family="Consolas, 'SFMono-Regular', Menlo, monospace" font-size="18" fill="#9AA1B0" letter-spacing="1">NOV 2025</text>
   <text x="676" y="864" font-family="Consolas, 'SFMono-Regular', Menlo, monospace" font-size="18" fill="#9AA1B0" text-anchor="end" letter-spacing="1">NOV 2026</text>
-  <text x="360" y="822" font-family="Consolas, 'SFMono-Regular', Menlo, monospace" font-size="18" fill="#9AA1B0" text-anchor="middle" letter-spacing="1">LAST PUBLISHED 2026-11-11 13:38:03 UTC</text>
+  <text x="360" y="822" font-family="Consolas, 'SFMono-Regular', Menlo, monospace" font-size="18" fill="#9AA1B0" text-anchor="middle" letter-spacing="1">LAST PUBLISHED 2026-11-11 13:52:18 UTC</text>
 </svg>
