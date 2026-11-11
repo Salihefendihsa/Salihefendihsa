@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
-"""Render the Editorial Master V5 SVG assets (assets/v5/).
+"""Render the Master Pro (v6 look, assets/v5 paths) SVG assets (assets/v5/).
 
 Every asset is rendered from one geometry per breakpoint and twice per theme,
 so light and dark versions line up exactly. Desktop assets are 1200 px wide;
 mobile assets are 720 px wide and recomposed (not scaled) with larger type so
 they stay readable inside GitHub's ~350 px mobile README column. The SVGs are
 plain XML: system font stacks only, no external resources, no scripts, no
-filters, no animation.
+filters; internal gradients and CSS motion that stops under prefers-reduced-motion.
 
 Assets (each in -light / -dark):
   hero-desktop, hero-mobile               name, title, monogram, product-domain map
@@ -36,14 +36,14 @@ MOBILE_W = 720
 
 THEMES = {
     "light": {
-        "bg": "#F6F4EF", "fg": "#16181D", "muted": "#5C6270", "surface": "#FFFFFF", "surface2": "#ECEDF0",
-        "rule": "#D8DAE0", "accent": "#2F4BC7", "accent_soft": "#E4E8F8", "accent2": "#8A94A8",
+        "bg": "#FFFFFF", "fg": "#0F1218", "muted": "#59606E", "surface": "#F8F9FB", "surface2": "#EEF0F4",
+        "rule": "#E1E4EA", "g1": "#3B5BDB", "g2": "#7048E8", "g3": "#0CA678", "glow": "#5C7CFA", "glow2": "#9775FA", "accent": "#2F4BC7", "accent_soft": "#E4E8F8", "accent2": "#8A94A8",
         "dom_logistics": "#2F4BC7", "dom_field": "#1F7A6D", "dom_business": "#A3651F", "dom_ai": "#6B4FB8", "dom_studio": "#2F4BC7",
         "dom_logistics_soft": "#E4E8F8", "dom_field_soft": "#DFF0EC", "dom_business_soft": "#F6EBDC", "dom_ai_soft": "#ECE6F8", "dom_studio_soft": "#E4E8F8",
     },
     "dark": {
-        "bg": "#101216", "fg": "#F1EEE6", "muted": "#9AA1B0", "surface": "#181B21", "surface2": "#22262E",
-        "rule": "#2C3039", "accent": "#7A90EE", "accent_soft": "#232A45", "accent2": "#6B7386",
+        "bg": "#0D1117", "fg": "#F0F3F8", "muted": "#9AA4B4", "surface": "#141A23", "surface2": "#1B2230",
+        "rule": "#252D3A", "g1": "#7C93FF", "g2": "#B08CFF", "g3": "#4FD1B5", "glow": "#4C6EF5", "glow2": "#845EF7", "accent": "#7A90EE", "accent_soft": "#232A45", "accent2": "#6B7386",
         "dom_logistics": "#7A90EE", "dom_field": "#5CC2B2", "dom_business": "#E0A45A", "dom_ai": "#A98BE8", "dom_studio": "#7A90EE",
         "dom_logistics_soft": "#1E2540", "dom_field_soft": "#17302C", "dom_business_soft": "#33281A", "dom_ai_soft": "#26203A", "dom_studio_soft": "#1E2540",
     },
@@ -182,20 +182,74 @@ def path(d: str, stroke: str, sw: float = 2, fill: str = "none") -> str:
 
 
 def card(x: float, y: float, w: float, h: float, t: dict, accent: str = "", rx: float = 14) -> list[str]:
-    out = [rect(x, y, w, h, t["surface"], rx=rx, stroke=t["rule"])]
+    out = [rect(x, y, w, h, t["surface"], rx=rx, stroke=t["rule"]),
+           rect(x + rx, y, w - 2 * rx, 1.5, "url(#edge)")]
     if accent:
         out.append(rect(x, y + 22, 5, h - 44, accent, rx=2.5))
     return out
 
 
+STYLE = ("@keyframes flow{to{stroke-dashoffset:-20}}"
+         "@keyframes pulse{from{transform:scale(1);opacity:.55}to{transform:scale(2.4);opacity:0}}"
+         ".flow{animation:flow 1.4s linear infinite}"
+         ".pulse{transform-box:fill-box;transform-origin:center;animation:pulse 2.6s ease-out infinite}"
+         "@media (prefers-reduced-motion:reduce){.flow,.pulse{animation:none}}")
+
+
+def defs(t: dict) -> list[str]:
+    """Internal paint servers only (no external resources)."""
+    def stops(pairs):
+        return "".join(f'<stop offset="{o}" stop-color="{c}" stop-opacity="{a}"/>' for o, c, a in pairs)
+    return [
+        f"<style>{STYLE}</style>",
+        "<defs>",
+        f'<linearGradient id="ac" x1="0" y1="0" x2="1" y2="0">{stops([(0, t["g1"], 1), (0.55, t["g2"], 1), (1, t["g3"], 1)])}</linearGradient>',
+        f'<linearGradient id="edge" x1="0" y1="0" x2="1" y2="0">{stops([(0, t["g1"], 0), (0.3, t["g1"], 0.55), (0.7, t["g2"], 0.55), (1, t["g2"], 0)])}</linearGradient>',
+        f'<radialGradient id="glowA" cx="0.5" cy="0.5" r="0.5">{stops([(0, t["glow"], 0.16), (1, t["glow"], 0)])}</radialGradient>',
+        f'<radialGradient id="glowB" cx="0.5" cy="0.5" r="0.5">{stops([(0, t["glow2"], 0.12), (1, t["glow2"], 0)])}</radialGradient>',
+        "</defs>",
+    ]
+
+
+def _theme_for(bg: str) -> dict:
+    return next((v for v in THEMES.values() if v["bg"] == bg), THEMES["dark"])
+
+
 def svg(width: int, height: int, title: str, desc: str, body: Iterable[str], bg: str) -> str:
+    t = _theme_for(bg)
     head = [
         f'<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" viewBox="0 0 {width} {height}" role="img" aria-labelledby="t d">',
         f'  <title id="t">{xml(title)}</title>',
         f'  <desc id="d">{xml(desc)}</desc>',
-        f'  {rect(0, 0, width, height, bg)}',
+        *[f"  {d}" for d in defs(t)],
+        f'  {rect(0, 0, width, height, bg, rx=18)}',
+        f'  <ellipse cx="{width * 0.86:.0f}" cy="{height * 0.08:.0f}" rx="{width * 0.42:.0f}" ry="{max(height * 0.75, 220):.0f}" fill="url(#glowA)"/>',
+        f'  <ellipse cx="{width * 0.08:.0f}" cy="{height * 0.98:.0f}" rx="{width * 0.36:.0f}" ry="{max(height * 0.6, 180):.0f}" fill="url(#glowB)"/>',
+        f'  {rect(width * 0.12, 0.5, width * 0.76, 2, "url(#edge)", rx=1)}',
     ]
     return "\n".join(head + [f"  {b}" for b in body] + ["</svg>"]) + "\n"
+
+
+def flow_line(x1: float, y1: float, x2: float, y2: float, stroke: str, sw: float = 2) -> str:
+    """Connector with a slow travelling dash (static when reduced motion is requested)."""
+    return (f'<line class="flow" x1="{x1:.1f}" y1="{y1:.1f}" x2="{x2:.1f}" y2="{y2:.1f}" stroke="{stroke}" '
+            f'stroke-width="{sw:g}" stroke-dasharray="6 4" stroke-linecap="round"/>')
+
+
+def hub_mark(cx: float, cy: float, r: float, t: dict) -> list[str]:
+    return [f'<circle class="pulse" cx="{cx:.1f}" cy="{cy:.1f}" r="{r:g}" fill="none" stroke="{t["g2"]}" stroke-width="2"/>',
+            circle(cx, cy, r * 1.55, "none", t["rule"], 1.5),
+            circle(cx, cy, r, "url(#ac)"), circle(cx, cy, r * 0.36, t["bg"])]
+
+
+def status_pill(x: float, y: float, label: str, size: float, t: dict) -> list[str]:
+    w = text_width(label, size, mono=True) + len(label) * 1.5 + size * 3.2
+    h = size * 2.1
+    cx, cy = x + size * 1.15, y + h / 2
+    return [rect(x, y, w, h, t["surface"], rx=h / 2, stroke=t["rule"]),
+            f'<circle class="pulse" cx="{cx:.1f}" cy="{cy:.1f}" r="{size * 0.32:g}" fill="{t["g3"]}"/>',
+            circle(cx, cy, size * 0.32, t["g3"]),
+            text(x + size * 2, cy + size * 0.36, label, size, t["fg"], mono=True, spacing=1.5)]
 
 
 # --------------------------------------------------------------------------- glyph family
@@ -296,6 +350,7 @@ def _domain_node(x: float, y: float, w: float, h: float, dom: str, label: str, c
                  label_size: float, caption_size: float, glyph_size: float) -> list[str]:
     col = domain_color(t, dom)
     out = [rect(x, y, w, h, t["surface"], rx=12, stroke=t["rule"]),
+           rect(x + 18, y - 0.5, 44, 2.5, col, rx=1.2),
            rect(x + 18, y + 18, glyph_size + 16, glyph_size + 16, domain_color(t, dom, soft=True), rx=9),
            *glyph(dom, x + 26, y + 26, glyph_size, col)]
     lx = x + 18 + glyph_size + 16 + 16
@@ -311,53 +366,52 @@ def render_hero(theme: str, mobile: bool = False) -> str:
     t = THEMES[theme]
     title = "Hilmi Salih Altınışık — Software Engineer & Product Builder"
     if not mobile:
-        w, h, m = DESKTOP_W, 440, 56
+        w, h, m = DESKTOP_W, 460, 56
         body = [rect(0.5, 0.5, w - 1, h - 1, "none", rx=18, stroke=t["rule"])]
-        body += monogram_mark(m, 48, 60, t)
-        body.append(text(m + 78, 86, "HILMI SALIH ALTINIŞIK", 21, t["muted"], mono=True, spacing=3))
-        body.append(text(m, 184, "Software Engineer", 60, t["fg"], weight="700", spacing=-1.5))
-        body.append(text(m, 246, "& Product Builder", 60, t["fg"], weight="700", spacing=-1.5))
-        pos = wrap(POSITIONING, 23, 560)
-        body += lines_block(m, 296, pos, 23, t["muted"], 32)
-        by = 296 + 32 * len(pos) + 18
-        body.append(rect(m, by - 6, 64, 4, t["accent"], rx=2))
-        body.append(text(m + 80, by + 1, "ARCHITECTURE → PRODUCT → LAUNCH", 19, t["fg"], mono=True, spacing=2))
+        body += monogram_mark(m, 52, 60, t)
+        body.append(text(m + 78, 90, "HILMI SALIH ALTINIŞIK", 21, t["muted"], mono=True, spacing=3))
+        body.append(text(m, 190, "Software Engineer", 62, t["fg"], weight="700", spacing=-1.8))
+        body.append(text(m, 256, "& Product Builder", 62, "url(#ac)", weight="700", spacing=-1.8))
+        pos = wrap(POSITIONING, 23, 540)
+        body += lines_block(m, 306, pos, 23, t["muted"], 32)
+        by = 306 + 32 * len(pos) + 14
+        body += status_pill(m, by, "OPEN TO SELECT PROJECTS", 16, t)
+        body.append(text(m + 330, by + 22, "ARCHITECTURE → PRODUCT → LAUNCH", 16, t["muted"], mono=True, spacing=2))
         # Product-domain map: one engineer (hub) connected to four operational domains.
-        gx, gy, nw, nh, gap = 676, 64, 224, 118, 22
-        hub = (gx + nw + gap / 2, gy + nh + gap + 15)
-        body.append(text(gx, gy - 18, "PRODUCT DOMAINS", 18, t["muted"], mono=True, spacing=3))
-        positions = [(gx, gy), (gx + nw + gap, gy), (gx, gy + nh + gap + 30), (gx + nw + gap, gy + nh + gap + 30)]
-        for (dom, label, caption), (nx, ny) in zip(HERO_DOMAINS, positions):
-            cx = nx + nw if nx == gx else nx
+        gx, gy, nw, nh, gx_gap, gy_gap = 640, 100, 244, 122, 24, 60
+        body.append(text(gx, gy - 30, "PRODUCT DOMAINS", 18, t["muted"], mono=True, spacing=3))
+        positions = [(gx, gy), (gx + nw + gx_gap, gy), (gx, gy + nh + gy_gap), (gx + nw + gx_gap, gy + nh + gy_gap)]
+        hub = (gx + nw + gx_gap / 2, gy + nh + gy_gap / 2)
+        for (nx, ny) in positions:
+            cx = nx + nw - 40 if nx == gx else nx + 40
             cy = ny + nh if ny == gy else ny
-            body.append(line(hub[0], hub[1], cx, cy, t["accent2"], 1.5))
+            body.append(flow_line(hub[0], hub[1], cx, cy, t["accent2"], 1.6))
         for (dom, label, caption), (nx, ny) in zip(HERO_DOMAINS, positions):
-            body += _domain_node(nx, ny, nw, nh, dom, label, caption, t, 22, 18, 26)
-        body += [circle(hub[0], hub[1], 22, t["accent"]), circle(hub[0], hub[1], 8, t["bg"])]
+            body += _domain_node(nx, ny, nw, nh, dom, label, caption, t, 21, 17, 26)
+        body += hub_mark(hub[0], hub[1], 13, t)
     else:
         w, m = MOBILE_W, 36
         body = []
         body += monogram_mark(m, 40, 68, t)
         body.append(text(m + 88, 84, "HILMI SALIH ALTINIŞIK", 22, t["muted"], mono=True, spacing=2.5))
         body.append(text(m, 188, "Software Engineer", 56, t["fg"], weight="700", spacing=-1.5))
-        body.append(text(m, 248, "& Product Builder", 56, t["fg"], weight="700", spacing=-1.5))
+        body.append(text(m, 248, "& Product Builder", 56, "url(#ac)", weight="700", spacing=-1.5))
         pos = wrap(POSITIONING, 27, w - 2 * m)
         body += lines_block(m, 302, pos, 27, t["muted"], 38)
-        by = 302 + 38 * len(pos) + 22
-        body.append(rect(m, by - 7, 56, 4, t["accent"], rx=2))
-        body.append(text(m + 72, by, "ARCHITECTURE → PRODUCT → LAUNCH", 21, t["fg"], mono=True, spacing=1.5))
-        gy = by + 60
-        body.append(text(m, gy - 18, "PRODUCT DOMAINS", 20, t["muted"], mono=True, spacing=3))
+        by = 302 + 38 * len(pos) + 6
+        body += status_pill(m, by, "OPEN TO SELECT PROJECTS", 19, t)
+        gy = by + 110
+        body.append(text(m, gy - 22, "PRODUCT DOMAINS", 20, t["muted"], mono=True, spacing=3))
         nw, nh, gap = (w - 2 * m - 40) / 2, 146, 40
         hub = (w / 2, gy + nh + gap / 2)
         positions = [(m, gy), (m + nw + gap, gy), (m, gy + nh + gap), (m + nw + gap, gy + nh + gap)]
-        for (dom, label, caption), (nx, ny) in zip(HERO_DOMAINS, positions):
+        for (nx, ny) in positions:
             cx = nx + nw if nx == m else nx
             cy = ny + nh if ny == gy else ny
-            body.append(line(hub[0], hub[1], cx, cy, t["accent2"], 1.5))
+            body.append(flow_line(hub[0], hub[1], cx, cy, t["accent2"], 1.6))
         for (dom, label, caption), (nx, ny) in zip(HERO_DOMAINS, positions):
             body += _domain_node(nx, ny, nw, nh, dom, label, caption, t, 24, 20, 28)
-        body += [circle(hub[0], hub[1], 17, t["accent"]), circle(hub[0], hub[1], 6, t["bg"])]
+        body += hub_mark(hub[0], hub[1], 12, t)
         h = int(gy + 2 * nh + gap + m)
         body.insert(0, rect(0.5, 0.5, w - 1, h - 1, "none", rx=18, stroke=t["rule"]))
     desc = (f"{'Mobile' if mobile else 'Desktop'} editorial hero: personal monogram, {POSITIONING} "
@@ -409,7 +463,7 @@ def render_proof(footprint: dict, theme: str, mobile: bool = False) -> str:
             body += card(x, y, cw, ch, t)
             body.append(rect(x + 20, y + 20, 44, 44, t["accent_soft"], rx=10))
             body += glyph(EVIDENCE_GLYPHS.get(mt.get("key", ""), "commits"), x + 28, y + 28, 28, t["accent"], t["accent_soft"])
-            body.append(text(x + 20, y + 112, format(int(mt["value"]), ","), 52, t["fg"], weight="700", spacing=-1.5))
+            body.append(text(x + 20, y + 112, format(int(mt["value"]), ","), 52, "url(#ac)", weight="700", spacing=-1.5))
             label_lines = wrap(mt["label"], 18, cw - 40, weight="600", max_lines=2)
             body += lines_block(x + 20, y + 139, label_lines, 18, t["fg"], 20, weight="600")
             note = mt.get("note", "")
@@ -431,7 +485,7 @@ def render_proof(footprint: dict, theme: str, mobile: bool = False) -> str:
             body += card(x, y, cell_w, ch, t)
             body.append(rect(x + 20, y + 20, 48, 48, t["accent_soft"], rx=10))
             body += glyph(EVIDENCE_GLYPHS.get(mt.get("key", ""), "commits"), x + 29, y + 29, 30, t["accent"], t["accent_soft"])
-            body.append(text(x + 20, y + 132, format(int(mt["value"]), ","), 56, t["fg"], weight="700", spacing=-1.5))
+            body.append(text(x + 20, y + 132, format(int(mt["value"]), ","), 56, "url(#ac)", weight="700", spacing=-1.5))
             label = str(mt.get("short_label") or mt["label"])
             label_lines = wrap(label, 22, cell_w - 40, weight="600", max_lines=2)
             body += lines_block(x + 20, y + 166, label_lines, 22, t["fg"], 23, weight="600")
@@ -478,12 +532,13 @@ def render_flagship(spec: dict, theme: str) -> str:
         body += _box(x3, y0 + i * (box_h + gap), col_w, box_h, label, t, size)
     core_h = 3 * box_h + 2 * gap
     body.append(rect(x2, y0, col_w, core_h, soft, rx=10))
-    body.append(rect(x2, y0, 6, core_h, col, rx=3))
+    body.append(rect(x2, y0, col_w, core_h, "none", rx=10, stroke=col, sw=1.2))
+    body.append(rect(x2, y0, 6, core_h, "url(#ac)", rx=3))
     for i, label in enumerate(spec["core"][:3]):
         body.append(text(x2 + 26, y0 + 42 + i * 66, label, size, t["fg"], weight="600"))
     mid = y0 + core_h / 2
-    body.append(line(x1 + col_w, mid, x2, mid, t["accent2"], 2))
-    body.append(line(x2 + col_w, mid, x3, mid, t["accent2"], 2))
+    body.append(flow_line(x1 + col_w, mid, x2, mid, col, 2))
+    body.append(flow_line(x2 + col_w, mid, x3, mid, col, 2))
     body.append(circle(x2, mid, 5, col))
     body.append(circle(x3, mid, 5, col))
     desc = (f"{spec['name']} system diagram. {spec['surfaces_title']}: {', '.join(spec['surfaces'])}. "
