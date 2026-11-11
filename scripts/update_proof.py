@@ -26,7 +26,31 @@ ROOT = Path(__file__).resolve().parents[1]
 UTC = dt.timezone.utc
 PAGE_SIZE = 100
 MAX_PAGES = 10000
-METRIC_KEYS = ("github_contributions", "commits_12m", "repos_contributed_12m", "owned_repos", "verified_collaborations")
+METRIC_KEYS = ("github_contributions", "commits_12m", "coding_hours_12m", "repos_contributed_12m", "verified_collaborations")
+
+# Coding-time estimate from commit timestamps (the widely used "git-hours" method):
+# commits less than SESSION_GAP apart belong to one working session and the real
+# gap between them is counted; every session also gets SESSION_LEAD for the work
+# done before its first commit. It is an estimate, labelled as such on the card.
+SESSION_GAP = dt.timedelta(hours=2)
+SESSION_LEAD = dt.timedelta(minutes=30)
+
+
+def estimate_coding_time(timestamps: list[dt.datetime]) -> tuple[int, int]:
+    """Return (whole hours, session count) for a set of commit times."""
+    times = sorted(timestamps)
+    if not times:
+        return 0, 0
+    total = SESSION_LEAD
+    sessions = 1
+    for prev, cur in zip(times, times[1:]):
+        gap = cur - prev
+        if gap < SESSION_GAP:
+            total += gap
+        else:
+            total += SESSION_LEAD
+            sessions += 1
+    return int(total.total_seconds() // 3600), sessions
 
 CONTRIBUTIONS_QUERY = """query($login:String!,$from:DateTime!,$to:DateTime!){
   viewer{login}
@@ -190,6 +214,7 @@ def measure(api: GhApi, end: dt.datetime, *, repos: list[dict] | None = None,
 
     owned = [r for r in by_id.values() if r["owner"]["login"].casefold() == OWNER.casefold()]
     sha_public: dict[str, bool] = {}
+    sha_time: dict[str, dt.datetime] = {}
     contributed_owned = 0
     contributed_partner = 0
     for repo in sorted(by_id.values(), key=lambda x: x["id"]):
@@ -220,6 +245,7 @@ def measure(api: GhApi, end: dt.datetime, *, repos: list[dict] | None = None,
             has_commit = True
             repo_shas.add(sha)
             sha_public[sha] = sha_public.get(sha, False) or not repo["private"]
+            sha_time.setdefault(sha, parse_time(timestamp))
 
         pulls = api.pages(f"repos/{full}/pulls?state=all&sort=created&direction=desc")
         has_pr = False
@@ -241,6 +267,7 @@ def measure(api: GhApi, end: dt.datetime, *, repos: list[dict] | None = None,
                 contributed_partner += 1
 
     public = sum(sha_public.values())
+    hours, sessions = estimate_coding_time(list(sha_time.values()))
     result = {
         "measured_on": end.date().isoformat(),
         "measured_at_utc": iso(end),
@@ -251,6 +278,7 @@ def measure(api: GhApi, end: dt.datetime, *, repos: list[dict] | None = None,
         },
         "scope": "Repositories visible to the authenticated owner; default-branch commits",
         "commits_12m": len(sha_public), "public": public, "private": len(sha_public) - public,
+        "coding_hours_12m": hours, "coding_sessions_12m": sessions,
         "repos_contributed_12m": contributed_owned + contributed_partner,
         "repos_contributed_owned": contributed_owned,
         "repos_contributed_collab": contributed_partner,
@@ -266,8 +294,8 @@ def metric_values(result: dict) -> dict[str, tuple[int, str]]:
     return {
         "github_contributions": (result["github_contributions"], f"Jan–Dec {result['contribution_window']['year']}"),
         "commits_12m": (result["commits_12m"], f"365d · {result['public']} public"),
+        "coding_hours_12m": (result["coding_hours_12m"], f"est. · {result['coding_sessions_12m']:,} sessions"),
         "repos_contributed_12m": (result["repos_contributed_12m"], f"{result['repos_contributed_owned']} owned · {result['repos_contributed_collab']} partner"),
-        "owned_repos": (result["owned_repos"], f"{result['owned_public']} public · {result['owned_private']} priv."),
         "verified_collaborations": (result["verified_collaborations"], "12m · commit/PR proof"),
     }
 
@@ -304,6 +332,9 @@ def prepare(old: dict, result: dict, readme: str, *, languages: list[dict] | Non
         if key == "github_contributions":
             metric["label"] = f"{result['contribution_window']['year']} GitHub contributions"
             metric["short_label"] = metric["label"]
+        if key == "coding_hours_12m":
+            metric["label"] = "Coding hours (est.)"
+            metric["short_label"] = "Coding hours"
         metric["value"], metric["note"] = values[key]
         footprint["metrics"].append(metric)
 
@@ -321,6 +352,10 @@ def prepare(old: dict, result: dict, readme: str, *, languages: list[dict] | Non
               f"- **{a['commits_12m']:,} commits authored in the last 365 days** — {a['public']:,} public and {a['private']:,} private. "
               "GitHub-linked author login on accessible repositories' default branches; each SHA counted once across repositories. "
               "This authored-commit measure has a different time window and eligibility rules from the contribution graph.\n"
+              f"- **{a['coding_hours_12m']:,} estimated coding hours in the last 365 days** — derived from the timestamps of the authored commits above "
+              f"({a['coding_sessions_12m']:,} working sessions). Commits less than 2 hours apart are one session and the time between them is counted; "
+              "each session adds 30 minutes for work before its first commit. Time without commits (reading, design, meetings) is not counted, "
+              "so this is an estimate, not a timesheet.\n"
               f"- **{a['repos_contributed_12m']:,} repositories contributed to** — {a['repos_contributed_owned']:,} owned and {a['repos_contributed_collab']:,} partner-owned. "
               "A qualifying authored default-branch commit or authored pull request in the period is required.\n"
               f"- **{a['owned_repos']:,} owned repositories** — {a['owned_public']:,} public and {a['owned_private']:,} private, "
