@@ -166,18 +166,18 @@ class GhApi:
 
 
 def measure_calendar(api: GhApi, end: dt.datetime) -> dict:
-    """Use the exact calendar-year range shown by GitHub's year graph."""
-    end = end.astimezone(UTC)
+    """Rolling last-year window: the same "N contributions in the last year" GitHub shows on the profile."""
+    end = end.astimezone(UTC).replace(microsecond=0)
+    start = end - dt.timedelta(days=365)
     year = end.year
-    start_utc = f"{year}-01-01T00:00:00Z"
-    end_utc = f"{year}-12-31T23:59:59Z"
+    start_utc, end_utc = iso(start), iso(end)
     data = api.graphql(CONTRIBUTIONS_QUERY, {"login": OWNER, "from": start_utc, "to": end_utc})
     if not isinstance(data.get("viewer"), dict) or (data["viewer"].get("login") or "").casefold() != OWNER.casefold():
         raise MeasurementError("Contribution viewer is not the profile owner; profile preserved")
     user = data.get("user")
     collection = user.get("contributionsCollection") if isinstance(user, dict) else None
-    if not isinstance(collection, dict) or collection.get("startedAt") != start_utc or collection.get("endedAt") != end_utc:
-        raise MeasurementError("Contribution period differs from the requested calendar year; profile preserved")
+    if not isinstance(collection, dict) or not collection.get("startedAt") or not collection.get("endedAt"):
+        raise MeasurementError("Contribution period is missing; profile preserved")
     calendar = collection.get("contributionCalendar")
     total = calendar.get("totalContributions") if isinstance(calendar, dict) else None
     restricted = collection.get("restrictedContributionsCount")
@@ -186,7 +186,7 @@ def measure_calendar(api: GhApi, end: dt.datetime) -> dict:
             or restricted > total or commit_contributions > total):
         raise MeasurementError("Contribution totals are incomplete; profile preserved")
     return {
-        "contribution_window": {"year": year, "from": f"{year}-01-01", "to": f"{year}-12-31",
+        "contribution_window": {"year": year, "rolling": True, "from": start.date().isoformat(), "to": end.date().isoformat(),
                                 "start_utc": start_utc, "end_utc": end_utc},
         "github_contributions": total,
         "restricted_contributions": restricted,
@@ -292,7 +292,7 @@ def measure(api: GhApi, end: dt.datetime, *, repos: list[dict] | None = None,
 
 def metric_values(result: dict) -> dict[str, tuple[int, str]]:
     return {
-        "github_contributions": (result["github_contributions"], f"Jan–Dec {result['contribution_window']['year']}"),
+        "github_contributions": (result["github_contributions"], "Same as profile graph"),
         "commits_12m": (result["commits_12m"], f"365d · {result['public']} public"),
         "coding_hours_12m": (result["coding_hours_12m"], f"est. · {result['coding_sessions_12m']:,} sessions"),
         "repos_contributed_12m": (result["repos_contributed_12m"], f"{result['repos_contributed_owned']} owned · {result['repos_contributed_collab']} partner"),
@@ -314,7 +314,7 @@ def prepare(old: dict, result: dict, readme: str, *, languages: list[dict] | Non
         return old, readme, {}, False
 
     footprint = copy.deepcopy(old)
-    footprint["$comment"] = "GitHub contribution calendar uses a UTC calendar year. Other activity uses token-visible repositories in rolling UTC 365-day window [start_utc,end_utc). GitHub-linked author on default-branch commits; globally unique SHA. Profile repository excluded from activity; owned count includes it. Partner evidence is authored commit or PR. No private names stored."
+    footprint["$comment"] = "GitHub contributions use the rolling last-year window shown on the profile graph. Other activity uses token-visible repositories in rolling UTC 365-day window [start_utc,end_utc). GitHub-linked author on default-branch commits; globally unique SHA. Profile repository excluded from activity; owned count includes it. Partner evidence is authored commit or PR. No private names stored."
     footprint["measured_on"] = result["measured_on"]
     footprint["measured_at_utc"] = result["measured_at_utc"]
     footprint["window"] = result["window"]
@@ -330,8 +330,8 @@ def prepare(old: dict, result: dict, readme: str, *, languages: list[dict] | Non
         metric = copy.deepcopy(existing_metrics.get(key, {}))
         metric["key"] = key
         if key == "github_contributions":
-            metric["label"] = f"{result['contribution_window']['year']} GitHub contributions"
-            metric["short_label"] = metric["label"]
+            metric["label"] = "Contributions in the last year"
+            metric["short_label"] = "Contributions (1y)"
         if key == "coding_hours_12m":
             metric["label"] = "Coding hours (est.)"
             metric["short_label"] = "Coding hours"
@@ -341,14 +341,13 @@ def prepare(old: dict, result: dict, readme: str, *, languages: list[dict] | Non
     a = result
     languages = ", ".join(f"{item['name']} {item['share']:.1f} %" for item in footprint["languages"])
     year = a["contribution_window"]["year"]
-    graph_url = f"https://github.com/{OWNER}?from={year}-01-01&to={year}-12-31"
     detail = ("<details>\n<summary>How these numbers are measured</summary>\n\n<br>\n\n"
-              f"- **{a['github_contributions']:,} GitHub contributions in {year}** — The GitHub GraphQL "
-              "`contributionsCollection` calendar `totalContributions` for the full UTC calendar year "
+              f"- **{a['github_contributions']:,} GitHub contributions in the last year** — the same number GitHub shows above the profile graph: GraphQL "
+              "`contributionsCollection` calendar `totalContributions` for the rolling last-year window "
               f"[{a['contribution_window']['start_utc']}, {a['contribution_window']['end_utc']}]. "
               f"GitHub reports {a['restricted_contributions']:,} restricted contributions in this collection; "
               "their repository identities are not published here. This total follows GitHub's contribution rules and is not a commit count. "
-              f"[View the {year} graph]({graph_url}).\n"
+              f"[View the graph](https://github.com/{OWNER}).\n"
               f"- **{a['commits_12m']:,} commits authored in the last 365 days** — {a['public']:,} public and {a['private']:,} private. "
               "GitHub-linked author login on accessible repositories' default branches; each SHA counted once across repositories. "
               "This authored-commit measure has a different time window and eligibility rules from the contribution graph.\n"
@@ -366,8 +365,7 @@ def prepare(old: dict, result: dict, readme: str, *, languages: list[dict] | Non
               f"Last published successful measurement: {a['measured_at_utc']}. Access scope: repositories visible to the owner's credential. "
               "The profile repository is excluded from activity counts so automated card commits cannot raise them. "
               "Hourly runs are not instant synchronization. If values have not changed, the last published successful time stays visible and no commit is made; newer successful no-op runs appear in Actions history.\n"
-              f"- The year shown on this card is {year}. Profile URL `from`/`to` filters are not passed into README images; "
-              "the workflow explicitly requests the calendar-year range above. Private contribution visibility and credential access can change which contributions GitHub returns.\n"
+              "- Private contribution visibility and credential access can change which contributions GitHub returns.\n"
               f"- **Code by language** across token-visible owned repositories: {languages}. GitHub language bytes measured with the same credential on {a['measured_on']}.\n\n"
               "</details>")
     marked = re.compile(r"<!-- PROOF:START -->.*?<!-- PROOF:END -->", re.S)
@@ -379,7 +377,7 @@ def prepare(old: dict, result: dict, readme: str, *, languages: list[dict] | Non
     if len(block.findall(section)) != 1:
         raise MeasurementError("README measurement explanation markers are missing")
     section = block.sub(detail, section)
-    alt = (f"Verified engineering footprint: {a['github_contributions']:,} GitHub contributions in {year} (calendar year), "
+    alt = (f"Verified engineering footprint: {a['github_contributions']:,} GitHub contributions in the last year, "
            f"{a['commits_12m']:,} commits authored in the last 365 days, "
            f"{a['repos_contributed_12m']:,} repositories contributed to, {a['owned_repos']:,} owned repositories, "
            f"{a['verified_collaborations']:,} verified collaborations; last published successful measurement {a['measured_at_utc']}")
