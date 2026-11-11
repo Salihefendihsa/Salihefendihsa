@@ -311,7 +311,7 @@ def metric_values(result: dict) -> dict[str, tuple[int, str]]:
                                  f"{result['contribution_window']['year']}: {result['github_contributions_year']:,}" if "github_contributions_year" in result else "Same as profile graph"),
         "commits_12m": (result["commits_12m"], f"365d · {result['public']} public"),
         "coding_hours_12m": (result["coding_hours_12m"], f"est. · {result['coding_sessions_12m']:,} sessions"),
-        "owned_repos": (result["owned_repos"], f"{result['owned_public']} public · {result['owned_private']} private"),
+        "owned_repos": (result["owned_repos"], f"{result['owned_public']} public · {result['owned_private']} priv."),
         "verified_collaborations": (result["verified_collaborations"], "12m · commit/PR proof"),
     }
 
