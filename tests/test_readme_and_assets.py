@@ -117,7 +117,8 @@ class ReadmeTests(unittest.TestCase):
             self.assertIsNone(re.search(pattern, self.readme), pattern)
 
     def test_every_relative_asset_exists_with_exact_case(self):
-        refs = set(re.findall(r'(?:src|srcset)="([^"]+)"', self.readme))
+        # External images are limited to shields.io badges; everything else must be a committed asset.
+        refs = {r for r in re.findall(r'(?:src|srcset)="([^"]+)"', self.readme) if not r.startswith("https://img.shields.io/")}
         self.assertTrue(refs)
         for ref in refs:
             self.assertFalse(ref.startswith(("http://", "https://")), ref)
@@ -226,7 +227,9 @@ class AssetTests(unittest.TestCase):
             self.assertTrue(root.find(f"{SVG_NS}title").text.strip(), name)
             self.assertEqual(root.get("role"), "img")
             low = svg.lower()
-            for banned in ("<script", "http://", "https://", "@import", "url(", "<filter", "<animate", "<image", "<foreignobject", "onload"):
+            # Only internal paint servers may be referenced: url(#id).
+            self.assertEqual(low.count("url("), low.count("url(#"), name)
+            for banned in ("<script", "http://", "https://", "@import", "<filter", "<animate", "<image", "<foreignobject", "onload"):
                 if banned == "http://":
                     self.assertEqual(low.count("http://"), low.count("http://www.w3.org/2000/svg"), name)
                     continue
@@ -237,7 +240,7 @@ class AssetTests(unittest.TestCase):
             if name.endswith("-light.svg"):
                 light = ET.fromstring(read(os.path.join(self.dir, name)))
                 dark = ET.fromstring(read(os.path.join(self.dir, name.replace("-light", "-dark"))))
-                geo = lambda root: [(el.tag, {k: v for k, v in el.attrib.items() if k not in ("fill", "stroke")}, (el.text or "").strip())
+                geo = lambda root: [(el.tag, {k: v for k, v in el.attrib.items() if k not in ("fill", "stroke", "stop-color")}, (el.text or "").strip())
                                     for el in root.iter()]
                 self.assertEqual(geo(light), geo(dark), name)
                 self.assertEqual(light.get("viewBox"), dark.get("viewBox"))
@@ -285,7 +288,7 @@ class AssetTests(unittest.TestCase):
 
     def test_broken_relative_asset_is_detected(self):
         readme = read(README_PATH) + ' src="assets/v5/missing-desktop-light.svg"'
-        refs = set(re.findall(r'(?:src|srcset)="([^"]+)"', readme))
+        refs = {r for r in re.findall(r'(?:src|srcset)="([^"]+)"', readme) if not r.startswith("https://img.shields.io/")}
         missing = [r for r in refs if not os.path.isfile(os.path.join(ROOT, *r.split("/")))]
         self.assertEqual(missing, ["assets/v5/missing-desktop-light.svg"])
 
