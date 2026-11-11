@@ -1,18 +1,18 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="720" height="1146" viewBox="0 0 720 1146" role="img" aria-labelledby="t d">
   <title id="t">SaaS products — Nilüfer İlaçlama, Barkod Sistemi, Calvelia, Kuyumcu Takip, Kalemlik, Kasabil</title>
   <desc id="d">SaaS products: Nilüfer İlaçlama — Field-service ops: Customers, crews, contracts and payments for a pest-control company. (Live Site); Barkod Sistemi — Retail stock &amp; POS: Barcode-driven stock, sales and till for retail shops. (Pilot); Calvelia — AI wardrobe: A digital wardrobe that suggests daily outfits from your own clothes. (Invite Pilot); Kuyumcu Takip — Jeweller operations: Live gold prices, stock and sales in one screen for jewellers. (In Build); Kalemlik — Stationery retail: Stock, barcode sales and customer accounts for stationery shops. (Pilot Shop); Kasabil — Restaurant POS: QR menu, orders, kitchen screen and till for restaurants and cafés. (In Build)</desc>
-  <style>@keyframes rise{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}@keyframes draw{from{stroke-dashoffset:1200}to{stroke-dashoffset:0}}.rise{opacity:0;animation:rise .7s cubic-bezier(.2,.7,.2,1) forwards}.draw{stroke-dasharray:1200;animation:draw 1.6s ease-out .5s both}.fade{opacity:0;animation:rise 1s ease-out forwards}.trace{stroke-dasharray:100;animation:trace 1.4s ease-out .35s both}@keyframes trace{from{stroke-dashoffset:100}to{stroke-dashoffset:0}}@media (prefers-reduced-motion:reduce){.rise,.fade{opacity:1;animation:none}.draw,.trace{animation:none;stroke-dasharray:none}}</style>
+  <style>@keyframes rise{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}@keyframes draw{from{stroke-dashoffset:1200}to{stroke-dashoffset:0}}.rise{opacity:0;animation:rise .7s cubic-bezier(.2,.7,.2,1) forwards}.draw{stroke-dasharray:1200;animation:draw 1.6s ease-out .5s both}.fade{opacity:0;animation:rise 1s ease-out forwards}.trace{stroke-dasharray:100;animation:trace 1.4s ease-out .35s both}@keyframes trace{from{stroke-dashoffset:100}to{stroke-dashoffset:0}}@keyframes flow{to{stroke-dashoffset:-24}}@keyframes spin{to{transform:rotate(360deg)}}@keyframes breathe{from{opacity:.35}to{opacity:1}}@keyframes ping{from{transform:scale(1);opacity:.5}to{transform:scale(2.2);opacity:0}}@keyframes travel{from{transform:translate(0,0)}to{transform:translate(var(--dx,0px),var(--dy,0px))}}.flow{stroke-dasharray:6 6;animation:flow 1.8s linear infinite}.spin{transform-box:view-box;animation:spin 18s linear infinite}.breathe{animation:breathe 2.8s ease-in-out infinite alternate}.ping{transform-box:fill-box;transform-origin:center;animation:ping 2.6s ease-out infinite}.travel{animation:travel 7s ease-in-out infinite alternate}@media (prefers-reduced-motion:reduce){.rise,.fade{opacity:1;animation:none}.draw,.trace,.flow,.spin,.breathe,.ping,.travel{animation:none}.draw,.trace{stroke-dasharray:none}}</style>
   <rect x="0.0" y="0.0" width="720.0" height="1146.0" fill="#F6F4EF"/>
   <rect x="0.5" y="0.5" width="719.0" height="1145.0" fill="none" rx="18" stroke="#D8DAE0" stroke-width="1"/>
   <g class="rise" style="animation-delay:0.08s">
   <rect x="28.0" y="28.0" width="322.0" height="350.0" fill="#FFFFFF" rx="16" stroke="#D8DAE0" stroke-width="1"/>
   <rect x="54.0" y="54.0" width="64.0" height="64.0" fill="#DFF0EC" rx="19.2"/>
-  <path class="trace" d="M73.2 54.0 H98.8" fill="none" stroke="#1F7A6D" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" pathLength="100"/>
+  <rect class="breathe" x="73.2" y="52.5" width="25.6" height="3.0" fill="#1F7A6D" rx="1.5"/>
   <path class="trace" d="M86.0 72.56 A13.4 13.4 0 1 1 85.85066666666667 72.56" fill="none" stroke="#1F7A6D" stroke-width="2.38933" stroke-linecap="round" stroke-linejoin="round" pathLength="100"/>
   <path class="trace" d="M86.0 80.02666666666667 A6.0 6.0 0 1 1 85.85066666666667 80.02666666666667" fill="none" stroke="#1F7A6D" stroke-width="2.38933" stroke-linecap="round" stroke-linejoin="round" pathLength="100"/>
   <path class="trace" d="M86.0 68.82666666666667 V75.54666666666667 M86.0 96.45333333333333 V103.17333333333333 M68.82666666666667 86.0 H75.54666666666667 M96.45333333333333 86.0 H103.17333333333333" fill="none" stroke="#1F7A6D" stroke-width="2.38933" stroke-linecap="round" stroke-linejoin="round" pathLength="100"/>
   <rect x="182.9" y="58.0" width="143.1" height="32.3" fill="#DFF0EC" rx="16.15"/>
-  <circle cx="199.1" cy="74.2" r="4.08" fill="#1F7A6D"/>
+  <circle class="breathe" cx="199.1" cy="74.2" r="4.08" fill="#1F7A6D"/>
   <text x="212" y="80" font-family="Consolas, 'SFMono-Regular', Menlo, monospace" font-size="17" fill="#1F7A6D" letter-spacing="1.2">LIVE SITE</text>
   <text x="54" y="152" font-family="Consolas, 'SFMono-Regular', Menlo, monospace" font-size="19" fill="#1F7A6D" letter-spacing="2">FIELD-SERVICE OPS</text>
   <text x="54" y="196" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="30" fill="#16181D" font-weight="700" letter-spacing="-0.6">Nilüfer İlaçlama</text>
@@ -24,10 +24,10 @@
   <g class="rise" style="animation-delay:0.20s">
   <rect x="370.0" y="28.0" width="322.0" height="350.0" fill="#FFFFFF" rx="16" stroke="#D8DAE0" stroke-width="1"/>
   <rect x="396.0" y="54.0" width="64.0" height="64.0" fill="#E4E8F8" rx="19.2"/>
-  <path class="trace" d="M415.2 54.0 H440.8" fill="none" stroke="#2F4BC7" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" pathLength="100"/>
+  <rect class="breathe" x="415.2" y="52.5" width="25.6" height="3.0" fill="#2F4BC7" rx="1.5"/>
   <path class="trace" d="M414.56 74.05333333333333 V97.94666666666666 M418.2933333333333 74.05333333333333 V97.94666666666666 M423.52 74.05333333333333 V97.94666666666666 M426.50666666666666 74.05333333333333 V97.94666666666666 M431.73333333333335 74.05333333333333 V97.94666666666666 M435.46666666666664 74.05333333333333 V97.94666666666666 M437.70666666666665 74.05333333333333 V97.94666666666666 M441.44 74.05333333333333 V97.94666666666666" fill="none" stroke="#2F4BC7" stroke-width="2.38933" stroke-linecap="round" stroke-linejoin="round" pathLength="100"/>
   <rect x="571.9" y="58.0" width="96.1" height="32.3" fill="#E4E8F8" rx="16.15"/>
-  <circle cx="588.0" cy="74.2" r="4.08" fill="#2F4BC7"/>
+  <circle class="breathe" cx="588.0" cy="74.2" r="4.08" fill="#2F4BC7"/>
   <text x="601" y="80" font-family="Consolas, 'SFMono-Regular', Menlo, monospace" font-size="17" fill="#2F4BC7" letter-spacing="1.2">PILOT</text>
   <text x="396" y="152" font-family="Consolas, 'SFMono-Regular', Menlo, monospace" font-size="19" fill="#2F4BC7" letter-spacing="2">RETAIL STOCK &amp; POS</text>
   <text x="396" y="196" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="34" fill="#16181D" font-weight="700" letter-spacing="-0.6">Barkod Sistemi</text>
@@ -38,10 +38,10 @@
   <g class="rise" style="animation-delay:0.32s">
   <rect x="28.0" y="398.0" width="322.0" height="350.0" fill="#FFFFFF" rx="16" stroke="#D8DAE0" stroke-width="1"/>
   <rect x="54.0" y="424.0" width="64.0" height="64.0" fill="#ECE6F8" rx="19.2"/>
-  <path class="trace" d="M73.2 424.0 H98.8" fill="none" stroke="#6B4FB8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" pathLength="100"/>
+  <rect class="breathe" x="73.2" y="422.5" width="25.6" height="3.0" fill="#6B4FB8" rx="1.5"/>
   <path class="trace" d="M86.0 451.52 V449.28 A3.7 3.7 0 1 1 89.73333333333333 445.5466666666666 M86.0 451.52 L71.81333333333333 463.46666666666664 H100.18666666666667 Z" fill="none" stroke="#6B4FB8" stroke-width="2.38933" stroke-linecap="round" stroke-linejoin="round" pathLength="100"/>
   <rect x="147.7" y="428.0" width="178.3" height="32.3" fill="#ECE6F8" rx="16.15"/>
-  <circle cx="163.9" cy="444.1" r="4.08" fill="#6B4FB8"/>
+  <circle class="breathe" cx="163.9" cy="444.1" r="4.08" fill="#6B4FB8"/>
   <text x="177" y="450" font-family="Consolas, 'SFMono-Regular', Menlo, monospace" font-size="17" fill="#6B4FB8" letter-spacing="1.2">INVITE PILOT</text>
   <text x="54" y="522" font-family="Consolas, 'SFMono-Regular', Menlo, monospace" font-size="19" fill="#6B4FB8" letter-spacing="2">AI WARDROBE</text>
   <text x="54" y="566" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="36" fill="#16181D" font-weight="700" letter-spacing="-0.6">Calvelia</text>
@@ -53,10 +53,10 @@
   <g class="rise" style="animation-delay:0.44s">
   <rect x="370.0" y="398.0" width="322.0" height="350.0" fill="#FFFFFF" rx="16" stroke="#D8DAE0" stroke-width="1"/>
   <rect x="396.0" y="424.0" width="64.0" height="64.0" fill="#F6EBDC" rx="19.2"/>
-  <path class="trace" d="M415.2 424.0 H440.8" fill="none" stroke="#A3651F" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" pathLength="100"/>
+  <rect class="breathe" x="415.2" y="422.5" width="25.6" height="3.0" fill="#A3651F" rx="1.5"/>
   <path class="trace" d="M419.03999999999996 444.05333333333334 H436.96 L442.93333333333334 451.52 L428.0 469.44 L413.06666666666666 451.52 Z M413.06666666666666 451.52 H442.93333333333334 M423.52 444.05333333333334 L428.0 451.52 L432.47999999999996 444.05333333333334 M428.0 451.52 V469.44" fill="none" stroke="#A3651F" stroke-width="2.38933" stroke-linecap="round" stroke-linejoin="round" pathLength="100"/>
   <rect x="536.7" y="428.0" width="131.3" height="32.3" fill="#F6EBDC" rx="16.15"/>
-  <circle cx="552.8" cy="444.1" r="4.08" fill="#A3651F"/>
+  <circle class="breathe" cx="552.8" cy="444.1" r="4.08" fill="#A3651F"/>
   <text x="566" y="450" font-family="Consolas, 'SFMono-Regular', Menlo, monospace" font-size="17" fill="#A3651F" letter-spacing="1.2">IN BUILD</text>
   <text x="396" y="522" font-family="Consolas, 'SFMono-Regular', Menlo, monospace" font-size="19" fill="#A3651F" letter-spacing="2">JEWELLER OPERATIONS</text>
   <text x="396" y="566" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="36" fill="#16181D" font-weight="700" letter-spacing="-0.6">Kuyumcu Takip</text>
@@ -67,10 +67,10 @@
   <g class="rise" style="animation-delay:0.56s">
   <rect x="28.0" y="768.0" width="322.0" height="350.0" fill="#FFFFFF" rx="16" stroke="#D8DAE0" stroke-width="1"/>
   <rect x="54.0" y="794.0" width="64.0" height="64.0" fill="#DFF0EC" rx="19.2"/>
-  <path class="trace" d="M73.2 794.0 H98.8" fill="none" stroke="#1F7A6D" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" pathLength="100"/>
+  <rect class="breathe" x="73.2" y="792.5" width="25.6" height="3.0" fill="#1F7A6D" rx="1.5"/>
   <path class="trace" d="M74.05333333333333 837.9466666666667 L75.54666666666667 830.48 L91.97333333333333 814.0533333333334 L97.94666666666666 820.0266666666668 L81.52 836.4533333333334 Z M88.24 817.7866666666667 L94.21333333333334 823.76" fill="none" stroke="#1F7A6D" stroke-width="2.38933" stroke-linecap="round" stroke-linejoin="round" pathLength="100"/>
   <rect x="171.2" y="798.0" width="154.8" height="32.3" fill="#DFF0EC" rx="16.15"/>
-  <circle cx="187.3" cy="814.1" r="4.08" fill="#1F7A6D"/>
+  <circle class="breathe" cx="187.3" cy="814.1" r="4.08" fill="#1F7A6D"/>
   <text x="200" y="820" font-family="Consolas, 'SFMono-Regular', Menlo, monospace" font-size="17" fill="#1F7A6D" letter-spacing="1.2">PILOT SHOP</text>
   <text x="54" y="892" font-family="Consolas, 'SFMono-Regular', Menlo, monospace" font-size="19" fill="#1F7A6D" letter-spacing="2">STATIONERY RETAIL</text>
   <text x="54" y="936" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="36" fill="#16181D" font-weight="700" letter-spacing="-0.6">Kalemlik</text>
@@ -81,10 +81,10 @@
   <g class="rise" style="animation-delay:0.68s">
   <rect x="370.0" y="768.0" width="322.0" height="350.0" fill="#FFFFFF" rx="16" stroke="#D8DAE0" stroke-width="1"/>
   <rect x="396.0" y="794.0" width="64.0" height="64.0" fill="#F6EBDC" rx="19.2"/>
-  <path class="trace" d="M415.2 794.0 H440.8" fill="none" stroke="#A3651F" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" pathLength="100"/>
+  <rect class="breathe" x="415.2" y="792.5" width="25.6" height="3.0" fill="#A3651F" rx="1.5"/>
   <path class="trace" d="M417.5466666666666 812.5600000000001 H438.4533333333333 V839.44 L435.01866666666666 836.4533333333334 L431.43466666666666 839.44 L428.0 836.4533333333334 L424.56533333333334 839.44 L420.98133333333334 836.4533333333334 L417.5466666666666 839.44 Z M422.7733333333333 820.0266666666668 H433.22666666666663 M422.7733333333333 826.0 H433.22666666666663 M422.7733333333333 831.9733333333334 H428.74666666666667" fill="none" stroke="#A3651F" stroke-width="2.38933" stroke-linecap="round" stroke-linejoin="round" pathLength="100"/>
   <rect x="536.7" y="798.0" width="131.3" height="32.3" fill="#F6EBDC" rx="16.15"/>
-  <circle cx="552.8" cy="814.1" r="4.08" fill="#A3651F"/>
+  <circle class="breathe" cx="552.8" cy="814.1" r="4.08" fill="#A3651F"/>
   <text x="566" y="820" font-family="Consolas, 'SFMono-Regular', Menlo, monospace" font-size="17" fill="#A3651F" letter-spacing="1.2">IN BUILD</text>
   <text x="396" y="892" font-family="Consolas, 'SFMono-Regular', Menlo, monospace" font-size="19" fill="#A3651F" letter-spacing="2">RESTAURANT POS</text>
   <text x="396" y="936" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="36" fill="#16181D" font-weight="700" letter-spacing="-0.6">Kasabil</text>

@@ -1,12 +1,12 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="720" height="2082" viewBox="0 0 720 2082" role="img" aria-labelledby="t d">
   <title id="t">Selected product ecosystem — Instagram AI Manager, Finans Pro, Tatlı Durağı POS &amp; QR Ordering, AuraProject, Nalbur Stok, Optivark</title>
   <desc id="d">Product board: Instagram AI Manager (AI operations) — Approval-first Instagram operations platform for professional accounts. In active development, Private, Lead engineer; Finans Pro (Finance) — Personal finance and investment tracking with OCR and FIFO profit. In development, Private, Solo engineer; Tatlı Durağı POS &amp; QR Ordering (Hospitality) — QR table ordering with a realtime, role-based admin POS. Delivered, Client system · private, Solo engineer; AuraProject (AI · Vision) — Outfit recommendation from visual analysis and style rules. Experimental, Public service · private core, Lead engineer; Nalbur Stok (Retail operations) — Inventory management for hardware stores with virtualised 100K-row product tables. Maintained, Private, Solo engineer; Optivark (Studio) — Studio site for logistics, production and field-team software. In development, Private, Solo engineer</desc>
-  <style>@keyframes rise{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}@keyframes draw{from{stroke-dashoffset:1200}to{stroke-dashoffset:0}}.rise{opacity:0;animation:rise .7s cubic-bezier(.2,.7,.2,1) forwards}.draw{stroke-dasharray:1200;animation:draw 1.6s ease-out .5s both}.fade{opacity:0;animation:rise 1s ease-out forwards}.trace{stroke-dasharray:100;animation:trace 1.4s ease-out .35s both}@keyframes trace{from{stroke-dashoffset:100}to{stroke-dashoffset:0}}@media (prefers-reduced-motion:reduce){.rise,.fade{opacity:1;animation:none}.draw,.trace{animation:none;stroke-dasharray:none}}</style>
+  <style>@keyframes rise{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}@keyframes draw{from{stroke-dashoffset:1200}to{stroke-dashoffset:0}}.rise{opacity:0;animation:rise .7s cubic-bezier(.2,.7,.2,1) forwards}.draw{stroke-dasharray:1200;animation:draw 1.6s ease-out .5s both}.fade{opacity:0;animation:rise 1s ease-out forwards}.trace{stroke-dasharray:100;animation:trace 1.4s ease-out .35s both}@keyframes trace{from{stroke-dashoffset:100}to{stroke-dashoffset:0}}@keyframes flow{to{stroke-dashoffset:-24}}@keyframes spin{to{transform:rotate(360deg)}}@keyframes breathe{from{opacity:.35}to{opacity:1}}@keyframes ping{from{transform:scale(1);opacity:.5}to{transform:scale(2.2);opacity:0}}@keyframes travel{from{transform:translate(0,0)}to{transform:translate(var(--dx,0px),var(--dy,0px))}}.flow{stroke-dasharray:6 6;animation:flow 1.8s linear infinite}.spin{transform-box:view-box;animation:spin 18s linear infinite}.breathe{animation:breathe 2.8s ease-in-out infinite alternate}.ping{transform-box:fill-box;transform-origin:center;animation:ping 2.6s ease-out infinite}.travel{animation:travel 7s ease-in-out infinite alternate}@media (prefers-reduced-motion:reduce){.rise,.fade{opacity:1;animation:none}.draw,.trace,.flow,.spin,.breathe,.ping,.travel{animation:none}.draw,.trace{stroke-dasharray:none}}</style>
   <rect x="0.0" y="0.0" width="720.0" height="2082.0" fill="#101216"/>
   <rect x="0.5" y="0.5" width="719.0" height="2081.0" fill="none" rx="18" stroke="#2C3039" stroke-width="1"/>
   <g class="rise" style="animation-delay:0.08s">
   <rect x="32.0" y="32.0" width="656.0" height="318.0" fill="#181B21" rx="14" stroke="#2C3039" stroke-width="1"/>
-  <rect x="32.0" y="54.0" width="5.0" height="274.0" fill="#A98BE8" rx="2.5"/>
+  <rect class="breathe" x="32.0" y="54.0" width="5.0" height="274.0" fill="#A98BE8" rx="2.5"/>
   <rect x="62.0" y="58.0" width="56.0" height="56.0" fill="#26203A" rx="11"/>
   <path d="M77.25 87.41666666666667 V95.91666666666667 H102.75 V87.41666666666667 M77.25 87.41666666666667 L81.5 77.5 H98.5 L102.75 87.41666666666667 H94.25 L91.41666666666667 91.66666666666667 H88.58333333333333 L85.75 87.41666666666667 Z" fill="none" stroke="#A98BE8" stroke-width="2.83333" stroke-linecap="round" stroke-linejoin="round"/>
   <circle cx="99.9" cy="77.5" r="5.95" fill="#26203A" stroke="#A98BE8" stroke-width="2.83333"/>
@@ -21,7 +21,7 @@
   </g>
   <g class="rise" style="animation-delay:0.20s">
   <rect x="32.0" y="372.0" width="656.0" height="318.0" fill="#181B21" rx="14" stroke="#2C3039" stroke-width="1"/>
-  <rect x="32.0" y="394.0" width="5.0" height="274.0" fill="#E0A45A" rx="2.5"/>
+  <rect class="breathe" x="32.0" y="394.0" width="5.0" height="274.0" fill="#E0A45A" rx="2.5"/>
   <rect x="62.0" y="398.0" width="56.0" height="56.0" fill="#33281A" rx="11"/>
   <rect x="77.2" y="427.4" width="5.7" height="11.3" fill="none" rx="1.41667" stroke="#E0A45A" stroke-width="2.83333"/>
   <rect x="87.2" y="421.8" width="5.7" height="17.0" fill="none" rx="1.41667" stroke="#E0A45A" stroke-width="2.83333"/>
@@ -37,7 +37,7 @@
   </g>
   <g class="rise" style="animation-delay:0.32s">
   <rect x="32.0" y="712.0" width="656.0" height="318.0" fill="#181B21" rx="14" stroke="#2C3039" stroke-width="1"/>
-  <rect x="32.0" y="734.0" width="5.0" height="274.0" fill="#E0A45A" rx="2.5"/>
+  <rect class="breathe" x="32.0" y="734.0" width="5.0" height="274.0" fill="#E0A45A" rx="2.5"/>
   <rect x="62.0" y="738.0" width="56.0" height="56.0" fill="#33281A" rx="11"/>
   <rect x="77.2" y="753.2" width="11.3" height="11.3" fill="none" rx="1.41667" stroke="#E0A45A" stroke-width="2.83333"/>
   <rect x="80.8" y="756.8" width="4.2" height="4.2" fill="#E0A45A"/>
@@ -54,7 +54,7 @@
   </g>
   <g class="rise" style="animation-delay:0.44s">
   <rect x="32.0" y="1052.0" width="656.0" height="318.0" fill="#181B21" rx="14" stroke="#2C3039" stroke-width="1"/>
-  <rect x="32.0" y="1074.0" width="5.0" height="274.0" fill="#A98BE8" rx="2.5"/>
+  <rect class="breathe" x="32.0" y="1074.0" width="5.0" height="274.0" fill="#A98BE8" rx="2.5"/>
   <rect x="62.0" y="1078.0" width="56.0" height="56.0" fill="#26203A" rx="11"/>
   <circle cx="90.0" cy="1106.0" r="11.3333" fill="none" stroke="#A98BE8" stroke-width="2.83333"/>
   <circle cx="90.0" cy="1106.0" r="4.25" fill="#A98BE8"/>
@@ -69,7 +69,7 @@
   </g>
   <g class="rise" style="animation-delay:0.56s">
   <rect x="32.0" y="1392.0" width="656.0" height="318.0" fill="#181B21" rx="14" stroke="#2C3039" stroke-width="1"/>
-  <rect x="32.0" y="1414.0" width="5.0" height="274.0" fill="#E0A45A" rx="2.5"/>
+  <rect class="breathe" x="32.0" y="1414.0" width="5.0" height="274.0" fill="#E0A45A" rx="2.5"/>
   <rect x="62.0" y="1418.0" width="56.0" height="56.0" fill="#33281A" rx="11"/>
   <rect x="77.2" y="1446.0" width="11.3" height="11.3" fill="none" rx="1.41667" stroke="#E0A45A" stroke-width="2.83333"/>
   <rect x="91.4" y="1446.0" width="11.3" height="11.3" fill="none" rx="1.41667" stroke="#E0A45A" stroke-width="2.83333"/>
@@ -85,7 +85,7 @@
   </g>
   <g class="rise" style="animation-delay:0.68s">
   <rect x="32.0" y="1732.0" width="656.0" height="318.0" fill="#181B21" rx="14" stroke="#2C3039" stroke-width="1"/>
-  <rect x="32.0" y="1754.0" width="5.0" height="274.0" fill="#7A90EE" rx="2.5"/>
+  <rect class="breathe" x="32.0" y="1754.0" width="5.0" height="274.0" fill="#7A90EE" rx="2.5"/>
   <rect x="62.0" y="1758.0" width="56.0" height="56.0" fill="#1E2540" rx="11"/>
   <rect x="77.2" y="1773.2" width="9.9" height="9.9" fill="none" rx="2.125" stroke="#7A90EE" stroke-width="2.83333"/>
   <rect x="92.8" y="1773.2" width="9.9" height="9.9" fill="none" rx="2.125" stroke="#7A90EE" stroke-width="2.83333"/>

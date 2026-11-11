@@ -1,12 +1,12 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="608" viewBox="0 0 1200 608" role="img" aria-labelledby="t d">
   <title id="t">Selected collaborations — Sticker &amp; Label Studio, Couples Companion App, Invitation Design Studio, Product Photo Studio</title>
   <desc id="d">Verified collaborations on partner-owned products: Sticker &amp; Label Studio — Lead contributor, 71 authored commits · 2 PRs (12m), Delivered, Partner-owned · private; Couples Companion App — Core contributor, 39 authored commits · 36 PRs (12m), In development, Partner-owned · private; Invitation Design Studio — Lead contributor, 5 authored commits · 0 PRs (12m), Delivered, Partner-owned · private; Product Photo Studio — Contributor, 2 authored commits · 0 PRs (12m), In development, Partner-owned · private</desc>
-  <style>@keyframes rise{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}@keyframes draw{from{stroke-dashoffset:1200}to{stroke-dashoffset:0}}.rise{opacity:0;animation:rise .7s cubic-bezier(.2,.7,.2,1) forwards}.draw{stroke-dasharray:1200;animation:draw 1.6s ease-out .5s both}.fade{opacity:0;animation:rise 1s ease-out forwards}.trace{stroke-dasharray:100;animation:trace 1.4s ease-out .35s both}@keyframes trace{from{stroke-dashoffset:100}to{stroke-dashoffset:0}}@media (prefers-reduced-motion:reduce){.rise,.fade{opacity:1;animation:none}.draw,.trace{animation:none;stroke-dasharray:none}}</style>
+  <style>@keyframes rise{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}@keyframes draw{from{stroke-dashoffset:1200}to{stroke-dashoffset:0}}.rise{opacity:0;animation:rise .7s cubic-bezier(.2,.7,.2,1) forwards}.draw{stroke-dasharray:1200;animation:draw 1.6s ease-out .5s both}.fade{opacity:0;animation:rise 1s ease-out forwards}.trace{stroke-dasharray:100;animation:trace 1.4s ease-out .35s both}@keyframes trace{from{stroke-dashoffset:100}to{stroke-dashoffset:0}}@keyframes flow{to{stroke-dashoffset:-24}}@keyframes spin{to{transform:rotate(360deg)}}@keyframes breathe{from{opacity:.35}to{opacity:1}}@keyframes ping{from{transform:scale(1);opacity:.5}to{transform:scale(2.2);opacity:0}}@keyframes travel{from{transform:translate(0,0)}to{transform:translate(var(--dx,0px),var(--dy,0px))}}.flow{stroke-dasharray:6 6;animation:flow 1.8s linear infinite}.spin{transform-box:view-box;animation:spin 18s linear infinite}.breathe{animation:breathe 2.8s ease-in-out infinite alternate}.ping{transform-box:fill-box;transform-origin:center;animation:ping 2.6s ease-out infinite}.travel{animation:travel 7s ease-in-out infinite alternate}@media (prefers-reduced-motion:reduce){.rise,.fade{opacity:1;animation:none}.draw,.trace,.flow,.spin,.breathe,.ping,.travel{animation:none}.draw,.trace{stroke-dasharray:none}}</style>
   <rect x="0.0" y="0.0" width="1200.0" height="608.0" fill="#101216"/>
   <rect x="0.5" y="0.5" width="1199.0" height="607.0" fill="none" rx="18" stroke="#2C3039" stroke-width="1"/>
   <g class="rise" style="animation-delay:0.08s">
   <rect x="40.0" y="40.0" width="548.0" height="252.0" fill="#181B21" rx="14" stroke="#2C3039" stroke-width="1"/>
-  <rect x="40.0" y="62.0" width="5.0" height="208.0" fill="#7A90EE" rx="2.5"/>
+  <rect class="breathe" x="40.0" y="62.0" width="5.0" height="208.0" fill="#7A90EE" rx="2.5"/>
   <rect x="70.0" y="66.0" width="54.0" height="54.0" fill="#232A45" rx="11"/>
   <circle cx="92.3" cy="93.0" r="8" fill="#232A45" stroke="#7A90EE" stroke-width="2.66667"/>
   <circle cx="101.7" cy="93.0" r="8" fill="none" stroke="#7A90EE" stroke-width="2.66667"/>
@@ -23,7 +23,7 @@
   </g>
   <g class="rise" style="animation-delay:0.20s">
   <rect x="612.0" y="40.0" width="548.0" height="252.0" fill="#181B21" rx="14" stroke="#2C3039" stroke-width="1"/>
-  <rect x="612.0" y="62.0" width="5.0" height="208.0" fill="#7A90EE" rx="2.5"/>
+  <rect class="breathe" x="612.0" y="62.0" width="5.0" height="208.0" fill="#7A90EE" rx="2.5"/>
   <rect x="642.0" y="66.0" width="54.0" height="54.0" fill="#232A45" rx="11"/>
   <circle cx="664.3" cy="93.0" r="8" fill="#232A45" stroke="#7A90EE" stroke-width="2.66667"/>
   <circle cx="673.7" cy="93.0" r="8" fill="none" stroke="#7A90EE" stroke-width="2.66667"/>
@@ -40,7 +40,7 @@
   </g>
   <g class="rise" style="animation-delay:0.32s">
   <rect x="40.0" y="316.0" width="548.0" height="252.0" fill="#181B21" rx="14" stroke="#2C3039" stroke-width="1"/>
-  <rect x="40.0" y="338.0" width="5.0" height="208.0" fill="#7A90EE" rx="2.5"/>
+  <rect class="breathe" x="40.0" y="338.0" width="5.0" height="208.0" fill="#7A90EE" rx="2.5"/>
   <rect x="70.0" y="342.0" width="54.0" height="54.0" fill="#232A45" rx="11"/>
   <circle cx="92.3" cy="369.0" r="8" fill="#232A45" stroke="#7A90EE" stroke-width="2.66667"/>
   <circle cx="101.7" cy="369.0" r="8" fill="none" stroke="#7A90EE" stroke-width="2.66667"/>
@@ -57,7 +57,7 @@
   </g>
   <g class="rise" style="animation-delay:0.44s">
   <rect x="612.0" y="316.0" width="548.0" height="252.0" fill="#181B21" rx="14" stroke="#2C3039" stroke-width="1"/>
-  <rect x="612.0" y="338.0" width="5.0" height="208.0" fill="#7A90EE" rx="2.5"/>
+  <rect class="breathe" x="612.0" y="338.0" width="5.0" height="208.0" fill="#7A90EE" rx="2.5"/>
   <rect x="642.0" y="342.0" width="54.0" height="54.0" fill="#232A45" rx="11"/>
   <circle cx="664.3" cy="369.0" r="8" fill="#232A45" stroke="#7A90EE" stroke-width="2.66667"/>
   <circle cx="673.7" cy="369.0" r="8" fill="none" stroke="#7A90EE" stroke-width="2.66667"/>

@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="720" height="866" viewBox="0 0 720 866" role="img" aria-labelledby="t d">
   <title id="t">Hilmi Salih Altınışık — Software Engineer &amp; Product Builder</title>
   <desc id="d">Mobile editorial hero: personal monogram, Building operational software across logistics, field service, business automation and autonomous AI systems. A map connects one engineer to four product domains: Logistics — Navlonix; Field Operations — Nilüfer İlaçlama; Business Systems — Finans Pro · Tatlı Durağı; Autonomous AI — SALIH-AI-COMPANY.</desc>
-  <style>@keyframes rise{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}@keyframes draw{from{stroke-dashoffset:1200}to{stroke-dashoffset:0}}.rise{opacity:0;animation:rise .7s cubic-bezier(.2,.7,.2,1) forwards}.draw{stroke-dasharray:1200;animation:draw 1.6s ease-out .5s both}.fade{opacity:0;animation:rise 1s ease-out forwards}.trace{stroke-dasharray:100;animation:trace 1.4s ease-out .35s both}@keyframes trace{from{stroke-dashoffset:100}to{stroke-dashoffset:0}}@media (prefers-reduced-motion:reduce){.rise,.fade{opacity:1;animation:none}.draw,.trace{animation:none;stroke-dasharray:none}}</style>
+  <style>@keyframes rise{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}@keyframes draw{from{stroke-dashoffset:1200}to{stroke-dashoffset:0}}.rise{opacity:0;animation:rise .7s cubic-bezier(.2,.7,.2,1) forwards}.draw{stroke-dasharray:1200;animation:draw 1.6s ease-out .5s both}.fade{opacity:0;animation:rise 1s ease-out forwards}.trace{stroke-dasharray:100;animation:trace 1.4s ease-out .35s both}@keyframes trace{from{stroke-dashoffset:100}to{stroke-dashoffset:0}}@keyframes flow{to{stroke-dashoffset:-24}}@keyframes spin{to{transform:rotate(360deg)}}@keyframes breathe{from{opacity:.35}to{opacity:1}}@keyframes ping{from{transform:scale(1);opacity:.5}to{transform:scale(2.2);opacity:0}}@keyframes travel{from{transform:translate(0,0)}to{transform:translate(var(--dx,0px),var(--dy,0px))}}.flow{stroke-dasharray:6 6;animation:flow 1.8s linear infinite}.spin{transform-box:view-box;animation:spin 18s linear infinite}.breathe{animation:breathe 2.8s ease-in-out infinite alternate}.ping{transform-box:fill-box;transform-origin:center;animation:ping 2.6s ease-out infinite}.travel{animation:travel 7s ease-in-out infinite alternate}@media (prefers-reduced-motion:reduce){.rise,.fade{opacity:1;animation:none}.draw,.trace,.flow,.spin,.breathe,.ping,.travel{animation:none}.draw,.trace{stroke-dasharray:none}}</style>
   <rect x="0.0" y="0.0" width="720.0" height="866.0" fill="#F6F4EF"/>
   <rect x="0.5" y="0.5" width="719.0" height="865.0" fill="none" rx="18" stroke="#D8DAE0" stroke-width="1"/>
   <g class="rise" style="animation-delay:0.08s">
@@ -18,10 +18,10 @@
   <rect x="36.0" y="431.0" width="56.0" height="4.0" fill="#2F4BC7" rx="2"/>
   <text x="108" y="438" font-family="Consolas, 'SFMono-Regular', Menlo, monospace" font-size="21" fill="#16181D" letter-spacing="1.5">ARCHITECTURE → PRODUCT → LAUNCH</text>
   <text x="36" y="480" font-family="Consolas, 'SFMono-Regular', Menlo, monospace" font-size="20" fill="#5C6270" letter-spacing="3">PRODUCT DOMAINS</text>
-  <line class="draw" x1="360.0" y1="664.0" x2="340.0" y2="644.0" stroke="#8A94A8" stroke-width="1.5"/>
-  <line class="draw" x1="360.0" y1="664.0" x2="380.0" y2="644.0" stroke="#8A94A8" stroke-width="1.5"/>
-  <line class="draw" x1="360.0" y1="664.0" x2="340.0" y2="684.0" stroke="#8A94A8" stroke-width="1.5"/>
-  <line class="draw" x1="360.0" y1="664.0" x2="380.0" y2="684.0" stroke="#8A94A8" stroke-width="1.5"/>
+  <line class="flow" x1="360.0" y1="664.0" x2="340.0" y2="644.0" stroke="#8A94A8" stroke-width="1.5"/>
+  <line class="flow" x1="360.0" y1="664.0" x2="380.0" y2="644.0" stroke="#8A94A8" stroke-width="1.5"/>
+  <line class="flow" x1="360.0" y1="664.0" x2="340.0" y2="684.0" stroke="#8A94A8" stroke-width="1.5"/>
+  <line class="flow" x1="360.0" y1="664.0" x2="380.0" y2="684.0" stroke="#8A94A8" stroke-width="1.5"/>
   <g class="rise" style="animation-delay:0.32s">
   <rect x="36.0" y="498.0" width="304.0" height="146.0" fill="#FFFFFF" rx="12" stroke="#D8DAE0" stroke-width="1"/>
   <rect x="54.0" y="516.0" width="44.0" height="44.0" fill="#E4E8F8" rx="9"/>
@@ -59,6 +59,8 @@
   <text x="458" y="727" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="24" fill="#16181D" font-weight="700">Autonomous AI</text>
   <text x="398" y="810" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="20" fill="#5C6270">SALIH-AI-COMPANY</text>
   </g>
+  <circle class="ping" style="animation-delay:0.0s" cx="360.0" cy="664.0" r="17" fill="none" stroke="#2F4BC7" stroke-width="2"/>
+  <circle class="ping" style="animation-delay:1.3s" cx="360.0" cy="664.0" r="17" fill="none" stroke="#2F4BC7" stroke-width="2"/>
   <circle cx="360.0" cy="664.0" r="17" fill="#2F4BC7"/>
   <circle cx="360.0" cy="664.0" r="6" fill="#F6F4EF"/>
 </svg>

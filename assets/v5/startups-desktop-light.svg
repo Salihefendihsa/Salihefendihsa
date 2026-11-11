@@ -1,15 +1,20 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="394" viewBox="0 0 1200 394" role="img" aria-labelledby="t d">
   <title id="t">Startups — Navlonix, Devi</title>
   <desc id="d">Startups: Navlonix — Freight marketplace: Businesses post loads, verified drivers send offers and every job is tracked to delivery. (Mvp · Pilot Prep); Devi — AI learning app: A mobile learning companion that adapts every lesson to the learner. (In Development)</desc>
-  <style>@keyframes rise{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}@keyframes draw{from{stroke-dashoffset:1200}to{stroke-dashoffset:0}}.rise{opacity:0;animation:rise .7s cubic-bezier(.2,.7,.2,1) forwards}.draw{stroke-dasharray:1200;animation:draw 1.6s ease-out .5s both}.fade{opacity:0;animation:rise 1s ease-out forwards}.trace{stroke-dasharray:100;animation:trace 1.4s ease-out .35s both}@keyframes trace{from{stroke-dashoffset:100}to{stroke-dashoffset:0}}@media (prefers-reduced-motion:reduce){.rise,.fade{opacity:1;animation:none}.draw,.trace{animation:none;stroke-dasharray:none}}</style>
+  <style>@keyframes rise{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}@keyframes draw{from{stroke-dashoffset:1200}to{stroke-dashoffset:0}}.rise{opacity:0;animation:rise .7s cubic-bezier(.2,.7,.2,1) forwards}.draw{stroke-dasharray:1200;animation:draw 1.6s ease-out .5s both}.fade{opacity:0;animation:rise 1s ease-out forwards}.trace{stroke-dasharray:100;animation:trace 1.4s ease-out .35s both}@keyframes trace{from{stroke-dashoffset:100}to{stroke-dashoffset:0}}@keyframes flow{to{stroke-dashoffset:-24}}@keyframes spin{to{transform:rotate(360deg)}}@keyframes breathe{from{opacity:.35}to{opacity:1}}@keyframes ping{from{transform:scale(1);opacity:.5}to{transform:scale(2.2);opacity:0}}@keyframes travel{from{transform:translate(0,0)}to{transform:translate(var(--dx,0px),var(--dy,0px))}}.flow{stroke-dasharray:6 6;animation:flow 1.8s linear infinite}.spin{transform-box:view-box;animation:spin 18s linear infinite}.breathe{animation:breathe 2.8s ease-in-out infinite alternate}.ping{transform-box:fill-box;transform-origin:center;animation:ping 2.6s ease-out infinite}.travel{animation:travel 7s ease-in-out infinite alternate}@media (prefers-reduced-motion:reduce){.rise,.fade{opacity:1;animation:none}.draw,.trace,.flow,.spin,.breathe,.ping,.travel{animation:none}.draw,.trace{stroke-dasharray:none}}</style>
   <rect x="0.0" y="0.0" width="1200.0" height="394.0" fill="#F6F4EF"/>
   <rect x="0.5" y="0.5" width="1199.0" height="393.0" fill="none" rx="18" stroke="#D8DAE0" stroke-width="1"/>
   <g class="rise" style="animation-delay:0.08s">
   <rect x="32.0" y="32.0" width="556.0" height="330.0" fill="#FFFFFF" rx="18" stroke="#D8DAE0" stroke-width="1"/>
   <circle cx="478.0" cy="136.0" r="64" fill="none" stroke="#D8DAE0" stroke-width="1.2"/>
   <circle cx="478.0" cy="136.0" r="43.52" fill="none" stroke="#D8DAE0" stroke-width="1.2"/>
+  <g class="spin" style="transform-origin:478px 136px">
   <path class="trace" d="M414.0 136.0 A64.0 64.0 0 0 1 478.0 72.0" fill="none" stroke="#2F4BC7" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" pathLength="100"/>
   <circle cx="478.0" cy="72.0" r="4" fill="#2F4BC7"/>
+  </g>
+  <g class="spin" style="transform-origin:478px 136px;animation-duration:26s;animation-direction:reverse">
+  <circle cx="521.5" cy="136.0" r="3" fill="#2F4BC7"/>
+  </g>
   <circle cx="478.0" cy="136.0" r="29.44" fill="#E4E8F8"/>
   <path class="trace" d="M464.77333333333337 147.57333333333332 C474.6933333333334 147.57333333333332 468.08000000000004 131.04 478.0 131.04 S484.61333333333334 124.42666666666666 491.2266666666667 124.42666666666666" fill="none" stroke="#2F4BC7" stroke-width="2.64533" stroke-linecap="round" stroke-linejoin="round" pathLength="100"/>
   <circle cx="464.8" cy="147.6" r="3.63733" fill="#2F4BC7"/>
@@ -21,7 +26,7 @@
   <text x="64" y="236" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="21" fill="#5C6270">job is tracked to delivery.</text>
   <line x1="64.0" y1="300.0" x2="556.0" y2="300.0" stroke="#D8DAE0" stroke-width="1"/>
   <rect x="64.0" y="316.0" width="201.0" height="28.5" fill="#E4E8F8" rx="14.25"/>
-  <circle cx="78.2" cy="330.2" r="3.6" fill="#2F4BC7"/>
+  <circle class="breathe" cx="78.2" cy="330.2" r="3.6" fill="#2F4BC7"/>
   <text x="90" y="336" font-family="Consolas, 'SFMono-Regular', Menlo, monospace" font-size="15" fill="#2F4BC7" letter-spacing="1.2">MVP · PILOT PREP</text>
   <text x="556" y="336" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="15" fill="#5C6270" text-anchor="end">Web · Mobile · Admin  ·  Co-founder</text>
   </g>
@@ -29,8 +34,13 @@
   <rect x="612.0" y="32.0" width="556.0" height="330.0" fill="#FFFFFF" rx="18" stroke="#D8DAE0" stroke-width="1"/>
   <circle cx="1058.0" cy="136.0" r="64" fill="none" stroke="#D8DAE0" stroke-width="1.2"/>
   <circle cx="1058.0" cy="136.0" r="43.52" fill="none" stroke="#D8DAE0" stroke-width="1.2"/>
+  <g class="spin" style="transform-origin:1058px 136px">
   <path class="trace" d="M994.0 136.0 A64.0 64.0 0 0 1 1058.0 72.0" fill="none" stroke="#6B4FB8" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" pathLength="100"/>
   <circle cx="1058.0" cy="72.0" r="4" fill="#6B4FB8"/>
+  </g>
+  <g class="spin" style="transform-origin:1058px 136px;animation-duration:26s;animation-direction:reverse">
+  <circle cx="1101.5" cy="136.0" r="3" fill="#6B4FB8"/>
+  </g>
   <circle cx="1058.0" cy="136.0" r="29.44" fill="#ECE6F8"/>
   <path class="trace" d="M1043.1200000000001 149.22666666666666 H1053.0400000000002 V139.30666666666667 H1062.96 V129.38666666666666 H1072.88" fill="none" stroke="#6B4FB8" stroke-width="2.64533" stroke-linecap="round" stroke-linejoin="round" pathLength="100"/>
   <circle cx="1072.9" cy="123.6" r="3.30667" fill="#6B4FB8"/>
@@ -41,7 +51,7 @@
   <text x="644" y="236" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="21" fill="#5C6270">learner.</text>
   <line x1="644.0" y1="300.0" x2="1136.0" y2="300.0" stroke="#D8DAE0" stroke-width="1"/>
   <rect x="644.0" y="316.0" width="180.0" height="28.5" fill="#ECE6F8" rx="14.25"/>
-  <circle cx="658.2" cy="330.2" r="3.6" fill="#6B4FB8"/>
+  <circle class="breathe" cx="658.2" cy="330.2" r="3.6" fill="#6B4FB8"/>
   <text x="670" y="336" font-family="Consolas, 'SFMono-Regular', Menlo, monospace" font-size="15" fill="#6B4FB8" letter-spacing="1.2">IN DEVELOPMENT</text>
   <text x="1136" y="336" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="17" fill="#5C6270" text-anchor="end">iOS · Android  ·  Core team</text>
   </g>

@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="380" viewBox="0 0 1200 380" role="img" aria-labelledby="t d">
   <title id="t">Nilüfer İlaçlama — Field-service operations suite</title>
   <desc id="d">Nilüfer İlaçlama system diagram. Surfaces: Admin panel, Field mobile app, Public site &amp; portal. Operations API: Roles &amp; permissions, Jobs · contracts, Payments · audit. Foundations: PostgreSQL · Prisma, Supabase RLS portal, Notifications.</desc>
-  <style>@keyframes rise{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}@keyframes draw{from{stroke-dashoffset:1200}to{stroke-dashoffset:0}}.rise{opacity:0;animation:rise .7s cubic-bezier(.2,.7,.2,1) forwards}.draw{stroke-dasharray:1200;animation:draw 1.6s ease-out .5s both}.fade{opacity:0;animation:rise 1s ease-out forwards}.trace{stroke-dasharray:100;animation:trace 1.4s ease-out .35s both}@keyframes trace{from{stroke-dashoffset:100}to{stroke-dashoffset:0}}@media (prefers-reduced-motion:reduce){.rise,.fade{opacity:1;animation:none}.draw,.trace{animation:none;stroke-dasharray:none}}</style>
+  <style>@keyframes rise{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}@keyframes draw{from{stroke-dashoffset:1200}to{stroke-dashoffset:0}}.rise{opacity:0;animation:rise .7s cubic-bezier(.2,.7,.2,1) forwards}.draw{stroke-dasharray:1200;animation:draw 1.6s ease-out .5s both}.fade{opacity:0;animation:rise 1s ease-out forwards}.trace{stroke-dasharray:100;animation:trace 1.4s ease-out .35s both}@keyframes trace{from{stroke-dashoffset:100}to{stroke-dashoffset:0}}@keyframes flow{to{stroke-dashoffset:-24}}@keyframes spin{to{transform:rotate(360deg)}}@keyframes breathe{from{opacity:.35}to{opacity:1}}@keyframes ping{from{transform:scale(1);opacity:.5}to{transform:scale(2.2);opacity:0}}@keyframes travel{from{transform:translate(0,0)}to{transform:translate(var(--dx,0px),var(--dy,0px))}}.flow{stroke-dasharray:6 6;animation:flow 1.8s linear infinite}.spin{transform-box:view-box;animation:spin 18s linear infinite}.breathe{animation:breathe 2.8s ease-in-out infinite alternate}.ping{transform-box:fill-box;transform-origin:center;animation:ping 2.6s ease-out infinite}.travel{animation:travel 7s ease-in-out infinite alternate}@media (prefers-reduced-motion:reduce){.rise,.fade{opacity:1;animation:none}.draw,.trace,.flow,.spin,.breathe,.ping,.travel{animation:none}.draw,.trace{stroke-dasharray:none}}</style>
   <rect x="0.0" y="0.0" width="1200.0" height="380.0" fill="#101216"/>
   <rect x="0.5" y="0.5" width="1199.0" height="379.0" fill="none" rx="16" stroke="#2C3039" stroke-width="1"/>
   <text x="48" y="46" font-family="Consolas, 'SFMono-Regular', Menlo, monospace" font-size="22" fill="#5CC2B2" letter-spacing="3">FLAGSHIP 02</text>
@@ -42,8 +42,10 @@
   <text x="457" y="268" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="26" fill="#F1EEE6" font-weight="600">Jobs · contracts</text>
   <text x="457" y="334" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="26" fill="#F1EEE6" font-weight="600">Payments · audit</text>
   </g>
-  <line class="draw" x1="386.7" y1="264.0" x2="430.7" y2="264.0" stroke="#6B7386" stroke-width="2"/>
-  <line class="draw" x1="769.3" y1="264.0" x2="813.3" y2="264.0" stroke="#6B7386" stroke-width="2"/>
+  <line class="flow" x1="386.7" y1="264.0" x2="430.7" y2="264.0" stroke="#5CC2B2" stroke-width="2"/>
+  <line class="flow" x1="769.3" y1="264.0" x2="813.3" y2="264.0" stroke="#5CC2B2" stroke-width="2"/>
+  <circle class="ping" style="animation-delay:0.0s" cx="430.7" cy="264.0" r="5" fill="none" stroke="#5CC2B2" stroke-width="2"/>
+  <circle class="ping" style="animation-delay:1.3s" cx="813.3" cy="264.0" r="5" fill="none" stroke="#5CC2B2" stroke-width="2"/>
   <circle cx="430.7" cy="264.0" r="5" fill="#5CC2B2"/>
   <circle cx="813.3" cy="264.0" r="5" fill="#5CC2B2"/>
 </svg>
