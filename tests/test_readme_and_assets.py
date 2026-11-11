@@ -160,7 +160,7 @@ class ReadmeTests(unittest.TestCase):
         self.assertIn("How these numbers are measured", self.readme)
         self.assertIn("not a commit count", self.readme)
         self.assertEqual(fp["metrics"][0]["key"], "github_contributions")
-        self.assertIn(f"GitHub contributions in {fp['contribution_window']['year']}", self.readme)
+        self.assertIn("GitHub contributions in the last year", self.readme)
 
     def test_no_unbreakable_words_for_mobile(self):
         self.assertLessEqual(gp.longest_word(self.readme), 34)

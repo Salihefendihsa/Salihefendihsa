@@ -155,7 +155,8 @@ class CalendarTests(unittest.TestCase):
             self.variables = None
 
         def graphql(self, query, variables):
-            self.variables = variables
+            if self.variables is None:
+                self.variables = variables
             self.query = query
             return {"viewer": {"login": self.viewer},
                     "user": {"contributionsCollection": self.collection}}
