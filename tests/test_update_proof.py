@@ -185,3 +185,13 @@ class CalendarTests(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class CodingTimeTests(unittest.TestCase):
+    def test_sessions_and_gaps(self):
+        from update_proof import estimate_coding_time
+        t0 = dt.datetime(2026, 1, 1, 9, tzinfo=dt.timezone.utc)
+        times = [t0, t0 + dt.timedelta(minutes=40), t0 + dt.timedelta(minutes=100),  # one session: 100 min + 30 lead
+                 t0 + dt.timedelta(hours=8)]                                          # new session: +30 lead
+        self.assertEqual(estimate_coding_time(times), (2, 2))  # 160 min -> 2 whole hours
+        self.assertEqual(estimate_coding_time([]), (0, 0))
