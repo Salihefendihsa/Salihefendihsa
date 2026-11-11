@@ -96,6 +96,22 @@ FLAGSHIPS = {
 }
 
 
+MOTION = ("<style>@keyframes rise{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}"
+                "@keyframes draw{from{stroke-dashoffset:1200}to{stroke-dashoffset:0}}"
+                ".rise{opacity:0;animation:rise .7s cubic-bezier(.2,.7,.2,1) forwards}"
+                ".draw{stroke-dasharray:1200;animation:draw 1.6s ease-out .5s both}"
+                ".fade{opacity:0;animation:rise 1s ease-out forwards}"
+                "@media (prefers-reduced-motion:reduce){.rise,.fade{opacity:1;animation:none}.draw{animation:none;stroke-dasharray:none}}</style>")
+
+
+def _rise(parts: list[str], i: int) -> list[str]:
+    return [f'<g class="rise" style="animation-delay:{0.08 + i * 0.12:.2f}s">', *parts, "</g>"]
+
+
+def _draw(el: str) -> str:
+    return el.replace("<line ", '<line class="draw" ', 1)
+
+
 # --------------------------------------------------------------------------- primitives
 
 def xml(text: str) -> str:
@@ -193,6 +209,7 @@ def svg(width: int, height: int, title: str, desc: str, body: Iterable[str], bg:
         f'<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" viewBox="0 0 {width} {height}" role="img" aria-labelledby="t d">',
         f'  <title id="t">{xml(title)}</title>',
         f'  <desc id="d">{xml(desc)}</desc>',
+        f"  {MOTION}",
         f'  {rect(0, 0, width, height, bg)}',
     ]
     return "\n".join(head + [f"  {b}" for b in body] + ["</svg>"]) + "\n"
@@ -313,6 +330,7 @@ def render_hero(theme: str, mobile: bool = False) -> str:
     if not mobile:
         w, h, m = DESKTOP_W, 440, 56
         body = [rect(0.5, 0.5, w - 1, h - 1, "none", rx=18, stroke=t["rule"])]
+        left0 = len(body)
         body += monogram_mark(m, 48, 60, t)
         body.append(text(m + 78, 86, "HILMI SALIH ALTINIŞIK", 21, t["muted"], mono=True, spacing=3))
         body.append(text(m, 184, "Software Engineer", 60, t["fg"], weight="700", spacing=-1.5))
@@ -322,6 +340,7 @@ def render_hero(theme: str, mobile: bool = False) -> str:
         by = 296 + 32 * len(pos) + 18
         body.append(rect(m, by - 6, 64, 4, t["accent"], rx=2))
         body.append(text(m + 80, by + 1, "ARCHITECTURE → PRODUCT → LAUNCH", 19, t["fg"], mono=True, spacing=2))
+        body[left0:] = _rise(body[left0:], 0)
         # Product-domain map: one engineer (hub) connected to four operational domains.
         gx, gy, nw, nh, gap = 676, 64, 224, 118, 22
         hub = (gx + nw + gap / 2, gy + nh + gap + 15)
@@ -330,14 +349,14 @@ def render_hero(theme: str, mobile: bool = False) -> str:
         for (dom, label, caption), (nx, ny) in zip(HERO_DOMAINS, positions):
             cx = nx + nw if nx == gx else nx
             cy = ny + nh if ny == gy else ny
-            body.append(line(hub[0], hub[1], cx, cy, t["accent2"], 1.5))
-        for (dom, label, caption), (nx, ny) in zip(HERO_DOMAINS, positions):
-            body += _domain_node(nx, ny, nw, nh, dom, label, caption, t, 22, 18, 26)
+            body.append(_draw(line(hub[0], hub[1], cx, cy, t["accent2"], 1.5)))
+        for i, ((dom, label, caption), (nx, ny)) in enumerate(zip(HERO_DOMAINS, positions)):
+            body += _rise(_domain_node(nx, ny, nw, nh, dom, label, caption, t, 22, 18, 26), i + 2)
         body += [circle(hub[0], hub[1], 22, t["accent"]), circle(hub[0], hub[1], 8, t["bg"])]
     else:
         w, m = MOBILE_W, 36
         body = []
-        body += monogram_mark(m, 40, 68, t)
+        body += _rise(monogram_mark(m, 40, 68, t), 0)
         body.append(text(m + 88, 84, "HILMI SALIH ALTINIŞIK", 22, t["muted"], mono=True, spacing=2.5))
         body.append(text(m, 188, "Software Engineer", 56, t["fg"], weight="700", spacing=-1.5))
         body.append(text(m, 248, "& Product Builder", 56, t["fg"], weight="700", spacing=-1.5))
@@ -354,9 +373,9 @@ def render_hero(theme: str, mobile: bool = False) -> str:
         for (dom, label, caption), (nx, ny) in zip(HERO_DOMAINS, positions):
             cx = nx + nw if nx == m else nx
             cy = ny + nh if ny == gy else ny
-            body.append(line(hub[0], hub[1], cx, cy, t["accent2"], 1.5))
-        for (dom, label, caption), (nx, ny) in zip(HERO_DOMAINS, positions):
-            body += _domain_node(nx, ny, nw, nh, dom, label, caption, t, 24, 20, 28)
+            body.append(_draw(line(hub[0], hub[1], cx, cy, t["accent2"], 1.5)))
+        for i, ((dom, label, caption), (nx, ny)) in enumerate(zip(HERO_DOMAINS, positions)):
+            body += _rise(_domain_node(nx, ny, nw, nh, dom, label, caption, t, 24, 20, 28), i + 2)
         body += [circle(hub[0], hub[1], 17, t["accent"]), circle(hub[0], hub[1], 6, t["bg"])]
         h = int(gy + 2 * nh + gap + m)
         body.insert(0, rect(0.5, 0.5, w - 1, h - 1, "none", rx=18, stroke=t["rule"]))
@@ -383,7 +402,7 @@ def _month(iso: str) -> str:
 
 def _timeline(x1: float, x2: float, y: float, t: dict, footprint: dict, size: float) -> list[str]:
     win = footprint.get("window", {})
-    out = [line(x1, y, x2, y, t["rule"], 2).replace("<line ", '<line class="draw" ', 1), line(x1, y - 8, x1, y + 8, t["accent2"], 2), line(x2, y - 8, x2, y + 8, t["accent2"], 2),
+    out = [_draw(line(x1, y, x2, y, t["rule"], 2)), line(x1, y - 8, x1, y + 8, t["accent2"], 2), line(x2, y - 8, x2, y + 8, t["accent2"], 2),
            circle(x2, y, 5, t["accent"]),
            text(x1, y + size + 12, _month(win.get("from", "")), size, t["muted"], mono=True, spacing=1),
            text(x2, y + size + 12, _month(win.get("to", "")), size, t["muted"], mono=True, spacing=1, anchor="end")]
@@ -391,17 +410,6 @@ def _timeline(x1: float, x2: float, y: float, t: dict, footprint: dict, size: fl
     label = f"LAST PUBLISHED {measured.replace('T', ' ').replace('Z', ' UTC')}"
     out.append(text((x1 + x2) / 2, y - 12, label, size, t["muted"], mono=True, spacing=1, anchor="middle"))
     return out
-
-
-PROOF_MOTION = ("<style>@keyframes rise{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}"
-                "@keyframes draw{from{stroke-dashoffset:1200}to{stroke-dashoffset:0}}"
-                ".rise{opacity:0;animation:rise .7s cubic-bezier(.2,.7,.2,1) forwards}"
-                ".draw{stroke-dasharray:1200;animation:draw 1.6s ease-out .5s both}"
-                "@media (prefers-reduced-motion:reduce){.rise{opacity:1;animation:none}.draw{animation:none;stroke-dasharray:none}}</style>")
-
-
-def _rise(parts: list[str], i: int) -> list[str]:
-    return [f'<g class="rise" style="animation-delay:{0.08 + i * 0.12:.2f}s">', *parts, "</g>"]
 
 
 def render_proof(footprint: dict, theme: str, mobile: bool = False) -> str:
@@ -414,7 +422,6 @@ def render_proof(footprint: dict, theme: str, mobile: bool = False) -> str:
         body = [rect(0.5, 0.5, w - 1, h - 1, "none", rx=18, stroke=t["rule"]),
                 text(m, 36, "VERIFIED ENGINEERING FOOTPRINT", 18, t["muted"], mono=True, spacing=3),
                 text(w - m, 36, "LAST 12 MONTHS · UPDATED HOURLY", 18, t["accent"], mono=True, spacing=2, anchor="end")]
-        body.insert(0, PROOF_MOTION)
         y = 52
         for i, mt in enumerate(metrics):
             x = m + i * (cw + gap)
@@ -438,7 +445,6 @@ def render_proof(footprint: dict, theme: str, mobile: bool = False) -> str:
         body = [rect(0.5, 0.5, w - 1, h - 1, "none", rx=18, stroke=t["rule"]),
                 text(m, 44, "VERIFIED FOOTPRINT", 20, t["muted"], mono=True, spacing=3),
                 text(w - m, 44, "LAST 12 MONTHS", 20, t["accent"], mono=True, spacing=3, anchor="end")]
-        body.insert(0, PROOF_MOTION)
         for i, mt in enumerate(metrics):
             cell_w = w - 2 * m if i == 4 else cw
             x = m if i == 4 else m + (i % 2) * (cw + gap)
@@ -490,17 +496,19 @@ def render_flagship(spec: dict, theme: str) -> str:
     labels = spec["surfaces"][:3] + spec["foundation"][:3] + spec["core"][:3]
     size = min(fit_size(lbl, col_w - 44, 28, "600") for lbl in labels)
     for i, label in enumerate(spec["surfaces"][:3]):
-        body += _box(x1, y0 + i * (box_h + gap), col_w, box_h, label, t, size)
+        body += _rise(_box(x1, y0 + i * (box_h + gap), col_w, box_h, label, t, size), i)
     for i, label in enumerate(spec["foundation"][:3]):
-        body += _box(x3, y0 + i * (box_h + gap), col_w, box_h, label, t, size)
+        body += _rise(_box(x3, y0 + i * (box_h + gap), col_w, box_h, label, t, size), i + 4)
     core_h = 3 * box_h + 2 * gap
+    core0 = len(body)
     body.append(rect(x2, y0, col_w, core_h, soft, rx=10))
     body.append(rect(x2, y0, 6, core_h, col, rx=3))
     for i, label in enumerate(spec["core"][:3]):
         body.append(text(x2 + 26, y0 + 42 + i * 66, label, size, t["fg"], weight="600"))
+    body[core0:] = _rise(body[core0:], 3)
     mid = y0 + core_h / 2
-    body.append(line(x1 + col_w, mid, x2, mid, t["accent2"], 2))
-    body.append(line(x2 + col_w, mid, x3, mid, t["accent2"], 2))
+    body.append(_draw(line(x1 + col_w, mid, x2, mid, t["accent2"], 2)))
+    body.append(_draw(line(x2 + col_w, mid, x3, mid, t["accent2"], 2)))
     body.append(circle(x2, mid, 5, col))
     body.append(circle(x3, mid, 5, col))
     desc = (f"{spec['name']} system diagram. {spec['surfaces_title']}: {', '.join(spec['surfaces'])}. "
@@ -557,7 +565,7 @@ def render_ecosystem(portfolio: dict, theme: str, mobile: bool = False) -> str:
     for i, p in enumerate(items):
         x = m + (i % cols) * (cw + gap)
         y = m + (i // cols) * (ch + gap)
-        body += _product_card(x, y, cw, ch, p, t, mobile)
+        body += _rise(_product_card(x, y, cw, ch, p, t, mobile), i)
     names = ", ".join(p["display_name"] for p in items)
     desc = "Product board: " + "; ".join(f"{p['display_name']} ({p.get('category', '')}) — {p.get('short_summary') or p['tagline']} {p['status']}, {p['access']}, {p['role']}" for p in items)
     return svg(w, int(h), f"Selected product ecosystem — {names}", desc, body, t["bg"])
@@ -605,7 +613,7 @@ def render_collaborations(portfolio: dict, theme: str, mobile: bool = False) -> 
     for i, p in enumerate(items):
         x = m + (i % cols) * (cw + gap)
         y = m + (i // cols) * (ch + gap)
-        body += _collab_card(x, y, cw, ch, p, t, mobile)
+        body += _rise(_collab_card(x, y, cw, ch, p, t, mobile), i)
     names = ", ".join(p["display_name"] for p in items)
     desc = "Verified collaborations on partner-owned products: " + "; ".join(
         f"{p['display_name']} — {p['role']}, {p['collaboration']['evidence']}, {p['status']}, {p['access']}" for p in items)
@@ -621,24 +629,27 @@ def render_approach(theme: str, mobile: bool = False) -> str:
         cw = (w - 2 * m) / len(APPROACH)
         body = [rect(0.5, 0.5, w - 1, h - 1, "none", rx=18, stroke=t["rule"])]
         cy = 104
-        body.append(line(m + cw / 2, cy, w - m - cw / 2, cy, t["rule"], 2))
+        body.append(_draw(line(m + cw / 2, cy, w - m - cw / 2, cy, t["rule"], 2)))
         for i, (key, title, sub) in enumerate(APPROACH):
             cx = m + cw * (i + 0.5)
+            st = len(body)
             body.append(circle(cx, cy, 34, t["surface"], t["accent"], 2))
             body += glyph(key, cx - 16, cy - 16, 32, t["accent"])
             body.append(text(cx, 48, f"0{i + 1}", 17, t["muted"], mono=True, spacing=2, anchor="middle"))
             body.append(text(cx, 178, title, fit_size(title, cw - 16, 23, "700"), t["fg"], weight="700", anchor="middle"))
             lines = wrap(sub, 18, cw - 20, max_lines=3)
             body += lines_block(cx, 208, lines, 18, t["muted"], 24, anchor="middle")
+            body[st:] = _rise(body[st:], i)
         body.append(text(w / 2, 282, "ARCHITECTURE  →  PRODUCT  →  LAUNCH", 16, t["accent2"], mono=True, spacing=3, anchor="middle"))
     else:
         w, m, step = MOBILE_W, 36, 168
         h = 60 + step * len(APPROACH) + 20
         body = [rect(0.5, 0.5, w - 1, h - 1, "none", rx=18, stroke=t["rule"])]
         sx = m + 40
-        body.append(line(sx, 70, sx, 60 + step * (len(APPROACH) - 1) + 40, t["rule"], 2))
+        body.append(_draw(line(sx, 70, sx, 60 + step * (len(APPROACH) - 1) + 40, t["rule"], 2)))
         for i, (key, title, sub) in enumerate(APPROACH):
             cy = 60 + step * i + 40
+            st = len(body)
             body.append(circle(sx, cy, 34, t["surface"], t["accent"], 2))
             body += glyph(key, sx - 16, cy - 16, 32, t["accent"])
             tx = sx + 62
@@ -646,6 +657,7 @@ def render_approach(theme: str, mobile: bool = False) -> str:
             body.append(text(tx, cy + 8, title, fit_size(title, w - tx - m, 30, "700"), t["fg"], weight="700"))
             lines = wrap(sub, 24, w - tx - m, max_lines=3)
             body += lines_block(tx, cy + 42, lines, 24, t["muted"], 30)
+            body[st:] = _rise(body[st:], i)
     desc = "Engineering approach in five stages: " + "; ".join(f"{ti} — {s}" for _, ti, s in APPROACH)
     return svg(w, h, "Engineering approach — five stages from architecture to observation", desc, body, t["bg"])
 
