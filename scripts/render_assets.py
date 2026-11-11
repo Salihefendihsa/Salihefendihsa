@@ -101,7 +101,9 @@ MOTION = ("<style>@keyframes rise{from{opacity:0;transform:translateY(10px)}to{o
                 ".rise{opacity:0;animation:rise .7s cubic-bezier(.2,.7,.2,1) forwards}"
                 ".draw{stroke-dasharray:1200;animation:draw 1.6s ease-out .5s both}"
                 ".fade{opacity:0;animation:rise 1s ease-out forwards}"
-                "@media (prefers-reduced-motion:reduce){.rise,.fade{opacity:1;animation:none}.draw{animation:none;stroke-dasharray:none}}</style>")
+                ".trace{stroke-dasharray:100;animation:trace 1.4s ease-out .35s both}"
+                "@keyframes trace{from{stroke-dashoffset:100}to{stroke-dashoffset:0}}"
+                "@media (prefers-reduced-motion:reduce){.rise,.fade{opacity:1;animation:none}.draw,.trace{animation:none;stroke-dasharray:none}}</style>")
 
 
 def _rise(parts: list[str], i: int) -> list[str]:
@@ -664,11 +666,165 @@ def render_approach(theme: str, mobile: bool = False) -> str:
 
 # --------------------------------------------------------------------------- entry points
 
+# --------------------------------------------------------------------------- startups & SaaS boards
+
+STARTUPS = [
+    {"id": "navlonix", "name": "Navlonix", "kind": "Freight marketplace", "domain": "logistics", "mark": "route",
+     "pitch": "Businesses post loads, verified drivers send offers and every job is tracked to delivery.",
+     "stage": "MVP · PILOT PREP", "meta": "Web · Mobile · Admin  ·  Co-founder"},
+    {"id": "devi", "name": "Devi", "kind": "AI learning app", "domain": "ai", "mark": "steps",
+     "pitch": "A mobile learning companion that adapts every lesson to the learner.",
+     "stage": "IN DEVELOPMENT", "meta": "iOS · Android  ·  Core team"},
+]
+
+SAAS = [
+    {"id": "nilufer", "name": "Nilüfer İlaçlama", "kind": "Field-service ops", "domain": "field", "mark": "target",
+     "pitch": "Customers, crews, contracts and payments for a pest-control company.", "stage": "LIVE SITE"},
+    {"id": "barkod", "name": "Barkod Sistemi", "kind": "Retail stock & POS", "domain": "logistics", "mark": "barcode",
+     "pitch": "Barcode-driven stock, sales and till for retail shops.", "stage": "PILOT"},
+    {"id": "calvelia", "name": "Calvelia", "kind": "AI wardrobe", "domain": "ai", "mark": "hanger",
+     "pitch": "A digital wardrobe that suggests daily outfits from your own clothes.", "stage": "INVITE PILOT"},
+    {"id": "kuyumcu", "name": "Kuyumcu Takip", "kind": "Jeweller operations", "domain": "business", "mark": "gem",
+     "pitch": "Live gold prices, stock and sales in one screen for jewellers.", "stage": "IN BUILD"},
+    {"id": "kalemlik", "name": "Kalemlik", "kind": "Stationery retail", "domain": "field", "mark": "pencil",
+     "pitch": "Stock, barcode sales and customer accounts for stationery shops.", "stage": "PILOT SHOP"},
+    {"id": "kasabil", "name": "Kasabil", "kind": "Restaurant POS", "domain": "business", "mark": "receipt",
+     "pitch": "QR menu, orders, kitchen screen and till for restaurants and cafés.", "stage": "IN BUILD"},
+]
+
+
+def _trace(d: str, stroke: str, sw: float) -> str:
+    return (f'<path class="trace" d="{d}" fill="none" stroke="{stroke}" stroke-width="{sw:g}" '
+            'stroke-linecap="round" stroke-linejoin="round" pathLength="100"/>')
+
+
+def product_mark(name: str, x: float, y: float, s: float, col: str, t: dict) -> list[str]:
+    """Hand-drawn style line mark on a 24-unit grid; strokes trace in once."""
+    u = s / 24.0
+    X = lambda v: x + v * u  # noqa: E731
+    Y = lambda v: y + v * u  # noqa: E731
+    sw = max(2, 1.6 * u)
+    P = lambda d: _trace(d, col, sw)  # noqa: E731
+    if name == "route":
+        return [P(f"M{X(4)} {Y(19)} C{X(10)} {Y(19)} {X(6)} {Y(9)} {X(12)} {Y(9)} S{X(16)} {Y(5)} {X(20)} {Y(5)}"),
+                circle(X(4), Y(19), 2.2 * u, col), circle(X(20), Y(5), 2.2 * u, "none", col, sw)]
+    if name == "steps":
+        return [P(f"M{X(3)} {Y(20)} H{X(9)} V{Y(14)} H{X(15)} V{Y(8)} H{X(21)}"), circle(X(21), Y(4.5), 2 * u, col)]
+    if name == "target":
+        return [P(f"M{X(12)} {Y(3)} A{9*u:.1f} {9*u:.1f} 0 1 1 {X(11.9)} {Y(3)}"),
+                P(f"M{X(12)} {Y(8)} A{4*u:.1f} {4*u:.1f} 0 1 1 {X(11.9)} {Y(8)}"),
+                P(f"M{X(12)} {Y(0.5)} V{Y(5)} M{X(12)} {Y(19)} V{Y(23.5)} M{X(0.5)} {Y(12)} H{X(5)} M{X(19)} {Y(12)} H{X(23.5)}")]
+    if name == "barcode":
+        return [P(" ".join(f"M{X(v)} {Y(4)} V{Y(20)}" for v in (3, 5.5, 9, 11, 14.5, 17, 18.5, 21)))]
+    if name == "hanger":
+        return [P(f"M{X(12)} {Y(9)} V{Y(7.5)} A{2.5*u:.1f} {2.5*u:.1f} 0 1 1 {X(14.5)} {Y(5)} "
+                  f"M{X(12)} {Y(9)} L{X(2.5)} {Y(17)} H{X(21.5)} Z")]
+    if name == "gem":
+        return [P(f"M{X(6)} {Y(4)} H{X(18)} L{X(22)} {Y(9)} L{X(12)} {Y(21)} L{X(2)} {Y(9)} Z M{X(2)} {Y(9)} H{X(22)} "
+                  f"M{X(9)} {Y(4)} L{X(12)} {Y(9)} L{X(15)} {Y(4)} M{X(12)} {Y(9)} V{Y(21)}")]
+    if name == "pencil":
+        return [P(f"M{X(4)} {Y(20)} L{X(5)} {Y(15)} L{X(16)} {Y(4)} L{X(20)} {Y(8)} L{X(9)} {Y(19)} Z M{X(13.5)} {Y(6.5)} L{X(17.5)} {Y(10.5)}")]
+    if name == "receipt":
+        return [P(f"M{X(5)} {Y(3)} H{X(19)} V{Y(21)} L{X(16.7)} {Y(19)} L{X(14.3)} {Y(21)} L{X(12)} {Y(19)} L{X(9.7)} {Y(21)} L{X(7.3)} {Y(19)} L{X(5)} {Y(21)} Z "
+                  f"M{X(8.5)} {Y(8)} H{X(15.5)} M{X(8.5)} {Y(12)} H{X(15.5)} M{X(8.5)} {Y(16)} H{X(12.5)}")]
+    return []
+
+
+def _orbit(cx: float, cy: float, r: float, t: dict, col: str) -> list[str]:
+    """Quiet geometric backdrop: concentric rings with one accent arc."""
+    return [circle(cx, cy, r, "none", t["rule"], 1.2), circle(cx, cy, r * 0.68, "none", t["rule"], 1.2),
+            _trace(f"M{cx - r:.1f} {cy:.1f} A{r:.1f} {r:.1f} 0 0 1 {cx:.1f} {cy - r:.1f}", col, 2.5),
+            circle(cx, cy - r, 4, col)]
+
+
+def _chip(x: float, y: float, label: str, size: float, col: str, soft: str, t: dict, anchor_end: bool = False) -> list[str]:
+    w = text_width(label, size, mono=True) + len(label) * 1.2 + size * 2.2
+    h = size * 1.9
+    x0 = x - w if anchor_end else x
+    return [rect(x0, y, w, h, soft, rx=h / 2), circle(x0 + size * 0.95, y + h / 2, size * 0.24, col),
+            text(x0 + size * 1.7, y + h / 2 + size * 0.36, label, size, col, mono=True, spacing=1.2)]
+
+
+def _startup_card(x: float, y: float, w: float, h: float, p: dict, t: dict, mobile: bool) -> list[str]:
+    col, soft = domain_color(t, p["domain"]), domain_color(t, p["domain"], soft=True)
+    k_s, n_s, p_s, m_s, c_s = (20, 52, 26, 20, 18) if mobile else (17, 48, 21, 17, 15)
+    out = [rect(x, y, w, h, t["surface"], rx=18, stroke=t["rule"])]
+    ox, oy, r = x + w - (120 if mobile else 110), y + (110 if mobile else 104), 70 if mobile else 64
+    out += _orbit(ox, oy, r, t, col)
+    out.append(circle(ox, oy, r * 0.46, soft))
+    ms = r * 0.62
+    out += product_mark(p["mark"], ox - ms / 2, oy - ms / 2, ms, col, t)
+    out.append(text(x + 32, y + 46, p["kind"].upper(), k_s, col, mono=True, spacing=2.5))
+    out.append(text(x + 32, y + 46 + n_s + 8, p["name"], n_s, t["fg"], weight="700", spacing=-1.5))
+    lines = wrap(p["pitch"], p_s, w - 64 - (2 * r + 30), max_lines=3)
+    out += lines_block(x + 32, y + 46 + n_s + 8 + p_s + 22, lines, p_s, t["muted"], p_s * 1.4)
+    out.append(line(x + 32, y + h - 62, x + w - 32, y + h - 62, t["rule"], 1))
+    out += _chip(x + 32, y + h - 46, p["stage"], c_s, col, soft, t)
+    out.append(text(x + w - 32, y + h - 46 + c_s * 1.31, p["meta"], fit_size(p["meta"], w * 0.5, m_s, floor=15 if not mobile else 17), t["muted"], anchor="end"))
+    return out
+
+
+def _saas_card(x: float, y: float, w: float, h: float, p: dict, t: dict, mobile: bool) -> list[str]:
+    col, soft = domain_color(t, p["domain"]), domain_color(t, p["domain"], soft=True)
+    k_s, n_s, p_s, c_s = (19, 36, 24, 17) if mobile else (15, 28, 18, 15)
+    out = [rect(x, y, w, h, t["surface"], rx=16, stroke=t["rule"])]
+    bs = 64 if mobile else 56
+    bx, by = x + 26, y + 26
+    out.append(rect(bx, by, bs, bs, soft, rx=bs * 0.3))
+    out.append(_trace(f"M{bx + bs * 0.3:.1f} {by:.1f} H{bx + bs * 0.7:.1f}", col, 3))
+    ms = bs * 0.56
+    out += product_mark(p["mark"], bx + (bs - ms) / 2, by + (bs - ms) / 2, ms, col, t)
+    out += _chip(x + w - 24, y + 30, p["stage"], c_s, col, soft, t, anchor_end=True)
+    ty = by + bs + 34
+    out.append(text(x + 26, ty, p["kind"].upper(), k_s, col, mono=True, spacing=2))
+    out.append(text(x + 26, ty + n_s + 8, p["name"], fit_size(p["name"], w - 52, n_s, "700", floor=22), t["fg"], weight="700", spacing=-0.6))
+    lines = wrap(p["pitch"], p_s, w - 52, max_lines=4 if mobile else 3)
+    out += lines_block(x + 26, ty + n_s + 8 + p_s + 16, lines, p_s, t["muted"], p_s * 1.38)
+    return out
+
+
+def render_startups(theme: str, mobile: bool = False) -> str:
+    t = THEMES[theme]
+    if mobile:
+        w, m, ch, gap = MOBILE_W, 28, 400, 24
+        h = 2 * m + len(STARTUPS) * ch + (len(STARTUPS) - 1) * gap
+        body = [rect(0.5, 0.5, w - 1, h - 1, "none", rx=18, stroke=t["rule"])]
+        for i, p in enumerate(STARTUPS):
+            body += _rise(_startup_card(m, m + i * (ch + gap), w - 2 * m, ch, p, t, True), i)
+    else:
+        w, m, ch, gap = DESKTOP_W, 32, 330, 24
+        cw = (w - 2 * m - gap) / 2
+        h = 2 * m + ch
+        body = [rect(0.5, 0.5, w - 1, h - 1, "none", rx=18, stroke=t["rule"])]
+        for i, p in enumerate(STARTUPS):
+            body += _rise(_startup_card(m + i * (cw + gap), m, cw, ch, p, t, False), i)
+    desc = "Startups: " + "; ".join(f"{p['name']} — {p['kind']}: {p['pitch']} ({p['stage'].title()})" for p in STARTUPS)
+    return svg(w, int(h), "Startups — " + ", ".join(p["name"] for p in STARTUPS), desc, body, t["bg"])
+
+
+def render_saas(theme: str, mobile: bool = False) -> str:
+    t = THEMES[theme]
+    cols = 2 if mobile else 3
+    w = MOBILE_W if mobile else DESKTOP_W
+    m, gap = (28, 20) if mobile else (32, 20)
+    ch = 350 if mobile else 252
+    cw = (w - 2 * m - (cols - 1) * gap) / cols
+    rows = (len(SAAS) + cols - 1) // cols
+    h = 2 * m + rows * ch + (rows - 1) * gap
+    body = [rect(0.5, 0.5, w - 1, h - 1, "none", rx=18, stroke=t["rule"])]
+    for i, p in enumerate(SAAS):
+        x = m + (i % cols) * (cw + gap)
+        y = m + (i // cols) * (ch + gap)
+        body += _rise(_saas_card(x, y, cw, ch, p, t, mobile), i)
+    desc = "SaaS products: " + "; ".join(f"{p['name']} — {p['kind']}: {p['pitch']} ({p['stage'].title()})" for p in SAAS)
+    return svg(w, int(h), "SaaS products — " + ", ".join(p["name"] for p in SAAS), desc, body, t["bg"])
+
+
 def asset_path(name: str, theme: str, asset_dir: str = ASSET_DIR) -> str:
     return os.path.join(asset_dir, f"{name}-{theme}.svg")
 
 
-RESPONSIVE_ASSETS = ("hero", "proof", "ecosystem", "collaborations", "approach")
+RESPONSIVE_ASSETS = ("hero", "proof", "ecosystem", "collaborations", "approach", "startups", "saas")
 
 
 def render_all(footprint: dict, portfolio: dict) -> dict[str, str]:
@@ -687,6 +843,10 @@ def render_all(footprint: dict, portfolio: dict) -> dict[str, str]:
         out[asset_path("hero-mobile", theme)] = render_hero(theme, mobile=True)
         out[asset_path("proof-desktop", theme)] = render_proof(footprint, theme)
         out[asset_path("proof-mobile", theme)] = render_proof(footprint, theme, mobile=True)
+        out[asset_path("startups-desktop", theme)] = render_startups(theme)
+        out[asset_path("startups-mobile", theme)] = render_startups(theme, mobile=True)
+        out[asset_path("saas-desktop", theme)] = render_saas(theme)
+        out[asset_path("saas-mobile", theme)] = render_saas(theme, mobile=True)
         for pid, spec in FLAGSHIPS.items():
             out[asset_path(f"flagship-{pid}", theme)] = render_flagship(spec, theme)
         out[asset_path("ecosystem-desktop", theme)] = render_ecosystem(portfolio, theme)
