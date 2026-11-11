@@ -17,19 +17,20 @@
 | **Nalbur Stok**<br><sub>React 19 · TypeScript · Vite · TanStack · Supabase · Solo engineer · Maintained · Private</sub> | Virtualised 100K-row product tables, reports and a Supabase backend. |
 | **Optivark**<br><sub>React · TypeScript · Vite · GSAP · Solo engineer · In development · Private</sub> | Marketing site and solution catalogue for the software practice behind these products: logistics and dispatch, production optimisation, field-team mobile apps and barcode / QR tooling. |
 | **Sticker & Label Studio**<br><sub>Next.js · TypeScript · Supabase · Cloudflare · Lead contributor · 71 authored commits · 2 PRs (12m) · Delivered · Partner-owned · private</sub> | Template library, positioned text editor, bulk generation from Excel and CSV, millimetre-accurate print layouts and Word export. |
-| **Couples Companion App**<br><sub>Flutter · Dart · Supabase · Core contributor · 37 authored commits · 36 PRs (12m) · In development · Partner-owned · private</sub> | Emotion signals, shared goals, daily check-in nudges, a character quiz and weekly insights, delivered through reviewed pull requests with accessibility tests. |
+| **Couples Companion App**<br><sub>Flutter · Dart · Supabase · Core contributor · 39 authored commits · 36 PRs (12m) · In development · Partner-owned · private</sub> | Emotion signals, shared goals, daily check-in nudges, a character quiz and weekly insights, delivered through reviewed pull requests with accessibility tests. |
 | **Invitation Design Studio**<br><sub>React · Vite · JavaScript · Lead contributor · 5 authored commits · 0 PRs (12m) · Delivered · Partner-owned · private</sub> | Parses pasted invitation text into fields, applies templates and phrase libraries, previews live and exports print-ready Word documents. |
 | **Product Photo Studio**<br><sub>Flutter · Dart · on-device ML · Supabase · Contributor · 2 authored commits · 0 PRs (12m) · In development · Partner-owned · private</sub> | Guided 360° capture, fully on-device background removal, studio backgrounds and post, carousel and story export for small sellers. |
 
 </details>
 
 <details>
-<summary><b>Tools &amp; Research</b> (4)</summary>
+<summary><b>Tools &amp; Research</b> (5)</summary>
 
 | Project | What it does |
 | --- | --- |
 | [LLM Chatbot](https://github.com/Salihefendihsa/LLMChatbot)<br><sub>C\# · .NET · Public</sub> | Streaming, multi-turn chatbot backend on the OpenAI-compatible Chat Completions API with a console client and tests. |
 | [MultiLang Translator](https://github.com/Salihefendihsa/MultiLangTranslator)<br><sub>C\# · .NET 8 · WPF · MVVM · Public</sub> | WPF desktop app translating text into several languages in parallel, with auto-detection, caching, history and an offline mock provider. |
+| [navlonix-localdocuments](https://github.com/Salihefendihsa/navlonix-localdocuments)<br><sub>C\# · Public</sub> | Local PDF text extraction and image OCR for .NET, with bounded helper processes, cancellation and explicit failure states. |
 | [RSU JPEG Compression](https://github.com/Salihefendihsa/rsu-jpeg-compression)<br><sub>Python · NumPy · SciPy · Public</sub> | Research experiment: a custom random-number generator drives dynamic JPEG quantization tables, benchmarked against the standard table. |
 | [Shape Classifier](https://github.com/Salihefendihsa/ShapeClassifier)<br><sub>C\# · .NET 8 · OpenCvSharp · ML.NET · Public</sub> | Geometric shape recognition: synthetic data, OpenCV pre-processing, Hu-moment features and an ML.NET classifier. |
 

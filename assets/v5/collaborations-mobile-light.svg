@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="720" height="1410" viewBox="0 0 720 1410" role="img" aria-labelledby="t d">
   <title id="t">Selected collaborations — Sticker &amp; Label Studio, Couples Companion App, Invitation Design Studio, Product Photo Studio</title>
-  <desc id="d">Verified collaborations on partner-owned products: Sticker &amp; Label Studio — Lead contributor, 71 authored commits · 2 PRs (12m), Delivered, Partner-owned · private; Couples Companion App — Core contributor, 37 authored commits · 36 PRs (12m), In development, Partner-owned · private; Invitation Design Studio — Lead contributor, 5 authored commits · 0 PRs (12m), Delivered, Partner-owned · private; Product Photo Studio — Contributor, 2 authored commits · 0 PRs (12m), In development, Partner-owned · private</desc>
+  <desc id="d">Verified collaborations on partner-owned products: Sticker &amp; Label Studio — Lead contributor, 71 authored commits · 2 PRs (12m), Delivered, Partner-owned · private; Couples Companion App — Core contributor, 39 authored commits · 36 PRs (12m), In development, Partner-owned · private; Invitation Design Studio — Lead contributor, 5 authored commits · 0 PRs (12m), Delivered, Partner-owned · private; Product Photo Studio — Contributor, 2 authored commits · 0 PRs (12m), In development, Partner-owned · private</desc>
   <rect x="0.0" y="0.0" width="720.0" height="1410.0" fill="#F6F4EF"/>
   <rect x="0.5" y="0.5" width="719.0" height="1409.0" fill="none" rx="18" stroke="#D8DAE0" stroke-width="1"/>
   <rect x="32.0" y="32.0" width="656.0" height="320.0" fill="#FFFFFF" rx="14" stroke="#D8DAE0" stroke-width="1"/>
@@ -29,7 +29,7 @@
   <text x="62" y="498" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="26" fill="#16181D">Flutter app that helps couples share how</text>
   <text x="62" y="533" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="26" fill="#16181D">they feel, without a fight.</text>
   <line x1="62.0" y1="602.0" x2="658.0" y2="602.0" stroke="#D8DAE0" stroke-width="1"/>
-  <text x="62" y="648" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="32" fill="#16181D" font-weight="700" letter-spacing="-1">37 commits · 36 PRs</text>
+  <text x="62" y="648" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="32" fill="#16181D" font-weight="700" letter-spacing="-1">39 commits · 36 PRs</text>
   <rect x="431.6" y="616.0" width="226.4" height="36.0" fill="#E4E8F8" rx="18"/>
   <text x="545" y="647" font-family="Consolas, 'SFMono-Regular', Menlo, monospace" font-size="20" fill="#2F4BC7" text-anchor="middle" letter-spacing="1.5">CORE CONTRIBUTOR</text>
   <text x="62" y="676" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="21" fill="#5C6270">In development  ·  Partner-owned · private</text>

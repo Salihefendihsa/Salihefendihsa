@@ -10,7 +10,7 @@
   <source media="(prefers-color-scheme: dark) and (max-width: 600px)" srcset="assets/v5/proof-mobile-dark.svg">
   <source media="(max-width: 600px)" srcset="assets/v5/proof-mobile-light.svg">
   <source media="(prefers-color-scheme: dark)" srcset="assets/v5/proof-desktop-dark.svg">
-  <img alt="Verified engineering footprint: 1,581 GitHub contributions in 2026 (calendar year), 1,342 commits authored in the last 365 days, 26 repositories contributed to, 38 owned repositories, 4 verified collaborations; last published successful measurement 2026-10-04T13:28:34Z" src="assets/v5/proof-desktop-light.svg" width="100%">
+  <img alt="Verified engineering footprint: 3,651 GitHub contributions in the last year, 3,216 commits authored in the last 365 days, 42 repositories contributed to, 56 owned repositories, 4 verified collaborations; last published successful measurement 2026-11-11T13:38:03Z" src="assets/v5/proof-desktop-light.svg" width="100%">
 </picture>
 
 <details>
@@ -18,14 +18,15 @@
 
 <br>
 
-- **1,581 GitHub contributions in 2026** — The GitHub GraphQL `contributionsCollection` calendar `totalContributions` for the full UTC calendar year [2026-01-01T00:00:00Z, 2026-12-31T23:59:59Z]. GitHub reports 1,252 restricted contributions in this collection; their repository identities are not published here. This total follows GitHub's contribution rules and is not a commit count. [View the 2026 graph](https://github.com/Salihefendihsa?from=2026-01-01&to=2026-12-31).
-- **1,342 commits authored in the last 365 days** — 303 public and 1,039 private. GitHub-linked author login on accessible repositories' default branches; each SHA counted once across repositories. This authored-commit measure has a different time window and eligibility rules from the contribution graph.
-- **26 repositories contributed to** — 22 owned and 4 partner-owned. A qualifying authored default-branch commit or authored pull request in the period is required.
-- **38 owned repositories** — 24 public and 14 private, as visible to the statistics credential at measurement time; this snapshot includes the profile repository.
+- **3,651 GitHub contributions in the last year** — the same number GitHub shows above the profile graph: GraphQL `contributionsCollection` calendar `totalContributions` for the rolling last-year window [2025-11-11T13:38:03Z, 2026-11-11T13:38:03Z]. GitHub reports 3,544 restricted contributions in this collection; their repository identities are not published here. This total follows GitHub's contribution rules and is not a commit count. [View the graph](https://github.com/Salihefendihsa).
+- **3,216 commits authored in the last 365 days** — 43 public and 3,173 private. GitHub-linked author login on accessible repositories' default branches; each SHA counted once across repositories. This authored-commit measure has a different time window and eligibility rules from the contribution graph.
+- **618 estimated coding hours in the last 365 days** — derived from the timestamps of the authored commits above (237 working sessions). Commits less than 2 hours apart are one session and the time between them is counted; each session adds 30 minutes for work before its first commit. Time without commits (reading, design, meetings) is not counted, so this is an estimate, not a timesheet.
+- **42 repositories contributed to** — 38 owned and 4 partner-owned. A qualifying authored default-branch commit or authored pull request in the period is required.
+- **56 owned repositories** — 23 public and 33 private, as visible to the statistics credential at measurement time; this snapshot includes the profile repository.
 - **4 verified collaborations** — partner-owned repositories with a qualifying commit or pull request in the period. Mere access is not evidence.
-- **Authored activity period:** UTC [2025-10-04T13:28:34Z, 2026-10-04T13:28:34Z) (365 days). Last published successful measurement: 2026-10-04T13:28:34Z. Access scope: repositories visible to the owner's credential. The profile repository is excluded from activity counts so automated card commits cannot raise them. Hourly runs are not instant synchronization. If values have not changed, the last published successful time stays visible and no commit is made; newer successful no-op runs appear in Actions history.
-- The year shown on this card is 2026. Profile URL `from`/`to` filters are not passed into README images; the workflow explicitly requests the calendar-year range above. Private contribution visibility and credential access can change which contributions GitHub returns.
-- **Code by language** across token-visible owned repositories: TypeScript 38.5 %, C# 19.0 %, Python 18.3 %, Dart 10.3 %, HTML 7.2 %, JavaScript 3.1 %, Other 3.6 %. GitHub language bytes measured with the same credential on 2026-10-04.
+- **Authored activity period:** UTC [2025-11-11T13:38:03Z, 2026-11-11T13:38:03Z) (365 days). Last published successful measurement: 2026-11-11T13:38:03Z. Access scope: repositories visible to the owner's credential. The profile repository is excluded from activity counts so automated card commits cannot raise them. Hourly runs are not instant synchronization. If values have not changed, the last published successful time stays visible and no commit is made; newer successful no-op runs appear in Actions history.
+- Private contribution visibility and credential access can change which contributions GitHub returns.
+- **Code by language** across token-visible owned repositories: TypeScript 50.2 %, Dart 18.0 %, C# 8.9 %, Python 7.7 %, PLpgSQL 7.3 %, JavaScript 3.0 %, Other 4.9 %. GitHub language bytes measured with the same credential on 2026-11-11.
 
 </details>
 <!-- PROOF:END -->
@@ -110,7 +111,7 @@ Running several development projects with AI agents only makes sense if agents c
   <source media="(prefers-color-scheme: dark) and (max-width: 600px)" srcset="assets/v5/collaborations-mobile-dark.svg">
   <source media="(max-width: 600px)" srcset="assets/v5/collaborations-mobile-light.svg">
   <source media="(prefers-color-scheme: dark)" srcset="assets/v5/collaborations-desktop-dark.svg">
-  <img alt="Verified collaborations on partner-owned products: Sticker &amp; Label Studio — Web studio for school name stickers and print-ready labels. (Lead contributor, 71 authored commits · 2 PRs (12m), Delivered, Partner-owned · private); Couples Companion App — Flutter app that helps couples share how they feel, without a fight. (Core contributor, 37 authored commits · 36 PRs (12m), In development, Partner-owned · private); Invitation Design Studio — Interactive studio for wedding and event invitations with print export. (Lead contributor, 5 authored commits · 0 PRs (12m), Delivered, Partner-owned · private); Product Photo Studio — On-device product photo studio that exports social-ready posts and stories. (Contributor, 2 authored commits · 0 PRs (12m), In development, Partner-owned · private)" src="assets/v5/collaborations-desktop-light.svg" width="100%">
+  <img alt="Verified collaborations on partner-owned products: Sticker &amp; Label Studio — Web studio for school name stickers and print-ready labels. (Lead contributor, 71 authored commits · 2 PRs (12m), Delivered, Partner-owned · private); Couples Companion App — Flutter app that helps couples share how they feel, without a fight. (Core contributor, 39 authored commits · 36 PRs (12m), In development, Partner-owned · private); Invitation Design Studio — Interactive studio for wedding and event invitations with print export. (Lead contributor, 5 authored commits · 0 PRs (12m), Delivered, Partner-owned · private); Product Photo Studio — On-device product photo studio that exports social-ready posts and stories. (Contributor, 2 authored commits · 0 PRs (12m), In development, Partner-owned · private)" src="assets/v5/collaborations-desktop-light.svg" width="100%">
 </picture>
 
 <!-- PORTFOLIO:END -->
@@ -145,19 +146,20 @@ Running several development projects with AI agents only makes sense if agents c
 | **Nalbur Stok**<br><sub>React 19 · TypeScript · Vite · TanStack · Supabase · Solo engineer · Maintained · Private</sub> | Virtualised 100K-row product tables, reports and a Supabase backend. |
 | **Optivark**<br><sub>React · TypeScript · Vite · GSAP · Solo engineer · In development · Private</sub> | Marketing site and solution catalogue for the software practice behind these products: logistics and dispatch, production optimisation, field-team mobile apps and barcode / QR tooling. |
 | **Sticker & Label Studio**<br><sub>Next.js · TypeScript · Supabase · Cloudflare · Lead contributor · 71 authored commits · 2 PRs (12m) · Delivered · Partner-owned · private</sub> | Template library, positioned text editor, bulk generation from Excel and CSV, millimetre-accurate print layouts and Word export. |
-| **Couples Companion App**<br><sub>Flutter · Dart · Supabase · Core contributor · 37 authored commits · 36 PRs (12m) · In development · Partner-owned · private</sub> | Emotion signals, shared goals, daily check-in nudges, a character quiz and weekly insights, delivered through reviewed pull requests with accessibility tests. |
+| **Couples Companion App**<br><sub>Flutter · Dart · Supabase · Core contributor · 39 authored commits · 36 PRs (12m) · In development · Partner-owned · private</sub> | Emotion signals, shared goals, daily check-in nudges, a character quiz and weekly insights, delivered through reviewed pull requests with accessibility tests. |
 | **Invitation Design Studio**<br><sub>React · Vite · JavaScript · Lead contributor · 5 authored commits · 0 PRs (12m) · Delivered · Partner-owned · private</sub> | Parses pasted invitation text into fields, applies templates and phrase libraries, previews live and exports print-ready Word documents. |
 | **Product Photo Studio**<br><sub>Flutter · Dart · on-device ML · Supabase · Contributor · 2 authored commits · 0 PRs (12m) · In development · Partner-owned · private</sub> | Guided 360° capture, fully on-device background removal, studio backgrounds and post, carousel and story export for small sellers. |
 
 </details>
 
 <details>
-<summary><b>Tools &amp; Research</b> (4)</summary>
+<summary><b>Tools &amp; Research</b> (5)</summary>
 
 | Project | What it does |
 | --- | --- |
 | [LLM Chatbot](https://github.com/Salihefendihsa/LLMChatbot)<br><sub>C\# · .NET · Public</sub> | Streaming, multi-turn chatbot backend on the OpenAI-compatible Chat Completions API with a console client and tests. |
 | [MultiLang Translator](https://github.com/Salihefendihsa/MultiLangTranslator)<br><sub>C\# · .NET 8 · WPF · MVVM · Public</sub> | WPF desktop app translating text into several languages in parallel, with auto-detection, caching, history and an offline mock provider. |
+| [navlonix-localdocuments](https://github.com/Salihefendihsa/navlonix-localdocuments)<br><sub>C\# · Public</sub> | Local PDF text extraction and image OCR for .NET, with bounded helper processes, cancellation and explicit failure states. |
 | [RSU JPEG Compression](https://github.com/Salihefendihsa/rsu-jpeg-compression)<br><sub>Python · NumPy · SciPy · Public</sub> | Research experiment: a custom random-number generator drives dynamic JPEG quantization tables, benchmarked against the standard table. |
 | [Shape Classifier](https://github.com/Salihefendihsa/ShapeClassifier)<br><sub>C\# · .NET 8 · OpenCvSharp · ML.NET · Public</sub> | Geometric shape recognition: synthetic data, OpenCV pre-processing, Hu-moment features and an ML.NET classifier. |
 
