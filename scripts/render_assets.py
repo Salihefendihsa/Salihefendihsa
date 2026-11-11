@@ -103,7 +103,17 @@ MOTION = ("<style>@keyframes rise{from{opacity:0;transform:translateY(10px)}to{o
                 ".fade{opacity:0;animation:rise 1s ease-out forwards}"
                 ".trace{stroke-dasharray:100;animation:trace 1.4s ease-out .35s both}"
                 "@keyframes trace{from{stroke-dashoffset:100}to{stroke-dashoffset:0}}"
-                "@media (prefers-reduced-motion:reduce){.rise,.fade{opacity:1;animation:none}.draw,.trace{animation:none;stroke-dasharray:none}}</style>")
+                "@keyframes flow{to{stroke-dashoffset:-24}}"
+                "@keyframes spin{to{transform:rotate(360deg)}}"
+                "@keyframes breathe{from{opacity:.35}to{opacity:1}}"
+                "@keyframes ping{from{transform:scale(1);opacity:.5}to{transform:scale(2.2);opacity:0}}"
+                "@keyframes travel{from{transform:translate(0,0)}to{transform:translate(var(--dx,0px),var(--dy,0px))}}"
+                ".flow{stroke-dasharray:6 6;animation:flow 1.8s linear infinite}"
+                ".spin{transform-box:view-box;animation:spin 18s linear infinite}"
+                ".breathe{animation:breathe 2.8s ease-in-out infinite alternate}"
+                ".ping{transform-box:fill-box;transform-origin:center;animation:ping 2.6s ease-out infinite}"
+                ".travel{animation:travel 7s ease-in-out infinite alternate}"
+                "@media (prefers-reduced-motion:reduce){.rise,.fade{opacity:1;animation:none}.draw,.trace,.flow,.spin,.breathe,.ping,.travel{animation:none}.draw,.trace{stroke-dasharray:none}}</style>")
 
 
 def _rise(parts: list[str], i: int) -> list[str]:
@@ -112,6 +122,21 @@ def _rise(parts: list[str], i: int) -> list[str]:
 
 def _draw(el: str) -> str:
     return el.replace("<line ", '<line class="draw" ', 1)
+
+
+def _cls(el: str, cls: str, style: str = "") -> str:
+    """Add a motion class (and optional inline style) to a single SVG element."""
+    tag_end = el.index(" ")
+    extra = f' class="{cls}"' + (f' style="{style}"' if style else "")
+    return el[:tag_end] + extra + el[tag_end:]
+
+
+def _ping(cx: float, cy: float, r: float, col: str, delay: float = 0) -> str:
+    return _cls(circle(cx, cy, r, "none", col, 2), "ping", f"animation-delay:{delay:.1f}s")
+
+
+def _traveller(x1: float, y1: float, x2: float, y2: float, r: float, col: str, dur: float = 7) -> str:
+    return _cls(circle(x1, y1, r, col), "travel", f"--dx:{x2 - x1:.0f}px;--dy:{y2 - y1:.0f}px;animation-duration:{dur:g}s")
 
 
 # --------------------------------------------------------------------------- primitives
@@ -202,7 +227,7 @@ def path(d: str, stroke: str, sw: float = 2, fill: str = "none") -> str:
 def card(x: float, y: float, w: float, h: float, t: dict, accent: str = "", rx: float = 14) -> list[str]:
     out = [rect(x, y, w, h, t["surface"], rx=rx, stroke=t["rule"])]
     if accent:
-        out.append(rect(x, y + 22, 5, h - 44, accent, rx=2.5))
+        out.append(_cls(rect(x, y + 22, 5, h - 44, accent, rx=2.5), "breathe"))
     return out
 
 
@@ -351,10 +376,11 @@ def render_hero(theme: str, mobile: bool = False) -> str:
         for (dom, label, caption), (nx, ny) in zip(HERO_DOMAINS, positions):
             cx = nx + nw if nx == gx else nx
             cy = ny + nh if ny == gy else ny
-            body.append(_draw(line(hub[0], hub[1], cx, cy, t["accent2"], 1.5)))
+            body.append(_cls(line(hub[0], hub[1], cx, cy, t["accent2"], 1.5), "flow"))
         for i, ((dom, label, caption), (nx, ny)) in enumerate(zip(HERO_DOMAINS, positions)):
             body += _rise(_domain_node(nx, ny, nw, nh, dom, label, caption, t, 22, 18, 26), i + 2)
-        body += [circle(hub[0], hub[1], 22, t["accent"]), circle(hub[0], hub[1], 8, t["bg"])]
+        body += [_ping(hub[0], hub[1], 22, t["accent"]), _ping(hub[0], hub[1], 22, t["accent"], 1.3),
+                 circle(hub[0], hub[1], 22, t["accent"]), circle(hub[0], hub[1], 8, t["bg"])]
     else:
         w, m = MOBILE_W, 36
         body = []
@@ -375,10 +401,11 @@ def render_hero(theme: str, mobile: bool = False) -> str:
         for (dom, label, caption), (nx, ny) in zip(HERO_DOMAINS, positions):
             cx = nx + nw if nx == m else nx
             cy = ny + nh if ny == gy else ny
-            body.append(_draw(line(hub[0], hub[1], cx, cy, t["accent2"], 1.5)))
+            body.append(_cls(line(hub[0], hub[1], cx, cy, t["accent2"], 1.5), "flow"))
         for i, ((dom, label, caption), (nx, ny)) in enumerate(zip(HERO_DOMAINS, positions)):
             body += _rise(_domain_node(nx, ny, nw, nh, dom, label, caption, t, 24, 20, 28), i + 2)
-        body += [circle(hub[0], hub[1], 17, t["accent"]), circle(hub[0], hub[1], 6, t["bg"])]
+        body += [_ping(hub[0], hub[1], 17, t["accent"]), _ping(hub[0], hub[1], 17, t["accent"], 1.3),
+                 circle(hub[0], hub[1], 17, t["accent"]), circle(hub[0], hub[1], 6, t["bg"])]
         h = int(gy + 2 * nh + gap + m)
         body.insert(0, rect(0.5, 0.5, w - 1, h - 1, "none", rx=18, stroke=t["rule"]))
     desc = (f"{'Mobile' if mobile else 'Desktop'} editorial hero: personal monogram, {POSITIONING} "
@@ -405,6 +432,7 @@ def _month(iso: str) -> str:
 def _timeline(x1: float, x2: float, y: float, t: dict, footprint: dict, size: float) -> list[str]:
     win = footprint.get("window", {})
     out = [_draw(line(x1, y, x2, y, t["rule"], 2)), line(x1, y - 8, x1, y + 8, t["accent2"], 2), line(x2, y - 8, x2, y + 8, t["accent2"], 2),
+           _traveller(x1, y, x2, y, 4, t["accent2"], 9), _ping(x2, y, 5, t["accent"]),
            circle(x2, y, 5, t["accent"]),
            text(x1, y + size + 12, _month(win.get("from", "")), size, t["muted"], mono=True, spacing=1),
            text(x2, y + size + 12, _month(win.get("to", "")), size, t["muted"], mono=True, spacing=1, anchor="end")]
@@ -509,8 +537,9 @@ def render_flagship(spec: dict, theme: str) -> str:
         body.append(text(x2 + 26, y0 + 42 + i * 66, label, size, t["fg"], weight="600"))
     body[core0:] = _rise(body[core0:], 3)
     mid = y0 + core_h / 2
-    body.append(_draw(line(x1 + col_w, mid, x2, mid, t["accent2"], 2)))
-    body.append(_draw(line(x2 + col_w, mid, x3, mid, t["accent2"], 2)))
+    body.append(_cls(line(x1 + col_w, mid, x2, mid, col, 2), "flow"))
+    body.append(_cls(line(x2 + col_w, mid, x3, mid, col, 2), "flow"))
+    body += [_ping(x2, mid, 5, col), _ping(x3, mid, 5, col, 1.3)]
     body.append(circle(x2, mid, 5, col))
     body.append(circle(x3, mid, 5, col))
     desc = (f"{spec['name']} system diagram. {spec['surfaces_title']}: {', '.join(spec['surfaces'])}. "
@@ -632,6 +661,7 @@ def render_approach(theme: str, mobile: bool = False) -> str:
         body = [rect(0.5, 0.5, w - 1, h - 1, "none", rx=18, stroke=t["rule"])]
         cy = 104
         body.append(_draw(line(m + cw / 2, cy, w - m - cw / 2, cy, t["rule"], 2)))
+        body.append(_traveller(m + cw / 2, cy, w - m - cw / 2, cy, 5, t["accent"], 10))
         for i, (key, title, sub) in enumerate(APPROACH):
             cx = m + cw * (i + 0.5)
             st = len(body)
@@ -649,6 +679,7 @@ def render_approach(theme: str, mobile: bool = False) -> str:
         body = [rect(0.5, 0.5, w - 1, h - 1, "none", rx=18, stroke=t["rule"])]
         sx = m + 40
         body.append(_draw(line(sx, 70, sx, 60 + step * (len(APPROACH) - 1) + 40, t["rule"], 2)))
+        body.append(_traveller(sx, 70, sx, 60 + step * (len(APPROACH) - 1) + 40, 5, t["accent"], 10))
         for i, (key, title, sub) in enumerate(APPROACH):
             cy = 60 + step * i + 40
             st = len(body)
@@ -732,16 +763,20 @@ def product_mark(name: str, x: float, y: float, s: float, col: str, t: dict) -> 
 
 def _orbit(cx: float, cy: float, r: float, t: dict, col: str) -> list[str]:
     """Quiet geometric backdrop: concentric rings with one accent arc."""
+    origin = f"transform-origin:{cx:.0f}px {cy:.0f}px"
     return [circle(cx, cy, r, "none", t["rule"], 1.2), circle(cx, cy, r * 0.68, "none", t["rule"], 1.2),
+            f'<g class="spin" style="{origin}">',
             _trace(f"M{cx - r:.1f} {cy:.1f} A{r:.1f} {r:.1f} 0 0 1 {cx:.1f} {cy - r:.1f}", col, 2.5),
-            circle(cx, cy - r, 4, col)]
+            circle(cx, cy - r, 4, col), "</g>",
+            f'<g class="spin" style="{origin};animation-duration:26s;animation-direction:reverse">',
+            circle(cx + r * 0.68, cy, 3, col), "</g>"]
 
 
 def _chip(x: float, y: float, label: str, size: float, col: str, soft: str, t: dict, anchor_end: bool = False) -> list[str]:
     w = text_width(label, size, mono=True) + len(label) * 1.2 + size * 2.2
     h = size * 1.9
     x0 = x - w if anchor_end else x
-    return [rect(x0, y, w, h, soft, rx=h / 2), circle(x0 + size * 0.95, y + h / 2, size * 0.24, col),
+    return [rect(x0, y, w, h, soft, rx=h / 2), _cls(circle(x0 + size * 0.95, y + h / 2, size * 0.24, col), "breathe"),
             text(x0 + size * 1.7, y + h / 2 + size * 0.36, label, size, col, mono=True, spacing=1.2)]
 
 
@@ -771,7 +806,7 @@ def _saas_card(x: float, y: float, w: float, h: float, p: dict, t: dict, mobile:
     bs = 64 if mobile else 56
     bx, by = x + 26, y + 26
     out.append(rect(bx, by, bs, bs, soft, rx=bs * 0.3))
-    out.append(_trace(f"M{bx + bs * 0.3:.1f} {by:.1f} H{bx + bs * 0.7:.1f}", col, 3))
+    out.append(_cls(rect(bx + bs * 0.3, by - 1.5, bs * 0.4, 3, col, rx=1.5), "breathe"))
     ms = bs * 0.56
     out += product_mark(p["mark"], bx + (bs - ms) / 2, by + (bs - ms) / 2, ms, col, t)
     out += _chip(x + w - 24, y + 30, p["stage"], c_s, col, soft, t, anchor_end=True)
