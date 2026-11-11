@@ -4,8 +4,8 @@
   "window": {
     "from": "2025-11-11",
     "to": "2026-11-11",
-    "start_utc": "2025-11-11T13:52:18Z",
-    "end_utc": "2026-11-11T13:52:18Z",
+    "start_utc": "2025-11-11T14:14:34Z",
+    "end_utc": "2026-11-11T14:14:34Z",
     "label": "Nov 2025 – Nov 2026"
   },
   "metrics": [
@@ -13,8 +13,8 @@
       "key": "github_contributions",
       "label": "Contributions in the last year",
       "short_label": "Contributions (1y)",
-      "value": 3655,
-      "note": "2026: 3,630"
+      "value": 3662,
+      "note": "2026: 3,637"
     },
     {
       "key": "commits_12m",
@@ -97,14 +97,14 @@
       "rolling": true,
       "from": "2025-11-11",
       "to": "2026-11-11",
-      "start_utc": "2025-11-11T13:52:18Z",
-      "end_utc": "2026-11-11T13:52:18Z"
+      "start_utc": "2025-11-11T14:14:34Z",
+      "end_utc": "2026-11-11T14:14:34Z"
     },
-    "github_contributions": 3655,
+    "github_contributions": 3662,
     "restricted_contributions": 3544,
-    "github_commit_contributions": 97,
-    "github_contributions_year": 3630,
-    "profile_fingerprint": "fbfc63ddaf46495665afec70afa7d0f3abe3ba1343a018423596f666bd9706a0"
+    "github_commit_contributions": 104,
+    "github_contributions_year": 3637,
+    "profile_fingerprint": "2b30350b5700c6543eb28b9939dd10b408a3484aa408c8cedfdcf69d0860f932"
   },
   "collaboration_evidence": {
     "sticker-label-studio": {
@@ -128,13 +128,13 @@
       "visual_evidence": "2 commits · 0 PRs"
     }
   },
-  "measured_at_utc": "2026-11-11T13:52:18Z",
+  "measured_at_utc": "2026-11-11T14:14:34Z",
   "contribution_window": {
     "year": 2026,
     "rolling": true,
     "from": "2025-11-11",
     "to": "2026-11-11",
-    "start_utc": "2025-11-11T13:52:18Z",
-    "end_utc": "2026-11-11T13:52:18Z"
+    "start_utc": "2025-11-11T14:14:34Z",
+    "end_utc": "2026-11-11T14:14:34Z"
   }
 }
