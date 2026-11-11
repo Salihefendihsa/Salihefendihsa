@@ -1,8 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="720" height="890" viewBox="0 0 720 890" role="img" aria-labelledby="t d">
   <title id="t">Verified engineering footprint · last 12 months (Nov 2025 – Nov 2026)</title>
   <desc id="d">3,655 contributions in the last year; 3,216 commits authored; 618 coding hours (est.); 56 repositories; 4 verified collaborations. Last published successful measurement 2026-11-11T13:52:18Z.</desc>
+  <style>@keyframes rise{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}@keyframes draw{from{stroke-dashoffset:1200}to{stroke-dashoffset:0}}.rise{opacity:0;animation:rise .7s cubic-bezier(.2,.7,.2,1) forwards}.draw{stroke-dasharray:1200;animation:draw 1.6s ease-out .5s both}.fade{opacity:0;animation:rise 1s ease-out forwards}@media (prefers-reduced-motion:reduce){.rise,.fade{opacity:1;animation:none}.draw{animation:none;stroke-dasharray:none}}</style>
   <rect x="0.0" y="0.0" width="720.0" height="890.0" fill="#101216"/>
-  <style>@keyframes rise{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}@keyframes draw{from{stroke-dashoffset:1200}to{stroke-dashoffset:0}}.rise{opacity:0;animation:rise .7s cubic-bezier(.2,.7,.2,1) forwards}.draw{stroke-dasharray:1200;animation:draw 1.6s ease-out .5s both}@media (prefers-reduced-motion:reduce){.rise{opacity:1;animation:none}.draw{animation:none;stroke-dasharray:none}}</style>
   <rect x="0.5" y="0.5" width="719.0" height="889.0" fill="none" rx="18" stroke="#2C3039" stroke-width="1"/>
   <text x="36" y="44" font-family="Consolas, 'SFMono-Regular', Menlo, monospace" font-size="20" fill="#9AA1B0" letter-spacing="3">VERIFIED FOOTPRINT</text>
   <text x="684" y="44" font-family="Consolas, 'SFMono-Regular', Menlo, monospace" font-size="20" fill="#7A90EE" text-anchor="end" letter-spacing="3">LAST 12 MONTHS</text>
@@ -49,7 +49,7 @@
   <rect x="404.8" y="358.2" width="22.5" height="2.8" fill="#7A90EE"/>
   <text x="392" y="450" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="56" fill="#F1EEE6" font-weight="700" letter-spacing="-1.5">56</text>
   <text x="392" y="484" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="22" fill="#F1EEE6" font-weight="600">Repositories</text>
-  <text x="392" y="529" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="18" fill="#9AA1B0">23 public · 33 private</text>
+  <text x="392" y="529" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="18" fill="#9AA1B0">23 public · 33 priv.</text>
   </g>
   <g class="rise" style="animation-delay:0.56s">
   <rect x="36.0" y="572.0" width="648.0" height="230.0" fill="#181B21" rx="14" stroke="#2C3039" stroke-width="1"/>

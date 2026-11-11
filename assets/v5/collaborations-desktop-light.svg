@@ -1,8 +1,10 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="608" viewBox="0 0 1200 608" role="img" aria-labelledby="t d">
   <title id="t">Selected collaborations — Sticker &amp; Label Studio, Couples Companion App, Invitation Design Studio, Product Photo Studio</title>
   <desc id="d">Verified collaborations on partner-owned products: Sticker &amp; Label Studio — Lead contributor, 71 authored commits · 2 PRs (12m), Delivered, Partner-owned · private; Couples Companion App — Core contributor, 39 authored commits · 36 PRs (12m), In development, Partner-owned · private; Invitation Design Studio — Lead contributor, 5 authored commits · 0 PRs (12m), Delivered, Partner-owned · private; Product Photo Studio — Contributor, 2 authored commits · 0 PRs (12m), In development, Partner-owned · private</desc>
+  <style>@keyframes rise{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}@keyframes draw{from{stroke-dashoffset:1200}to{stroke-dashoffset:0}}.rise{opacity:0;animation:rise .7s cubic-bezier(.2,.7,.2,1) forwards}.draw{stroke-dasharray:1200;animation:draw 1.6s ease-out .5s both}.fade{opacity:0;animation:rise 1s ease-out forwards}@media (prefers-reduced-motion:reduce){.rise,.fade{opacity:1;animation:none}.draw{animation:none;stroke-dasharray:none}}</style>
   <rect x="0.0" y="0.0" width="1200.0" height="608.0" fill="#F6F4EF"/>
   <rect x="0.5" y="0.5" width="1199.0" height="607.0" fill="none" rx="18" stroke="#D8DAE0" stroke-width="1"/>
+  <g class="rise" style="animation-delay:0.08s">
   <rect x="40.0" y="40.0" width="548.0" height="252.0" fill="#FFFFFF" rx="14" stroke="#D8DAE0" stroke-width="1"/>
   <rect x="40.0" y="62.0" width="5.0" height="208.0" fill="#2F4BC7" rx="2.5"/>
   <rect x="70.0" y="66.0" width="54.0" height="54.0" fill="#E4E8F8" rx="11"/>
@@ -18,6 +20,8 @@
   <rect x="371.3" y="218.0" width="186.7" height="32.0" fill="#E4E8F8" rx="16"/>
   <text x="465" y="245" font-family="Consolas, 'SFMono-Regular', Menlo, monospace" font-size="16" fill="#2F4BC7" text-anchor="middle" letter-spacing="1.5">LEAD CONTRIBUTOR</text>
   <text x="70" y="274" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="17" fill="#5C6270">Delivered  ·  Partner-owned · private</text>
+  </g>
+  <g class="rise" style="animation-delay:0.20s">
   <rect x="612.0" y="40.0" width="548.0" height="252.0" fill="#FFFFFF" rx="14" stroke="#D8DAE0" stroke-width="1"/>
   <rect x="612.0" y="62.0" width="5.0" height="208.0" fill="#2F4BC7" rx="2.5"/>
   <rect x="642.0" y="66.0" width="54.0" height="54.0" fill="#E4E8F8" rx="11"/>
@@ -33,6 +37,8 @@
   <rect x="943.3" y="218.0" width="186.7" height="32.0" fill="#E4E8F8" rx="16"/>
   <text x="1037" y="245" font-family="Consolas, 'SFMono-Regular', Menlo, monospace" font-size="16" fill="#2F4BC7" text-anchor="middle" letter-spacing="1.5">CORE CONTRIBUTOR</text>
   <text x="642" y="274" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="17" fill="#5C6270">In development  ·  Partner-owned · private</text>
+  </g>
+  <g class="rise" style="animation-delay:0.32s">
   <rect x="40.0" y="316.0" width="548.0" height="252.0" fill="#FFFFFF" rx="14" stroke="#D8DAE0" stroke-width="1"/>
   <rect x="40.0" y="338.0" width="5.0" height="208.0" fill="#2F4BC7" rx="2.5"/>
   <rect x="70.0" y="342.0" width="54.0" height="54.0" fill="#E4E8F8" rx="11"/>
@@ -48,6 +54,8 @@
   <rect x="371.3" y="494.0" width="186.7" height="32.0" fill="#E4E8F8" rx="16"/>
   <text x="465" y="521" font-family="Consolas, 'SFMono-Regular', Menlo, monospace" font-size="16" fill="#2F4BC7" text-anchor="middle" letter-spacing="1.5">LEAD CONTRIBUTOR</text>
   <text x="70" y="550" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="17" fill="#5C6270">Delivered  ·  Partner-owned · private</text>
+  </g>
+  <g class="rise" style="animation-delay:0.44s">
   <rect x="612.0" y="316.0" width="548.0" height="252.0" fill="#FFFFFF" rx="14" stroke="#D8DAE0" stroke-width="1"/>
   <rect x="612.0" y="338.0" width="5.0" height="208.0" fill="#2F4BC7" rx="2.5"/>
   <rect x="642.0" y="342.0" width="54.0" height="54.0" fill="#E4E8F8" rx="11"/>
@@ -63,4 +71,5 @@
   <rect x="992.9" y="494.0" width="137.1" height="32.0" fill="#E4E8F8" rx="16"/>
   <text x="1061" y="521" font-family="Consolas, 'SFMono-Regular', Menlo, monospace" font-size="16" fill="#2F4BC7" text-anchor="middle" letter-spacing="1.5">CONTRIBUTOR</text>
   <text x="642" y="550" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="17" fill="#5C6270">In development  ·  Partner-owned · private</text>
+  </g>
 </svg>

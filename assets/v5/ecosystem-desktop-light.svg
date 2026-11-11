@@ -1,8 +1,10 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="836" viewBox="0 0 1200 836" role="img" aria-labelledby="t d">
   <title id="t">Selected product ecosystem — Instagram AI Manager, Finans Pro, Tatlı Durağı POS &amp; QR Ordering, AuraProject, Nalbur Stok, Optivark</title>
   <desc id="d">Product board: Instagram AI Manager (AI operations) — Approval-first Instagram operations platform for professional accounts. In active development, Private, Lead engineer; Finans Pro (Finance) — Personal finance and investment tracking with OCR and FIFO profit. In development, Private, Solo engineer; Tatlı Durağı POS &amp; QR Ordering (Hospitality) — QR table ordering with a realtime, role-based admin POS. Delivered, Client system · private, Solo engineer; AuraProject (AI · Vision) — Outfit recommendation from visual analysis and style rules. Experimental, Public service · private core, Lead engineer; Nalbur Stok (Retail operations) — Inventory management for hardware stores with virtualised 100K-row product tables. Maintained, Private, Solo engineer; Optivark (Studio) — Studio site for logistics, production and field-team software. In development, Private, Solo engineer</desc>
+  <style>@keyframes rise{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}@keyframes draw{from{stroke-dashoffset:1200}to{stroke-dashoffset:0}}.rise{opacity:0;animation:rise .7s cubic-bezier(.2,.7,.2,1) forwards}.draw{stroke-dasharray:1200;animation:draw 1.6s ease-out .5s both}.fade{opacity:0;animation:rise 1s ease-out forwards}@media (prefers-reduced-motion:reduce){.rise,.fade{opacity:1;animation:none}.draw{animation:none;stroke-dasharray:none}}</style>
   <rect x="0.0" y="0.0" width="1200.0" height="836.0" fill="#F6F4EF"/>
   <rect x="0.5" y="0.5" width="1199.0" height="835.0" fill="none" rx="18" stroke="#D8DAE0" stroke-width="1"/>
+  <g class="rise" style="animation-delay:0.08s">
   <rect x="40.0" y="40.0" width="548.0" height="236.0" fill="#FFFFFF" rx="14" stroke="#D8DAE0" stroke-width="1"/>
   <rect x="40.0" y="62.0" width="5.0" height="192.0" fill="#6B4FB8" rx="2.5"/>
   <rect x="70.0" y="66.0" width="52.0" height="52.0" fill="#ECE6F8" rx="11"/>
@@ -16,6 +18,8 @@
   <text x="70" y="225" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="17" fill="#5C6270">Python · FastAPI · PostgreSQL · Redis · Next.js · Docker</text>
   <line x1="70.0" y1="232.0" x2="558.0" y2="232.0" stroke="#D8DAE0" stroke-width="1"/>
   <text x="70" y="258" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="18" fill="#5C6270">In active development  ·  Private  ·  Lead engineer</text>
+  </g>
+  <g class="rise" style="animation-delay:0.20s">
   <rect x="612.0" y="40.0" width="548.0" height="236.0" fill="#FFFFFF" rx="14" stroke="#D8DAE0" stroke-width="1"/>
   <rect x="612.0" y="62.0" width="5.0" height="192.0" fill="#A3651F" rx="2.5"/>
   <rect x="642.0" y="66.0" width="52.0" height="52.0" fill="#F6EBDC" rx="11"/>
@@ -30,6 +34,8 @@
   <text x="642" y="225" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="19" fill="#5C6270">Flutter · Node.js · Express · MongoDB</text>
   <line x1="642.0" y1="232.0" x2="1130.0" y2="232.0" stroke="#D8DAE0" stroke-width="1"/>
   <text x="642" y="258" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="18" fill="#5C6270">In development  ·  Private  ·  Solo engineer</text>
+  </g>
+  <g class="rise" style="animation-delay:0.32s">
   <rect x="40.0" y="300.0" width="548.0" height="236.0" fill="#FFFFFF" rx="14" stroke="#D8DAE0" stroke-width="1"/>
   <rect x="40.0" y="322.0" width="5.0" height="192.0" fill="#A3651F" rx="2.5"/>
   <rect x="70.0" y="326.0" width="52.0" height="52.0" fill="#F6EBDC" rx="11"/>
@@ -45,6 +51,8 @@
   <text x="70" y="485" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="19" fill="#5C6270">Next.js · TypeScript · Supabase Realtime</text>
   <line x1="70.0" y1="492.0" x2="558.0" y2="492.0" stroke="#D8DAE0" stroke-width="1"/>
   <text x="70" y="518" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="17" fill="#5C6270">Delivered  ·  Client system · private  ·  Solo engineer</text>
+  </g>
+  <g class="rise" style="animation-delay:0.44s">
   <rect x="612.0" y="300.0" width="548.0" height="236.0" fill="#FFFFFF" rx="14" stroke="#D8DAE0" stroke-width="1"/>
   <rect x="612.0" y="322.0" width="5.0" height="192.0" fill="#6B4FB8" rx="2.5"/>
   <rect x="642.0" y="326.0" width="52.0" height="52.0" fill="#ECE6F8" rx="11"/>
@@ -58,6 +66,8 @@
   <text x="642" y="485" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="16" fill="#5C6270">Python · FastAPI · PyTorch · OpenAI / Gemini · ControlNet</text>
   <line x1="642.0" y1="492.0" x2="1130.0" y2="492.0" stroke="#D8DAE0" stroke-width="1"/>
   <text x="642" y="518" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="15" fill="#5C6270">Experimental  ·  Public service · private core  ·  Lead engineer</text>
+  </g>
+  <g class="rise" style="animation-delay:0.56s">
   <rect x="40.0" y="560.0" width="548.0" height="236.0" fill="#FFFFFF" rx="14" stroke="#D8DAE0" stroke-width="1"/>
   <rect x="40.0" y="582.0" width="5.0" height="192.0" fill="#A3651F" rx="2.5"/>
   <rect x="70.0" y="586.0" width="52.0" height="52.0" fill="#F6EBDC" rx="11"/>
@@ -72,6 +82,8 @@
   <text x="70" y="745" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="19" fill="#5C6270">React 19 · TypeScript · Vite · TanStack · Supabase</text>
   <line x1="70.0" y1="752.0" x2="558.0" y2="752.0" stroke="#D8DAE0" stroke-width="1"/>
   <text x="70" y="778" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="18" fill="#5C6270">Maintained  ·  Private  ·  Solo engineer</text>
+  </g>
+  <g class="rise" style="animation-delay:0.68s">
   <rect x="612.0" y="560.0" width="548.0" height="236.0" fill="#FFFFFF" rx="14" stroke="#D8DAE0" stroke-width="1"/>
   <rect x="612.0" y="582.0" width="5.0" height="192.0" fill="#2F4BC7" rx="2.5"/>
   <rect x="642.0" y="586.0" width="52.0" height="52.0" fill="#E4E8F8" rx="11"/>
@@ -87,4 +99,5 @@
   <text x="642" y="745" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="19" fill="#5C6270">React · TypeScript · Vite · GSAP</text>
   <line x1="642.0" y1="752.0" x2="1130.0" y2="752.0" stroke="#D8DAE0" stroke-width="1"/>
   <text x="642" y="778" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="18" fill="#5C6270">In development  ·  Private  ·  Solo engineer</text>
+  </g>
 </svg>
