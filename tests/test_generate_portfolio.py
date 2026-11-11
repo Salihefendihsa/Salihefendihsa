@@ -284,11 +284,11 @@ class CollaborationTests(unittest.TestCase):
         pf = portfolio([product("stud", display_name="Sticker Studio", role="Lead contributor", access="Partner-owned · private",
                                 collaboration={"label": "Built in collaboration", "evidence": "71 of 75 commits"})])
         text = generate([repo("tool")], pf)
-        collab = text[text.index("## 03 — Verified Collaborations"):text.index(gp.PORTFOLIO_END)]
+        collab = text[text.index("## 05 — Verified Collaborations"):text.index(gp.PORTFOLIO_END)]
         self.assertIn("assets/v5/collaborations-mobile-dark.svg", collab)
         self.assertIn("Sticker Studio — Does a thing for real people every day. (Lead contributor, 71 of 75 commits", collab)
         self.assertIn("Partner-owned · private", collab)
-        eco = text[text.index("## 02 — Product Ecosystem"):text.index("## 03 — Verified Collaborations")]
+        eco = text[text.index("## 04 — Product Ecosystem"):text.index("## 05 — Verified Collaborations")]
         self.assertNotIn("Sticker Studio", eco)
         archive = text[text.index(gp.ARCHIVE_START):]
         self.assertIn("| **Sticker Studio**<br><sub>Python · Lead contributor · 71 of 75 commits · In development · Partner-owned · private</sub> | Does a private thing well. |", archive)
@@ -528,7 +528,7 @@ class RealDataTests(unittest.TestCase):
         self.assertIn("Flagship 01 — Navlonix:", text)
         self.assertIn("Flagship 02 — Nilüfer İlaçlama Operations Suite:", text)
         self.assertIn("Flagship 03 — SALIH-AI-COMPANY:", text)
-        self.assertIn("## 02 — Product Ecosystem", text)
+        self.assertIn("## 04 — Product Ecosystem", text)
         self.assertIn("<summary><b>Selected products — full descriptions</b> (10)</summary>", text)
         self.assertNotIn("Web Lab 1", text)
         self.assertLessEqual(gp.longest_word(text), 30)

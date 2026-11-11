@@ -40,14 +40,14 @@ class ReadmeTests(unittest.TestCase):
 
     def test_section_order(self):
         order = ["assets/v5/hero-", "assets/v5/proof-", "How these numbers are measured",
-                 "## 01 — Flagship Systems", "## 02 — Product Ecosystem", "assets/v5/ecosystem-",
-                 "## 03 — Verified Collaborations", "assets/v5/collaborations-",
-                 "## 04 — Engineering Method", "assets/v5/approach-", "## 05 — Complete Archive", "## Contact"]
+                 "## 03 — Flagship Systems", "## 04 — Product Ecosystem", "assets/v5/ecosystem-",
+                 "## 05 — Verified Collaborations", "assets/v5/collaborations-",
+                 "## 06 — Engineering Method", "assets/v5/approach-", "## 07 — Complete Archive", "## Contact"]
         positions = [self.readme.index(s) for s in order]
         self.assertEqual(positions, sorted(positions))
 
     def test_collaborations_are_included_once_on_the_board(self):
-        block = self.readme[self.readme.index("## 03 — Verified Collaborations"):self.readme.index("## 04 — Engineering Method")]
+        block = self.readme[self.readme.index("## 05 — Verified Collaborations"):self.readme.index("## 06 — Engineering Method")]
         alt = re.search(r'<img alt="([^"]+)" src="assets/v5/collaborations-desktop-light\.svg"', block).group(1)
         for name in ("Sticker &amp; Label Studio", "Couples Companion App", "Invitation Design Studio", "Product Photo Studio"):
             self.assertEqual(alt.count(name), 1, name)
@@ -59,7 +59,7 @@ class ReadmeTests(unittest.TestCase):
         self.assertEqual([l for l in visible.splitlines() if l.strip() and not l.startswith(("#", "<sub>", "<!--"))], [])
 
     def test_ecosystem_board_replaces_the_text_wall(self):
-        block = self.readme[self.readme.index("## 02 — Product Ecosystem"):self.readme.index("## 03 — Verified Collaborations")]
+        block = self.readme[self.readme.index("## 04 — Product Ecosystem"):self.readme.index("## 05 — Verified Collaborations")]
         alt = re.search(r'<img alt="([^"]+)" src="assets/v5/ecosystem-desktop-light\.svg"', block).group(1)
         for name in ("Instagram AI Manager", "Finans Pro", "Tatlı Durağı POS &amp; QR Ordering", "AuraProject", "Nalbur Stok", "Optivark"):
             self.assertEqual(alt.count(name), 1, name)
@@ -70,7 +70,7 @@ class ReadmeTests(unittest.TestCase):
         self.assertEqual([l for l in visible.splitlines() if l.strip() and not l.startswith(("#", "<sub>"))], [])
 
     def test_engineering_method_is_the_process_diagram(self):
-        block = self.readme[self.readme.index("## 04 — Engineering Method"):self.readme.index("## 05 — Complete Archive")]
+        block = self.readme[self.readme.index("## 06 — Engineering Method"):self.readme.index("## 07 — Complete Archive")]
         self.assertIn("assets/v5/approach-mobile-dark.svg", block)
         self.assertNotIn("- **", block)  # the old bullet list is gone
         alt = re.search(r'<img alt="([^"]+)"', block).group(1)
@@ -92,9 +92,9 @@ class ReadmeTests(unittest.TestCase):
             self.assertRegex(lines[3], rf'^<img alt="[^"]{{20,}}" src="assets/v5/{base}-desktop-light\.svg" width="100%">$')
 
     def test_full_descriptions_live_only_in_the_collapsed_archive(self):
-        archive = self.readme[self.readme.index("## 05 — Complete Archive"):]
+        archive = self.readme[self.readme.index("## 07 — Complete Archive"):]
         self.assertIn("<summary><b>Selected products — full descriptions</b> (10)</summary>", archive)
-        before = self.readme[:self.readme.index("## 05 — Complete Archive")]
+        before = self.readme[:self.readme.index("## 07 — Complete Archive")]
         self.assertNotIn("Multi-workspace backend", before)
         self.assertEqual(archive.count("Template library, positioned text editor"), 1)
 
@@ -128,7 +128,7 @@ class ReadmeTests(unittest.TestCase):
 
     def test_pictures_have_light_dark_and_fallback(self):
         pictures = re.findall(r"<picture>(.*?)</picture>", self.readme, re.S)
-        self.assertEqual(len(pictures), 8)
+        self.assertEqual(len(pictures), 10)
         for pic in pictures:
             self.assertIn('media="(prefers-color-scheme: dark)"', pic)
             self.assertRegex(pic, r'<img alt="[^"]{10,}" src="assets/v5/[^"]+-light\.svg" width="100%">')
@@ -166,8 +166,8 @@ class ReadmeTests(unittest.TestCase):
         self.assertLessEqual(gp.longest_word(self.readme), 34)
 
     def test_story_before_archive(self):
-        archive = self.readme.index("## 05 — Complete Archive")
-        for s in ("Flagship 01 — Navlonix:", "## 02 — Product Ecosystem", "## 03 — Verified Collaborations", "## 04 — Engineering Method"):
+        archive = self.readme.index("## 07 — Complete Archive")
+        for s in ("Flagship 01 — Navlonix:", "## 04 — Product Ecosystem", "## 05 — Verified Collaborations", "## 06 — Engineering Method"):
             self.assertLess(self.readme.index(s), archive)
 
 
@@ -180,7 +180,7 @@ class AssetTests(unittest.TestCase):
         names = [f"{r}-{bp}" for r in ra.RESPONSIVE_ASSETS for bp in ("desktop", "mobile")] + [f"flagship-{pid}" for pid in ra.FLAGSHIPS]
         expected = {f"{n}-{t}.svg" for t in ("light", "dark") for n in names}
         self.assertEqual(set(self.files), expected)
-        self.assertEqual(len(self.files), 26)
+        self.assertEqual(len(self.files), 34)
 
     def test_mobile_geometry_is_recomposed_not_scaled(self):
         for r in ra.RESPONSIVE_ASSETS:
