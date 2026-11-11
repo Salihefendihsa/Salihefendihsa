@@ -367,7 +367,7 @@ def render_hero(theme: str, mobile: bool = False) -> str:
 
 # --------------------------------------------------------------------------- proof (evidence cards)
 
-EVIDENCE_GLYPHS = {"github_contributions": "contributions", "commits_12m": "commits", "repos_contributed_12m": "repositories", "owned_repos": "owned", "verified_collaborations": "collaboration"}
+EVIDENCE_GLYPHS = {"github_contributions": "contributions", "commits_12m": "commits", "repos_contributed_12m": "repositories", "owned_repos": "owned", "coding_hours_12m": "observe", "verified_collaborations": "collaboration"}
 
 
 MONTHS = ("JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEP", "OCT", "NOV", "DEC")
