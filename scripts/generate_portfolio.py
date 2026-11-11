@@ -556,7 +556,7 @@ def render_portfolio_block(products: list[Product]) -> str:
     ecosystem = [p for p in products if p.tier == 2 and not p.is_collaboration]
     collabs = [p for p in products if p.is_collaboration]
 
-    out += ["## 01 — Flagship Systems", "",
+    out += ["## 03 — Flagship Systems", "",
             f"<sub>{len(flagships)} product systems I am responsible for end to end, each shown with the same structure.</sub>", ""]
     if flagships:
         for i, p in enumerate(flagships, 1):
@@ -566,7 +566,7 @@ def render_portfolio_block(products: list[Product]) -> str:
     else:
         out += ["_No flagship products yet._", ""]
 
-    out += ["## 02 — Product Ecosystem", "",
+    out += ["## 04 — Product Ecosystem", "",
             f"<sub>{len(ecosystem)} products grouped by what they do, not by repository. Full descriptions sit in the collapsed archive below.</sub>", ""]
     if ecosystem:
         out += responsive_picture("ecosystem", _board_alt(ecosystem, "Selected product ecosystem")) + [""]
@@ -577,7 +577,7 @@ def render_portfolio_block(products: list[Product]) -> str:
     else:
         out += ["_Nothing to show yet._", ""]
 
-    out += ["## 03 — Verified Collaborations", "",
+    out += ["## 05 — Verified Collaborations", "",
             "<sub>Partner-owned products where my commits or pull requests are verifiable. Ownership stays with the partner; no private repositories are linked.</sub>", ""]
     if collabs:
         out += responsive_picture("collaborations", _board_alt(collabs, "Verified collaborations on partner-owned products")) + [""]
@@ -607,7 +607,7 @@ def render_archive_row(a: ArchiveEntry) -> str:
 
 def render_archive_block(archive: list[ArchiveEntry], groups: tuple[str, ...], products: list[Product] | None = None) -> str:
     out = [ARCHIVE_START, GENERATED_NOTE, "",
-           "## 05 — Complete Archive", "",
+           "## 07 — Complete Archive", "",
            "<sub>Full descriptions of the products on the boards above, then everything else that is safe to show: public repositories discovered automatically from GitHub and allowlisted private work under generic names.</sub>", ""]
     details = [p for p in (products or []) if p.tier == 2]
     if details:
