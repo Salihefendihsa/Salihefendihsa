@@ -26,7 +26,7 @@ ROOT = Path(__file__).resolve().parents[1]
 UTC = dt.timezone.utc
 PAGE_SIZE = 100
 MAX_PAGES = 10000
-METRIC_KEYS = ("github_contributions", "commits_12m", "coding_hours_12m", "repos_contributed_12m", "verified_collaborations")
+METRIC_KEYS = ("github_contributions", "commits_12m", "coding_hours_12m", "owned_repos", "verified_collaborations")
 
 # Coding-time estimate from commit timestamps (the widely used "git-hours" method):
 # commits less than SESSION_GAP apart belong to one working session and the real
@@ -185,13 +185,28 @@ def measure_calendar(api: GhApi, end: dt.datetime) -> dict:
     if (any(not isinstance(value, int) or value < 0 for value in (total, restricted, commit_contributions))
             or restricted > total or commit_contributions > total):
         raise MeasurementError("Contribution totals are incomplete; profile preserved")
-    return {
+    out = {
         "contribution_window": {"year": year, "rolling": True, "from": start.date().isoformat(), "to": end.date().isoformat(),
                                 "start_utc": start_utc, "end_utc": end_utc},
         "github_contributions": total,
         "restricted_contributions": restricted,
         "github_commit_contributions": commit_contributions,
     }
+    year_total = _calendar_year_total(api, end)
+    if year_total is not None:
+        out["github_contributions_year"] = year_total
+    return out
+
+
+def _calendar_year_total(api: "GhApi", end: dt.datetime) -> int | None:
+    """Jan 1 -> now of the current year: the number GitHub shows when the year tab is selected."""
+    start = dt.datetime(end.year, 1, 1, tzinfo=UTC)
+    data = api.graphql(CONTRIBUTIONS_QUERY, {"login": OWNER, "from": iso(start), "to": iso(end)})
+    user = data.get("user") if isinstance(data, dict) else None
+    coll = user.get("contributionsCollection") if isinstance(user, dict) else None
+    cal = coll.get("contributionCalendar") if isinstance(coll, dict) else None
+    total = cal.get("totalContributions") if isinstance(cal, dict) else None
+    return total if isinstance(total, int) and total >= 0 else None
 
 
 def measure(api: GhApi, end: dt.datetime, *, repos: list[dict] | None = None,
@@ -292,10 +307,11 @@ def measure(api: GhApi, end: dt.datetime, *, repos: list[dict] | None = None,
 
 def metric_values(result: dict) -> dict[str, tuple[int, str]]:
     return {
-        "github_contributions": (result["github_contributions"], "Same as profile graph"),
+        "github_contributions": (result["github_contributions"],
+                                 f"{result['contribution_window']['year']}: {result['github_contributions_year']:,}" if "github_contributions_year" in result else "Same as profile graph"),
         "commits_12m": (result["commits_12m"], f"365d · {result['public']} public"),
         "coding_hours_12m": (result["coding_hours_12m"], f"est. · {result['coding_sessions_12m']:,} sessions"),
-        "repos_contributed_12m": (result["repos_contributed_12m"], f"{result['repos_contributed_owned']} owned · {result['repos_contributed_collab']} partner"),
+        "owned_repos": (result["owned_repos"], f"{result['owned_public']} public · {result['owned_private']} private"),
         "verified_collaborations": (result["verified_collaborations"], "12m · commit/PR proof"),
     }
 
@@ -332,6 +348,9 @@ def prepare(old: dict, result: dict, readme: str, *, languages: list[dict] | Non
         if key == "github_contributions":
             metric["label"] = "Contributions in the last year"
             metric["short_label"] = "Contributions (1y)"
+        if key == "owned_repos":
+            metric["label"] = "Repositories"
+            metric["short_label"] = "Repositories"
         if key == "coding_hours_12m":
             metric["label"] = "Coding hours (est.)"
             metric["short_label"] = "Coding hours"
@@ -342,7 +361,7 @@ def prepare(old: dict, result: dict, readme: str, *, languages: list[dict] | Non
     languages = ", ".join(f"{item['name']} {item['share']:.1f} %" for item in footprint["languages"])
     year = a["contribution_window"]["year"]
     detail = ("<details>\n<summary>How these numbers are measured</summary>\n\n<br>\n\n"
-              f"- **{a['github_contributions']:,} GitHub contributions in the last year** — the same number GitHub shows above the profile graph: GraphQL "
+              f"- **{a['github_contributions']:,} GitHub contributions in the last year** ({a.get('github_contributions_year', 0):,} in {year} so far) — the same numbers GitHub shows above the profile graph: GraphQL "
               "`contributionsCollection` calendar `totalContributions` for the rolling last-year window "
               f"[{a['contribution_window']['start_utc']}, {a['contribution_window']['end_utc']}]. "
               f"GitHub reports {a['restricted_contributions']:,} restricted contributions in this collection; "
