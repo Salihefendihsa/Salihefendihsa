@@ -1,80 +1,66 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="608" viewBox="0 0 1200 608" role="img" aria-labelledby="t d">
   <title id="t">Selected collaborations — Sticker &amp; Label Studio, Couples Companion App, Invitation Design Studio, Product Photo Studio</title>
   <desc id="d">Verified collaborations on partner-owned products: Sticker &amp; Label Studio — Lead contributor, 71 authored commits · 2 PRs (12m), Delivered, Partner-owned · private; Couples Companion App — Core contributor, 37 authored commits · 36 PRs (12m), In development, Partner-owned · private; Invitation Design Studio — Lead contributor, 5 authored commits · 0 PRs (12m), Delivered, Partner-owned · private; Product Photo Studio — Contributor, 2 authored commits · 0 PRs (12m), In development, Partner-owned · private</desc>
-  <style>@keyframes flow{to{stroke-dashoffset:-20}}@keyframes pulse{from{transform:scale(1);opacity:.55}to{transform:scale(2.4);opacity:0}}.flow{animation:flow 1.4s linear infinite}.pulse{transform-box:fill-box;transform-origin:center;animation:pulse 2.6s ease-out infinite}@media (prefers-reduced-motion:reduce){.flow,.pulse{animation:none}}</style>
-  <defs>
-  <linearGradient id="ac" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#7C93FF" stop-opacity="1"/><stop offset="0.55" stop-color="#B08CFF" stop-opacity="1"/><stop offset="1" stop-color="#4FD1B5" stop-opacity="1"/></linearGradient>
-  <linearGradient id="edge" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#7C93FF" stop-opacity="0"/><stop offset="0.3" stop-color="#7C93FF" stop-opacity="0.55"/><stop offset="0.7" stop-color="#B08CFF" stop-opacity="0.55"/><stop offset="1" stop-color="#B08CFF" stop-opacity="0"/></linearGradient>
-  <radialGradient id="glowA" cx="0.5" cy="0.5" r="0.5"><stop offset="0" stop-color="#4C6EF5" stop-opacity="0.16"/><stop offset="1" stop-color="#4C6EF5" stop-opacity="0"/></radialGradient>
-  <radialGradient id="glowB" cx="0.5" cy="0.5" r="0.5"><stop offset="0" stop-color="#845EF7" stop-opacity="0.12"/><stop offset="1" stop-color="#845EF7" stop-opacity="0"/></radialGradient>
-  </defs>
-  <rect x="0.0" y="0.0" width="1200.0" height="608.0" fill="#0D1117" rx="18"/>
-  <ellipse cx="1032" cy="49" rx="504" ry="456" fill="url(#glowA)"/>
-  <ellipse cx="96" cy="596" rx="432" ry="365" fill="url(#glowB)"/>
-  <rect x="144.0" y="0.5" width="912.0" height="2.0" fill="url(#edge)" rx="1"/>
-  <rect x="0.5" y="0.5" width="1199.0" height="607.0" fill="none" rx="18" stroke="#252D3A" stroke-width="1"/>
-  <rect x="40.0" y="40.0" width="548.0" height="252.0" fill="#141A23" rx="14" stroke="#252D3A" stroke-width="1"/>
-  <rect x="54.0" y="40.0" width="520.0" height="1.5" fill="url(#edge)"/>
+  <rect x="0.0" y="0.0" width="1200.0" height="608.0" fill="#101216"/>
+  <rect x="0.5" y="0.5" width="1199.0" height="607.0" fill="none" rx="18" stroke="#2C3039" stroke-width="1"/>
+  <rect x="40.0" y="40.0" width="548.0" height="252.0" fill="#181B21" rx="14" stroke="#2C3039" stroke-width="1"/>
   <rect x="40.0" y="62.0" width="5.0" height="208.0" fill="#7A90EE" rx="2.5"/>
   <rect x="70.0" y="66.0" width="54.0" height="54.0" fill="#232A45" rx="11"/>
   <circle cx="92.3" cy="93.0" r="8" fill="#232A45" stroke="#7A90EE" stroke-width="2.66667"/>
   <circle cx="101.7" cy="93.0" r="8" fill="none" stroke="#7A90EE" stroke-width="2.66667"/>
   <circle cx="97.0" cy="93.0" r="2.4" fill="#7A90EE"/>
-  <text x="144" y="84" font-family="Consolas, 'SFMono-Regular', Menlo, monospace" font-size="16" fill="#9AA4B4" letter-spacing="2">BUILT IN COLLABORATION</text>
-  <text x="144" y="120" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="30" fill="#F0F3F8" font-weight="700" letter-spacing="-0.5">Sticker &amp; Label Studio</text>
-  <text x="70" y="160" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="22" fill="#F0F3F8">Web studio for school name stickers and</text>
-  <text x="70" y="190" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="22" fill="#F0F3F8">print-ready labels.</text>
-  <line x1="70.0" y1="200.0" x2="558.0" y2="200.0" stroke="#252D3A" stroke-width="1"/>
-  <text x="70" y="246" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="27" fill="#F0F3F8" font-weight="700" letter-spacing="-1">71 commits · 2 PRs</text>
+  <text x="144" y="84" font-family="Consolas, 'SFMono-Regular', Menlo, monospace" font-size="16" fill="#9AA1B0" letter-spacing="2">BUILT IN COLLABORATION</text>
+  <text x="144" y="120" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="30" fill="#F1EEE6" font-weight="700" letter-spacing="-0.5">Sticker &amp; Label Studio</text>
+  <text x="70" y="160" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="22" fill="#F1EEE6">Web studio for school name stickers and</text>
+  <text x="70" y="190" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="22" fill="#F1EEE6">print-ready labels.</text>
+  <line x1="70.0" y1="200.0" x2="558.0" y2="200.0" stroke="#2C3039" stroke-width="1"/>
+  <text x="70" y="246" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="27" fill="#F1EEE6" font-weight="700" letter-spacing="-1">71 commits · 2 PRs</text>
   <rect x="371.3" y="218.0" width="186.7" height="32.0" fill="#232A45" rx="16"/>
   <text x="465" y="245" font-family="Consolas, 'SFMono-Regular', Menlo, monospace" font-size="16" fill="#7A90EE" text-anchor="middle" letter-spacing="1.5">LEAD CONTRIBUTOR</text>
-  <text x="70" y="274" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="17" fill="#9AA4B4">Delivered  ·  Partner-owned · private</text>
-  <rect x="612.0" y="40.0" width="548.0" height="252.0" fill="#141A23" rx="14" stroke="#252D3A" stroke-width="1"/>
-  <rect x="626.0" y="40.0" width="520.0" height="1.5" fill="url(#edge)"/>
+  <text x="70" y="274" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="17" fill="#9AA1B0">Delivered  ·  Partner-owned · private</text>
+  <rect x="612.0" y="40.0" width="548.0" height="252.0" fill="#181B21" rx="14" stroke="#2C3039" stroke-width="1"/>
   <rect x="612.0" y="62.0" width="5.0" height="208.0" fill="#7A90EE" rx="2.5"/>
   <rect x="642.0" y="66.0" width="54.0" height="54.0" fill="#232A45" rx="11"/>
   <circle cx="664.3" cy="93.0" r="8" fill="#232A45" stroke="#7A90EE" stroke-width="2.66667"/>
   <circle cx="673.7" cy="93.0" r="8" fill="none" stroke="#7A90EE" stroke-width="2.66667"/>
   <circle cx="669.0" cy="93.0" r="2.4" fill="#7A90EE"/>
-  <text x="716" y="84" font-family="Consolas, 'SFMono-Regular', Menlo, monospace" font-size="16" fill="#9AA4B4" letter-spacing="2">BUILT IN COLLABORATION</text>
-  <text x="716" y="120" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="30" fill="#F0F3F8" font-weight="700" letter-spacing="-0.5">Couples Companion App</text>
-  <text x="642" y="160" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="22" fill="#F0F3F8">Flutter app that helps couples share how</text>
-  <text x="642" y="190" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="22" fill="#F0F3F8">they feel, without a fight.</text>
-  <line x1="642.0" y1="200.0" x2="1130.0" y2="200.0" stroke="#252D3A" stroke-width="1"/>
-  <text x="642" y="246" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="26" fill="#F0F3F8" font-weight="700" letter-spacing="-1">37 commits · 36 PRs</text>
+  <text x="716" y="84" font-family="Consolas, 'SFMono-Regular', Menlo, monospace" font-size="16" fill="#9AA1B0" letter-spacing="2">BUILT IN COLLABORATION</text>
+  <text x="716" y="120" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="30" fill="#F1EEE6" font-weight="700" letter-spacing="-0.5">Couples Companion App</text>
+  <text x="642" y="160" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="22" fill="#F1EEE6">Flutter app that helps couples share how</text>
+  <text x="642" y="190" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="22" fill="#F1EEE6">they feel, without a fight.</text>
+  <line x1="642.0" y1="200.0" x2="1130.0" y2="200.0" stroke="#2C3039" stroke-width="1"/>
+  <text x="642" y="246" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="26" fill="#F1EEE6" font-weight="700" letter-spacing="-1">37 commits · 36 PRs</text>
   <rect x="943.3" y="218.0" width="186.7" height="32.0" fill="#232A45" rx="16"/>
   <text x="1037" y="245" font-family="Consolas, 'SFMono-Regular', Menlo, monospace" font-size="16" fill="#7A90EE" text-anchor="middle" letter-spacing="1.5">CORE CONTRIBUTOR</text>
-  <text x="642" y="274" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="17" fill="#9AA4B4">In development  ·  Partner-owned · private</text>
-  <rect x="40.0" y="316.0" width="548.0" height="252.0" fill="#141A23" rx="14" stroke="#252D3A" stroke-width="1"/>
-  <rect x="54.0" y="316.0" width="520.0" height="1.5" fill="url(#edge)"/>
+  <text x="642" y="274" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="17" fill="#9AA1B0">In development  ·  Partner-owned · private</text>
+  <rect x="40.0" y="316.0" width="548.0" height="252.0" fill="#181B21" rx="14" stroke="#2C3039" stroke-width="1"/>
   <rect x="40.0" y="338.0" width="5.0" height="208.0" fill="#7A90EE" rx="2.5"/>
   <rect x="70.0" y="342.0" width="54.0" height="54.0" fill="#232A45" rx="11"/>
   <circle cx="92.3" cy="369.0" r="8" fill="#232A45" stroke="#7A90EE" stroke-width="2.66667"/>
   <circle cx="101.7" cy="369.0" r="8" fill="none" stroke="#7A90EE" stroke-width="2.66667"/>
   <circle cx="97.0" cy="369.0" r="2.4" fill="#7A90EE"/>
-  <text x="144" y="360" font-family="Consolas, 'SFMono-Regular', Menlo, monospace" font-size="16" fill="#9AA4B4" letter-spacing="2">BUILT IN COLLABORATION</text>
-  <text x="144" y="396" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="30" fill="#F0F3F8" font-weight="700" letter-spacing="-0.5">Invitation Design Studio</text>
-  <text x="70" y="436" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="22" fill="#F0F3F8">Interactive studio for wedding and event</text>
-  <text x="70" y="466" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="22" fill="#F0F3F8">invitations with print export.</text>
-  <line x1="70.0" y1="476.0" x2="558.0" y2="476.0" stroke="#252D3A" stroke-width="1"/>
-  <text x="70" y="522" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="29" fill="#F0F3F8" font-weight="700" letter-spacing="-1">5 commits · 0 PRs</text>
+  <text x="144" y="360" font-family="Consolas, 'SFMono-Regular', Menlo, monospace" font-size="16" fill="#9AA1B0" letter-spacing="2">BUILT IN COLLABORATION</text>
+  <text x="144" y="396" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="30" fill="#F1EEE6" font-weight="700" letter-spacing="-0.5">Invitation Design Studio</text>
+  <text x="70" y="436" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="22" fill="#F1EEE6">Interactive studio for wedding and event</text>
+  <text x="70" y="466" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="22" fill="#F1EEE6">invitations with print export.</text>
+  <line x1="70.0" y1="476.0" x2="558.0" y2="476.0" stroke="#2C3039" stroke-width="1"/>
+  <text x="70" y="522" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="29" fill="#F1EEE6" font-weight="700" letter-spacing="-1">5 commits · 0 PRs</text>
   <rect x="371.3" y="494.0" width="186.7" height="32.0" fill="#232A45" rx="16"/>
   <text x="465" y="521" font-family="Consolas, 'SFMono-Regular', Menlo, monospace" font-size="16" fill="#7A90EE" text-anchor="middle" letter-spacing="1.5">LEAD CONTRIBUTOR</text>
-  <text x="70" y="550" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="17" fill="#9AA4B4">Delivered  ·  Partner-owned · private</text>
-  <rect x="612.0" y="316.0" width="548.0" height="252.0" fill="#141A23" rx="14" stroke="#252D3A" stroke-width="1"/>
-  <rect x="626.0" y="316.0" width="520.0" height="1.5" fill="url(#edge)"/>
+  <text x="70" y="550" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="17" fill="#9AA1B0">Delivered  ·  Partner-owned · private</text>
+  <rect x="612.0" y="316.0" width="548.0" height="252.0" fill="#181B21" rx="14" stroke="#2C3039" stroke-width="1"/>
   <rect x="612.0" y="338.0" width="5.0" height="208.0" fill="#7A90EE" rx="2.5"/>
   <rect x="642.0" y="342.0" width="54.0" height="54.0" fill="#232A45" rx="11"/>
   <circle cx="664.3" cy="369.0" r="8" fill="#232A45" stroke="#7A90EE" stroke-width="2.66667"/>
   <circle cx="673.7" cy="369.0" r="8" fill="none" stroke="#7A90EE" stroke-width="2.66667"/>
   <circle cx="669.0" cy="369.0" r="2.4" fill="#7A90EE"/>
-  <text x="716" y="360" font-family="Consolas, 'SFMono-Regular', Menlo, monospace" font-size="16" fill="#9AA4B4" letter-spacing="2">BUILT IN COLLABORATION</text>
-  <text x="716" y="396" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="30" fill="#F0F3F8" font-weight="700" letter-spacing="-0.5">Product Photo Studio</text>
-  <text x="642" y="436" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="22" fill="#F0F3F8">On-device product photo studio that exports</text>
-  <text x="642" y="466" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="22" fill="#F0F3F8">social-ready posts and stories.</text>
-  <line x1="642.0" y1="476.0" x2="1130.0" y2="476.0" stroke="#252D3A" stroke-width="1"/>
-  <text x="642" y="522" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="34" fill="#F0F3F8" font-weight="700" letter-spacing="-1">2 commits · 0 PRs</text>
+  <text x="716" y="360" font-family="Consolas, 'SFMono-Regular', Menlo, monospace" font-size="16" fill="#9AA1B0" letter-spacing="2">BUILT IN COLLABORATION</text>
+  <text x="716" y="396" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="30" fill="#F1EEE6" font-weight="700" letter-spacing="-0.5">Product Photo Studio</text>
+  <text x="642" y="436" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="22" fill="#F1EEE6">On-device product photo studio that exports</text>
+  <text x="642" y="466" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="22" fill="#F1EEE6">social-ready posts and stories.</text>
+  <line x1="642.0" y1="476.0" x2="1130.0" y2="476.0" stroke="#2C3039" stroke-width="1"/>
+  <text x="642" y="522" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="34" fill="#F1EEE6" font-weight="700" letter-spacing="-1">2 commits · 0 PRs</text>
   <rect x="992.9" y="494.0" width="137.1" height="32.0" fill="#232A45" rx="16"/>
   <text x="1061" y="521" font-family="Consolas, 'SFMono-Regular', Menlo, monospace" font-size="16" fill="#7A90EE" text-anchor="middle" letter-spacing="1.5">CONTRIBUTOR</text>
-  <text x="642" y="550" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="17" fill="#9AA4B4">In development  ·  Partner-owned · private</text>
+  <text x="642" y="550" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="17" fill="#9AA1B0">In development  ·  Partner-owned · private</text>
 </svg>
