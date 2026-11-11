@@ -1,10 +1,12 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="336" viewBox="0 0 1200 336" role="img" aria-labelledby="t d">
-  <title id="t">Verified engineering footprint · 2026 calendar year and Nov 2025 – Nov 2026</title>
+  <title id="t">Verified engineering footprint · last 12 months (Nov 2025 – Nov 2026)</title>
   <desc id="d">3,651 contributions in the last year; 3,216 commits authored; 618 coding hours (est.); 42 repositories contributed to; 4 verified collaborations. Last published successful measurement 2026-11-11T13:38:03Z.</desc>
   <rect x="0.0" y="0.0" width="1200.0" height="336.0" fill="#101216"/>
+  <style>@keyframes rise{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}@keyframes draw{from{stroke-dashoffset:1200}to{stroke-dashoffset:0}}.rise{opacity:0;animation:rise .7s cubic-bezier(.2,.7,.2,1) forwards}.draw{stroke-dasharray:1200;animation:draw 1.6s ease-out .5s both}@media (prefers-reduced-motion:reduce){.rise{opacity:1;animation:none}.draw{animation:none;stroke-dasharray:none}}</style>
   <rect x="0.5" y="0.5" width="1199.0" height="335.0" fill="none" rx="18" stroke="#2C3039" stroke-width="1"/>
   <text x="48" y="36" font-family="Consolas, 'SFMono-Regular', Menlo, monospace" font-size="18" fill="#9AA1B0" letter-spacing="3">VERIFIED ENGINEERING FOOTPRINT</text>
   <text x="1152" y="36" font-family="Consolas, 'SFMono-Regular', Menlo, monospace" font-size="18" fill="#7A90EE" text-anchor="end" letter-spacing="2">LAST 12 MONTHS · UPDATED HOURLY</text>
+  <g class="rise" style="animation-delay:0.08s">
   <rect x="48.0" y="52.0" width="208.0" height="198.0" fill="#181B21" rx="14" stroke="#2C3039" stroke-width="1"/>
   <rect x="68.0" y="72.0" width="44.0" height="44.0" fill="#232A45" rx="10"/>
   <rect x="78.3" y="83.5" width="5.8" height="5.8" fill="#7A90EE" rx="1.16667"/>
@@ -19,6 +21,8 @@
   <text x="68" y="191" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="18" fill="#F1EEE6" font-weight="600">Contributions in</text>
   <text x="68" y="211" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="18" fill="#F1EEE6" font-weight="600">the last year</text>
   <text x="68" y="233" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="15" fill="#9AA1B0">Same as profile graph</text>
+  </g>
+  <g class="rise" style="animation-delay:0.20s">
   <rect x="272.0" y="52.0" width="208.0" height="198.0" fill="#181B21" rx="14" stroke="#2C3039" stroke-width="1"/>
   <rect x="292.0" y="72.0" width="44.0" height="44.0" fill="#232A45" rx="10"/>
   <line x1="302.3" y1="94.0" x2="325.7" y2="94.0" stroke="#7A90EE" stroke-width="2.33333"/>
@@ -27,6 +31,8 @@
   <text x="292" y="164" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="52" fill="#F1EEE6" font-weight="700" letter-spacing="-1.5">3,216</text>
   <text x="292" y="191" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="18" fill="#F1EEE6" font-weight="600">Commits authored</text>
   <text x="292" y="233" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="16" fill="#9AA1B0">365d · 43 public</text>
+  </g>
+  <g class="rise" style="animation-delay:0.32s">
   <rect x="496.0" y="52.0" width="208.0" height="198.0" fill="#181B21" rx="14" stroke="#2C3039" stroke-width="1"/>
   <rect x="516.0" y="72.0" width="44.0" height="44.0" fill="#232A45" rx="10"/>
   <path d="M527.5 99.83333333333334 A10.5 10.5 0 0 1 548.5 99.83333333333334" fill="none" stroke="#7A90EE" stroke-width="2.33333" stroke-linecap="round" stroke-linejoin="round"/>
@@ -37,6 +43,8 @@
   <text x="516" y="191" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="18" fill="#F1EEE6" font-weight="600">Coding hours</text>
   <text x="516" y="211" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="18" fill="#F1EEE6" font-weight="600">(est.)</text>
   <text x="516" y="233" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="16" fill="#9AA1B0">est. · 237 sessions</text>
+  </g>
+  <g class="rise" style="animation-delay:0.44s">
   <rect x="720.0" y="52.0" width="208.0" height="198.0" fill="#181B21" rx="14" stroke="#2C3039" stroke-width="1"/>
   <rect x="740.0" y="72.0" width="44.0" height="44.0" fill="#232A45" rx="10"/>
   <path d="M762.0 84.66666666666667 L772.5 90.5 L762.0 96.33333333333334 L751.5 90.5 Z" fill="none" stroke="#7A90EE" stroke-width="2.33333" stroke-linecap="round" stroke-linejoin="round"/>
@@ -45,6 +53,8 @@
   <text x="740" y="191" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="18" fill="#F1EEE6" font-weight="600">Repositories</text>
   <text x="740" y="211" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="18" fill="#F1EEE6" font-weight="600">contributed to</text>
   <text x="740" y="233" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="16" fill="#9AA1B0">38 owned · 4 partner</text>
+  </g>
+  <g class="rise" style="animation-delay:0.56s">
   <rect x="944.0" y="52.0" width="208.0" height="198.0" fill="#181B21" rx="14" stroke="#2C3039" stroke-width="1"/>
   <rect x="964.0" y="72.0" width="44.0" height="44.0" fill="#232A45" rx="10"/>
   <circle cx="981.9" cy="94.0" r="7" fill="#232A45" stroke="#7A90EE" stroke-width="2.33333"/>
@@ -54,7 +64,8 @@
   <text x="964" y="191" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="18" fill="#F1EEE6" font-weight="600">Verified</text>
   <text x="964" y="211" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="18" fill="#F1EEE6" font-weight="600">collaborations</text>
   <text x="964" y="233" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="15" fill="#9AA1B0">12m · commit/PR proof</text>
-  <line x1="56.0" y1="284.0" x2="1144.0" y2="284.0" stroke="#2C3039" stroke-width="2"/>
+  </g>
+  <line class="draw" x1="56.0" y1="284.0" x2="1144.0" y2="284.0" stroke="#2C3039" stroke-width="2"/>
   <line x1="56.0" y1="276.0" x2="56.0" y2="292.0" stroke="#6B7386" stroke-width="2"/>
   <line x1="1144.0" y1="276.0" x2="1144.0" y2="292.0" stroke="#6B7386" stroke-width="2"/>
   <circle cx="1144.0" cy="284.0" r="5" fill="#7A90EE"/>

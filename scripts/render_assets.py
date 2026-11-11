@@ -383,7 +383,7 @@ def _month(iso: str) -> str:
 
 def _timeline(x1: float, x2: float, y: float, t: dict, footprint: dict, size: float) -> list[str]:
     win = footprint.get("window", {})
-    out = [line(x1, y, x2, y, t["rule"], 2), line(x1, y - 8, x1, y + 8, t["accent2"], 2), line(x2, y - 8, x2, y + 8, t["accent2"], 2),
+    out = [line(x1, y, x2, y, t["rule"], 2).replace("<line ", '<line class="draw" ', 1), line(x1, y - 8, x1, y + 8, t["accent2"], 2), line(x2, y - 8, x2, y + 8, t["accent2"], 2),
            circle(x2, y, 5, t["accent"]),
            text(x1, y + size + 12, _month(win.get("from", "")), size, t["muted"], mono=True, spacing=1),
            text(x2, y + size + 12, _month(win.get("to", "")), size, t["muted"], mono=True, spacing=1, anchor="end")]
@@ -391,6 +391,17 @@ def _timeline(x1: float, x2: float, y: float, t: dict, footprint: dict, size: fl
     label = f"LAST PUBLISHED {measured.replace('T', ' ').replace('Z', ' UTC')}"
     out.append(text((x1 + x2) / 2, y - 12, label, size, t["muted"], mono=True, spacing=1, anchor="middle"))
     return out
+
+
+PROOF_MOTION = ("<style>@keyframes rise{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}"
+                "@keyframes draw{from{stroke-dashoffset:1200}to{stroke-dashoffset:0}}"
+                ".rise{opacity:0;animation:rise .7s cubic-bezier(.2,.7,.2,1) forwards}"
+                ".draw{stroke-dasharray:1200;animation:draw 1.6s ease-out .5s both}"
+                "@media (prefers-reduced-motion:reduce){.rise{opacity:1;animation:none}.draw{animation:none;stroke-dasharray:none}}</style>")
+
+
+def _rise(parts: list[str], i: int) -> list[str]:
+    return [f'<g class="rise" style="animation-delay:{0.08 + i * 0.12:.2f}s">', *parts, "</g>"]
 
 
 def render_proof(footprint: dict, theme: str, mobile: bool = False) -> str:
@@ -403,9 +414,11 @@ def render_proof(footprint: dict, theme: str, mobile: bool = False) -> str:
         body = [rect(0.5, 0.5, w - 1, h - 1, "none", rx=18, stroke=t["rule"]),
                 text(m, 36, "VERIFIED ENGINEERING FOOTPRINT", 18, t["muted"], mono=True, spacing=3),
                 text(w - m, 36, "LAST 12 MONTHS · UPDATED HOURLY", 18, t["accent"], mono=True, spacing=2, anchor="end")]
+        body.insert(0, PROOF_MOTION)
         y = 52
         for i, mt in enumerate(metrics):
             x = m + i * (cw + gap)
+            start = len(body)
             body += card(x, y, cw, ch, t)
             body.append(rect(x + 20, y + 20, 44, 44, t["accent_soft"], rx=10))
             body += glyph(EVIDENCE_GLYPHS.get(mt.get("key", ""), "commits"), x + 28, y + 28, 28, t["accent"], t["accent_soft"])
@@ -414,6 +427,7 @@ def render_proof(footprint: dict, theme: str, mobile: bool = False) -> str:
             body += lines_block(x + 20, y + 139, label_lines, 18, t["fg"], 20, weight="600")
             note = mt.get("note", "")
             body.append(text(x + 20, y + 181, note, fit_size(note, cw - 40, 16, floor=14), t["muted"]))
+            body[start:] = _rise(body[start:], i)
         body += _timeline(m + 8, w - m - 8, 284, t, footprint, 16)
     else:
         w, m = MOBILE_W, 36
@@ -424,10 +438,12 @@ def render_proof(footprint: dict, theme: str, mobile: bool = False) -> str:
         body = [rect(0.5, 0.5, w - 1, h - 1, "none", rx=18, stroke=t["rule"]),
                 text(m, 44, "VERIFIED FOOTPRINT", 20, t["muted"], mono=True, spacing=3),
                 text(w - m, 44, "LAST 12 MONTHS", 20, t["accent"], mono=True, spacing=3, anchor="end")]
+        body.insert(0, PROOF_MOTION)
         for i, mt in enumerate(metrics):
             cell_w = w - 2 * m if i == 4 else cw
             x = m if i == 4 else m + (i % 2) * (cw + gap)
             y = 64 + (i // 2) * (ch + gap)
+            start = len(body)
             body += card(x, y, cell_w, ch, t)
             body.append(rect(x + 20, y + 20, 48, 48, t["accent_soft"], rx=10))
             body += glyph(EVIDENCE_GLYPHS.get(mt.get("key", ""), "commits"), x + 29, y + 29, 30, t["accent"], t["accent_soft"])
@@ -437,10 +453,11 @@ def render_proof(footprint: dict, theme: str, mobile: bool = False) -> str:
             body += lines_block(x + 20, y + 166, label_lines, 22, t["fg"], 23, weight="600")
             note = mt.get("note", "")
             body.append(text(x + 20, y + 211, note, fit_size(note, cell_w - 40, 18, floor=16), t["muted"]))
+            body[start:] = _rise(body[start:], i)
         body += _timeline(m + 8, w - m - 8, timeline_y, t, footprint, 18)
     window = footprint.get("window", {}).get("label", "")
     summary = "; ".join(f"{int(x['value']):,} {x['label'].lower()}" for x in metrics)
-    return svg(w, h, f"Verified engineering footprint · {year} calendar year and {window}",
+    return svg(w, h, f"Verified engineering footprint · last 12 months ({window})",
                f"{summary}. Last published successful measurement {footprint.get('measured_at_utc', footprint.get('measured_on', ''))}.", body, t["bg"])
 
 
