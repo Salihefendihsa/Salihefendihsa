@@ -165,11 +165,11 @@ class CalendarTests(unittest.TestCase):
                 "restrictedContributionsCount": restricted, "totalCommitContributions": 311,
                 "contributionCalendar": {"totalContributions": total}}
 
-    def test_exact_calendar_year_and_distinct_total(self):
+    def test_rolling_last_year_window_and_distinct_total(self):
         api = self.Api(self.collection())
         result = proof.measure_calendar(api, self.END)
-        self.assertEqual(api.variables, {"login": proof.OWNER, "from": "2026-01-01T00:00:00Z",
-                                         "to": "2026-12-31T23:59:59Z"})
+        self.assertEqual(api.variables, {"login": proof.OWNER, "from": "2025-10-04T07:00:00Z",
+                                         "to": "2026-10-04T07:00:00Z"})
         self.assertIn("contributionCalendar", api.query)
         self.assertEqual(result["github_contributions"], 1581)
         self.assertEqual(result["restricted_contributions"], 1252)
@@ -177,7 +177,7 @@ class CalendarTests(unittest.TestCase):
 
     def test_wrong_viewer_or_period_or_missing_total_fails_closed(self):
         for api in (self.Api(self.collection(), viewer="other"),
-                    self.Api({**self.collection(), "endedAt": "2026-10-04T00:00:00Z"}),
+                    self.Api({**self.collection(), "endedAt": None}),
                     self.Api(self.collection(total=None))):
             with self.assertRaises(proof.MeasurementError):
                 proof.measure_calendar(api, self.END)
