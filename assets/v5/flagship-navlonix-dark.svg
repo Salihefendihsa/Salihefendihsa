@@ -1,34 +1,45 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="380" viewBox="0 0 1200 380" role="img" aria-labelledby="t d">
   <title id="t">Navlonix — Logistics marketplace</title>
   <desc id="d">Navlonix system diagram. Surfaces: Customer apps, Driver app, Admin panel. .NET 9 API: Fair pricing, Escrow ledger, Live tracking. Foundations: PostgreSQL · PostGIS, Redis · SignalR, Gemini AI.</desc>
-  <rect x="0.0" y="0.0" width="1200.0" height="380.0" fill="#101216"/>
-  <rect x="0.5" y="0.5" width="1199.0" height="379.0" fill="none" rx="16" stroke="#2C3039" stroke-width="1"/>
+  <style>@keyframes flow{to{stroke-dashoffset:-20}}@keyframes pulse{from{transform:scale(1);opacity:.55}to{transform:scale(2.4);opacity:0}}.flow{animation:flow 1.4s linear infinite}.pulse{transform-box:fill-box;transform-origin:center;animation:pulse 2.6s ease-out infinite}@media (prefers-reduced-motion:reduce){.flow,.pulse{animation:none}}</style>
+  <defs>
+  <linearGradient id="ac" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#7C93FF" stop-opacity="1"/><stop offset="0.55" stop-color="#B08CFF" stop-opacity="1"/><stop offset="1" stop-color="#4FD1B5" stop-opacity="1"/></linearGradient>
+  <linearGradient id="edge" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#7C93FF" stop-opacity="0"/><stop offset="0.3" stop-color="#7C93FF" stop-opacity="0.55"/><stop offset="0.7" stop-color="#B08CFF" stop-opacity="0.55"/><stop offset="1" stop-color="#B08CFF" stop-opacity="0"/></linearGradient>
+  <radialGradient id="glowA" cx="0.5" cy="0.5" r="0.5"><stop offset="0" stop-color="#4C6EF5" stop-opacity="0.16"/><stop offset="1" stop-color="#4C6EF5" stop-opacity="0"/></radialGradient>
+  <radialGradient id="glowB" cx="0.5" cy="0.5" r="0.5"><stop offset="0" stop-color="#845EF7" stop-opacity="0.12"/><stop offset="1" stop-color="#845EF7" stop-opacity="0"/></radialGradient>
+  </defs>
+  <rect x="0.0" y="0.0" width="1200.0" height="380.0" fill="#0D1117" rx="18"/>
+  <ellipse cx="1032" cy="30" rx="504" ry="285" fill="url(#glowA)"/>
+  <ellipse cx="96" cy="372" rx="432" ry="228" fill="url(#glowB)"/>
+  <rect x="144.0" y="0.5" width="912.0" height="2.0" fill="url(#edge)" rx="1"/>
+  <rect x="0.5" y="0.5" width="1199.0" height="379.0" fill="none" rx="16" stroke="#252D3A" stroke-width="1"/>
   <text x="48" y="46" font-family="Consolas, 'SFMono-Regular', Menlo, monospace" font-size="22" fill="#7A90EE" letter-spacing="3">FLAGSHIP 01</text>
-  <text x="48" y="90" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="46" fill="#F1EEE6" font-weight="700" letter-spacing="-1">Navlonix</text>
-  <text x="1152" y="90" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="28" fill="#9AA1B0" text-anchor="end">Logistics marketplace</text>
-  <line x1="48.0" y1="110.0" x2="1152.0" y2="110.0" stroke="#2C3039" stroke-width="1.5"/>
-  <text x="48" y="142" font-family="Consolas, 'SFMono-Regular', Menlo, monospace" font-size="22" fill="#9AA1B0" letter-spacing="2">SURFACES</text>
+  <text x="48" y="90" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="46" fill="#F0F3F8" font-weight="700" letter-spacing="-1">Navlonix</text>
+  <text x="1152" y="90" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="28" fill="#9AA4B4" text-anchor="end">Logistics marketplace</text>
+  <line x1="48.0" y1="110.0" x2="1152.0" y2="110.0" stroke="#252D3A" stroke-width="1.5"/>
+  <text x="48" y="142" font-family="Consolas, 'SFMono-Regular', Menlo, monospace" font-size="22" fill="#9AA4B4" letter-spacing="2">SURFACES</text>
   <text x="431" y="142" font-family="Consolas, 'SFMono-Regular', Menlo, monospace" font-size="22" fill="#7A90EE" letter-spacing="2">.NET 9 API</text>
-  <text x="813" y="142" font-family="Consolas, 'SFMono-Regular', Menlo, monospace" font-size="22" fill="#9AA1B0" letter-spacing="2">FOUNDATIONS</text>
-  <rect x="48.0" y="160.0" width="338.7" height="60.0" fill="#22262E" rx="8"/>
-  <text x="70" y="199" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="26" fill="#F1EEE6">Customer apps</text>
-  <rect x="48.0" y="234.0" width="338.7" height="60.0" fill="#22262E" rx="8"/>
-  <text x="70" y="273" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="26" fill="#F1EEE6">Driver app</text>
-  <rect x="48.0" y="308.0" width="338.7" height="60.0" fill="#22262E" rx="8"/>
-  <text x="70" y="347" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="26" fill="#F1EEE6">Admin panel</text>
-  <rect x="813.3" y="160.0" width="338.7" height="60.0" fill="#22262E" rx="8"/>
-  <text x="835" y="199" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="26" fill="#F1EEE6">PostgreSQL · PostGIS</text>
-  <rect x="813.3" y="234.0" width="338.7" height="60.0" fill="#22262E" rx="8"/>
-  <text x="835" y="273" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="26" fill="#F1EEE6">Redis · SignalR</text>
-  <rect x="813.3" y="308.0" width="338.7" height="60.0" fill="#22262E" rx="8"/>
-  <text x="835" y="347" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="26" fill="#F1EEE6">Gemini AI</text>
+  <text x="813" y="142" font-family="Consolas, 'SFMono-Regular', Menlo, monospace" font-size="22" fill="#9AA4B4" letter-spacing="2">FOUNDATIONS</text>
+  <rect x="48.0" y="160.0" width="338.7" height="60.0" fill="#1B2230" rx="8"/>
+  <text x="70" y="199" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="26" fill="#F0F3F8">Customer apps</text>
+  <rect x="48.0" y="234.0" width="338.7" height="60.0" fill="#1B2230" rx="8"/>
+  <text x="70" y="273" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="26" fill="#F0F3F8">Driver app</text>
+  <rect x="48.0" y="308.0" width="338.7" height="60.0" fill="#1B2230" rx="8"/>
+  <text x="70" y="347" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="26" fill="#F0F3F8">Admin panel</text>
+  <rect x="813.3" y="160.0" width="338.7" height="60.0" fill="#1B2230" rx="8"/>
+  <text x="835" y="199" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="26" fill="#F0F3F8">PostgreSQL · PostGIS</text>
+  <rect x="813.3" y="234.0" width="338.7" height="60.0" fill="#1B2230" rx="8"/>
+  <text x="835" y="273" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="26" fill="#F0F3F8">Redis · SignalR</text>
+  <rect x="813.3" y="308.0" width="338.7" height="60.0" fill="#1B2230" rx="8"/>
+  <text x="835" y="347" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="26" fill="#F0F3F8">Gemini AI</text>
   <rect x="430.7" y="160.0" width="338.7" height="208.0" fill="#1E2540" rx="10"/>
-  <rect x="430.7" y="160.0" width="6.0" height="208.0" fill="#7A90EE" rx="3"/>
-  <text x="457" y="202" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="26" fill="#F1EEE6" font-weight="600">Fair pricing</text>
-  <text x="457" y="268" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="26" fill="#F1EEE6" font-weight="600">Escrow ledger</text>
-  <text x="457" y="334" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="26" fill="#F1EEE6" font-weight="600">Live tracking</text>
-  <line x1="386.7" y1="264.0" x2="430.7" y2="264.0" stroke="#6B7386" stroke-width="2"/>
-  <line x1="769.3" y1="264.0" x2="813.3" y2="264.0" stroke="#6B7386" stroke-width="2"/>
+  <rect x="430.7" y="160.0" width="338.7" height="208.0" fill="none" rx="10" stroke="#7A90EE" stroke-width="1.2"/>
+  <rect x="430.7" y="160.0" width="6.0" height="208.0" fill="url(#ac)" rx="3"/>
+  <text x="457" y="202" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="26" fill="#F0F3F8" font-weight="600">Fair pricing</text>
+  <text x="457" y="268" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="26" fill="#F0F3F8" font-weight="600">Escrow ledger</text>
+  <text x="457" y="334" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="26" fill="#F0F3F8" font-weight="600">Live tracking</text>
+  <line class="flow" x1="386.7" y1="264.0" x2="430.7" y2="264.0" stroke="#7A90EE" stroke-width="2" stroke-dasharray="6 4" stroke-linecap="round"/>
+  <line class="flow" x1="769.3" y1="264.0" x2="813.3" y2="264.0" stroke="#7A90EE" stroke-width="2" stroke-dasharray="6 4" stroke-linecap="round"/>
   <circle cx="430.7" cy="264.0" r="5" fill="#7A90EE"/>
   <circle cx="813.3" cy="264.0" r="5" fill="#7A90EE"/>
 </svg>
