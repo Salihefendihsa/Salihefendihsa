@@ -402,7 +402,7 @@ def render_proof(footprint: dict, theme: str, mobile: bool = False) -> str:
         cw, ch, gap = (w - 2 * m - (len(metrics) - 1) * 16) / max(1, len(metrics)), 198, 16
         body = [rect(0.5, 0.5, w - 1, h - 1, "none", rx=18, stroke=t["rule"]),
                 text(m, 36, "VERIFIED ENGINEERING FOOTPRINT", 18, t["muted"], mono=True, spacing=3),
-                text(w - m, 36, f"{year} GRAPH · 365D ACTIVITY" if year else "365D ACTIVITY", 18, t["accent"], mono=True, spacing=2, anchor="end")]
+                text(w - m, 36, "LAST 12 MONTHS · UPDATED HOURLY", 18, t["accent"], mono=True, spacing=2, anchor="end")]
         y = 52
         for i, mt in enumerate(metrics):
             x = m + i * (cw + gap)
@@ -423,7 +423,7 @@ def render_proof(footprint: dict, theme: str, mobile: bool = False) -> str:
         h = timeline_y + 56
         body = [rect(0.5, 0.5, w - 1, h - 1, "none", rx=18, stroke=t["rule"]),
                 text(m, 44, "VERIFIED FOOTPRINT", 20, t["muted"], mono=True, spacing=3),
-                text(w - m, 44, f"{year} + 365D" if year else "365D", 20, t["accent"], mono=True, spacing=3, anchor="end")]
+                text(w - m, 44, "LAST 12 MONTHS", 20, t["accent"], mono=True, spacing=3, anchor="end")]
         for i, mt in enumerate(metrics):
             cell_w = w - 2 * m if i == 4 else cw
             x = m if i == 4 else m + (i % 2) * (cw + gap)

@@ -4,7 +4,7 @@
   <rect x="0.0" y="0.0" width="720.0" height="890.0" fill="#F6F4EF"/>
   <rect x="0.5" y="0.5" width="719.0" height="889.0" fill="none" rx="18" stroke="#D8DAE0" stroke-width="1"/>
   <text x="36" y="44" font-family="Consolas, 'SFMono-Regular', Menlo, monospace" font-size="20" fill="#5C6270" letter-spacing="3">VERIFIED FOOTPRINT</text>
-  <text x="684" y="44" font-family="Consolas, 'SFMono-Regular', Menlo, monospace" font-size="20" fill="#2F4BC7" text-anchor="end" letter-spacing="3">2026 + 365D</text>
+  <text x="684" y="44" font-family="Consolas, 'SFMono-Regular', Menlo, monospace" font-size="20" fill="#2F4BC7" text-anchor="end" letter-spacing="3">LAST 12 MONTHS</text>
   <rect x="36.0" y="64.0" width="312.0" height="230.0" fill="#FFFFFF" rx="14" stroke="#D8DAE0" stroke-width="1"/>
   <rect x="56.0" y="84.0" width="48.0" height="48.0" fill="#E4E8F8" rx="10"/>
   <rect x="67.5" y="96.8" width="6.2" height="6.2" fill="#2F4BC7" rx="1.25"/>
