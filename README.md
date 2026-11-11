@@ -5,25 +5,6 @@
   <img alt="Hilmi Salih Altınışık — Software Engineer & Product Builder. Building operational software across logistics, field service, business automation and autonomous AI systems. Product domains: Logistics (Navlonix), Field Operations (Nilüfer İlaçlama), Business Systems (Finans Pro, Tatlı Durağı), Autonomous AI (SALIH-AI-COMPANY)." src="assets/v5/hero-desktop-light.svg" width="100%">
 </picture>
 
-<p align="center">
-  <a href="https://www.linkedin.com/in/hilmi-salih-alt%C4%B1n%C4%B1%C5%9F%C4%B1k-6a9301294/"><img alt="LinkedIn" src="https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white&labelColor=0D1117"></a>
-  <a href="mailto:altinisikhilmisalih@gmail.com"><img alt="Email" src="https://img.shields.io/badge/Email-Get_in_touch-7C93FF?style=for-the-badge&logo=gmail&logoColor=white&labelColor=0D1117"></a>
-  <img alt="Based in Türkiye" src="https://img.shields.io/badge/Based_in-T%C3%BCrkiye-4FD1B5?style=for-the-badge&labelColor=0D1117">
-</p>
-
-<p align="center">
-  <img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white">
-  <img alt=".NET" src="https://img.shields.io/badge/.NET-512BD4?style=flat-square&logo=dotnet&logoColor=white">
-  <img alt="Python" src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white">
-  <img alt="Flutter" src="https://img.shields.io/badge/Flutter-02569B?style=flat-square&logo=flutter&logoColor=white">
-  <img alt="Next.js" src="https://img.shields.io/badge/Next.js-111111?style=flat-square&logo=nextdotjs&logoColor=white">
-  <img alt="React" src="https://img.shields.io/badge/React-149ECA?style=flat-square&logo=react&logoColor=white">
-  <img alt="PostgreSQL" src="https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white">
-  <img alt="Supabase" src="https://img.shields.io/badge/Supabase-3ECF8E?style=flat-square&logo=supabase&logoColor=white">
-  <img alt="Redis" src="https://img.shields.io/badge/Redis-DC382D?style=flat-square&logo=redis&logoColor=white">
-  <img alt="Docker" src="https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white">
-</p>
-
 <!-- PROOF:START -->
 <picture>
   <source media="(prefers-color-scheme: dark) and (max-width: 600px)" srcset="assets/v5/proof-mobile-dark.svg">
@@ -212,7 +193,6 @@ Running several development projects with AI agents only makes sense if agents c
 
 ## Contact
 
-<a href="https://www.linkedin.com/in/hilmi-salih-alt%C4%B1n%C4%B1%C5%9F%C4%B1k-6a9301294/"><img alt="LinkedIn" src="https://img.shields.io/badge/LinkedIn-Hilmi_Salih_Alt%C4%B1n%C4%B1%C5%9F%C4%B1k-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white&labelColor=0D1117"></a>
-<a href="mailto:altinisikhilmisalih@gmail.com"><img alt="Email" src="https://img.shields.io/badge/Email-altinisikhilmisalih%40gmail.com-7C93FF?style=for-the-badge&logo=gmail&logoColor=white&labelColor=0D1117"></a>
+[LinkedIn](https://www.linkedin.com/in/hilmi-salih-alt%C4%B1n%C4%B1%C5%9F%C4%B1k-6a9301294/) · [Email](mailto:altinisikhilmisalih@gmail.com) · [GitHub](https://github.com/Salihefendihsa)
 
 If you are building something useful, I would be glad to hear about it.
