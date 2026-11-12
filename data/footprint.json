@@ -4,8 +4,8 @@
   "window": {
     "from": "2025-11-12",
     "to": "2026-11-12",
-    "start_utc": "2025-11-12T02:54:36Z",
-    "end_utc": "2026-11-12T02:54:36Z",
+    "start_utc": "2025-11-12T10:57:06Z",
+    "end_utc": "2026-11-12T10:57:06Z",
     "label": "Nov 2025 – Nov 2026"
   },
   "metrics": [
@@ -97,8 +97,8 @@
       "rolling": true,
       "from": "2025-11-12",
       "to": "2026-11-12",
-      "start_utc": "2025-11-12T02:54:36Z",
-      "end_utc": "2026-11-12T02:54:36Z"
+      "start_utc": "2025-11-12T10:57:06Z",
+      "end_utc": "2026-11-12T10:57:06Z"
     },
     "github_contributions": 3676,
     "restricted_contributions": 3556,
@@ -128,13 +128,13 @@
       "visual_evidence": "2 commits · 0 PRs"
     }
   },
-  "measured_at_utc": "2026-11-12T02:54:36Z",
+  "measured_at_utc": "2026-11-12T10:57:06Z",
   "contribution_window": {
     "year": 2026,
     "rolling": true,
     "from": "2025-11-12",
     "to": "2026-11-12",
-    "start_utc": "2025-11-12T02:54:36Z",
-    "end_utc": "2026-11-12T02:54:36Z"
+    "start_utc": "2025-11-12T10:57:06Z",
+    "end_utc": "2026-11-12T10:57:06Z"
   }
 }
