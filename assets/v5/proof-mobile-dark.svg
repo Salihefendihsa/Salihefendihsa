@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="720" height="890" viewBox="0 0 720 890" role="img" aria-labelledby="t d">
   <title id="t">Verified engineering footprint · last 12 months (Nov 2025 – Nov 2026)</title>
-  <desc id="d">3,676 contributions in the last year; 3,228 commits authored; 619 coding hours (est.); 56 repositories; 4 verified collaborations. Last published successful measurement 2026-11-11T21:20:07Z.</desc>
+  <desc id="d">3,676 contributions in the last year; 3,228 commits authored; 619 coding hours (est.); 56 repositories; 4 verified collaborations. Last published successful measurement 2026-11-12T02:54:36Z.</desc>
   <style>@keyframes rise{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}@keyframes draw{from{stroke-dashoffset:1200}to{stroke-dashoffset:0}}.rise{opacity:0;animation:rise .7s cubic-bezier(.2,.7,.2,1) forwards}.draw{stroke-dasharray:1200;animation:draw 1.6s ease-out .5s both}.fade{opacity:0;animation:rise 1s ease-out forwards}.trace{stroke-dasharray:100;animation:trace 1.4s ease-out .35s both}@keyframes trace{from{stroke-dashoffset:100}to{stroke-dashoffset:0}}@keyframes flow{to{stroke-dashoffset:-24}}@keyframes spin{to{transform:rotate(360deg)}}@keyframes breathe{from{opacity:.35}to{opacity:1}}@keyframes ping{from{transform:scale(1);opacity:.5}to{transform:scale(2.2);opacity:0}}@keyframes travel{from{transform:translate(0,0)}to{transform:translate(var(--dx,0px),var(--dy,0px))}}.flow{stroke-dasharray:6 6;animation:flow 1.8s linear infinite}.spin{transform-box:view-box;animation:spin 18s linear infinite}.breathe{animation:breathe 2.8s ease-in-out infinite alternate}.ping{transform-box:fill-box;transform-origin:center;animation:ping 2.6s ease-out infinite}.travel{animation:travel 7s ease-in-out infinite alternate}@media (prefers-reduced-motion:reduce){.rise,.fade{opacity:1;animation:none}.draw,.trace,.flow,.spin,.breathe,.ping,.travel{animation:none}.draw,.trace{stroke-dasharray:none}}</style>
   <rect x="0.0" y="0.0" width="720.0" height="890.0" fill="#101216"/>
   <rect x="0.5" y="0.5" width="719.0" height="889.0" fill="none" rx="18" stroke="#2C3039" stroke-width="1"/>
@@ -69,5 +69,5 @@
   <circle cx="676.0" cy="834.0" r="5" fill="#7A90EE"/>
   <text x="44" y="864" font-family="Consolas, 'SFMono-Regular', Menlo, monospace" font-size="18" fill="#9AA1B0" letter-spacing="1">NOV 2025</text>
   <text x="676" y="864" font-family="Consolas, 'SFMono-Regular', Menlo, monospace" font-size="18" fill="#9AA1B0" text-anchor="end" letter-spacing="1">NOV 2026</text>
-  <text x="360" y="822" font-family="Consolas, 'SFMono-Regular', Menlo, monospace" font-size="18" fill="#9AA1B0" text-anchor="middle" letter-spacing="1">LAST PUBLISHED 2026-11-11 21:20:07 UTC</text>
+  <text x="360" y="822" font-family="Consolas, 'SFMono-Regular', Menlo, monospace" font-size="18" fill="#9AA1B0" text-anchor="middle" letter-spacing="1">LAST PUBLISHED 2026-11-12 02:54:36 UTC</text>
 </svg>

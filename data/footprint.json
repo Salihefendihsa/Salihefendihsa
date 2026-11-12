@@ -1,11 +1,11 @@
 {
   "$comment": "GitHub contributions use the rolling last-year window shown on the profile graph. Other activity uses token-visible repositories in rolling UTC 365-day window [start_utc,end_utc). GitHub-linked author on default-branch commits; globally unique SHA. Profile repository excluded from activity; owned count includes it. Partner evidence is authored commit or PR. No private names stored.",
-  "measured_on": "2026-11-11",
+  "measured_on": "2026-11-12",
   "window": {
-    "from": "2025-11-11",
-    "to": "2026-11-11",
-    "start_utc": "2025-11-11T21:20:07Z",
-    "end_utc": "2026-11-11T21:20:07Z",
+    "from": "2025-11-12",
+    "to": "2026-11-12",
+    "start_utc": "2025-11-12T02:54:36Z",
+    "end_utc": "2026-11-12T02:54:36Z",
     "label": "Nov 2025 – Nov 2026"
   },
   "metrics": [
@@ -95,10 +95,10 @@
     "contribution_window": {
       "year": 2026,
       "rolling": true,
-      "from": "2025-11-11",
-      "to": "2026-11-11",
-      "start_utc": "2025-11-11T21:20:07Z",
-      "end_utc": "2026-11-11T21:20:07Z"
+      "from": "2025-11-12",
+      "to": "2026-11-12",
+      "start_utc": "2025-11-12T02:54:36Z",
+      "end_utc": "2026-11-12T02:54:36Z"
     },
     "github_contributions": 3676,
     "restricted_contributions": 3556,
@@ -128,13 +128,13 @@
       "visual_evidence": "2 commits · 0 PRs"
     }
   },
-  "measured_at_utc": "2026-11-11T21:20:07Z",
+  "measured_at_utc": "2026-11-12T02:54:36Z",
   "contribution_window": {
     "year": 2026,
     "rolling": true,
-    "from": "2025-11-11",
-    "to": "2026-11-11",
-    "start_utc": "2025-11-11T21:20:07Z",
-    "end_utc": "2026-11-11T21:20:07Z"
+    "from": "2025-11-12",
+    "to": "2026-11-12",
+    "start_utc": "2025-11-12T02:54:36Z",
+    "end_utc": "2026-11-12T02:54:36Z"
   }
 }
