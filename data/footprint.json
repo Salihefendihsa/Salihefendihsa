@@ -4,8 +4,8 @@
   "window": {
     "from": "2025-11-13",
     "to": "2026-11-13",
-    "start_utc": "2025-11-13T07:52:09Z",
-    "end_utc": "2026-11-13T07:52:09Z",
+    "start_utc": "2025-11-13T16:14:16Z",
+    "end_utc": "2026-11-13T16:14:16Z",
     "label": "Nov 2025 – Nov 2026"
   },
   "metrics": [
@@ -13,12 +13,12 @@
       "key": "github_contributions",
       "label": "Contributions in the last year",
       "short_label": "Contributions (1y)",
-      "value": 3681,
-      "note": "2026: 3,656"
+      "value": 3708,
+      "note": "2026: 3,683"
     },
     {
       "key": "commits_12m",
-      "value": 3233,
+      "value": 3260,
       "label": "Commits authored",
       "note": "365d · 43 public",
       "short_label": "Commits authored"
@@ -27,7 +27,7 @@
       "key": "coding_hours_12m",
       "label": "Coding hours (est.)",
       "short_label": "Coding hours",
-      "value": 621,
+      "value": 627,
       "note": "est. · 238 sessions"
     },
     {
@@ -60,7 +60,7 @@
     },
     {
       "name": "Python",
-      "share": 7.7
+      "share": 7.8
     },
     {
       "name": "PLpgSQL",
@@ -80,10 +80,10 @@
   "scope": "Repositories visible to the authenticated owner; default-branch commits",
   "measurement": {
     "scope": "Repositories visible to the authenticated owner; default-branch commits",
-    "commits_12m": 3233,
+    "commits_12m": 3260,
     "public": 43,
-    "private": 3190,
-    "coding_hours_12m": 621,
+    "private": 3217,
+    "coding_hours_12m": 627,
     "coding_sessions_12m": 238,
     "repos_contributed_12m": 42,
     "repos_contributed_owned": 38,
@@ -97,13 +97,13 @@
       "rolling": true,
       "from": "2025-11-13",
       "to": "2026-11-13",
-      "start_utc": "2025-11-13T07:52:09Z",
-      "end_utc": "2026-11-13T07:52:09Z"
+      "start_utc": "2025-11-13T16:14:16Z",
+      "end_utc": "2026-11-13T16:14:16Z"
     },
-    "github_contributions": 3681,
-    "restricted_contributions": 3561,
+    "github_contributions": 3708,
+    "restricted_contributions": 3588,
     "github_commit_contributions": 106,
-    "github_contributions_year": 3656,
+    "github_contributions_year": 3683,
     "profile_fingerprint": "2b30350b5700c6543eb28b9939dd10b408a3484aa408c8cedfdcf69d0860f932"
   },
   "collaboration_evidence": {
@@ -128,13 +128,13 @@
       "visual_evidence": "2 commits · 0 PRs"
     }
   },
-  "measured_at_utc": "2026-11-13T07:52:09Z",
+  "measured_at_utc": "2026-11-13T16:14:16Z",
   "contribution_window": {
     "year": 2026,
     "rolling": true,
     "from": "2025-11-13",
     "to": "2026-11-13",
-    "start_utc": "2025-11-13T07:52:09Z",
-    "end_utc": "2026-11-13T07:52:09Z"
+    "start_utc": "2025-11-13T16:14:16Z",
+    "end_utc": "2026-11-13T16:14:16Z"
   }
 }
