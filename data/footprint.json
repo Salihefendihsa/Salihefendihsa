@@ -1,11 +1,11 @@
 {
   "$comment": "GitHub contributions use the rolling last-year window shown on the profile graph. Other activity uses token-visible repositories in rolling UTC 365-day window [start_utc,end_utc). GitHub-linked author on default-branch commits; globally unique SHA. Profile repository excluded from activity; owned count includes it. Partner evidence is authored commit or PR. No private names stored.",
-  "measured_on": "2026-11-14",
+  "measured_on": "2026-11-15",
   "window": {
-    "from": "2025-11-14",
-    "to": "2026-11-14",
-    "start_utc": "2025-11-14T21:24:40Z",
-    "end_utc": "2026-11-14T21:24:40Z",
+    "from": "2025-11-15",
+    "to": "2026-11-15",
+    "start_utc": "2025-11-15T01:50:37Z",
+    "end_utc": "2026-11-15T01:50:37Z",
     "label": "Nov 2025 – Nov 2026"
   },
   "metrics": [
@@ -13,12 +13,12 @@
       "key": "github_contributions",
       "label": "Contributions in the last year",
       "short_label": "Contributions (1y)",
-      "value": 3927,
-      "note": "2026: 3,902"
+      "value": 4037,
+      "note": "2026: 4,012"
     },
     {
       "key": "commits_12m",
-      "value": 3479,
+      "value": 3589,
       "label": "Commits authored",
       "note": "365d · 43 public",
       "short_label": "Commits authored"
@@ -27,7 +27,7 @@
       "key": "coding_hours_12m",
       "label": "Coding hours (est.)",
       "short_label": "Coding hours",
-      "value": 635,
+      "value": 638,
       "note": "est. · 241 sessions"
     },
     {
@@ -48,11 +48,11 @@
   "languages": [
     {
       "name": "TypeScript",
-      "share": 49.9
+      "share": 49.8
     },
     {
       "name": "Dart",
-      "share": 18.0
+      "share": 18.1
     },
     {
       "name": "C#",
@@ -80,10 +80,10 @@
   "scope": "Repositories visible to the authenticated owner; default-branch commits",
   "measurement": {
     "scope": "Repositories visible to the authenticated owner; default-branch commits",
-    "commits_12m": 3479,
+    "commits_12m": 3589,
     "public": 43,
-    "private": 3436,
-    "coding_hours_12m": 635,
+    "private": 3546,
+    "coding_hours_12m": 638,
     "coding_sessions_12m": 241,
     "repos_contributed_12m": 42,
     "repos_contributed_owned": 38,
@@ -95,15 +95,15 @@
     "contribution_window": {
       "year": 2026,
       "rolling": true,
-      "from": "2025-11-14",
-      "to": "2026-11-14",
-      "start_utc": "2025-11-14T21:24:40Z",
-      "end_utc": "2026-11-14T21:24:40Z"
+      "from": "2025-11-15",
+      "to": "2026-11-15",
+      "start_utc": "2025-11-15T01:50:37Z",
+      "end_utc": "2026-11-15T01:50:37Z"
     },
-    "github_contributions": 3927,
-    "restricted_contributions": 3807,
+    "github_contributions": 4037,
+    "restricted_contributions": 3917,
     "github_commit_contributions": 106,
-    "github_contributions_year": 3902,
+    "github_contributions_year": 4012,
     "profile_fingerprint": "2b30350b5700c6543eb28b9939dd10b408a3484aa408c8cedfdcf69d0860f932"
   },
   "collaboration_evidence": {
@@ -128,13 +128,13 @@
       "visual_evidence": "2 commits · 0 PRs"
     }
   },
-  "measured_at_utc": "2026-11-14T21:24:40Z",
+  "measured_at_utc": "2026-11-15T01:50:37Z",
   "contribution_window": {
     "year": 2026,
     "rolling": true,
-    "from": "2025-11-14",
-    "to": "2026-11-14",
-    "start_utc": "2025-11-14T21:24:40Z",
-    "end_utc": "2026-11-14T21:24:40Z"
+    "from": "2025-11-15",
+    "to": "2026-11-15",
+    "start_utc": "2025-11-15T01:50:37Z",
+    "end_utc": "2026-11-15T01:50:37Z"
   }
 }
