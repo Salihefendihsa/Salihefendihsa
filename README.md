@@ -10,7 +10,7 @@
   <source media="(prefers-color-scheme: dark) and (max-width: 600px)" srcset="assets/v5/proof-mobile-dark.svg">
   <source media="(max-width: 600px)" srcset="assets/v5/proof-mobile-light.svg">
   <source media="(prefers-color-scheme: dark)" srcset="assets/v5/proof-desktop-dark.svg">
-  <img alt="Verified engineering footprint: 4,678 GitHub contributions in the last year, 4,231 commits authored in the last 365 days, 43 repositories contributed to, 57 owned repositories, 4 verified collaborations; last published successful measurement 2026-11-17T13:13:10Z" src="assets/v5/proof-desktop-light.svg" width="100%">
+  <img alt="Verified engineering footprint: 4,744 GitHub contributions in the last year, 4,297 commits authored in the last 365 days, 43 repositories contributed to, 57 owned repositories, 4 verified collaborations; last published successful measurement 2026-11-17T22:15:41Z" src="assets/v5/proof-desktop-light.svg" width="100%">
 </picture>
 
 <details>
@@ -18,15 +18,15 @@
 
 <br>
 
-- **4,678 GitHub contributions in the last year** (4,653 in 2026 so far) — the same numbers GitHub shows above the profile graph: GraphQL `contributionsCollection` calendar `totalContributions` for the rolling last-year window [2025-11-17T13:13:10Z, 2026-11-17T13:13:10Z]. GitHub reports 4,558 restricted contributions in this collection; their repository identities are not published here. This total follows GitHub's contribution rules and is not a commit count. [View the graph](https://github.com/Salihefendihsa).
-- **4,231 commits authored in the last 365 days** — 43 public and 4,188 private. GitHub-linked author login on accessible repositories' default branches; each SHA counted once across repositories. This authored-commit measure has a different time window and eligibility rules from the contribution graph.
-- **664 estimated coding hours in the last 365 days** — derived from the timestamps of the authored commits above (246 working sessions). Commits less than 2 hours apart are one session and the time between them is counted; each session adds 30 minutes for work before its first commit. Time without commits (reading, design, meetings) is not counted, so this is an estimate, not a timesheet.
+- **4,744 GitHub contributions in the last year** (4,719 in 2026 so far) — the same numbers GitHub shows above the profile graph: GraphQL `contributionsCollection` calendar `totalContributions` for the rolling last-year window [2025-11-17T22:15:41Z, 2026-11-17T22:15:41Z]. GitHub reports 4,624 restricted contributions in this collection; their repository identities are not published here. This total follows GitHub's contribution rules and is not a commit count. [View the graph](https://github.com/Salihefendihsa).
+- **4,297 commits authored in the last 365 days** — 43 public and 4,254 private. GitHub-linked author login on accessible repositories' default branches; each SHA counted once across repositories. This authored-commit measure has a different time window and eligibility rules from the contribution graph.
+- **667 estimated coding hours in the last 365 days** — derived from the timestamps of the authored commits above (247 working sessions). Commits less than 2 hours apart are one session and the time between them is counted; each session adds 30 minutes for work before its first commit. Time without commits (reading, design, meetings) is not counted, so this is an estimate, not a timesheet.
 - **43 repositories contributed to** — 39 owned and 4 partner-owned. A qualifying authored default-branch commit or authored pull request in the period is required.
 - **57 owned repositories** — 23 public and 34 private, as visible to the statistics credential at measurement time; this snapshot includes the profile repository.
 - **4 verified collaborations** — partner-owned repositories with a qualifying commit or pull request in the period. Mere access is not evidence.
-- **Authored activity period:** UTC [2025-11-17T13:13:10Z, 2026-11-17T13:13:10Z) (365 days). Last published successful measurement: 2026-11-17T13:13:10Z. Access scope: repositories visible to the owner's credential. The profile repository is excluded from activity counts so automated card commits cannot raise them. Hourly runs are not instant synchronization. If values have not changed, the last published successful time stays visible and no commit is made; newer successful no-op runs appear in Actions history.
+- **Authored activity period:** UTC [2025-11-17T22:15:41Z, 2026-11-17T22:15:41Z) (365 days). Last published successful measurement: 2026-11-17T22:15:41Z. Access scope: repositories visible to the owner's credential. The profile repository is excluded from activity counts so automated card commits cannot raise them. Hourly runs are not instant synchronization. If values have not changed, the last published successful time stays visible and no commit is made; newer successful no-op runs appear in Actions history.
 - Private contribution visibility and credential access can change which contributions GitHub returns.
-- **Code by language** across token-visible owned repositories: TypeScript 49.7 %, Dart 18.2 %, C# 8.6 %, Python 8.4 %, PLpgSQL 7.3 %, JavaScript 3.0 %, Other 4.9 %. GitHub language bytes measured with the same credential on 2026-11-17.
+- **Code by language** across token-visible owned repositories: TypeScript 49.8 %, Dart 17.9 %, C# 8.5 %, Python 8.3 %, PLpgSQL 7.2 %, HTML 3.4 %, Other 5.0 %. GitHub language bytes measured with the same credential on 2026-11-17.
 
 </details>
 <!-- PROOF:END -->
