@@ -1,11 +1,11 @@
 {
   "$comment": "GitHub contributions use the rolling last-year window shown on the profile graph. Other activity uses token-visible repositories in rolling UTC 365-day window [start_utc,end_utc). GitHub-linked author on default-branch commits; globally unique SHA. Profile repository excluded from activity; owned count includes it. Partner evidence is authored commit or PR. No private names stored.",
-  "measured_on": "2026-11-17",
+  "measured_on": "2026-11-18",
   "window": {
-    "from": "2025-11-17",
-    "to": "2026-11-17",
-    "start_utc": "2025-11-17T22:15:41Z",
-    "end_utc": "2026-11-17T22:15:41Z",
+    "from": "2025-11-18",
+    "to": "2026-11-18",
+    "start_utc": "2025-11-18T04:12:45Z",
+    "end_utc": "2026-11-18T04:12:45Z",
     "label": "Nov 2025 – Nov 2026"
   },
   "metrics": [
@@ -13,12 +13,12 @@
       "key": "github_contributions",
       "label": "Contributions in the last year",
       "short_label": "Contributions (1y)",
-      "value": 4744,
-      "note": "2026: 4,719"
+      "value": 5666,
+      "note": "2026: 5,641"
     },
     {
       "key": "commits_12m",
-      "value": 4297,
+      "value": 5219,
       "label": "Commits authored",
       "note": "365d · 43 public",
       "short_label": "Commits authored"
@@ -27,8 +27,8 @@
       "key": "coding_hours_12m",
       "label": "Coding hours (est.)",
       "short_label": "Coding hours",
-      "value": 667,
-      "note": "est. · 247 sessions"
+      "value": 672,
+      "note": "est. · 248 sessions"
     },
     {
       "key": "owned_repos",
@@ -48,19 +48,19 @@
   "languages": [
     {
       "name": "TypeScript",
-      "share": 49.8
+      "share": 51.0
     },
     {
       "name": "Dart",
-      "share": 17.9
+      "share": 17.3
     },
     {
       "name": "C#",
-      "share": 8.5
+      "share": 8.2
     },
     {
       "name": "Python",
-      "share": 8.3
+      "share": 8.0
     },
     {
       "name": "PLpgSQL",
@@ -68,11 +68,11 @@
     },
     {
       "name": "HTML",
-      "share": 3.4
+      "share": 3.3
     },
     {
       "name": "Other",
-      "share": 5.0
+      "share": 4.9
     }
   ],
   "languages_note": "Share of code by bytes across owned repositories, public and private",
@@ -80,11 +80,11 @@
   "scope": "Repositories visible to the authenticated owner; default-branch commits",
   "measurement": {
     "scope": "Repositories visible to the authenticated owner; default-branch commits",
-    "commits_12m": 4297,
+    "commits_12m": 5219,
     "public": 43,
-    "private": 4254,
-    "coding_hours_12m": 667,
-    "coding_sessions_12m": 247,
+    "private": 5176,
+    "coding_hours_12m": 672,
+    "coding_sessions_12m": 248,
     "repos_contributed_12m": 43,
     "repos_contributed_owned": 39,
     "repos_contributed_collab": 4,
@@ -95,15 +95,15 @@
     "contribution_window": {
       "year": 2026,
       "rolling": true,
-      "from": "2025-11-17",
-      "to": "2026-11-17",
-      "start_utc": "2025-11-17T22:15:41Z",
-      "end_utc": "2026-11-17T22:15:41Z"
+      "from": "2025-11-18",
+      "to": "2026-11-18",
+      "start_utc": "2025-11-18T04:12:45Z",
+      "end_utc": "2026-11-18T04:12:45Z"
     },
-    "github_contributions": 4744,
-    "restricted_contributions": 4624,
+    "github_contributions": 5666,
+    "restricted_contributions": 5546,
     "github_commit_contributions": 106,
-    "github_contributions_year": 4719,
+    "github_contributions_year": 5641,
     "profile_fingerprint": "2b30350b5700c6543eb28b9939dd10b408a3484aa408c8cedfdcf69d0860f932"
   },
   "collaboration_evidence": {
@@ -128,13 +128,13 @@
       "visual_evidence": "2 commits · 0 PRs"
     }
   },
-  "measured_at_utc": "2026-11-17T22:15:41Z",
+  "measured_at_utc": "2026-11-18T04:12:45Z",
   "contribution_window": {
     "year": 2026,
     "rolling": true,
-    "from": "2025-11-17",
-    "to": "2026-11-17",
-    "start_utc": "2025-11-17T22:15:41Z",
-    "end_utc": "2026-11-17T22:15:41Z"
+    "from": "2025-11-18",
+    "to": "2026-11-18",
+    "start_utc": "2025-11-18T04:12:45Z",
+    "end_utc": "2026-11-18T04:12:45Z"
   }
 }
