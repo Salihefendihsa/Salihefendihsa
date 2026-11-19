@@ -1,11 +1,11 @@
 {
   "$comment": "GitHub contributions use the rolling last-year window shown on the profile graph. Other activity uses token-visible repositories in rolling UTC 365-day window [start_utc,end_utc). GitHub-linked author on default-branch commits; globally unique SHA. Profile repository excluded from activity; owned count includes it. Partner evidence is authored commit or PR. No private names stored.",
-  "measured_on": "2026-11-18",
+  "measured_on": "2026-11-19",
   "window": {
-    "from": "2025-11-18",
-    "to": "2026-11-18",
-    "start_utc": "2025-11-18T21:52:55Z",
-    "end_utc": "2026-11-18T21:52:55Z",
+    "from": "2025-11-19",
+    "to": "2026-11-19",
+    "start_utc": "2025-11-19T03:17:56Z",
+    "end_utc": "2026-11-19T03:17:56Z",
     "label": "Nov 2025 – Nov 2026"
   },
   "metrics": [
@@ -13,12 +13,12 @@
       "key": "github_contributions",
       "label": "Contributions in the last year",
       "short_label": "Contributions (1y)",
-      "value": 6214,
-      "note": "2026: 6,189"
+      "value": 6234,
+      "note": "2026: 6,209"
     },
     {
       "key": "commits_12m",
-      "value": 5871,
+      "value": 6250,
       "label": "Commits authored",
       "note": "365d · 43 public",
       "short_label": "Commits authored"
@@ -27,7 +27,7 @@
       "key": "coding_hours_12m",
       "label": "Coding hours (est.)",
       "short_label": "Coding hours",
-      "value": 680,
+      "value": 683,
       "note": "est. · 250 sessions"
     },
     {
@@ -48,23 +48,23 @@
   "languages": [
     {
       "name": "TypeScript",
-      "share": 51.3
+      "share": 51.6
     },
     {
       "name": "Dart",
-      "share": 17.2
+      "share": 17.1
     },
     {
       "name": "C#",
-      "share": 8.2
+      "share": 8.1
     },
     {
       "name": "Python",
-      "share": 8.0
+      "share": 7.9
     },
     {
       "name": "PLpgSQL",
-      "share": 7.3
+      "share": 7.2
     },
     {
       "name": "HTML",
@@ -80,10 +80,10 @@
   "scope": "Repositories visible to the authenticated owner; default-branch commits",
   "measurement": {
     "scope": "Repositories visible to the authenticated owner; default-branch commits",
-    "commits_12m": 5871,
+    "commits_12m": 6250,
     "public": 43,
-    "private": 5828,
-    "coding_hours_12m": 680,
+    "private": 6207,
+    "coding_hours_12m": 683,
     "coding_sessions_12m": 250,
     "repos_contributed_12m": 45,
     "repos_contributed_owned": 40,
@@ -95,15 +95,15 @@
     "contribution_window": {
       "year": 2026,
       "rolling": true,
-      "from": "2025-11-18",
-      "to": "2026-11-18",
-      "start_utc": "2025-11-18T21:52:55Z",
-      "end_utc": "2026-11-18T21:52:55Z"
+      "from": "2025-11-19",
+      "to": "2026-11-19",
+      "start_utc": "2025-11-19T03:17:56Z",
+      "end_utc": "2026-11-19T03:17:56Z"
     },
-    "github_contributions": 6214,
-    "restricted_contributions": 6094,
+    "github_contributions": 6234,
+    "restricted_contributions": 6114,
     "github_commit_contributions": 106,
-    "github_contributions_year": 6189,
+    "github_contributions_year": 6209,
     "profile_fingerprint": "2b30350b5700c6543eb28b9939dd10b408a3484aa408c8cedfdcf69d0860f932"
   },
   "collaboration_evidence": {
@@ -128,13 +128,13 @@
       "visual_evidence": "2 commits · 0 PRs"
     }
   },
-  "measured_at_utc": "2026-11-18T21:52:55Z",
+  "measured_at_utc": "2026-11-19T03:17:56Z",
   "contribution_window": {
     "year": 2026,
     "rolling": true,
-    "from": "2025-11-18",
-    "to": "2026-11-18",
-    "start_utc": "2025-11-18T21:52:55Z",
-    "end_utc": "2026-11-18T21:52:55Z"
+    "from": "2025-11-19",
+    "to": "2026-11-19",
+    "start_utc": "2025-11-19T03:17:56Z",
+    "end_utc": "2026-11-19T03:17:56Z"
   }
 }
