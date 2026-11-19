@@ -4,8 +4,8 @@
   "window": {
     "from": "2025-11-19",
     "to": "2026-11-19",
-    "start_utc": "2025-11-19T12:55:08Z",
-    "end_utc": "2026-11-19T12:55:08Z",
+    "start_utc": "2025-11-19T21:26:26Z",
+    "end_utc": "2026-11-19T21:26:26Z",
     "label": "Nov 2025 – Nov 2026"
   },
   "metrics": [
@@ -13,12 +13,12 @@
       "key": "github_contributions",
       "label": "Contributions in the last year",
       "short_label": "Contributions (1y)",
-      "value": 7315,
-      "note": "2026: 7,290"
+      "value": 8171,
+      "note": "2026: 8,146"
     },
     {
       "key": "commits_12m",
-      "value": 6828,
+      "value": 7652,
       "label": "Commits authored",
       "note": "365d · 43 public",
       "short_label": "Commits authored"
@@ -27,15 +27,15 @@
       "key": "coding_hours_12m",
       "label": "Coding hours (est.)",
       "short_label": "Coding hours",
-      "value": 689,
+      "value": 698,
       "note": "est. · 251 sessions"
     },
     {
       "key": "owned_repos",
       "label": "Repositories",
       "short_label": "Repositories",
-      "value": 57,
-      "note": "23 public · 34 priv."
+      "value": 59,
+      "note": "23 public · 36 priv."
     },
     {
       "key": "verified_collaborations",
@@ -48,23 +48,23 @@
   "languages": [
     {
       "name": "TypeScript",
-      "share": 51.6
+      "share": 51.8
     },
     {
       "name": "Dart",
-      "share": 17.1
+      "share": 16.8
     },
     {
       "name": "C#",
-      "share": 8.1
+      "share": 8.4
     },
     {
       "name": "Python",
-      "share": 7.9
+      "share": 7.8
     },
     {
       "name": "PLpgSQL",
-      "share": 7.2
+      "share": 7.1
     },
     {
       "name": "HTML",
@@ -72,7 +72,7 @@
     },
     {
       "name": "Other",
-      "share": 4.8
+      "share": 4.9
     }
   ],
   "languages_note": "Share of code by bytes across owned repositories, public and private",
@@ -80,30 +80,30 @@
   "scope": "Repositories visible to the authenticated owner; default-branch commits",
   "measurement": {
     "scope": "Repositories visible to the authenticated owner; default-branch commits",
-    "commits_12m": 6828,
+    "commits_12m": 7652,
     "public": 43,
-    "private": 6785,
-    "coding_hours_12m": 689,
+    "private": 7609,
+    "coding_hours_12m": 698,
     "coding_sessions_12m": 251,
-    "repos_contributed_12m": 46,
-    "repos_contributed_owned": 40,
+    "repos_contributed_12m": 47,
+    "repos_contributed_owned": 41,
     "repos_contributed_collab": 6,
-    "owned_repos": 57,
+    "owned_repos": 59,
     "owned_public": 23,
-    "owned_private": 34,
+    "owned_private": 36,
     "verified_collaborations": 6,
     "contribution_window": {
       "year": 2026,
       "rolling": true,
       "from": "2025-11-19",
       "to": "2026-11-19",
-      "start_utc": "2025-11-19T12:55:08Z",
-      "end_utc": "2026-11-19T12:55:08Z"
+      "start_utc": "2025-11-19T21:26:26Z",
+      "end_utc": "2026-11-19T21:26:26Z"
     },
-    "github_contributions": 7315,
-    "restricted_contributions": 7195,
+    "github_contributions": 8171,
+    "restricted_contributions": 8051,
     "github_commit_contributions": 106,
-    "github_contributions_year": 7290,
+    "github_contributions_year": 8146,
     "profile_fingerprint": "2b30350b5700c6543eb28b9939dd10b408a3484aa408c8cedfdcf69d0860f932"
   },
   "collaboration_evidence": {
@@ -128,13 +128,13 @@
       "visual_evidence": "2 commits · 0 PRs"
     }
   },
-  "measured_at_utc": "2026-11-19T12:55:08Z",
+  "measured_at_utc": "2026-11-19T21:26:26Z",
   "contribution_window": {
     "year": 2026,
     "rolling": true,
     "from": "2025-11-19",
     "to": "2026-11-19",
-    "start_utc": "2025-11-19T12:55:08Z",
-    "end_utc": "2026-11-19T12:55:08Z"
+    "start_utc": "2025-11-19T21:26:26Z",
+    "end_utc": "2026-11-19T21:26:26Z"
   }
 }
