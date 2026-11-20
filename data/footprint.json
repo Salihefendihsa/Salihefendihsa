@@ -1,11 +1,11 @@
 {
   "$comment": "GitHub contributions use the rolling last-year window shown on the profile graph. Other activity uses token-visible repositories in rolling UTC 365-day window [start_utc,end_utc). GitHub-linked author on default-branch commits; globally unique SHA. Profile repository excluded from activity; owned count includes it. Partner evidence is authored commit or PR. No private names stored.",
-  "measured_on": "2026-11-19",
+  "measured_on": "2026-11-20",
   "window": {
-    "from": "2025-11-19",
-    "to": "2026-11-19",
-    "start_utc": "2025-11-19T21:26:26Z",
-    "end_utc": "2026-11-19T21:26:26Z",
+    "from": "2025-11-20",
+    "to": "2026-11-20",
+    "start_utc": "2025-11-20T03:04:31Z",
+    "end_utc": "2026-11-20T03:04:31Z",
     "label": "Nov 2025 – Nov 2026"
   },
   "metrics": [
@@ -13,29 +13,29 @@
       "key": "github_contributions",
       "label": "Contributions in the last year",
       "short_label": "Contributions (1y)",
-      "value": 8171,
-      "note": "2026: 8,146"
+      "value": 8613,
+      "note": "2026: 8,588"
     },
     {
       "key": "commits_12m",
-      "value": 7652,
+      "value": 8074,
       "label": "Commits authored",
-      "note": "365d · 43 public",
+      "note": "365d · 45 public",
       "short_label": "Commits authored"
     },
     {
       "key": "coding_hours_12m",
       "label": "Coding hours (est.)",
       "short_label": "Coding hours",
-      "value": 698,
+      "value": 704,
       "note": "est. · 251 sessions"
     },
     {
       "key": "owned_repos",
       "label": "Repositories",
       "short_label": "Repositories",
-      "value": 59,
-      "note": "23 public · 36 priv."
+      "value": 60,
+      "note": "24 public · 36 priv."
     },
     {
       "key": "verified_collaborations",
@@ -48,23 +48,23 @@
   "languages": [
     {
       "name": "TypeScript",
-      "share": 51.8
+      "share": 52.2
     },
     {
       "name": "Dart",
-      "share": 16.8
+      "share": 16.6
     },
     {
       "name": "C#",
-      "share": 8.4
+      "share": 8.3
     },
     {
       "name": "Python",
-      "share": 7.8
+      "share": 7.7
     },
     {
       "name": "PLpgSQL",
-      "share": 7.1
+      "share": 7.0
     },
     {
       "name": "HTML",
@@ -80,31 +80,31 @@
   "scope": "Repositories visible to the authenticated owner; default-branch commits",
   "measurement": {
     "scope": "Repositories visible to the authenticated owner; default-branch commits",
-    "commits_12m": 7652,
-    "public": 43,
-    "private": 7609,
-    "coding_hours_12m": 698,
+    "commits_12m": 8074,
+    "public": 45,
+    "private": 8029,
+    "coding_hours_12m": 704,
     "coding_sessions_12m": 251,
-    "repos_contributed_12m": 47,
-    "repos_contributed_owned": 41,
+    "repos_contributed_12m": 48,
+    "repos_contributed_owned": 42,
     "repos_contributed_collab": 6,
-    "owned_repos": 59,
-    "owned_public": 23,
+    "owned_repos": 60,
+    "owned_public": 24,
     "owned_private": 36,
     "verified_collaborations": 6,
     "contribution_window": {
       "year": 2026,
       "rolling": true,
-      "from": "2025-11-19",
-      "to": "2026-11-19",
-      "start_utc": "2025-11-19T21:26:26Z",
-      "end_utc": "2026-11-19T21:26:26Z"
+      "from": "2025-11-20",
+      "to": "2026-11-20",
+      "start_utc": "2025-11-20T03:04:31Z",
+      "end_utc": "2026-11-20T03:04:31Z"
     },
-    "github_contributions": 8171,
-    "restricted_contributions": 8051,
-    "github_commit_contributions": 106,
-    "github_contributions_year": 8146,
-    "profile_fingerprint": "2b30350b5700c6543eb28b9939dd10b408a3484aa408c8cedfdcf69d0860f932"
+    "github_contributions": 8613,
+    "restricted_contributions": 8490,
+    "github_commit_contributions": 108,
+    "github_contributions_year": 8588,
+    "profile_fingerprint": "f340868f0a58b8b24ed81dba6ffa53b501d9a8dc444848ed28b46dd61910d240"
   },
   "collaboration_evidence": {
     "sticker-label-studio": {
@@ -128,13 +128,13 @@
       "visual_evidence": "2 commits · 0 PRs"
     }
   },
-  "measured_at_utc": "2026-11-19T21:26:26Z",
+  "measured_at_utc": "2026-11-20T03:04:31Z",
   "contribution_window": {
     "year": 2026,
     "rolling": true,
-    "from": "2025-11-19",
-    "to": "2026-11-19",
-    "start_utc": "2025-11-19T21:26:26Z",
-    "end_utc": "2026-11-19T21:26:26Z"
+    "from": "2025-11-20",
+    "to": "2026-11-20",
+    "start_utc": "2025-11-20T03:04:31Z",
+    "end_utc": "2026-11-20T03:04:31Z"
   }
 }

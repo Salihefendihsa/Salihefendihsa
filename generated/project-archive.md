@@ -24,10 +24,11 @@
 </details>
 
 <details>
-<summary><b>Tools &amp; Research</b> (5)</summary>
+<summary><b>Tools &amp; Research</b> (6)</summary>
 
 | Project | What it does |
 | --- | --- |
+| [efendi-games](https://github.com/Salihefendihsa/efendi-games)<br><sub>HTML · Public</sub> | Neon Galaksi 3D — tarayıcıda oyna, Android APK, iPhone ana ekran (yalnızca derlenmiş site) |
 | [LLM Chatbot](https://github.com/Salihefendihsa/LLMChatbot)<br><sub>C\# · .NET · Public</sub> | Streaming, multi-turn chatbot backend on the OpenAI-compatible Chat Completions API with a console client and tests. |
 | [Local Documents](https://github.com/Salihefendihsa/navlonix-localdocuments)<br><sub>C\# · .NET · Public</sub> | Local PDF text extraction and image OCR for .NET, with bounded helper processes, cancellation and explicit failure states. |
 | [MultiLang Translator](https://github.com/Salihefendihsa/MultiLangTranslator)<br><sub>C\# · .NET 8 · WPF · MVVM · Public</sub> | WPF desktop app translating text into several languages in parallel, with auto-detection, caching, history and an offline mock provider. |

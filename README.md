@@ -10,7 +10,7 @@
   <source media="(prefers-color-scheme: dark) and (max-width: 600px)" srcset="assets/v5/proof-mobile-dark.svg">
   <source media="(max-width: 600px)" srcset="assets/v5/proof-mobile-light.svg">
   <source media="(prefers-color-scheme: dark)" srcset="assets/v5/proof-desktop-dark.svg">
-  <img alt="Verified engineering footprint: 8,171 GitHub contributions in the last year, 7,652 commits authored in the last 365 days, 47 repositories contributed to, 59 owned repositories, 6 verified collaborations; last published successful measurement 2026-11-19T21:26:26Z" src="assets/v5/proof-desktop-light.svg" width="100%">
+  <img alt="Verified engineering footprint: 8,613 GitHub contributions in the last year, 8,074 commits authored in the last 365 days, 48 repositories contributed to, 60 owned repositories, 6 verified collaborations; last published successful measurement 2026-11-20T03:04:31Z" src="assets/v5/proof-desktop-light.svg" width="100%">
 </picture>
 
 <details>
@@ -18,15 +18,15 @@
 
 <br>
 
-- **8,171 GitHub contributions in the last year** (8,146 in 2026 so far) — the same numbers GitHub shows above the profile graph: GraphQL `contributionsCollection` calendar `totalContributions` for the rolling last-year window [2025-11-19T21:26:26Z, 2026-11-19T21:26:26Z]. GitHub reports 8,051 restricted contributions in this collection; their repository identities are not published here. This total follows GitHub's contribution rules and is not a commit count. [View the graph](https://github.com/Salihefendihsa).
-- **7,652 commits authored in the last 365 days** — 43 public and 7,609 private. GitHub-linked author login on accessible repositories' default branches; each SHA counted once across repositories. This authored-commit measure has a different time window and eligibility rules from the contribution graph.
-- **698 estimated coding hours in the last 365 days** — derived from the timestamps of the authored commits above (251 working sessions). Commits less than 2 hours apart are one session and the time between them is counted; each session adds 30 minutes for work before its first commit. Time without commits (reading, design, meetings) is not counted, so this is an estimate, not a timesheet.
-- **47 repositories contributed to** — 41 owned and 6 partner-owned. A qualifying authored default-branch commit or authored pull request in the period is required.
-- **59 owned repositories** — 23 public and 36 private, as visible to the statistics credential at measurement time; this snapshot includes the profile repository.
+- **8,613 GitHub contributions in the last year** (8,588 in 2026 so far) — the same numbers GitHub shows above the profile graph: GraphQL `contributionsCollection` calendar `totalContributions` for the rolling last-year window [2025-11-20T03:04:31Z, 2026-11-20T03:04:31Z]. GitHub reports 8,490 restricted contributions in this collection; their repository identities are not published here. This total follows GitHub's contribution rules and is not a commit count. [View the graph](https://github.com/Salihefendihsa).
+- **8,074 commits authored in the last 365 days** — 45 public and 8,029 private. GitHub-linked author login on accessible repositories' default branches; each SHA counted once across repositories. This authored-commit measure has a different time window and eligibility rules from the contribution graph.
+- **704 estimated coding hours in the last 365 days** — derived from the timestamps of the authored commits above (251 working sessions). Commits less than 2 hours apart are one session and the time between them is counted; each session adds 30 minutes for work before its first commit. Time without commits (reading, design, meetings) is not counted, so this is an estimate, not a timesheet.
+- **48 repositories contributed to** — 42 owned and 6 partner-owned. A qualifying authored default-branch commit or authored pull request in the period is required.
+- **60 owned repositories** — 24 public and 36 private, as visible to the statistics credential at measurement time; this snapshot includes the profile repository.
 - **6 verified collaborations** — partner-owned repositories with a qualifying commit or pull request in the period. Mere access is not evidence.
-- **Authored activity period:** UTC [2025-11-19T21:26:26Z, 2026-11-19T21:26:26Z) (365 days). Last published successful measurement: 2026-11-19T21:26:26Z. Access scope: repositories visible to the owner's credential. The profile repository is excluded from activity counts so automated card commits cannot raise them. Hourly runs are not instant synchronization. If values have not changed, the last published successful time stays visible and no commit is made; newer successful no-op runs appear in Actions history.
+- **Authored activity period:** UTC [2025-11-20T03:04:31Z, 2026-11-20T03:04:31Z) (365 days). Last published successful measurement: 2026-11-20T03:04:31Z. Access scope: repositories visible to the owner's credential. The profile repository is excluded from activity counts so automated card commits cannot raise them. Hourly runs are not instant synchronization. If values have not changed, the last published successful time stays visible and no commit is made; newer successful no-op runs appear in Actions history.
 - Private contribution visibility and credential access can change which contributions GitHub returns.
-- **Code by language** across token-visible owned repositories: TypeScript 51.8 %, Dart 16.8 %, C# 8.4 %, Python 7.8 %, PLpgSQL 7.1 %, HTML 3.3 %, Other 4.9 %. GitHub language bytes measured with the same credential on 2026-11-19.
+- **Code by language** across token-visible owned repositories: TypeScript 52.2 %, Dart 16.6 %, C# 8.3 %, Python 7.7 %, PLpgSQL 7.0 %, HTML 3.3 %, Other 4.9 %. GitHub language bytes measured with the same credential on 2026-11-20.
 
 </details>
 <!-- PROOF:END -->
@@ -177,10 +177,11 @@ Running several development projects with AI agents only makes sense if agents c
 </details>
 
 <details>
-<summary><b>Tools &amp; Research</b> (5)</summary>
+<summary><b>Tools &amp; Research</b> (6)</summary>
 
 | Project | What it does |
 | --- | --- |
+| [efendi-games](https://github.com/Salihefendihsa/efendi-games)<br><sub>HTML · Public</sub> | Neon Galaksi 3D — tarayıcıda oyna, Android APK, iPhone ana ekran (yalnızca derlenmiş site) |
 | [LLM Chatbot](https://github.com/Salihefendihsa/LLMChatbot)<br><sub>C\# · .NET · Public</sub> | Streaming, multi-turn chatbot backend on the OpenAI-compatible Chat Completions API with a console client and tests. |
 | [Local Documents](https://github.com/Salihefendihsa/navlonix-localdocuments)<br><sub>C\# · .NET · Public</sub> | Local PDF text extraction and image OCR for .NET, with bounded helper processes, cancellation and explicit failure states. |
 | [MultiLang Translator](https://github.com/Salihefendihsa/MultiLangTranslator)<br><sub>C\# · .NET 8 · WPF · MVVM · Public</sub> | WPF desktop app translating text into several languages in parallel, with auto-detection, caching, history and an offline mock provider. |
